@@ -27,4 +27,8 @@ $(document).ready(function() {
 
     $('.left-sidebar-menu-wrapper .tooltip').tooltip();
 
+    $(document).ready(function(){
+        $('select').formSelect();
+    });
+
 });

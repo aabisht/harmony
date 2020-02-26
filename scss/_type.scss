@@ -93,3 +93,12 @@ a {
 .left-sidebar-menu-wrapper .level-3 {
   background-color: rgba(0,0,0,0.1);
 }
+
+.main-body-content-wrapper {
+  padding-left: calculateRem($left-menu-content-width);
+  @include transition(padding 0.2s);
+
+  .left-menu-fixed & {
+    padding-left: calculateRem($left-menu-content-fixed-width);
+  }
+}
