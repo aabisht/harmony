@@ -1,0 +1,18 @@
+@function calculateRem($size) {
+
+  @if $size == 0{
+      @return 0;
+  } @else {
+      $remSize: $size / 16px;
+
+      //Default font size on html element is 100%, equivalent to 16px;
+      @return #{$remSize}rem;
+  }
+}
+
+@mixin fontSize($size) {
+  @if $size {
+      font-size: $size;
+      font-size: calculateRem($size);
+  }
+}

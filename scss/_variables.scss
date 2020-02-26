@@ -1,0 +1,107 @@
+@use 'sass:map';
+
+$primary-color: #96C0CE !default;
+$secondary-color: #6f7170 !default;
+$color-white: #ffffff !default;
+
+$text-color-white: $color-white !default;
+$color-black: #000000 !default;
+
+$text-color-secondary: $secondary-color !default;
+
+$error-color: #f44336 !default;
+
+$mat-c-green: (
+  50: lighten($primary-color, 10%),
+  100: lighten($primary-color, 5%),
+  200: $primary-color,
+  300: darken($primary-color, 5%),
+  400: darken($primary-color, 10%),
+  500: darken($primary-color, 15%),
+  600: darken($primary-color, 20%),
+  700: darken($primary-color, 25%),
+  800: darken($primary-color, 30%),
+  900: darken($primary-color, 35%),
+  A100: lighten($primary-color, 5%),
+  A200: $primary-color,
+  A400: darken($primary-color, 10%),
+  A700: darken($primary-color, 25%),
+  contrast: (
+    50: $text-color-secondary,
+    100: $text-color-secondary,
+    200: $text-color-secondary,
+    300: $text-color-white,
+    400: $text-color-white,
+    500: $text-color-white,
+    600: $text-color-white,
+    700: $text-color-white,
+    800: $text-color-white,
+    900: $text-color-white,
+    A100: $text-color-secondary,
+    A200: $text-color-white,
+    A400: $text-color-white,
+    A700: $text-color-white,
+  )
+);
+
+$primary-font: 'Open Sans', sans-serif !default;
+$secondary-font: 'Raleway', sans-serif !default;
+
+$heading-font-weight: 600 !default;
+$body-font-weight: 400 !default;
+$body-bg-color: #f2f2f2;
+$body-text-color: $text-color-secondary;
+
+$body-link-color: $primary-color !default;
+$body-link-hover-color: map.get($mat-c-green, 500) !default;
+
+// $icon-font-path: "./assets/fonts/fontawesome" !default;
+
+
+$grid-gutter-width: 30px !default;
+
+// Authentication
+$authentication-box-width: 420px !default;
+$authentication-text-color: $text-color-secondary !default;
+$authentication-card-bg-color: $color-white !default;
+$authentication-logo-width: 180px !default;
+
+$input-hover-border-color: $secondary-color !default;
+$button-focus-outline-color: darken($primary-color, 25%) !default;
+
+$form-focus-color: map.get($mat-c-green, 500);
+
+
+// Header
+$header-height: 72px !default;
+$header-bg-color: $color-white !default;
+$header-title-font-size: 20px !default;
+$header-breadcrumb-font-size: 12px !default;
+
+$header-dropdown-trigger-font-size: 34px !default;
+$header-dropdown-trigger-width: 50px !default;
+$header-dropdown-trigger-height: 50px !default;
+
+$header-dropdown-menu-right-position: $grid-gutter-width/2 !default;
+$header-dropdown-menu-right-width: 300px !default;
+$header-dropdown-menu-right-bg-color: $color-white !default;
+$header-dropdown-menu-right-box-shadow: 0 2px 1px -1px rgba($color-black,.2), 0 1px 1px 0 rgba($color-black,.14), 0 1px 3px 0 rgba($color-black,.12) !default;
+
+$header-dropdown-menu-link-color: $secondary-color !default;
+$header-dropdown-menu-link-hover-color: $primary-color !default;
+$header-dropdown-menu-link-hover-bg-color: #fdfdfd !default;
+
+// Left Menu
+$left-menu-content-bg-color: $primary-color !default;
+$left-menu-content-width: 100px !default;
+$left-menu-content-fixed-width: 350px !default;
+$left-menu-content-box-shadow: 0px 8px 10px -5px rgba($color-black,0.2), 0px 16px 24px 2px rgba($color-black,0.14), 0px 6px 30px 5px rgba($color-black,0.12) !default;
+
+$left-menu-logo-wrapper-height: 60px !default;
+$left-menu-logo-width: 220px !default;
+
+$left-menu-menu-trigger-font-size: 34px !default;
+$left-menu-menu-color: $color-white !default;
+
+
+// @debug $mat-c-green;

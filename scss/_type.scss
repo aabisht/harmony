@@ -1,0 +1,95 @@
+body {
+  background-color: $body-bg-color;
+  color: $body-text-color;
+  font-family: $primary-font;
+  font-size: $font-size-base;
+  font-weight: $body-font-weight;
+  line-height: $line-height-base;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $secondary-font;
+  font-weight: $heading-font-weight;
+}
+
+h1, .h1 {
+  font-size: $h1-font-size;
+}
+
+h2, .h2 {
+  font-size: $h2-font-size;
+}
+
+h3, .h3 {
+  font-size: $h3-font-size;
+}
+
+h4, .h4 {
+  font-size: $h4-font-size;
+}
+
+h5, .h5 {
+  font-size: $h5-font-size;
+}
+
+h6, .h6 {
+  font-size: $h6-font-size;
+}
+
+a {
+  color: $body-link-color;
+
+  &:hover, &:focus {
+    color: $body-link-hover-color;
+  }
+}
+
+.mat-form-field-label {
+  margin-bottom: 0;
+}
+
+.mat-flat-button {
+  &:focus {
+    outline: 1px dotted;
+    outline: 5px auto $button-focus-outline-color;
+  }
+}
+
+.button-block {
+  display: block !important;
+  width: 100%;
+}
+
+.mat-form-field-appearance-outline {
+  .mat-form-field-outline {
+    color: rgba($input-hover-border-color, 0.12) !important;
+  }
+
+  .mat-form-field-outline-thick {
+    color: rgba($input-hover-border-color, 0.87) !important;
+  }
+
+  &.mat-focused {
+    .mat-form-field-outline-thick,
+    .mat-form-field-prefix {
+      color:  $form-focus-color !important;
+    }
+  }
+
+  &.mat-form-field-invalid.mat-form-field-invalid {
+    .mat-form-field-outline-thick,
+    .mat-form-field-prefix {
+      color:  $error-color !important;
+    }
+  }
+}
+
+.mat-form-field-subscript-wrapper {
+  position: relative !important;
+}
+
+.left-sidebar-menu-wrapper .level-2,
+.left-sidebar-menu-wrapper .level-3 {
+  background-color: rgba(0,0,0,0.1);
+}
