@@ -7,21 +7,110 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+  <link href="./css/vendor/fontawesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
+<body class="left-menu-fixed">
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <div class="body-container-wrapper">
+    <div class="body-wrapper">
+
+      <!-- Header -->
+      <header class="header-container">
+        <div class="header-container-wrapper">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-10 header-left-wrapper">
+                <div class="cell-wrapper">
+                  <div class="header-title-nav-wrapper">
+                    <div class="title">
+                      <h3>Item Maintenance</h3>
+                      <div aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Item Maintenance</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 header-right-wrapper text-right">
+                <div class="cell-wrapper">
+                  <div class="header-dropdown-wrapper">
+                    <a href="javascript:;" class="header-dropdown-trigger"><i class="far fa-user-circle"></i></a>
+                    <div class="dropdown-menu">
+                      <ul>
+                        <li><a href="javascript:;">Menu 1</a></li>
+                        <li><a href="javascript:;">Menu 2</a></li>
+                        <li><a href="javascript:;">Menu 3</a></li>
+                        <li><a href="javascript:;">Menu 4</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Left Menu -->
+      <div class="left-menu-wrapper">
+        <div class="left-menu-content-wrapper">
+          <div class="left-menu-header-wrapper">
+            <div class="d-flex flex-row justify-content-between align-items-start logo-wrapper">
+              <a href="javscript:;" class="left-menu-logo"><img src="./assets/img/bristol-farms-landscape-logo-white.png" class="img-fluid" alt="Bristol Farms"></a>
+              <a href="javscript:;" class="left-menu-trigger"><i class="fas fa-bars"></i></a>
+            </div>
+            <div class="menu-wrapper">
+              <div class="left-sidebar-menu-wrapper">
+                <ul>
+                  <li class="has-children">
+                    <a href="javscript:;" class="tooltip" data-position="right" data-tooltip="Deals"><i class="label-icon fab fa-angellist"></i> <span class="label">Deals</span> <i class="dropdown-arrow material-icons">keyboard_arrow_down</i></a>
+                    <ul class="child-menu level-2">
+                      <li>
+                        <a href="javscript:;" class="tooltip" data-position="right" data-tooltip="View Deals"><i class="label-icon fas fa-binoculars"></i> <span class="label">View Deals</span></a>
+                      </li>
+                      <li class="has-children">
+                        <a href="javscript:;" class="tooltip" data-position="right" data-tooltip="Vendor Billing"><i class="label-icon fas fa-file-invoice"></i> <span class="label">Vendor Billing</span> <i class="dropdown-arrow material-icons">keyboard_arrow_down</i></a>
+                        <ul class="child-menu  level-3">
+                          <li>
+                            <a href="javscript:;" class="tooltip" data-position="right" data-tooltip="Pending Bills"><i class="label-icon far fa-angry"></i> <span class="label">Pending Bills</span></a>
+                          </li>
+                          <li class="has-children">
+                            <a href="javscript:;" class="tooltip" data-position="right" data-tooltip="Post Bills"><i class="label-icon far fa-smile-beam"></i> <span class="label">Post Bills</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Body Content -->
+      
+      
+    </div>
+  </div>
+
+
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

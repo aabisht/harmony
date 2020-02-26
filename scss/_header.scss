@@ -1,0 +1,104 @@
+.header-container {
+    padding-top: calculateRem($header-height);
+}
+  
+.header-container-wrapper {
+    background-color: $header-bg-color;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 8px 0;
+    padding-left: calculateRem($left-menu-content-width);
+    @include transition(padding 0.2s);
+    height: calculateRem($header-height);
+    @include box-shadow(0 10px 30px 0 rgba($secondary-color,.08));
+  
+    .left-menu-fixed & {
+        padding-left: calculateRem($left-menu-content-fixed-width);
+    }
+  
+    .title {
+      h3 {
+        @include fontSize($header-title-font-size);
+      }
+    }
+  
+    .breadcrumb {
+      background-color: $header-bg-color;
+      padding: 0;
+      margin: 0;
+      @include fontSize($header-breadcrumb-font-size);
+    }
+  }
+  
+  .header-dropdown-wrapper {
+    .header-dropdown-trigger {
+      display: inline-block;
+      @include fontSize($header-dropdown-trigger-font-size);
+      width: calculateRem(50px);
+      height: calculateRem(50px);
+      text-align: center;
+    }
+  
+    .dropdown-menu {
+      position: absolute;
+      right: $header-dropdown-menu-right-position;
+      width: calculateRem($header-dropdown-menu-right-width);
+      z-index: 3;
+      background: $header-dropdown-menu-right-bg-color;
+      @include box-shadow($header-dropdown-menu-right-box-shadow);
+      @include border-bottom-radius(4px);
+      margin-top: 13px;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(all 0.2s);
+      @include translateY(40px);
+  
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+  
+        > li {
+          > a {
+            display: block;
+            padding: 10px 15px;
+            border-bottom: 1px solid #f7f7f7;
+            border-top: 1px solid #f1f1f1;
+            color: $header-dropdown-menu-link-color;
+            text-decoration: none;
+          }
+  
+          &:first-child {
+            > a {
+              border-top: none;
+            }
+          }
+  
+          &:last-child {
+            > a {
+              border-bottom: none;
+            }
+          }
+  
+          &:hover {
+            > a {
+              color: $header-dropdown-menu-link-hover-color;
+              background-color: $header-dropdown-menu-link-hover-bg-color;
+            }
+          }
+        }
+      }
+    }
+  
+    &.active {
+      .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        @include translateY(0);
+      }
+    }
+}

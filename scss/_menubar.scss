@@ -1,0 +1,127 @@
+.left-menu-wrapper {
+    padding-left: calculateRem($left-menu-content-width);
+}
+  
+.left-menu-content-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    background: $left-menu-content-bg-color;
+    width: calculateRem($left-menu-content-width);
+    z-index: 3;
+    @include box-shadow($left-menu-content-box-shadow);
+    padding: ($grid-gutter-width/2-5) $grid-gutter-width/2;
+    @include transition(width 0.2s);
+  
+    .logo-wrapper {
+      margin-bottom: $grid-gutter-width/2;
+      min-height: calculateRem($left-menu-logo-wrapper-height);
+    }
+  
+    .left-menu-logo {
+      width: calculateRem($left-menu-logo-width);
+    }
+  
+    .left-menu-trigger {
+      @include fontSize($left-menu-menu-trigger-font-size);
+      color: $left-menu-menu-color;
+      text-decoration: none;
+      @include flex(0 0 100%);
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .menu-wrapper {
+      margin-left: -$grid-gutter-width/2;
+      margin-right: -$grid-gutter-width/2;
+    }
+  
+    .left-menu-logo,
+    .left-sidebar-menu-wrapper .label {
+        display: none;
+    }
+}
+  
+.left-menu-fixed {
+    .left-menu-wrapper {
+        padding-left: calculateRem($left-menu-content-fixed-width);
+    }
+    .left-menu-content-wrapper {
+        width: calculateRem($left-menu-content-fixed-width);
+        @include transition(all 0.2s);
+    }
+
+    .left-menu-trigger {
+        @include flex(0 0 auto);
+        max-width: none;
+        text-align: center;
+    }
+
+    .left-menu-logo,
+    .left-sidebar-menu-wrapper .label {
+        display: inline-block;
+    }
+}
+
+
+// Menu Bar Styling Not required for angular app
+.left-sidebar-menu-wrapper {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background: rgba(0, 0, 0, 0.2);
+        color: $color-white;
+
+        li {
+            a {
+                line-height: 48px;
+                position: relative;
+                cursor: pointer;
+                color: $color-white;
+                text-decoration: none;
+                display: block;
+                height: 48px;
+                -webkit-tap-highlight-color: transparent;
+                width: 100%;
+                font-size: 16px;
+                padding: 0 60px 0 16px;
+
+                .label-icon  {
+                    margin-right: 16px;
+                }
+            }
+
+            .child-menu {
+                display: none;
+            }
+
+            &.has-children {
+                > a {
+                    position: relative;
+
+                    .dropdown-arrow {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        line-height: 48px;
+                        width: 50px;
+                        text-align: center;
+                        @include rotate(-90);
+                        @include transition(all 0.3s);
+                    }
+                }
+
+                &.active {
+                    > a {
+                        .dropdown-arrow {
+                            @include rotate(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,22 +1,32 @@
 @use 'sass:map';
 
 // Normalize
-@import './vendor/normalize/normalize';
+@import 'vendor/normalize/normalize';
 
 // Bootstrap
-@import "./vendor/bootstrap/functions";
-@import "./vendor/bootstrap/variables";
-@import "./vendor/bootstrap/mixins";
-@import "./vendor/bootstrap/root";
-@import "./vendor/bootstrap/reboot";
-@import "./vendor/bootstrap/images";
-@import "./vendor/bootstrap/grid";
-@import "./vendor/bootstrap/utilities";
-@import "./vendor/bootstrap/breadcrumb";
+@import "vendor/bootstrap/functions";
+@import "vendor/bootstrap/variables";
+@import "vendor/bootstrap/mixins";
+@import "vendor/bootstrap/utilities";
+@import "vendor/bootstrap/root";
+@import "vendor/bootstrap/reboot";
+@import "vendor/bootstrap/images";
+@import "vendor/bootstrap/containers";
+@import "vendor/bootstrap/grid";
+@import "vendor/bootstrap/transitions";
+@import "vendor/bootstrap/card";
+@import "vendor/bootstrap/breadcrumb";
+@import "vendor/bootstrap/list-group";
+@import "vendor/bootstrap/helpers";
+@import "vendor/bootstrap/utilities/api";
 
-@import './variables';
-@import './mixins';
+
+@import 'variables';
+@import 'mixins';
 
 // Custom Styling
-@import './type';
-@import './font';
+@import 'type';
+@import 'font';
+
+@import 'header';
+@import 'menubar'
