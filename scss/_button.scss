@@ -20,6 +20,7 @@
     border-radius: 4px;
     overflow: visible;
     position: relative;
+    @include transition(all 0.2s);
 
     &:hover, &:focus {
         outline: 0;

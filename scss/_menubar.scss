@@ -76,6 +76,7 @@
         color: $color-white;
 
         li {
+            
             a {
                 line-height: 48px;
                 position: relative;
@@ -92,6 +93,13 @@
 
                 .label-icon  {
                     margin-right: 16px;
+                }
+            }
+
+            &.active {
+                > a {
+                    background-color: rgba(0,0,0,0.1);
+                    border-bottom-color: rgba(0,0,0,0.2);
                 }
             }
 
