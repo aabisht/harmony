@@ -106,3 +106,17 @@ a {
     padding-left: calculateRem($left-menu-content-fixed-width);
   }
 }
+
+.card {
+  .card-title {
+    font-weight: 600;
+
+    #select-row-num {
+      font-size: 14px;
+    }
+  }
+}
+
+.row {
+  margin-bottom: 0;
+}

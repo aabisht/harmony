@@ -35,5 +35,9 @@ $(document).ready(function() {
     
     $('select').formSelect();
     // $('.datepicker').datepicker();
+    $(".datepicker").flatpickr({
+        enableTime: true,
+        dateFormat: "m-d-Y",
+    });
 
 });

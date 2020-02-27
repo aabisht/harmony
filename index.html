@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Home | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
   <link href="./css/vendor/fontawesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/vendor/flatpickr.min.css">
   <link rel="stylesheet" href="./css/vendor/materialize.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
@@ -32,11 +33,10 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>Pending Billing</h3>
+                      <h3>Home</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="#">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Pending Billing</li>
+                          <li class="breadcrumb-item active" aria-current="page">Home</li>
                         </ol>
                       </div>
                     </div>
@@ -47,12 +47,21 @@
                 <div class="cell-wrapper">
                   <div class="header-dropdown-wrapper">
                     <a href="javascript:;" class="header-dropdown-trigger"><i class="far fa-user-circle"></i></a>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu text-left">
+                      <div class="header-dropdown-user-profile-wrapper text-center">
+                        <div class="user-avatar-wrapper">
+                          <i class="far fa-user-circle"></i>
+                        </div>
+                        <div class="user-detail-wrapper">
+                          <h3><a href="javascript:;">User Name</a></h3>
+                          <h5>Admin</h5>
+                        </div>
+                      </div>
                       <ul>
                         <li><a href="javascript:;">Menu 1</a></li>
                         <li><a href="javascript:;">Menu 2</a></li>
                         <li><a href="javascript:;">Menu 3</a></li>
-                        <li><a href="javascript:;">Menu 4</a></li>
+                        <li><a href="javascript:;">Logout</a></li>
                       </ul>
                     </div>
                   </div>
@@ -74,7 +83,7 @@
               <div class="card header-search-card-wrapper">
                 <div class="card-content">
                   <h3 class="card-title">Deals ended between</h3>
-                  <div class="row align-items-end">
+                  <div class="row align-items-center">
                     <div class="col-lg-5 col-md-4">
                       <div class="cell-wrapper">
                         <div class="input-field">
@@ -94,7 +103,7 @@
                     <div class="col-lg-2 col-md-4">
                       <div class="cell-wrapper">
                         <div class="button-wrapper">
-                          <a href="javascrip:;" class="button-primary">Search</a>
+                          <a href="javascrip:;" class="button-primary button-block">Search</a>
                         </div>
                       </div>
                     </div>
@@ -145,10 +154,9 @@
 
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="js/vendor/jquery-3.4.1.min.js"></script>
-  <script src="js/vendor/jquery-ui.min.js"></script>
-  <script src="js/vendor/jquery.event.drag-2.3.0.js"></script>
   <script src="js/vendor/ag-grid-enterprise.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/vendor/flatpickr.js"></script>
+  <script src="js/vendor/materialize.min.js"></script>
 
 
   <script src="js/main.js"></script>
@@ -206,7 +214,7 @@
       var rowCount = event.api.getSelectedNodes().length;
       console.log('selection changed, ' + rowCount + ' rows selected');
       if(rowCount > 0) {
-        $('#select-row-num').html(rowCount + ' <span>selected</span>');
+        $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
       } else {
         $('#select-row-num').html('');
       }

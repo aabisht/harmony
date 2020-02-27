@@ -65,18 +65,40 @@
         > li {
           > a {
             display: block;
-            padding: 10px 15px;
+            padding: 10px 35px 10px 20px;
             border-bottom: 1px solid #f7f7f7;
             border-top: 1px solid #f1f1f1;
             color: $header-dropdown-menu-link-color;
             text-decoration: none;
-          }
-  
-          &:first-child {
-            > a {
-              border-top: none;
+            position: relative;
+            @include transition(padding 0.2s);
+
+            &:after {
+              content: "\f054";
+              font-family: "Font Awesome";
+              font-weight: 900;
+              -moz-osx-font-smoothing: grayscale;
+              -webkit-font-smoothing: antialiased;
+              display: inline-block;
+              font-style: normal;
+              font-variant: normal;
+              text-rendering: auto;
+              line-height: 1;
+              @include font-size(12px);
+              opacity: 0.8;
+              position: absolute;
+              right: 25px;
+              top: 50%;
+              margin-top: -5px;
+              @include transition(right 0.2s);
             }
           }
+  
+          // &:first-child {
+          //   > a {
+          //     border-top: none;
+          //   }
+          // }
   
           &:last-child {
             > a {
@@ -88,6 +110,11 @@
             > a {
               color: $header-dropdown-menu-link-hover-color;
               background-color: $header-dropdown-menu-link-hover-bg-color;
+              padding-left: 15px;
+
+              &:after { 
+                right: 20px;
+              }
             }
           }
         }
@@ -101,4 +128,26 @@
         @include translateY(0);
       }
     }
+}
+
+.header-dropdown-user-profile-wrapper {
+  padding: $grid-gutter-width/2;
+  border-bottom: 1px solid #f7f7f7;
+
+  .user-avatar-wrapper {
+    @include font-size(50px);
+    color: darken($primary-color, 20%);
+    margin-bottom: $grid-gutter-width/2 - 5;
+  }
+
+  .user-detail-wrapper {
+    a {
+      color: $header-dropdown-menu-link-color;
+
+      &:hover {
+        color: $header-dropdown-menu-link-hover-color;
+        text-decoration: none;
+      }
+    }
+  }
 }

@@ -5,28 +5,50 @@
     width: auto;
 
     &.ag-theme-material {
+        color: $datatable-text-color;
+
+        .card & {
+            margin-bottom: -24px;
+
+            .ag-paging-panel {
+                background-color: $datatable-header-bg-color;
+            }
+        }
+
         .ag-header-cell,
         .ag-header-group-cell {
-            background-color: #efefef;
+            background-color: $datatable-header-bg-color;
 
             &:first-of-type {
                 &.ag-column-resizing, &:hover {
-                    background-color: darken(#efefef, 5%);
+                    background-color: darken($datatable-header-bg-color, 5%);
                 }
             }
         }
         .ag-header-cell {
             &:not(.ag-column-resizing) + .ag-header-cell {
                 &.ag-column-resizing, &:hover {
-                    background-color: darken(#efefef, 5%);
+                    background-color: darken($datatable-header-bg-color, 5%);
                 }
             }
         }
         .ag-header-group-cell {
             &:not(.ag-column-resizing) + .ag-header-group-cell {
               &.ag-column-resizing, &:hover {
-                background-color: darken(#efefef, 5%);
+                background-color: darken($datatable-header-bg-color, 5%);
               }
+            }
+        }
+
+        .ag-row-selected {
+            background-color: $datatable-selected-row-bg-color;
+        }
+
+        .ag-icon {
+            color: $datatable-text-color;
+
+            &.ag-icon-checkbox-checked {
+                color: $datatable-selected-checkbox-color;
             }
         }
     }

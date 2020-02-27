@@ -75,7 +75,7 @@ $form-focus-color: map.get($mat-c-green, 500);
 // Header
 $header-height: 72px !default;
 $header-bg-color: $color-white !default;
-$header-title-font-size: 20px !default;
+$header-title-font-size: 24px !default;
 $header-breadcrumb-font-size: 12px !default;
 
 $header-dropdown-trigger-font-size: 34px !default;
@@ -88,7 +88,7 @@ $header-dropdown-menu-right-bg-color: $color-white !default;
 $header-dropdown-menu-right-box-shadow: 0 2px 1px -1px rgba($color-black,.2), 0 1px 1px 0 rgba($color-black,.14), 0 1px 3px 0 rgba($color-black,.12) !default;
 
 $header-dropdown-menu-link-color: $secondary-color !default;
-$header-dropdown-menu-link-hover-color: $primary-color !default;
+$header-dropdown-menu-link-hover-color: darken($primary-color, 20%) !default;
 $header-dropdown-menu-link-hover-bg-color: #fdfdfd !default;
 
 // Left Menu
@@ -104,6 +104,12 @@ $left-menu-menu-trigger-font-size: 34px !default;
 $left-menu-menu-color: $color-white !default;
 
 // Button
-$button-primary-bg-color: darken($primary-color, 20%);
-$button-primary-text-color: $color-white;
-$button-primary-border-color: darken($button-primary-bg-color, 5%);
+$button-primary-bg-color: darken($primary-color, 20%) !default;
+$button-primary-text-color: $color-white !default;
+$button-primary-border-color: darken($button-primary-bg-color, 5%) !default;
+
+// Data Table
+$datatable-text-color: $secondary-color !default;
+$datatable-header-bg-color: #efefef !default;
+$datatable-selected-checkbox-color: darken($primary-color, 20%) !default;
+$datatable-selected-row-bg-color: lighten($primary-color, 20%) !default;
