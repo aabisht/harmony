@@ -1,6 +1,6 @@
 $(document).ready(function() { 
     loadLeftMenu();
-    loadHeader();
+    // loadHeader();
     
     function loadLeftMenu() {
         return $('.left-menu-wrapper').load("template/left-menu.html", function() { 
@@ -8,11 +8,11 @@ $(document).ready(function() {
         });
     }
 
-    function loadHeader() {
-        return $('.header-container').load("template/header.html", function() { 
-            $(this).trigger('create');
-        });
-    }
+    // function loadHeader() {
+    //     return $('.header-container').load("template/header.html", function() { 
+    //         $(this).trigger('create');
+    //     });
+    // }
 
     $('body').on('click', '.header-dropdown-trigger', function(event) {
         event.preventDefault();
@@ -39,8 +39,7 @@ $(document).ready(function() {
         $(this).parent().toggleClass('active');
     });
     
-    $(document).ready(function(){
-        $('select').formSelect();
-    });
+    $('select').formSelect();
+    $('.datepicker').datepicker();
 
 });
