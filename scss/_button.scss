@@ -1,0 +1,47 @@
+%button-styling {
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    position: relative;
+}
+.button-primary {
+    @extend %button-styling;
+    background-color: $button-primary-bg-color;
+    color: $button-primary-text-color;
+    border: 1px solid $button-primary-border-color;
+    text-decoration: none !important;
+
+    &:hover, &:focus {
+        background-color: darken($button-primary-bg-color, 10%);
+        color: $button-primary-text-color;
+        border: 1px solid $button-primary-border-color;
+    }
+
+    &.button-stroked {
+        background-color: transparent;
+        color: $button-primary-bg-color;
+        border: 1px solid $button-primary-border-color;
+
+        &:hover, &:focus { 
+            background-color: darken($button-primary-bg-color, 10%);
+            color: $color-white;
+        }
+    }
+}

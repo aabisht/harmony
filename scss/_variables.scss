@@ -103,5 +103,7 @@ $left-menu-logo-width: 220px !default;
 $left-menu-menu-trigger-font-size: 34px !default;
 $left-menu-menu-color: $color-white !default;
 
-
-// @debug $mat-c-green;
+// Button
+$button-primary-bg-color: darken($primary-color, 20%);
+$button-primary-text-color: $color-white;
+$button-primary-border-color: darken($button-primary-bg-color, 5%);

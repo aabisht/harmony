@@ -32,11 +32,11 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>Vendor Billing</h3>
+                      <h3>Pending Billing</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="#">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Vendor Billing</li>
+                          <li class="breadcrumb-item active" aria-current="page">Pending Billing</li>
                         </ol>
                       </div>
                     </div>
@@ -73,16 +73,9 @@
             <div class="container-fluid">
               <div class="card header-search-card-wrapper">
                 <div class="card-content">
+                  <h3 class="card-title">Deals ended between</h3>
                   <div class="row align-items-end">
-                    <div class="col-lg-4">
-                      <div class="cell-wrapper">
-                        <div class="input-field">
-                          <input id="search_deal_ended_between" type="text" class="validate">
-                          <label for="search_deal_ended_between">Deals ended between</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-5 col-md-4">
                       <div class="cell-wrapper">
                         <div class="input-field">
                           <input id="search_start_date" type="text" class="datepicker">
@@ -90,7 +83,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-5 col-md-4">
                       <div class="cell-wrapper">
                         <div class="input-field">
                           <input id="search_end_date" type="text" class="datepicker">
@@ -98,10 +91,10 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-2 col-md-4">
                       <div class="cell-wrapper">
                         <div class="button-wrapper">
-                          <a href="javascrip:;" class="btn-large block waves-effect waves-light">Search</a>
+                          <a href="javascrip:;" class="button-primary">Search</a>
                         </div>
                       </div>
                     </div>
@@ -115,7 +108,30 @@
             <div class="container-fluid">
               <div class="card">
                 <div class="card-content">
+                  <div class="card-header d-flex flex-row justify-content-between align-items-center">
+                    <div class="card-title-wrapper">
+                      <h3 class="card-title">Pending Billing <span id="select-row-num"></span></h3>
+                    </div>
+                    <div class="card-header-action-wrapper">
+                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                        <div class="input-field-wrapper header-action-item">
+                          <div class="input-field d-flex flex-row justify-content-end align-items-center">
+                            <span class="page-size-label">Item to Show</span>
+                            <select onchange="onPageSizeChanged()" id="page-size">
+                              <option value="10">10</option>
+                              <option value="20">20</option>
+                              <option value="50">50</option>
+                            </select>
+                          </div>
+                        </div>
+                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-filter"></i> Filter</button>
+                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-arrow-up"></i><i class="fas fa-arrow-down"></i> Sort</button>
+                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-download"></i></button>
+                      </div>
+                    </div>
+                  </div>
                   <div id="datatable" class="datatable ag-theme-material"></div>
+                  
                 </div>
               </div>
             </div>
@@ -138,7 +154,7 @@
   <script src="js/main.js"></script>
 
   <script>
-    $(function () {
+    var gridOptions;
       var columnDefs = [
         {
           headerName: "UPC", 
@@ -156,19 +172,19 @@
         {headerName: "End Date", field: "end_date"},
       ];
       $.get("data/pendin-bills.json", function(data, status){
-        console.log(data);    
-        var gridOptions = {
+        gridOptions = {
           defaultColDef: {
             editable: false,
             resizable: true,
             sortable:true,
           },
-          suppressRowClickSelection: true,
           rowSelection: 'multiple',
           columnDefs: columnDefs,
           rowData: data,
           pagination: true,
           paginationPageSize: 10,
+          onRowSelected: onRowSelected,
+          onSelectionChanged: onSelectionChanged,
           paginationNumberFormatter: function(params) {
               return '[' + params.value.toLocaleString() + ']';
           }
@@ -176,6 +192,32 @@
         var gridDiv = document.querySelector('#datatable');
         new agGrid.Grid(gridDiv, gridOptions);    
       });
+
+    function onPageSizeChanged(newPageSize) {
+      var value = document.getElementById('page-size').value;
+      gridOptions.api.paginationSetPageSize(Number(value));
+    }
+
+    function onRowSelected(event) {
+      console.log("row " + event.node.data.upc + " selected = " + event.node.selected);
+    }
+
+    function onSelectionChanged(event) {
+      var rowCount = event.api.getSelectedNodes().length;
+      console.log('selection changed, ' + rowCount + ' rows selected');
+      if(rowCount > 0) {
+        $('#select-row-num').html(rowCount + ' <span>selected</span>');
+      } else {
+        $('#select-row-num').html('');
+      }
+    }
+
+    $(document).ready(function() { 
+      $(window).on("load resize ",function(e){
+        console.log($(document).outerHeight(true));
+        
+      });
+      $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 68);
     });
   </script>
 

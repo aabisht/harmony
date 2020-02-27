@@ -8,12 +8,6 @@ $(document).ready(function() {
         });
     }
 
-    // function loadHeader() {
-    //     return $('.header-container').load("template/header.html", function() { 
-    //         $(this).trigger('create');
-    //     });
-    // }
-
     $('body').on('click', '.header-dropdown-trigger', function(event) {
         event.preventDefault();
         event.stopPropagation();
@@ -40,6 +34,6 @@ $(document).ready(function() {
     });
     
     $('select').formSelect();
-    $('.datepicker').datepicker();
+    // $('.datepicker').datepicker();
 
 });

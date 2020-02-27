@@ -1,4 +1,49 @@
 .datatable {
-    width: 100%;
     height: 400px;
+    margin-left: -24px;
+    margin-right: -24px;
+    width: auto;
+
+    &.ag-theme-material {
+        .ag-header-cell,
+        .ag-header-group-cell {
+            background-color: #efefef;
+
+            &:first-of-type {
+                &.ag-column-resizing, &:hover {
+                    background-color: darken(#efefef, 5%);
+                }
+            }
+        }
+        .ag-header-cell {
+            &:not(.ag-column-resizing) + .ag-header-cell {
+                &.ag-column-resizing, &:hover {
+                    background-color: darken(#efefef, 5%);
+                }
+            }
+        }
+        .ag-header-group-cell {
+            &:not(.ag-column-resizing) + .ag-header-group-cell {
+              &.ag-column-resizing, &:hover {
+                background-color: darken(#efefef, 5%);
+              }
+            }
+        }
+    }
+}
+
+.card-header-action-wrapper {
+    .button-wrapper {
+        .header-action-item {
+            & + .header-action-item {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.page-size-label {
+    margin-right: 8px;
+    position: relative;
+    top: -5px;
 }
