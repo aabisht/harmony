@@ -1,0 +1,182 @@
+[
+    {
+      "upc": "UPC000001",
+      "bill_to": "Elsie Best",
+      "doc_id": 180,
+      "doc_price": "$3,115.99"
+    },
+    {
+      "upc": "UPC000002",
+      "bill_to": "Fanny Leach",
+      "doc_id": 874,
+      "doc_price": "$3,186.61"
+    },
+    {
+      "upc": "UPC000003",
+      "bill_to": "Christine Wooten",
+      "doc_id": 125,
+      "doc_price": "$2,667.26"
+    },
+    {
+      "upc": "UPC000004",
+      "bill_to": "Elaine Jenkins",
+      "doc_id": 284,
+      "doc_price": "$2,544.79"
+    },
+    {
+      "upc": "UPC000005",
+      "bill_to": "Pamela Morrow",
+      "doc_id": 120,
+      "doc_price": "$2,206.52"
+    },
+    {
+      "upc": "UPC000006",
+      "bill_to": "Anna Dyer",
+      "doc_id": 859,
+      "doc_price": "$2,234.28"
+    },
+    {
+      "upc": "UPC000007",
+      "bill_to": "Sonya Hanson",
+      "doc_id": 361,
+      "doc_price": "$3,099.63"
+    },
+    {
+      "upc": "UPC000008",
+      "bill_to": "Linda Fisher",
+      "doc_id": 290,
+      "doc_price": "$2,348.93"
+    },
+    {
+      "upc": "UPC000009",
+      "bill_to": "Hanson Dawson",
+      "doc_id": 790,
+      "doc_price": "$2,430.05"
+    },
+    {
+      "upc": "UPC0000010",
+      "bill_to": "Rosella Pruitt",
+      "doc_id": 293,
+      "doc_price": "$3,958.98"
+    },
+    {
+      "upc": "UPC0000011",
+      "bill_to": "Aline Cunningham",
+      "doc_id": 132,
+      "doc_price": "$1,431.43"
+    },
+    {
+      "upc": "UPC0000012",
+      "bill_to": "Nikki Wilkerson",
+      "doc_id": 902,
+      "doc_price": "$2,637.62"
+    },
+    {
+      "upc": "UPC0000013",
+      "bill_to": "Lana Moreno",
+      "doc_id": 156,
+      "doc_price": "$3,298.31"
+    },
+    {
+      "upc": "UPC0000014",
+      "bill_to": "Joyner Guy",
+      "doc_id": 516,
+      "doc_price": "$2,361.28"
+    },
+    {
+      "upc": "UPC0000015",
+      "bill_to": "Araceli Daugherty",
+      "doc_id": 580,
+      "doc_price": "$1,741.62"
+    },
+    {
+      "upc": "UPC0000016",
+      "bill_to": "Mercado Ryan",
+      "doc_id": 987,
+      "doc_price": "$1,656.20"
+    },
+    {
+      "upc": "UPC0000017",
+      "bill_to": "Mercer Meadows",
+      "doc_id": 789,
+      "doc_price": "$1,450.21"
+    },
+    {
+      "upc": "UPC0000018",
+      "bill_to": "Combs Crane",
+      "doc_id": 480,
+      "doc_price": "$3,054.83"
+    },
+    {
+      "upc": "UPC0000019",
+      "bill_to": "Miranda Ray",
+      "doc_id": 830,
+      "doc_price": "$1,634.38"
+    },
+    {
+      "upc": "UPC0000020",
+      "bill_to": "Janelle Figueroa",
+      "doc_id": 355,
+      "doc_price": "$2,775.64"
+    },
+    {
+      "upc": "UPC0000021",
+      "bill_to": "Ford Richard",
+      "doc_id": 151,
+      "doc_price": "$1,159.46"
+    },
+    {
+      "upc": "UPC0000022",
+      "bill_to": "Helene Wiley",
+      "doc_id": 938,
+      "doc_price": "$2,520.20"
+    },
+    {
+      "upc": "UPC0000023",
+      "bill_to": "Velma Blanchard",
+      "doc_id": 423,
+      "doc_price": "$3,295.71"
+    },
+    {
+      "upc": "UPC0000024",
+      "bill_to": "Fox Andrews",
+      "doc_id": 489,
+      "doc_price": "$2,451.03"
+    },
+    {
+      "upc": "UPC0000025",
+      "bill_to": "Tracie Morton",
+      "doc_id": 302,
+      "doc_price": "$2,228.20"
+    },
+    {
+      "upc": "UPC0000026",
+      "bill_to": "Mcclain Christensen",
+      "doc_id": 458,
+      "doc_price": "$1,559.76"
+    },
+    {
+      "upc": "UPC0000027",
+      "bill_to": "Langley Nieves",
+      "doc_id": 752,
+      "doc_price": "$3,386.14"
+    },
+    {
+      "upc": "UPC0000028",
+      "bill_to": "Selena Pickett",
+      "doc_id": 137,
+      "doc_price": "$2,800.31"
+    },
+    {
+      "upc": "UPC0000029",
+      "bill_to": "Marlene Mcgee",
+      "doc_id": 558,
+      "doc_price": "$3,308.31"
+    },
+    {
+      "upc": "UPC0000030",
+      "bill_to": "Hale Herring",
+      "doc_id": 101,
+      "doc_price": "$1,159.82"
+    }
+  ]
