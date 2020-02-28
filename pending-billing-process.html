@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Home | Bristol Farms</title>
+  <title>Process Pending Billing | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -20,6 +20,15 @@
 </head>
 
 <body class="left-menu-fixed">
+  <style>
+    .collapsible-data-table {
+      height: calc(100vh - 90px);
+      background: #fff;
+    }
+    .datatable {
+      height: 620px;
+    }
+  </style>
 
   <div class="body-container-wrapper">
     <div class="body-wrapper">
@@ -33,10 +42,12 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>Home</h3>
+                      <h3>Process</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                          <li class="breadcrumb-item active" aria-current="page">Home</li>
+                          <li class="breadcrumb-item"><a href="/">Home</a></li>
+                          <li class="breadcrumb-item"><a href="/pending-billing.html">Pending Bills</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Process</li>
                         </ol>
                       </div>
                     </div>
@@ -78,71 +89,44 @@
       <!-- Main Body Content -->
       <div class="main-body-content-wrapper">
         <div class="main-body-content-container">
-          <div class="header-search-wrapper">
-            <div class="container-fluid">
-              <div class="card header-search-card-wrapper">
-                <div class="card-content">
-                  <h3 class="card-title">Deals ended between</h3>
-                  <div class="row align-items-center">
-                    <div class="col-lg-5 col-md-4">
-                      <div class="cell-wrapper">
-                        <div class="input-field">
-                          <input id="search_start_date" type="text" class="datepicker">
-                          <label for="search_start_date">Start Date</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-5 col-md-4">
-                      <div class="cell-wrapper">
-                        <div class="input-field">
-                          <input id="search_end_date" type="text" class="datepicker">
-                          <label for="search_end_date">End Date</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4">
-                      <div class="cell-wrapper">
-                        <div class="button-wrapper">
-                          <a href="javascrip:;" class="button-primary button-block">Search</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <div class="main-body-data-wrapper">
             <div class="container-fluid">
-              <div class="card">
-                <div class="card-content">
-                  <div class="card-header d-flex flex-row justify-content-between align-items-center">
-                    <div class="card-title-wrapper">
-                      <h3 class="card-title">Pending Billing <span id="select-row-num"></span></h3>
+              
+              <ul class="collapsible collapsible-data-table">
+                <li class="active">
+                  <div class="align-items-center collapsible-header d-flex flex-row justify-content-between">
+                    <div class="header-title">
+                      <h3><i class="fa"></i>Bill To: Vendor 1</h3>
                     </div>
-                    <div class="card-header-action-wrapper" id="cardHeaderAction">
-                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center ">
-                        <div class="input-field-wrapper header-action-item header-action-item-select">
-                          <div class="input-field d-flex flex-row justify-content-end align-items-center">
-                            <span class="page-size-label">Item to Show</span>
-                            <select onchange="onPageSizeChanged()" id="page-size">
-                              <option value="10">10</option>
-                              <option value="20">20</option>
-                              <option value="50">50</option>
-                            </select>
-                          </div>
-                        </div>
-                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-filter"></i> Filter</button>
-                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-sort"></i> Sort</button>
-                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-download"></i></button>
-                      </div>
+                    <div class="header-action-wrapper">
+                      <h3>Total Amout: <span class="header-1-action-total-amt header-action-total-amt"></span></h3>
                     </div>
                   </div>
-                  <div id="datatable" class="datatable ag-theme-material"></div>
-                  
-                </div>
-              </div>
+                  <div class="collapsible-body">
+                    <div id="vendor1Data" class="datatable ag-theme-material"></div>
+                    <div class="footer-btn-wrapper">
+                      <a href="javascript:;" class="button-primary">Finalize All</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="">
+                  <div class="align-items-center collapsible-header d-flex flex-row justify-content-between">
+                    <div class="header-title">
+                      <h3><i class="fa"></i>Bill To: Vendor 2</h3>
+                    </div>
+                    <div class="header-action-wrapper">
+                      <h3>Total Amout: <span class="header-2-action-total-amt header-action-total-amt"></span></h3>
+                    </div>
+                  </div>
+                  <div class="collapsible-body">
+                    <div id="vendor2Data" class="datatable ag-theme-material"></div>
+                    <div class="footer-btn-wrapper">
+                      <a href="javascript:;" class="button-primary">Finalize All</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -162,43 +146,62 @@
   <script src="js/main.js"></script>
 
   <script>
-    var gridOptions;
+    var gridOptions_1, gridOptions_2, data1=[], data2=[], data1_total_price = 0 , data2_total_price = 0;
       var columnDefs = [
-        {
-          headerName: "UPC", 
-          field: "upc",
-          headerCheckboxSelection: true,
-          headerCheckboxSelectionFilteredOnly: true,
-          checkboxSelection: true
-        },
+        {headerName: "UPC", field: "upc"},
+        {headerName: "Description", field: "description"},
         {headerName: "Store", field: "store"},
-        {headerName: "Vendor", field: "vendor"},
-        {headerName: "Bill To", field: "bill_to"},
         {headerName: "Type", field: "type"},
-        {headerName: "Price", field: "price"},
         {headerName: "Start Date", field: "start_date"},
         {headerName: "End Date", field: "end_date"},
+        {headerName: "Price/Unit ($)", field: "price"},
+        {headerName: "Total Unit", field: "unit"},
+        {headerName: "Total ($)", field: "total"},
       ];
-      $.get("data/pendin-bills.json", function(data, status){
-        gridOptions = {
-          defaultColDef: {
-            editable: false,
-            resizable: true,
-            sortable:true,
-          },
-          rowSelection: 'multiple',
+      $.get("data/pending-billing-process.json", function(data, status){
+        $(data["vendor-1"]).each(function() {
+          this.total = parseFloat(this.price) * parseFloat(this.unit);
+          data1_total_price = data1_total_price + this.total;
+          this.price = '$'+ this.price;
+          this.total = '$' + this.total;
+          data1.push(this);
+        });
+
+        $(data["vendor-2"]).each(function() {
+          this.total = parseFloat(this.price) * parseFloat(this.unit);
+          data2_total_price = data2_total_price + this.total;
+          this.price = '$'+ this.price;
+          this.total = '$' + this.total;
+          data2.push(this);
+        });
+
+        $('.header-1-action-total-amt').text(Number.parseFloat(data1_total_price).toFixed(2));
+        $('.header-2-action-total-amt').text(Number.parseFloat(data2_total_price).toFixed(2));
+
+        gridOptions_1 = {
           columnDefs: columnDefs,
-          rowData: data,
+          rowData: data1,
+          suppressContextMenu:true,
           pagination: true,
           paginationPageSize: 10,
-          onRowSelected: onRowSelected,
-          onSelectionChanged: onSelectionChanged,
           paginationNumberFormatter: function(params) {
               return '[' + params.value.toLocaleString() + ']';
           }
         };
-        var gridDiv = document.querySelector('#datatable');
-        new agGrid.Grid(gridDiv, gridOptions);    
+        gridOptions_2 = {
+          columnDefs: columnDefs,
+          rowData: data2,
+          suppressContextMenu:true,
+          pagination: true,
+          paginationPageSize: 10,
+          paginationNumberFormatter: function(params) {
+              return '[' + params.value.toLocaleString() + ']';
+          }
+        };
+        var gridDiv = document.querySelector('#vendor1Data');
+        new agGrid.Grid(gridDiv, gridOptions_1);    
+        var gridDiv = document.querySelector('#vendor2Data');
+        new agGrid.Grid(gridDiv, gridOptions_2);    
       });
 
     function onPageSizeChanged(newPageSize) {
@@ -226,7 +229,7 @@
 
     $(document).ready(function() { 
       $(window).on("load resize ",function(e){
-        $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
+        // $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
       });
     });
   </script>

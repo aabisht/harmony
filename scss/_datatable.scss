@@ -1,3 +1,11 @@
+%card-title-styling {
+    @include fontSize(24px);
+    line-height: calculateRem(32px);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
 .datatable {
     height: 400px;
     margin-left: -24px;
@@ -60,6 +68,12 @@
             & + .header-action-item {
                 margin-left: 10px;
             }
+
+            &.header-action-item-select {
+                .select-wrapper {
+                    width: 90px;
+                }
+            }
         }
     }
 }
@@ -68,4 +82,65 @@
     margin-right: 8px;
     position: relative;
     top: -5px;
+}
+
+.card {
+    .card-title {
+        @extend %card-title-styling;
+    }
+}
+
+.collapsible-data-table {
+    .collapsible-header {
+        .header-title {
+            h3 {
+                @extend %card-title-styling;
+
+                .fa {
+                    @include font-size(16px);
+                    &:before {
+                        content: "\f067";
+                    }
+                }
+            }
+        }
+
+        .header-action-wrapper {
+            h3 {
+                @extend %card-title-styling;
+            }
+        }
+    }
+
+    .active {
+        .collapsible-header {
+            .header-title {
+                h3 {
+                    .fa {
+                        &:before {
+                            content: "\f068";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .collapsible-body {
+        background-color: $color-white;
+        padding: 0 24px;
+        position: relative;
+
+        .footer-btn-wrapper {
+            position: absolute;
+            bottom: 10px;
+            right: 25px;
+            z-index: 1;
+        }
+    }
+
+    .ag-paging-panel {
+        padding-right: calculateRem(180px);
+        background-color: $datatable-header-bg-color;
+    }
 }

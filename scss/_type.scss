@@ -109,8 +109,6 @@ a {
 
 .card {
   .card-title {
-    font-weight: 600;
-
     #select-row-num {
       font-size: 14px;
     }
@@ -119,4 +117,24 @@ a {
 
 .row {
   margin-bottom: 0;
+}
+
+.datepicker {
+  border-bottom: 1px solid #9e9e9e !important;
+}
+
+.flatpickr-day {
+  &.selected, &.startRange, &.endRange, &.selected.inRange, &.startRange.inRange, &.endRange.inRange, &.selected:focus, &.startRange:focus, &.endRange:focus, &.selected:hover, &.startRange:hover, &.endRange:hover, &.selected.prevMonthDay, &.startRange.prevMonthDay, &.endRange.prevMonthDay, &.selected.nextMonthDay, &.startRange.nextMonthDay, &.endRange.nextMonthDay {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  &.today {
+    border-color: $primary-color;
+
+    &:hover, &:focus {
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
 }

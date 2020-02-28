@@ -34,6 +34,7 @@ $(document).ready(function() {
     });
     
     $('select').formSelect();
+    $('.collapsible').collapsible();
     // $('.datepicker').datepicker();
     $(".datepicker").flatpickr({
         enableTime: true,
