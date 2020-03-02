@@ -1,0 +1,166 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Deals | Bristol Farms</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+  <link href="./css/vendor/fontawesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/vendor/flatpickr.min.css">
+  <link rel="stylesheet" href="./css/vendor/materialize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="left-menu-fixed">
+
+  <div class="body-container-wrapper">
+    <div class="body-wrapper">
+
+      <!-- Header -->
+      <header class="header-container">
+        <div class="header-container-wrapper">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-10 header-left-wrapper">
+                <div class="cell-wrapper">
+                  <div class="header-title-nav-wrapper">
+                    <div class="title">
+                      <h3>Deals</h3>
+                      <div aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="/">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Deals</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 header-right-wrapper text-right">
+                <div class="cell-wrapper">
+                  <div class="header-dropdown-wrapper">
+                    <a href="javascript:;" class="header-dropdown-trigger"><i class="far fa-user-circle"></i></a>
+                    <div class="dropdown-menu text-left">
+                      <div class="header-dropdown-user-profile-wrapper text-center">
+                        <div class="user-avatar-wrapper">
+                          <i class="far fa-user-circle"></i>
+                        </div>
+                        <div class="user-detail-wrapper">
+                          <h3><a href="javascript:;">User Name</a></h3>
+                          <h5>Admin</h5>
+                        </div>
+                      </div>
+                      <ul>
+                        <li><a href="javascript:;">Menu 1</a></li>
+                        <li><a href="javascript:;">Menu 2</a></li>
+                        <li><a href="javascript:;">Menu 3</a></li>
+                        <li><a href="javascript:;">Logout</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Left Menu -->
+      <div class="left-menu-wrapper"></div>
+
+      <!-- Main Body Content -->
+      <div class="main-body-content-wrapper">
+        <div class="main-body-content-container">
+          <div class="header-search-wrapper">
+            <div class="container-fluid">
+              <div class="card header-search-card-wrapper">
+                <div class="card-content">
+                  <h3 class="card-title">Deal Import</h3>
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-2 col-md-4">
+                      <div class="cell-wrapper">
+                        <div class="button-wrapper">
+                          <a href="javascrip:;" class="button-primary button-icon-left button-outline button-block download-csv-button"><i class="fas fa-file-download"></i> Download Template</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-5 col-md-4">
+                      <div class="cell-wrapper">
+                        <div class="file-field input-field">
+                          <div class="btn button-primary button-icon-left">
+                            <span><i class="fas fa-file-upload"></i> Upload File</span>
+                            <input type="file">
+                          </div>
+                          <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                      <div class="cell-wrapper">
+                        <div class="button-wrapper">
+                          <a href="./deals-data.html" class="button-primary button-block">Submit</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="js/vendor/jquery-3.4.1.min.js"></script>
+  <script src="js/vendor/ag-grid-enterprise.min.js"></script>
+  <script src="js/vendor/flatpickr.js"></script>
+  <script src="js/vendor/materialize.min.js"></script>
+
+
+  <script src="js/main.js"></script>
+
+  <script>
+      var data = [
+        ['UPC000000001', 'Vendor-2', '$354.44', '$247.59', '$234.59', '04-16-2019', '06-23-2014']
+      ];
+   
+      $(document).ready(function() { 
+        $('body').on('click', '.download-csv-button', function(event) {
+          var csv = 'UPC,Vendor,OI $,Scan Backs,Ad Fee,Start Date,End Date\n';
+          data.forEach(function(row) {
+                  csv += row.join(',');
+                  csv += "\n";
+          });
+          console.log(csv);
+          var hiddenElement = document.createElement('a');
+          hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+          hiddenElement.target = '_blank';
+          hiddenElement.download = 'deals.csv';
+          hiddenElement.click();
+        });
+      });
+  </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

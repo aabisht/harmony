@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Pending Billing | Bristol Farms</title>
+  <title>Pending Accurals | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -33,11 +33,11 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>Pending Billing</h3>
+                      <h3>Pending Accurals</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Pending Billing</li>
+                          <li class="breadcrumb-item active" aria-current="page">Pending Accurals</li>
                         </ol>
                       </div>
                     </div>
@@ -83,21 +83,13 @@
             <div class="container-fluid">
               <div class="card header-search-card-wrapper">
                 <div class="card-content">
-                  <h3 class="card-title">Deals ended between</h3>
-                  <div class="row align-items-center">
+                  <h3 class="card-title">Select Time</h3>
+                  <div class="row justify-content-center align-items-center">
                     <div class="col-lg-5 col-md-4">
                       <div class="cell-wrapper">
                         <div class="input-field">
                           <input id="search_start_date" type="text" class="datepicker">
                           <label for="search_start_date">Start Date</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-5 col-md-4">
-                      <div class="cell-wrapper">
-                        <div class="input-field">
-                          <input id="search_end_date" type="text" class="datepicker">
-                          <label for="search_end_date">End Date</label>
                         </div>
                       </div>
                     </div>
@@ -120,7 +112,7 @@
                 <div class="card-content">
                   <div class="card-header d-flex flex-row justify-content-between align-items-center">
                     <div class="card-title-wrapper">
-                      <h3 class="card-title">Pending Billing <span id="select-row-num"></span></h3>
+                      <h3 class="card-title">Pending Accurals <span id="select-row-num"></span></h3>
                     </div>
                     <div class="card-header-action-wrapper" id="cardHeaderAction">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
@@ -163,7 +155,7 @@
   <script src="js/main.js"></script>
 
   <script>
-    var gridOptions;
+    var gridOptions, gridData=[];
       var columnDefs = [
         {
           headerName: "UPC", 
@@ -173,14 +165,18 @@
           checkboxSelection: true
         },
         {headerName: "Store", field: "store"},
-        {headerName: "Vendor", field: "vendor"},
-        {headerName: "Bill To", field: "bill_to"},
-        {headerName: "Type", field: "type"},
-        {headerName: "Price", field: "price"},
+        {headerName: "$/Unit", field: "price_unit"},
+        {headerName: "Total Units Sold", field: "unit"},
+        {headerName: "Total", field: "total"},
         {headerName: "Start Date", field: "start_date"},
-        {headerName: "End Date", field: "end_date"},
       ];
-      $.get("data/pendin-bills.json", function(data, status){
+      $.get("data/pending-accurals.json", function(data, status){
+        $(data).each(function(item) {
+          this.price_unit = '$'+this.price_unit;
+          this.total = '$'+this.total;
+
+          gridData.push(this);
+        });
         gridOptions = {
           defaultColDef: {
             editable: false,
@@ -189,7 +185,7 @@
           },
           rowSelection: 'multiple',
           columnDefs: columnDefs,
-          rowData: data,
+          rowData: gridData,
           pagination: true,
           paginationPageSize: 10,
           onRowSelected: onRowSelected,
@@ -220,7 +216,7 @@
       if(rowCount > 0) {
         $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
         if($('#cardHeaderAction .button-wrapper .header-action-process').length === 0) {
-          $('#cardHeaderAction .button-wrapper').append('<a href="/pending-billing-process.html" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Process</a>');
+          $('#cardHeaderAction .button-wrapper').append('<a href="javascript:;" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Run Accruals</a>');
         }
       } else {
         $('#select-row-num').html('');

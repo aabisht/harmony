@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Pending Billing | Bristol Farms</title>
+  <title>Deals | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -33,11 +33,11 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>Pending Billing</h3>
+                      <h3>Deals</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Pending Billing</li>
+                          <li class="breadcrumb-item active" aria-current="page">Deals</li>
                         </ol>
                       </div>
                     </div>
@@ -83,28 +83,32 @@
             <div class="container-fluid">
               <div class="card header-search-card-wrapper">
                 <div class="card-content">
-                  <h3 class="card-title">Deals ended between</h3>
-                  <div class="row align-items-center">
-                    <div class="col-lg-5 col-md-4">
+                  <h3 class="card-title">Deal Import</h3>
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-2 col-md-4">
                       <div class="cell-wrapper">
-                        <div class="input-field">
-                          <input id="search_start_date" type="text" class="datepicker">
-                          <label for="search_start_date">Start Date</label>
+                        <div class="button-wrapper">
+                          <a href="javascrip:;" class="button-primary button-icon-left button-outline button-block"><i class="fas fa-file-download"></i> Download Template</a>
                         </div>
                       </div>
                     </div>
                     <div class="col-lg-5 col-md-4">
                       <div class="cell-wrapper">
-                        <div class="input-field">
-                          <input id="search_end_date" type="text" class="datepicker">
-                          <label for="search_end_date">End Date</label>
+                        <div class="file-field input-field">
+                          <div class="btn button-primary button-icon-left">
+                            <span><i class="fas fa-file-upload"></i> Upload File</span>
+                            <input type="file">
+                          </div>
+                          <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="col-lg-2 col-md-4">
                       <div class="cell-wrapper">
                         <div class="button-wrapper">
-                          <a href="javascrip:;" class="button-primary button-block">Search</a>
+                          <a href="javascrip:;" class="button-primary button-block">Submit</a>
                         </div>
                       </div>
                     </div>
@@ -120,7 +124,7 @@
                 <div class="card-content">
                   <div class="card-header d-flex flex-row justify-content-between align-items-center">
                     <div class="card-title-wrapper">
-                      <h3 class="card-title">Pending Billing <span id="select-row-num"></span></h3>
+                      <h3 class="card-title">Deals<br><small>Double Click on row to edit.</small></h3>
                     </div>
                     <div class="card-header-action-wrapper" id="cardHeaderAction">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
@@ -134,9 +138,18 @@
                             </select>
                           </div>
                         </div>
-                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-filter"></i> Filter</button>
-                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-sort"></i> Sort</button>
-                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-download"></i></button>
+                        <div class="input-field-wrapper header-action-item header-action-item-select header-action-item-select-vendoe">
+                          <div class="input-field d-flex flex-row justify-content-end align-items-center">
+                            <span class="page-size-label">Bill To</span>
+                            <select onchange="onPageSizeChanged()" id="page-size">
+                              <option value="10">Vendor-1</option>
+                              <option value="20">Vendor-2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <!-- <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-filter"></i> Filter</button>
+                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-sort"></i> Sort</button> -->
+                        <!-- <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-download"></i></button> -->
                       </div>
                     </div>
                   </div>
@@ -163,43 +176,63 @@
   <script src="js/main.js"></script>
 
   <script>
-    var gridOptions;
+    var gridOptions, gridData=[];
       var columnDefs = [
         {
           headerName: "UPC", 
           field: "upc",
-          headerCheckboxSelection: true,
-          headerCheckboxSelectionFilteredOnly: true,
-          checkboxSelection: true
+          editable: false
         },
-        {headerName: "Store", field: "store"},
-        {headerName: "Vendor", field: "vendor"},
-        {headerName: "Bill To", field: "bill_to"},
-        {headerName: "Type", field: "type"},
-        {headerName: "Price", field: "price"},
-        {headerName: "Start Date", field: "start_date"},
-        {headerName: "End Date", field: "end_date"},
+        {headerName: "Store", field: "store", editable: true},
+        {headerName: "Vendor", field: "vendor", editable: true},
+        {headerName: "Cost Type", field: "cost_type", editable: true},
+        {headerName: "Allowance Type", field: "allowance_type", editable: true},
+        {headerName: "Amount", field: "amount", editable: true},
+        {headerName: "Ad Fee", field: "ad_fee", editable: true},
+        {headerName: "Start Date", field: "start_date", editable: true, cellClass: function(params) { return params.value === '21-12-2018' ? 'data-error' : ''; }},
+        {headerName: "End Date", field: "end_date", editable: true, cellClass: function(params) { return params.value === '18-10-2019' ? 'data-error' : ''; }},
+        // {headerName: "Action", field: "button", cellRenderer: 'actionCellRender', editable: false}
       ];
-      $.get("data/pendin-bills.json", function(data, status){
+      $.get("data/deals.json", function(data, status){
+        $(data).each(function(item) {
+
+          if(this.start_date === '12-21-2018'){
+            this.start_date = '21-12-2018'
+          }
+
+          if(this.end_date === '10-18-2019'){
+            this.end_date = '18-10-2019'
+          }
+
+          gridData.push(this);
+        });
         gridOptions = {
           defaultColDef: {
             editable: false,
             resizable: true,
             sortable:true,
           },
-          rowSelection: 'multiple',
+          singleClickEdit: false,
+          stopEditingWhenGridLosesFocus: false,
           columnDefs: columnDefs,
-          rowData: data,
+          rowData: gridData,
+          editType: 'fullRow',
           pagination: true,
           paginationPageSize: 10,
-          onRowSelected: onRowSelected,
-          onSelectionChanged: onSelectionChanged,
           paginationNumberFormatter: function(params) {
               return '[' + params.value.toLocaleString() + ']';
           },
           onGridReady: function(params) {
             params.api.sizeColumnsToFit();
-          }
+          },
+          onRowValueChanged: function(event) {
+              var data = event.data;
+              M.toast({html: 'Vale for '+data.upc+' value changed.'})
+              // console.log('onRowValueChanged: (' + data.upc + ', ' + data.vendor + ', ' + data.OI + ', ' + ', ' + data.scan_backs + ', ' + data.ad_fee + ')');
+          },
+          // components: {
+          //   actionCellRender: ActionCellRender
+          // }
         };
         var gridDiv = document.querySelector('#datatable');
         new agGrid.Grid(gridDiv, gridOptions);    
@@ -210,27 +243,45 @@
       gridOptions.api.paginationSetPageSize(Number(value));
     }
 
-    function onRowSelected(event) {
-      console.log("row " + event.node.data.upc + " selected = " + event.node.selected);
+    function onBtStartEditing() {
+        gridOptions.api.setFocusedCell(2, 'make');
+        gridOptions.api.startEditingCell({
+            rowIndex: 2,
+            colKey: 'make'
+        });
     }
 
-    function onSelectionChanged(event) {
-      var rowCount = event.api.getSelectedNodes().length;
-      console.log('selection changed, ' + rowCount + ' rows selected');
-      if(rowCount > 0) {
-        $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
-        if($('#cardHeaderAction .button-wrapper .header-action-process').length === 0) {
-          $('#cardHeaderAction .button-wrapper').append('<a href="/pending-billing-process.html" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Process</a>');
-        }
-      } else {
-        $('#select-row-num').html('');
-        $('#cardHeaderAction .button-wrapper .header-action-process').remove();
-      }
+    function ActionCellRender() {
     }
+
+    ActionCellRender.prototype.init = function (params) {
+        this.eGui = document.createElement('div');
+        this.eGui.classList.add('button-wrapper')
+        
+        if (params.value !== "" || params.value !== undefined || params.value !== null) {
+          this.eGui.innerHTML = '<button type="button" class="button-stroked button-primary table-button-edit"><i class="fas fa-edit"></i></button><button type="button" class="button-stroked button-primary table-button-save"><i class="far fa-save"></i></button><button type="button" class="button-stroked button-primary table-button-clancel"><i class="fas fa-times"></i></button>';
+        }
+    };
+
+    ActionCellRender.prototype.getGui = function () {
+        return this.eGui;
+    };
 
     $(document).ready(function() { 
       $(window).on("load resize ",function(e){
         $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
+      });
+
+
+      $('body').on('click', '.table-button-edit', function(event) {
+        // debugger;
+        event.stopPropagation();
+        var rowIndex = parseInt($(this).closest('.ag-row').attr('row-index'));
+        gridOptions.api.setFocusedCell(rowIndex, 'make');
+        gridOptions.api.startEditingCell({
+        rowIndex: rowIndex,
+        colKey: 'make'
+    });
       });
     });
   </script>

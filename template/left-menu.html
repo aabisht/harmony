@@ -29,7 +29,7 @@
                     <a href="javscript:;" class="tooltip" data-position="right" data-tooltip="Allowances"><i class="label-icon fas fa-tasks"></i> <span class="label">Allowances</span><i class="dropdown-arrow material-icons">keyboard_arrow_down</i></a>
                     <ul class="child-menu level-2">
                         <li>
-                            <a href="javscript:;" class="tooltip" data-position="right" data-tooltip="Deals"><i class="label-icon fas fa-shopping-cart"></i> <span class="label">Deals</span></a>
+                            <a href="/deals.html" class="tooltip" data-position="right" data-tooltip="Deals"><i class="label-icon fas fa-shopping-cart"></i> <span class="label">Deals</span></a>
                         </li>
                     </ul>
                 </li>
@@ -62,7 +62,10 @@
                             <a href="javscript:;" class="tooltip" data-position="right" data-tooltip="Accurals"><i class="label-icon far fa-clipboard"></i> <span class="label">Accurals</span><i class="dropdown-arrow material-icons">keyboard_arrow_down</i></a>
                             <ul class="child-menu  level-3">
                                 <li>
-                                    <a href="javscript:;" class="tooltip" data-position="right" data-tooltip="View Accurals"><i class="label-icon far fa-edit"></i> <span class="label">View Accurals</span></a>
+                                    <a href="/pending-accurals.html" class="tooltip" data-position="right" data-tooltip="Pending Accurals"><i class="label-icon far fa-frown"></i> <span class="label">Pending Accurals</span></a>
+                                </li>
+                                <li>
+                                    <a href="javscript:;" class="tooltip" data-position="right" data-tooltip="Past Accurals"><i class="label-icon far fa-smile-beam"></i> <span class="label">Past Accurals</span></a>
                                 </li>
                             </ul>
                         </li>
@@ -91,7 +94,17 @@
         $('.left-sidebar-menu-wrapper .tooltip').tooltip();
 
         $('.left-sidebar-menu-wrapper ul li a').each(function(){ 
-            if($(this).attr('href') === window.location.pathname) {
+            var urlPath = window.location.pathname;
+
+            if(urlPath === '/deals-data.html') {
+                urlPath = '/deals.html'
+            }
+
+            if(urlPath === '/pending-billing-process.html' || urlPath === '/pending-billing-finalize.html' ) {
+                urlPath = '/pending-billing.html'
+            }
+
+            if($(this).attr('href') === urlPath) {
                 
                 $(this).parent().addClass('active');
 

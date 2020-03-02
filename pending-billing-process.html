@@ -160,7 +160,7 @@
       ];
       $.get("data/pending-billing-process.json", function(data, status){
         $(data["vendor-1"]).each(function() {
-          this.total = parseFloat(this.price) * parseFloat(this.unit);
+          this.total = Number.parseFloat(parseFloat(this.price) * parseFloat(this.unit)).toFixed(2);
           data1_total_price = data1_total_price + this.total;
           this.price = '$'+ this.price;
           this.total = '$' + this.total;
@@ -168,15 +168,15 @@
         });
 
         $(data["vendor-2"]).each(function() {
-          this.total = parseFloat(this.price) * parseFloat(this.unit);
+          this.total = Number.parseFloat(parseFloat(this.price) * parseFloat(this.unit)).toFixed(2);
           data2_total_price = data2_total_price + this.total;
           this.price = '$'+ this.price;
           this.total = '$' + this.total;
           data2.push(this);
         });
 
-        $('.header-1-action-total-amt').text(Number.parseFloat(data1_total_price).toFixed(2));
-        $('.header-2-action-total-amt').text(Number.parseFloat(data2_total_price).toFixed(2));
+        $('.header-1-action-total-amt').text('$'+Number.parseFloat(data1_total_price).toFixed(2));
+        $('.header-2-action-total-amt').text('$'+Number.parseFloat(data2_total_price).toFixed(2));
 
         gridOptions_1 = {
           columnDefs: columnDefs,
@@ -186,6 +186,9 @@
           paginationPageSize: 10,
           paginationNumberFormatter: function(params) {
               return '[' + params.value.toLocaleString() + ']';
+          },
+          onGridReady: function(params) {
+            params.api.sizeColumnsToFit();
           }
         };
         gridOptions_2 = {
@@ -196,6 +199,9 @@
           paginationPageSize: 10,
           paginationNumberFormatter: function(params) {
               return '[' + params.value.toLocaleString() + ']';
+          },
+          onGridReady: function(params) {
+            params.api.sizeColumnsToFit();
           }
         };
         var gridDiv = document.querySelector('#vendor1Data');

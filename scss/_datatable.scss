@@ -4,6 +4,13 @@
     font-weight: 600;
     display: block;
     margin-bottom: 8px;
+
+    small {
+        font-size: 50%;
+        line-height: 1;
+        font-style: italic;
+        font-weight: 400;
+    }
 }
 
 .datatable {
@@ -20,6 +27,17 @@
 
             .ag-paging-panel {
                 background-color: $datatable-header-bg-color;
+            }
+        }
+
+        .ag-header {
+            background-color: $datatable-header-bg-color;
+        }
+
+        .ag-cell {
+            &.data-error {
+                background-color: $error-color;
+                color: $color-white;
             }
         }
 
@@ -60,6 +78,38 @@
             }
         }
     }
+
+    &.ag-theme-material {
+        .ag-ltr {
+            .ag-cell-focus.ag-cell-range-single-cell.ag-cell-range-handle {
+                border-color: $primary-color;
+            }
+        
+            .ag-has-focus .ag-cell-focus {
+                &.ag-cell-range-single-cell, &:not(.ag-cell-range-selected) {
+                    border-color: $primary-color;
+                }
+            }
+        }
+        
+        .ag-rtl {
+            .ag-cell-focus.ag-cell-range-single-cell.ag-cell-range-handle {
+                border-color: $primary-color;
+            }
+        
+            .ag-has-focus .ag-cell-focus {
+                &.ag-cell-range-single-cell, &:not(.ag-cell-range-selected) {
+                    border-color: $primary-color;
+                }
+            }
+        }
+
+        .ag-input-wrapper input {
+            &:not([type]):focus, &[type=date]:focus, &[type=datetime-local]:focus, &[type=number]:focus, &[type=tel]:focus, &[type=text]:focus {
+                border-color: $primary-color;
+            }
+        }
+    }
 }
 
 .card-header-action-wrapper {
@@ -69,7 +119,7 @@
                 margin-left: 10px;
             }
 
-            &.header-action-item-select {
+            &.header-action-item-select:not(.header-action-item-select-vendoe) {
                 .select-wrapper {
                     width: 90px;
                 }
@@ -142,5 +192,13 @@
     .ag-paging-panel {
         padding-right: calculateRem(180px);
         background-color: $datatable-header-bg-color;
+    }
+}
+
+.header-search-wrapper {
+    .file-path-wrapper {
+        input.file-path {
+            margin-bottom: 0;
+        }
     }
 }

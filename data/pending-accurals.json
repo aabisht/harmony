@@ -1,0 +1,802 @@
+[
+  {
+    "upc": "UPC000000001",
+    "store": "Codax",
+    "price_unit": "361.53",
+    "unit": 21,
+    "total": "7592.13",
+    "start_date": "01-29-2016"
+  },
+  {
+    "upc": "UPC000000002",
+    "store": "Neteria",
+    "price_unit": "110.05",
+    "unit": 98,
+    "total": "10784.90",
+    "start_date": "09-03-2019"
+  },
+  {
+    "upc": "UPC000000003",
+    "store": "Geekko",
+    "price_unit": "125.86",
+    "unit": 83,
+    "total": "10446.38",
+    "start_date": "08-29-2014"
+  },
+  {
+    "upc": "UPC000000004",
+    "store": "Paprikut",
+    "price_unit": "170.55",
+    "unit": 10,
+    "total": "1705.50",
+    "start_date": "09-23-2017"
+  },
+  {
+    "upc": "UPC000000005",
+    "store": "Valpreal",
+    "price_unit": "376.89",
+    "unit": 100,
+    "total": "37689.00",
+    "start_date": "02-01-2020"
+  },
+  {
+    "upc": "UPC000000006",
+    "store": "Webiotic",
+    "price_unit": "181.38",
+    "unit": 81,
+    "total": "14691.78",
+    "start_date": "12-30-2019"
+  },
+  {
+    "upc": "UPC000000007",
+    "store": "Calcula",
+    "price_unit": "134.89",
+    "unit": 76,
+    "total": "10251.64",
+    "start_date": "04-21-2017"
+  },
+  {
+    "upc": "UPC000000008",
+    "store": "Futurize",
+    "price_unit": "254.05",
+    "unit": 81,
+    "total": "20578.05",
+    "start_date": "04-09-2019"
+  },
+  {
+    "upc": "UPC000000009",
+    "store": "Marketoid",
+    "price_unit": "252.87",
+    "unit": 58,
+    "total": "14666.46",
+    "start_date": "06-15-2018"
+  },
+  {
+    "upc": "UPC0000000010",
+    "store": "Mitroc",
+    "price_unit": "270.36",
+    "unit": 94,
+    "total": "25413.84",
+    "start_date": "02-01-2014"
+  },
+  {
+    "upc": "UPC0000000011",
+    "store": "Pharmex",
+    "price_unit": "108.97",
+    "unit": 24,
+    "total": "2615.28",
+    "start_date": "03-24-2018"
+  },
+  {
+    "upc": "UPC0000000012",
+    "store": "Viocular",
+    "price_unit": "291.77",
+    "unit": 24,
+    "total": "7002.48",
+    "start_date": "04-29-2017"
+  },
+  {
+    "upc": "UPC0000000013",
+    "store": "Silodyne",
+    "price_unit": "358.08",
+    "unit": 51,
+    "total": "18262.08",
+    "start_date": "07-18-2015"
+  },
+  {
+    "upc": "UPC0000000014",
+    "store": "Isbol",
+    "price_unit": "170.51",
+    "unit": 81,
+    "total": "13811.31",
+    "start_date": "08-04-2015"
+  },
+  {
+    "upc": "UPC0000000015",
+    "store": "Fanfare",
+    "price_unit": "117.46",
+    "unit": 81,
+    "total": "9514.26",
+    "start_date": "08-20-2017"
+  },
+  {
+    "upc": "UPC0000000016",
+    "store": "Zork",
+    "price_unit": "225.08",
+    "unit": 31,
+    "total": "6977.48",
+    "start_date": "04-07-2019"
+  },
+  {
+    "upc": "UPC0000000017",
+    "store": "Shadease",
+    "price_unit": "337.83",
+    "unit": 44,
+    "total": "14864.52",
+    "start_date": "02-12-2018"
+  },
+  {
+    "upc": "UPC0000000018",
+    "store": "Collaire",
+    "price_unit": "111.58",
+    "unit": 40,
+    "total": "4463.20",
+    "start_date": "10-31-2016"
+  },
+  {
+    "upc": "UPC0000000019",
+    "store": "Songbird",
+    "price_unit": "307.86",
+    "unit": 97,
+    "total": "29862.42",
+    "start_date": "03-07-2016"
+  },
+  {
+    "upc": "UPC0000000020",
+    "store": "Miraclis",
+    "price_unit": "285.45",
+    "unit": 36,
+    "total": "10276.20",
+    "start_date": "06-14-2017"
+  },
+  {
+    "upc": "UPC0000000021",
+    "store": "Enormo",
+    "price_unit": "316.23",
+    "unit": 13,
+    "total": "4110.99",
+    "start_date": "10-25-2015"
+  },
+  {
+    "upc": "UPC0000000022",
+    "store": "Centuria",
+    "price_unit": "114.16",
+    "unit": 33,
+    "total": "3767.28",
+    "start_date": "10-06-2016"
+  },
+  {
+    "upc": "UPC0000000023",
+    "store": "Cyclonica",
+    "price_unit": "292.20",
+    "unit": 53,
+    "total": "15486.60",
+    "start_date": "03-15-2016"
+  },
+  {
+    "upc": "UPC0000000024",
+    "store": "Fishland",
+    "price_unit": "153.78",
+    "unit": 43,
+    "total": "6612.54",
+    "start_date": "07-05-2014"
+  },
+  {
+    "upc": "UPC0000000025",
+    "store": "Darwinium",
+    "price_unit": "122.91",
+    "unit": 65,
+    "total": "7989.15",
+    "start_date": "04-08-2018"
+  },
+  {
+    "upc": "UPC0000000026",
+    "store": "Balooba",
+    "price_unit": "259.56",
+    "unit": 69,
+    "total": "17909.64",
+    "start_date": "04-14-2014"
+  },
+  {
+    "upc": "UPC0000000027",
+    "store": "Andryx",
+    "price_unit": "235.69",
+    "unit": 51,
+    "total": "12020.19",
+    "start_date": "04-11-2018"
+  },
+  {
+    "upc": "UPC0000000028",
+    "store": "Paragonia",
+    "price_unit": "137.04",
+    "unit": 13,
+    "total": "1781.52",
+    "start_date": "12-15-2015"
+  },
+  {
+    "upc": "UPC0000000029",
+    "store": "Kage",
+    "price_unit": "398.62",
+    "unit": 92,
+    "total": "36673.04",
+    "start_date": "12-31-2015"
+  },
+  {
+    "upc": "UPC0000000030",
+    "store": "Corporana",
+    "price_unit": "221.96",
+    "unit": 10,
+    "total": "2219.60",
+    "start_date": "07-22-2018"
+  },
+  {
+    "upc": "UPC0000000031",
+    "store": "Amril",
+    "price_unit": "333.51",
+    "unit": 23,
+    "total": "7670.73",
+    "start_date": "12-09-2018"
+  },
+  {
+    "upc": "UPC0000000032",
+    "store": "Harmoney",
+    "price_unit": "123.49",
+    "unit": 16,
+    "total": "1975.84",
+    "start_date": "07-01-2019"
+  },
+  {
+    "upc": "UPC0000000033",
+    "store": "Teraprene",
+    "price_unit": "326.83",
+    "unit": 14,
+    "total": "4575.62",
+    "start_date": "10-10-2014"
+  },
+  {
+    "upc": "UPC0000000034",
+    "store": "Twiggery",
+    "price_unit": "121.88",
+    "unit": 41,
+    "total": "4997.08",
+    "start_date": "08-09-2017"
+  },
+  {
+    "upc": "UPC0000000035",
+    "store": "Geeketron",
+    "price_unit": "291.54",
+    "unit": 32,
+    "total": "9329.28",
+    "start_date": "08-07-2015"
+  },
+  {
+    "upc": "UPC0000000036",
+    "store": "Telpod",
+    "price_unit": "208.60",
+    "unit": 14,
+    "total": "2920.40",
+    "start_date": "12-06-2019"
+  },
+  {
+    "upc": "UPC0000000037",
+    "store": "Pholio",
+    "price_unit": "212.24",
+    "unit": 11,
+    "total": "2334.64",
+    "start_date": "08-09-2014"
+  },
+  {
+    "upc": "UPC0000000038",
+    "store": "Zilidium",
+    "price_unit": "151.00",
+    "unit": 70,
+    "total": "10570.00",
+    "start_date": "09-08-2018"
+  },
+  {
+    "upc": "UPC0000000039",
+    "store": "Genmom",
+    "price_unit": "357.33",
+    "unit": 99,
+    "total": "35375.67",
+    "start_date": "06-27-2015"
+  },
+  {
+    "upc": "UPC0000000040",
+    "store": "Netropic",
+    "price_unit": "153.70",
+    "unit": 58,
+    "total": "8914.60",
+    "start_date": "10-06-2015"
+  },
+  {
+    "upc": "UPC0000000041",
+    "store": "Qnekt",
+    "price_unit": "113.34",
+    "unit": 57,
+    "total": "6460.38",
+    "start_date": "12-11-2019"
+  },
+  {
+    "upc": "UPC0000000042",
+    "store": "Eclipto",
+    "price_unit": "213.98",
+    "unit": 77,
+    "total": "16476.46",
+    "start_date": "01-10-2020"
+  },
+  {
+    "upc": "UPC0000000043",
+    "store": "Oronoko",
+    "price_unit": "215.09",
+    "unit": 83,
+    "total": "17852.47",
+    "start_date": "04-02-2014"
+  },
+  {
+    "upc": "UPC0000000044",
+    "store": "Kineticut",
+    "price_unit": "118.03",
+    "unit": 61,
+    "total": "7199.83",
+    "start_date": "07-30-2018"
+  },
+  {
+    "upc": "UPC0000000045",
+    "store": "Nikuda",
+    "price_unit": "234.96",
+    "unit": 78,
+    "total": "18326.88",
+    "start_date": "04-27-2015"
+  },
+  {
+    "upc": "UPC0000000046",
+    "store": "Orbin",
+    "price_unit": "384.18",
+    "unit": 51,
+    "total": "19593.18",
+    "start_date": "04-21-2014"
+  },
+  {
+    "upc": "UPC0000000047",
+    "store": "Flumbo",
+    "price_unit": "224.64",
+    "unit": 31,
+    "total": "6963.84",
+    "start_date": "07-26-2014"
+  },
+  {
+    "upc": "UPC0000000048",
+    "store": "Plasmos",
+    "price_unit": "195.90",
+    "unit": 12,
+    "total": "2350.80",
+    "start_date": "03-12-2014"
+  },
+  {
+    "upc": "UPC0000000049",
+    "store": "Buzzopia",
+    "price_unit": "220.99",
+    "unit": 20,
+    "total": "4419.80",
+    "start_date": "07-30-2017"
+  },
+  {
+    "upc": "UPC0000000050",
+    "store": "Lunchpod",
+    "price_unit": "104.98",
+    "unit": 88,
+    "total": "9238.24",
+    "start_date": "10-19-2016"
+  },
+  {
+    "upc": "UPC0000000051",
+    "store": "Exosis",
+    "price_unit": "344.36",
+    "unit": 53,
+    "total": "18251.08",
+    "start_date": "05-28-2014"
+  },
+  {
+    "upc": "UPC0000000052",
+    "store": "Chorizon",
+    "price_unit": "332.79",
+    "unit": 23,
+    "total": "7654.17",
+    "start_date": "11-05-2018"
+  },
+  {
+    "upc": "UPC0000000053",
+    "store": "Comtrek",
+    "price_unit": "337.25",
+    "unit": 28,
+    "total": "9443.00",
+    "start_date": "03-26-2018"
+  },
+  {
+    "upc": "UPC0000000054",
+    "store": "Zoxy",
+    "price_unit": "196.93",
+    "unit": 17,
+    "total": "3347.81",
+    "start_date": "12-12-2017"
+  },
+  {
+    "upc": "UPC0000000055",
+    "store": "Accidency",
+    "price_unit": "316.80",
+    "unit": 48,
+    "total": "15206.40",
+    "start_date": "02-24-2018"
+  },
+  {
+    "upc": "UPC0000000056",
+    "store": "Hawkster",
+    "price_unit": "262.40",
+    "unit": 43,
+    "total": "11283.20",
+    "start_date": "03-18-2019"
+  },
+  {
+    "upc": "UPC0000000057",
+    "store": "Tingles",
+    "price_unit": "242.54",
+    "unit": 13,
+    "total": "3153.02",
+    "start_date": "01-20-2020"
+  },
+  {
+    "upc": "UPC0000000058",
+    "store": "Codact",
+    "price_unit": "179.99",
+    "unit": 100,
+    "total": "17999.00",
+    "start_date": "12-01-2019"
+  },
+  {
+    "upc": "UPC0000000059",
+    "store": "Gology",
+    "price_unit": "376.72",
+    "unit": 81,
+    "total": "30514.32",
+    "start_date": "02-19-2018"
+  },
+  {
+    "upc": "UPC0000000060",
+    "store": "Earthplex",
+    "price_unit": "386.40",
+    "unit": 96,
+    "total": "37094.40",
+    "start_date": "05-27-2017"
+  },
+  {
+    "upc": "UPC0000000061",
+    "store": "Comdom",
+    "price_unit": "197.73",
+    "unit": 41,
+    "total": "8106.93",
+    "start_date": "07-18-2018"
+  },
+  {
+    "upc": "UPC0000000062",
+    "store": "Dyno",
+    "price_unit": "265.45",
+    "unit": 18,
+    "total": "4778.10",
+    "start_date": "02-18-2017"
+  },
+  {
+    "upc": "UPC0000000063",
+    "store": "Ziore",
+    "price_unit": "260.62",
+    "unit": 78,
+    "total": "20328.36",
+    "start_date": "08-25-2017"
+  },
+  {
+    "upc": "UPC0000000064",
+    "store": "Olucore",
+    "price_unit": "188.25",
+    "unit": 91,
+    "total": "17130.75",
+    "start_date": "02-24-2016"
+  },
+  {
+    "upc": "UPC0000000065",
+    "store": "Exodoc",
+    "price_unit": "268.91",
+    "unit": 89,
+    "total": "23932.99",
+    "start_date": "10-14-2017"
+  },
+  {
+    "upc": "UPC0000000066",
+    "store": "Sentia",
+    "price_unit": "314.34",
+    "unit": 45,
+    "total": "14145.30",
+    "start_date": "09-25-2019"
+  },
+  {
+    "upc": "UPC0000000067",
+    "store": "Terascape",
+    "price_unit": "357.96",
+    "unit": 49,
+    "total": "17540.04",
+    "start_date": "01-16-2016"
+  },
+  {
+    "upc": "UPC0000000068",
+    "store": "Sustenza",
+    "price_unit": "234.14",
+    "unit": 75,
+    "total": "17560.50",
+    "start_date": "03-03-2016"
+  },
+  {
+    "upc": "UPC0000000069",
+    "store": "Qualitex",
+    "price_unit": "269.36",
+    "unit": 16,
+    "total": "4309.76",
+    "start_date": "01-02-2020"
+  },
+  {
+    "upc": "UPC0000000070",
+    "store": "Ludak",
+    "price_unit": "366.51",
+    "unit": 83,
+    "total": "30420.33",
+    "start_date": "06-15-2015"
+  },
+  {
+    "upc": "UPC0000000071",
+    "store": "Unq",
+    "price_unit": "171.66",
+    "unit": 93,
+    "total": "15964.38",
+    "start_date": "10-01-2018"
+  },
+  {
+    "upc": "UPC0000000072",
+    "store": "Isotrack",
+    "price_unit": "270.30",
+    "unit": 74,
+    "total": "20002.20",
+    "start_date": "04-24-2016"
+  },
+  {
+    "upc": "UPC0000000073",
+    "store": "Housedown",
+    "price_unit": "259.84",
+    "unit": 33,
+    "total": "8574.72",
+    "start_date": "05-16-2016"
+  },
+  {
+    "upc": "UPC0000000074",
+    "store": "Slumberia",
+    "price_unit": "179.00",
+    "unit": 38,
+    "total": "6802.00",
+    "start_date": "05-06-2014"
+  },
+  {
+    "upc": "UPC0000000075",
+    "store": "Comtent",
+    "price_unit": "228.22",
+    "unit": 88,
+    "total": "20083.36",
+    "start_date": "09-23-2015"
+  },
+  {
+    "upc": "UPC0000000076",
+    "store": "Zensor",
+    "price_unit": "343.49",
+    "unit": 73,
+    "total": "25074.77",
+    "start_date": "07-05-2015"
+  },
+  {
+    "upc": "UPC0000000077",
+    "store": "Jumpstack",
+    "price_unit": "336.59",
+    "unit": 94,
+    "total": "31639.46",
+    "start_date": "05-25-2014"
+  },
+  {
+    "upc": "UPC0000000078",
+    "store": "Senmei",
+    "price_unit": "107.20",
+    "unit": 24,
+    "total": "2572.80",
+    "start_date": "05-16-2014"
+  },
+  {
+    "upc": "UPC0000000079",
+    "store": "Multiflex",
+    "price_unit": "129.50",
+    "unit": 25,
+    "total": "3237.50",
+    "start_date": "08-21-2016"
+  },
+  {
+    "upc": "UPC0000000080",
+    "store": "Spherix",
+    "price_unit": "363.11",
+    "unit": 32,
+    "total": "11619.52",
+    "start_date": "06-15-2015"
+  },
+  {
+    "upc": "UPC0000000081",
+    "store": "Interloo",
+    "price_unit": "109.73",
+    "unit": 88,
+    "total": "9656.24",
+    "start_date": "02-19-2016"
+  },
+  {
+    "upc": "UPC0000000082",
+    "store": "Momentia",
+    "price_unit": "293.91",
+    "unit": 84,
+    "total": "24688.44",
+    "start_date": "03-14-2018"
+  },
+  {
+    "upc": "UPC0000000083",
+    "store": "Eventix",
+    "price_unit": "180.86",
+    "unit": 96,
+    "total": "17362.56",
+    "start_date": "03-18-2017"
+  },
+  {
+    "upc": "UPC0000000084",
+    "store": "Parcoe",
+    "price_unit": "131.22",
+    "unit": 46,
+    "total": "6036.12",
+    "start_date": "08-13-2014"
+  },
+  {
+    "upc": "UPC0000000085",
+    "store": "Tellifly",
+    "price_unit": "355.12",
+    "unit": 45,
+    "total": "15980.40",
+    "start_date": "03-30-2017"
+  },
+  {
+    "upc": "UPC0000000086",
+    "store": "Slambda",
+    "price_unit": "126.20",
+    "unit": 58,
+    "total": "7319.60",
+    "start_date": "06-30-2016"
+  },
+  {
+    "upc": "UPC0000000087",
+    "store": "Plasmosis",
+    "price_unit": "132.23",
+    "unit": 59,
+    "total": "7801.57",
+    "start_date": "04-15-2018"
+  },
+  {
+    "upc": "UPC0000000088",
+    "store": "Isodrive",
+    "price_unit": "115.63",
+    "unit": 67,
+    "total": "7747.21",
+    "start_date": "02-27-2016"
+  },
+  {
+    "upc": "UPC0000000089",
+    "store": "Comstruct",
+    "price_unit": "332.38",
+    "unit": 61,
+    "total": "20275.18",
+    "start_date": "02-09-2016"
+  },
+  {
+    "upc": "UPC0000000090",
+    "store": "Vidto",
+    "price_unit": "202.98",
+    "unit": 47,
+    "total": "9540.06",
+    "start_date": "01-04-2014"
+  },
+  {
+    "upc": "UPC0000000091",
+    "store": "Zyple",
+    "price_unit": "381.74",
+    "unit": 87,
+    "total": "33211.38",
+    "start_date": "06-01-2014"
+  },
+  {
+    "upc": "UPC0000000092",
+    "store": "Kog",
+    "price_unit": "246.48",
+    "unit": 18,
+    "total": "4436.64",
+    "start_date": "11-09-2014"
+  },
+  {
+    "upc": "UPC0000000093",
+    "store": "Cogentry",
+    "price_unit": "198.87",
+    "unit": 48,
+    "total": "9545.76",
+    "start_date": "06-14-2014"
+  },
+  {
+    "upc": "UPC0000000094",
+    "store": "Zentry",
+    "price_unit": "287.93",
+    "unit": 38,
+    "total": "10941.34",
+    "start_date": "08-26-2019"
+  },
+  {
+    "upc": "UPC0000000095",
+    "store": "Zilladyne",
+    "price_unit": "396.75",
+    "unit": 33,
+    "total": "13092.75",
+    "start_date": "03-03-2016"
+  },
+  {
+    "upc": "UPC0000000096",
+    "store": "Assistix",
+    "price_unit": "156.81",
+    "unit": 41,
+    "total": "6429.21",
+    "start_date": "12-24-2016"
+  },
+  {
+    "upc": "UPC0000000097",
+    "store": "Brainquil",
+    "price_unit": "251.67",
+    "unit": 90,
+    "total": "22650.30",
+    "start_date": "03-27-2018"
+  },
+  {
+    "upc": "UPC0000000098",
+    "store": "Spacewax",
+    "price_unit": "134.86",
+    "unit": 72,
+    "total": "9709.92",
+    "start_date": "12-04-2019"
+  },
+  {
+    "upc": "UPC0000000099",
+    "store": "Solaren",
+    "price_unit": "140.80",
+    "unit": 88,
+    "total": "12390.40",
+    "start_date": "05-21-2015"
+  },
+  {
+    "upc": "UPC00000000100",
+    "store": "Enquility",
+    "price_unit": "106.66",
+    "unit": 73,
+    "total": "7786.18",
+    "start_date": "01-24-2014"
+  }
+]
