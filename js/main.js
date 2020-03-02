@@ -36,9 +36,11 @@ $(document).ready(function() {
     $('select').formSelect();
     $('.collapsible').collapsible();
     // $('.datepicker').datepicker();
-    $(".datepicker").flatpickr({
-        enableTime: true,
-        dateFormat: "m-d-Y",
+
+    $('body').on('click', '.select-wrapper input.select-dropdown', function(event) {
+        event.stopPropagation();
     });
+
+    $('.tooltip').tooltip();
 
 });

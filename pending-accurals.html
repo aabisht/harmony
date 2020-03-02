@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
   <link href="./css/vendor/fontawesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/vendor/flatpickr.min.css">
+  <link rel="stylesheet" href="./css/vendor/datepicker.min.css">
   <link rel="stylesheet" href="./css/vendor/materialize.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
@@ -88,7 +88,7 @@
                     <div class="col-lg-5 col-md-4">
                       <div class="cell-wrapper">
                         <div class="input-field">
-                          <input id="search_start_date" type="text" class="datepicker">
+                          <input id="search_start_date" type="text" class="datepicker-here" data-language='en' data-min-view="months" data-view="months" data-date-format="MM yyyy" autocomplete="off" value="May 2020">
                           <label for="search_start_date">Start Date</label>
                         </div>
                       </div>
@@ -126,9 +126,9 @@
                             </select>
                           </div>
                         </div>
-                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-filter"></i> Filter</button>
-                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-sort"></i> Sort</button>
-                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-download"></i></button>
+                        <!-- <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-filter"></i> Filter</button>
+                        <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-sort"></i> Sort</button> -->
+                        <button type="button" class="button-stroked button-primary tooltip header-action-item" data-position="bottom" data-tooltip="Download"><i class="fas fa-download"></i></button>
                       </div>
                     </div>
                   </div>
@@ -148,8 +148,9 @@
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="js/vendor/jquery-3.4.1.min.js"></script>
   <script src="js/vendor/ag-grid-enterprise.min.js"></script>
-  <script src="js/vendor/flatpickr.js"></script>
   <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/vendor/datepicker.min.js"></script>
+  <script src="js/vendor/datepicker.en.js"></script>
 
 
   <script src="js/main.js"></script>
@@ -227,6 +228,11 @@
     $(document).ready(function() { 
       $(window).on("load resize ",function(e){
         $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
+      });
+
+      $('.datepicker-here').each(function() {
+        var dp = $(this).datepicker().data('datepicker');
+        dp.selectDate(new Date($(this).attr('value')));
       });
     });
   </script>

@@ -25,9 +25,9 @@
       height: calc(100vh - 90px);
       background: #fff;
     }
-    .datatable {
+    /* .datatable {
       height: 620px;
-    }
+    } */
   </style>
 
   <div class="body-container-wrapper">
@@ -93,7 +93,7 @@
 
           <div class="main-body-data-wrapper">
             <div class="container-fluid">
-              <div class="card">
+              <!-- <div class="card">
                 <div class="card-content">
                   <div class="card-header d-flex flex-row justify-content-between align-items-center">
                     <div class="card-title-wrapper">
@@ -116,7 +116,67 @@
                   </div>
                   <div id="datatable" class="datatable ag-theme-material"></div>
                 </div>
-              </div>
+              </div> -->
+              <ul class="collapsible collapsible-data-table">
+                <li class="">
+                  <div class="align-items-center collapsible-header d-flex flex-row justify-content-between">
+                    <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
+                    <div class="header-title">
+                      <h3>Bill To: Vendor 1</h3>
+                      <h4>Total Amout: <span class="header-1-action-total-amt header-action-total-amt"></span></h4>
+                      <h5>Doc ID: 13</h5>
+                    </div>
+                    <div class="header-action-wrapper">
+                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                        <div class="input-field-wrapper header-action-item header-action-item-select">
+                          <div class="input-field d-flex flex-row justify-content-end align-items-center">
+                            <span class="page-size-label">Item to Show</span>
+                            <select onchange="onPageSizeChanged()" id="page-size">
+                              <option value="10">10</option>
+                              <option value="20">20</option>
+                              <option value="50">50</option>
+                            </select>
+                          </div>
+                        </div>
+                        <a href="javascript:;" class="button-primary header-action-item tooltip" data-position="bottom" data-tooltip="Downlaod CSV file"><i class="fas fa-file-csv"></i> Downlaod</a>
+                        <a href="javascript:;" class="button-primary header-action-item tooltip" data-position="bottom" data-tooltip="Downlaod PDF file"><i class="fas fa-file-pdf"></i> Downlaod</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div id="vendor1Data" class="datatable ag-theme-material"></div>
+                  </div>
+                </li>
+                <li class="">
+                  <div class="align-items-center collapsible-header d-flex flex-row justify-content-between">
+                    <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
+                    <div class="header-title">
+                      <h3>Bill To: Vendor 2</h3>
+                      <h4>Total Amout: <span class="header-2-action-total-amt header-action-total-amt"></span></h4>
+                      <h5>Doc ID: 18</h5>
+                    </div>
+                    <div class="header-action-wrapper">
+                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                        <div class="input-field-wrapper header-action-item header-action-item-select">
+                          <div class="input-field d-flex flex-row justify-content-end align-items-center">
+                            <span class="page-size-label">Item to Show</span>
+                            <select onchange="onPageSizeChanged()" id="page-size">
+                              <option value="10">10</option>
+                              <option value="20">20</option>
+                              <option value="50">50</option>
+                            </select>
+                          </div>
+                        </div>
+                        <a href="javascript:;" class="button-primary header-action-item tooltip" data-position="bottom" data-tooltip="Downlaod CSV file"><i class="fas fa-file-csv"></i> Downlaod</a>
+                        <a href="javascript:;" class="button-primary header-action-item tooltip" data-position="bottom" data-tooltip="Downlaod PDF file"><i class="fas fa-file-pdf"></i> Downlaod</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div id="vendor2Data" class="datatable ag-theme-material"></div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -129,49 +189,77 @@
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="js/vendor/jquery-3.4.1.min.js"></script>
   <script src="js/vendor/ag-grid-enterprise.min.js"></script>
-  <script src="js/vendor/flatpickr.js"></script>
   <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/vendor/datepicker.min.js"></script>
+  <script src="js/vendor/datepicker.en.js"></script>
 
 
   <script src="js/main.js"></script>
-
   <script>
-    var gridOptions;
+  var gridOptions_1, gridOptions_2, data1=[], data2=[], data1_total_price = 0 , data2_total_price = 0;
       var columnDefs = [
-        {
-          headerName: "UPC", 
-          field: "upc",
-          headerCheckboxSelection: true,
-          headerCheckboxSelectionFilteredOnly: true,
-          checkboxSelection: true
-        },
-        {headerName: "Bill To", field: "bill_to"},
-        {headerName: "Doc ID", field: "doc_id"},
-        {headerName: "Doc $", field: "doc_price"}
+        {headerName: "UPC", field: "upc", width: 240},
+        {headerName: "Description", field: "description"},
+        {headerName: "Store", field: "store"},
+        {headerName: "Type", field: "type"},
+        {headerName: "Start Date", field: "start_date"},
+        {headerName: "End Date", field: "end_date"},
+        {headerName: "Price/Unit ($)", field: "price"},
+        {headerName: "Total Unit", field: "unit"},
+        {headerName: "Total ($)", field: "total"},
       ];
-      $.get("data/pending-billing-finalize.json", function(data, status){
-        gridOptions = {
-          defaultColDef: {
-            editable: false,
-            resizable: true,
-            sortable:true,
-          },
-          rowSelection: 'multiple',
+      $.get("data/pending-billing-process.json", function(data, status){
+        $(data["vendor-1"]).each(function() {
+          this.total = Number.parseFloat(parseFloat(this.price) * parseFloat(this.unit)).toFixed(2);
+          data1_total_price = data1_total_price + parseFloat(this.total);
+          this.price = '$'+ this.price;
+          this.total = '$' + this.total;
+          data1.push(this);
+        });
+
+        $(data["vendor-2"]).each(function() {
+          this.total = Number.parseFloat(parseFloat(this.price) * parseFloat(this.unit)).toFixed(2);
+          data2_total_price = data2_total_price + parseFloat(this.total);
+          this.price = '$'+ this.price;
+          this.total = '$' + this.total;
+          data2.push(this);
+        });
+
+
+        gridOptions_1 = {
           columnDefs: columnDefs,
-          rowData: data,
+          rowData: data1,
+          suppressContextMenu:true,
           pagination: true,
           paginationPageSize: 10,
-          onRowSelected: onRowSelected,
-          onSelectionChanged: onSelectionChanged,
           paginationNumberFormatter: function(params) {
               return '[' + params.value.toLocaleString() + ']';
           },
           onGridReady: function(params) {
             params.api.sizeColumnsToFit();
+            $('.header-1-action-total-amt').text('$'+Number.parseFloat(data1_total_price).toFixed(2));
+            $('#vendor1Data').parent().addClass('collapsible-body');
           }
         };
-        var gridDiv = document.querySelector('#datatable');
-        new agGrid.Grid(gridDiv, gridOptions);    
+        gridOptions_2 = {
+          columnDefs: columnDefs,
+          rowData: data2,
+          suppressContextMenu:true,
+          pagination: true,
+          paginationPageSize: 10,
+          paginationNumberFormatter: function(params) {
+              return '[' + params.value.toLocaleString() + ']';
+          },
+          onGridReady: function(params) {
+            params.api.sizeColumnsToFit();
+            $('.header-2-action-total-amt').text('$'+Number.parseFloat(data2_total_price).toFixed(2));
+            $('#vendor2Data').parent().addClass('collapsible-body');
+          }
+        };
+        var gridDiv = document.querySelector('#vendor1Data');
+        new agGrid.Grid(gridDiv, gridOptions_1);    
+        var gridDiv = document.querySelector('#vendor2Data');
+        new agGrid.Grid(gridDiv, gridOptions_2);    
       });
 
     function onPageSizeChanged(newPageSize) {
@@ -179,27 +267,9 @@
       gridOptions.api.paginationSetPageSize(Number(value));
     }
 
-    function onRowSelected(event) {
-      console.log("row " + event.node.data.upc + " selected = " + event.node.selected);
-    }
-
-    function onSelectionChanged(event) {
-      var rowCount = event.api.getSelectedNodes().length;
-      console.log('selection changed, ' + rowCount + ' rows selected');
-      if(rowCount > 0) {
-        $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
-        if($('#cardHeaderAction .button-wrapper .header-action-process').length === 0) {
-          $('#cardHeaderAction .button-wrapper').append('<a href="javascript:;" class="button-primary header-action-item header-action-process"><i class="fas fa-download"></i>  Download Selected</a>');
-        }
-      } else {
-        $('#select-row-num').html('');
-        $('#cardHeaderAction .button-wrapper .header-action-process').remove();
-      }
-    }
-
     $(document).ready(function() { 
       $(window).on("load resize ",function(e){
-        $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 50);
+        // $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
       });
     });
   </script>

@@ -1,0 +1,40 @@
+.datepicker {
+    .datepicker--pointer,
+    .datepicker--nav {
+        background-color: darken($primary-color, 20%);
+    }
+
+    .datepicker--nav {
+        border-bottom-color: darken($primary-color, 25%);
+    }
+
+    .datepicker--nav-action path {
+        stroke: $color-white;
+    }
+
+    .datepicker--cell {
+        &.-selected-,
+        &.-selected-.-current- {
+            background-color: darken($primary-color, 20%);
+        }
+
+        &.-current- {
+            color: darken($primary-color, 20%);
+        }
+    } 
+
+    .datepicker--nav-action, 
+    .datepicker--nav-title {
+        &:hover {
+            background-color: darken($primary-color, 20%);
+        }
+    }
+
+    .datepicker--nav-title i {
+        color: $color-white;
+    }
+
+    .datepicker--day-name {
+        color: darken($primary-color, 20%);
+    }
+}

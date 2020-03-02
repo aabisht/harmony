@@ -35,6 +35,8 @@
         }
 
         .ag-cell {
+            text-transform: capitalize;
+            
             &.data-error {
                 background-color: $error-color;
                 color: $color-white;
@@ -112,17 +114,15 @@
     }
 }
 
-.card-header-action-wrapper {
-    .button-wrapper {
-        .header-action-item {
-            & + .header-action-item {
-                margin-left: 10px;
-            }
+.button-wrapper {
+    .header-action-item {
+        & + .header-action-item {
+            margin-left: 10px;
+        }
 
-            &.header-action-item-select:not(.header-action-item-select-vendoe) {
-                .select-wrapper {
-                    width: 90px;
-                }
+        &.header-action-item-select:not(.header-action-item-select-vendoe) {
+            .select-wrapper {
+                width: 60px;
             }
         }
     }
@@ -142,15 +142,28 @@
 
 .collapsible-data-table {
     .collapsible-header {
+        position: relative;
+        padding-left: calculateRem(50px);
+        
         .header-title {
             h3 {
                 @extend %card-title-styling;
+            }
+        }
 
-                .fa {
-                    @include font-size(16px);
-                    &:before {
-                        content: "\f067";
-                    }
+        .collapsible-header-icon-wrapper {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -15px;
+            text-align: center;
+            width: calculateRem(45px);
+
+            .fa {
+                @include font-size(16px);
+                margin-right: 0;
+                &:before {
+                    content: "\f067";
                 }
             }
         }
@@ -164,12 +177,10 @@
 
     .active {
         .collapsible-header {
-            .header-title {
-                h3 {
-                    .fa {
-                        &:before {
-                            content: "\f068";
-                        }
+            .collapsible-header-icon-wrapper {
+                .fa {
+                    &:before {
+                        content: "\f068";
                     }
                 }
             }

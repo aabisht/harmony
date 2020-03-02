@@ -25,9 +25,6 @@
       height: calc(100vh - 90px);
       background: #fff;
     }
-    .datatable {
-      height: 620px;
-    }
   </style>
 
   <div class="body-container-wrapper">
@@ -94,36 +91,58 @@
             <div class="container-fluid">
               
               <ul class="collapsible collapsible-data-table">
-                <li class="active">
+                <li class="">
                   <div class="align-items-center collapsible-header d-flex flex-row justify-content-between">
+                    <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
                     <div class="header-title">
-                      <h3><i class="fa"></i>Bill To: Vendor 1</h3>
+                      <h3>Bill To: Vendor 1</h3>
+                      <h4>Total Amout: <span class="header-1-action-total-amt header-action-total-amt"></span></h4>
                     </div>
                     <div class="header-action-wrapper">
-                      <h3>Total Amout: <span class="header-1-action-total-amt header-action-total-amt"></span></h3>
+                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                        <div class="input-field-wrapper header-action-item header-action-item-select">
+                          <div class="input-field d-flex flex-row justify-content-end align-items-center">
+                            <span class="page-size-label">Item to Show</span>
+                            <select onchange="onPageSizeChanged()" id="page-size">
+                              <option value="10">10</option>
+                              <option value="20">20</option>
+                              <option value="50">50</option>
+                            </select>
+                          </div>
+                        </div>
+                        <a href="/pending-billing-finalize.html" class="button-primary header-action-item">Finalize All</a>
+                      </div>
                     </div>
                   </div>
-                  <div class="collapsible-body">
+                  <div class="">
                     <div id="vendor1Data" class="datatable ag-theme-material"></div>
-                    <div class="footer-btn-wrapper">
-                      <a href="/pending-billing-finalize.html" class="button-primary">Finalize All</a>
-                    </div>
                   </div>
                 </li>
                 <li class="">
                   <div class="align-items-center collapsible-header d-flex flex-row justify-content-between">
+                    <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
                     <div class="header-title">
-                      <h3><i class="fa"></i>Bill To: Vendor 2</h3>
+                      <h3>Bill To: Vendor 2</h3>
+                      <h4>Total Amout: <span class="header-2-action-total-amt header-action-total-amt"></span></h4>
                     </div>
                     <div class="header-action-wrapper">
-                      <h3>Total Amout: <span class="header-2-action-total-amt header-action-total-amt"></span></h3>
+                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                        <div class="input-field-wrapper header-action-item header-action-item-select">
+                          <div class="input-field d-flex flex-row justify-content-end align-items-center">
+                            <span class="page-size-label">Item to Show</span>
+                            <select onchange="onPageSizeChanged()" id="page-size">
+                              <option value="10">10</option>
+                              <option value="20">20</option>
+                              <option value="50">50</option>
+                            </select>
+                          </div>
+                        </div>
+                        <a href="/pending-billing-finalize.html" class="button-primary header-action-item">Finalize All</a>
+                      </div>
                     </div>
                   </div>
-                  <div class="collapsible-body">
+                  <div class="">
                     <div id="vendor2Data" class="datatable ag-theme-material"></div>
-                    <div class="footer-btn-wrapper">
-                      <a href="/pending-billing-finalize.html" class="button-primary">Finalize All</a>
-                    </div>
                   </div>
                 </li>
               </ul>
@@ -139,8 +158,9 @@
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="js/vendor/jquery-3.4.1.min.js"></script>
   <script src="js/vendor/ag-grid-enterprise.min.js"></script>
-  <script src="js/vendor/flatpickr.js"></script>
   <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/vendor/datepicker.min.js"></script>
+  <script src="js/vendor/datepicker.en.js"></script>
 
 
   <script src="js/main.js"></script>
@@ -148,7 +168,7 @@
   <script>
     var gridOptions_1, gridOptions_2, data1=[], data2=[], data1_total_price = 0 , data2_total_price = 0;
       var columnDefs = [
-        {headerName: "UPC", field: "upc"},
+        {headerName: "UPC", field: "upc", width: 240},
         {headerName: "Description", field: "description"},
         {headerName: "Store", field: "store"},
         {headerName: "Type", field: "type"},
@@ -161,7 +181,7 @@
       $.get("data/pending-billing-process.json", function(data, status){
         $(data["vendor-1"]).each(function() {
           this.total = Number.parseFloat(parseFloat(this.price) * parseFloat(this.unit)).toFixed(2);
-          data1_total_price = data1_total_price + this.total;
+          data1_total_price = data1_total_price + parseFloat(this.total);
           this.price = '$'+ this.price;
           this.total = '$' + this.total;
           data1.push(this);
@@ -169,14 +189,12 @@
 
         $(data["vendor-2"]).each(function() {
           this.total = Number.parseFloat(parseFloat(this.price) * parseFloat(this.unit)).toFixed(2);
-          data2_total_price = data2_total_price + this.total;
+          data2_total_price = data2_total_price + parseFloat(this.total);
           this.price = '$'+ this.price;
           this.total = '$' + this.total;
           data2.push(this);
         });
 
-        $('.header-1-action-total-amt').text('$'+Number.parseFloat(data1_total_price).toFixed(2));
-        $('.header-2-action-total-amt').text('$'+Number.parseFloat(data2_total_price).toFixed(2));
 
         gridOptions_1 = {
           columnDefs: columnDefs,
@@ -189,6 +207,8 @@
           },
           onGridReady: function(params) {
             params.api.sizeColumnsToFit();
+            $('.header-1-action-total-amt').text('$'+Number.parseFloat(data1_total_price).toFixed(2));
+            $('#vendor1Data').parent().addClass('collapsible-body');
           }
         };
         gridOptions_2 = {
@@ -202,6 +222,8 @@
           },
           onGridReady: function(params) {
             params.api.sizeColumnsToFit();
+            $('.header-2-action-total-amt').text('$'+Number.parseFloat(data2_total_price).toFixed(2));
+            $('#vendor2Data').parent().addClass('collapsible-body');
           }
         };
         var gridDiv = document.querySelector('#vendor1Data');
@@ -213,24 +235,6 @@
     function onPageSizeChanged(newPageSize) {
       var value = document.getElementById('page-size').value;
       gridOptions.api.paginationSetPageSize(Number(value));
-    }
-
-    function onRowSelected(event) {
-      console.log("row " + event.node.data.upc + " selected = " + event.node.selected);
-    }
-
-    function onSelectionChanged(event) {
-      var rowCount = event.api.getSelectedNodes().length;
-      console.log('selection changed, ' + rowCount + ' rows selected');
-      if(rowCount > 0) {
-        $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
-        if($('#cardHeaderAction .button-wrapper .header-action-process').length === 0) {
-          $('#cardHeaderAction .button-wrapper').append('<a href="/pending-billing-process.html" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Process</a>');
-        }
-      } else {
-        $('#select-row-num').html('');
-        $('#cardHeaderAction .button-wrapper .header-action-process').remove();
-      }
     }
 
     $(document).ready(function() { 

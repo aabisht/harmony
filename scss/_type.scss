@@ -161,3 +161,18 @@ textarea.materialize-textarea:focus:not([readonly]) {
   background-color: rgba(darken($primary-color, 20%), 0.7);
   color: $color-white;
 }
+
+.flatpickr-current-month {
+  .flatpickr-monthDropdown-months {
+    display: inline-block;
+  }
+
+  .numInputWrapper {
+    .numInput {
+      height: auto;
+      border-bottom: none;
+      font-size: inherit;
+      margin: 0;
+    }
+  }
+}
