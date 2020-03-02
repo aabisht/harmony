@@ -16,6 +16,7 @@
         &.-selected-,
         &.-selected-.-current- {
             background-color: darken($primary-color, 20%);
+            color: $color-white;
         }
 
         &.-current- {
