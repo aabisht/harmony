@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Pending Accurals | Bristol Farms</title>
+  <title>Pending Accruals | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -33,11 +33,11 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>Pending Accurals</h3>
+                      <h3>Pending Accruals</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Pending Accurals</li>
+                          <li class="breadcrumb-item active" aria-current="page">Pending Accruals</li>
                         </ol>
                       </div>
                     </div>
@@ -83,13 +83,13 @@
             <div class="container-fluid">
               <div class="card header-search-card-wrapper">
                 <div class="card-content">
-                  <h3 class="card-title">Select Time</h3>
+                  <h3 class="card-title">Select Month</h3>
                   <div class="row justify-content-center align-items-center">
                     <div class="col-lg-5 col-md-4">
                       <div class="cell-wrapper">
                         <div class="input-field">
-                          <input id="search_start_date" type="text" class="datepicker-here" data-language='en' data-min-view="months" data-view="months" data-date-format="MM yyyy" autocomplete="off" value="May 2020">
-                          <label for="search_start_date">Start Date</label>
+                          <input id="search_start_date" type="text" class="datepicker-here" data-language='en' data-min-view="months" data-view="months" data-date-format="MM yyyy" autocomplete="off" value="February 2020">
+                          <label for="search_start_date">Select Accrual Start Date</label>
                         </div>
                       </div>
                     </div>
@@ -112,27 +112,29 @@
                 <div class="card-content">
                   <div class="card-header d-flex flex-row justify-content-between align-items-center">
                     <div class="card-title-wrapper">
-                      <h3 class="card-title">Pending Accurals <span id="select-row-num"></span></h3>
+                      <h3 class="card-title">Pending Accruals <span id="select-row-num"></span></h3>
                     </div>
                     <div class="card-header-action-wrapper" id="cardHeaderAction">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <div class="input-field-wrapper header-action-item header-action-item-select">
-                          <div class="input-field d-flex flex-row justify-content-end align-items-center">
-                            <span class="page-size-label">Item to Show</span>
-                            <select onchange="onPageSizeChanged()" id="page-size">
-                              <option value="10">10</option>
-                              <option value="20">20</option>
-                              <option value="50">50</option>
-                            </select>
-                          </div>
-                        </div>
                         <!-- <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-filter"></i> Filter</button>
                         <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-sort"></i> Sort</button> -->
                         <button type="button" class="button-stroked button-primary tooltip header-action-item" data-position="bottom" data-tooltip="Download"><i class="fas fa-download"></i></button>
                       </div>
                     </div>
                   </div>
-                  <div id="datatable" class="datatable ag-theme-material"></div>
+                  <div class="datatable-wrapper">
+                    <div id="datatable" class="datatable ag-theme-material"></div>
+                    <div class="datatable-action-item-select">
+                      <div class="d-flex flex-row justify-content-end align-items-center">
+                        <span class="page-size-label">Item to Show</span>
+                        <select onchange="onPageSizeChanged()" id="page-size">
+                          <option value="10">10</option>
+                          <option value="20">20</option>
+                          <option value="50">50</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
                   
                 </div>
               </div>
@@ -163,13 +165,14 @@
           field: "upc",
           headerCheckboxSelection: true,
           headerCheckboxSelectionFilteredOnly: true,
-          checkboxSelection: true
+          checkboxSelection: true,
+          minWidth: 240
         },
         {headerName: "Store", field: "store"},
         {headerName: "$/Unit", field: "price_unit"},
         {headerName: "Total Units Sold", field: "unit"},
         {headerName: "Total", field: "total"},
-        {headerName: "Start Date", field: "start_date"},
+        {headerName: "Accrual Start Date", field: "start_date"},
       ];
       $.get("data/pending-accurals.json", function(data, status){
         $(data).each(function(item) {

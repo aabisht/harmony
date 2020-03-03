@@ -88,7 +88,7 @@
                     <div class="col-lg-5 col-md-4">
                       <div class="cell-wrapper">
                         <div class="input-field">
-                          <input id="search_start_date" type="text" class="datepicker-here" value="01-01-2018" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
+                          <input id="search_start_date" type="text" class="datepicker-here" value="01-01-2020" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
                           <label for="search_start_date">Start Date</label>
                         </div>
                       </div>
@@ -96,7 +96,7 @@
                     <div class="col-lg-5 col-md-4">
                       <div class="cell-wrapper">
                         <div class="input-field">
-                          <input id="search_end_date" type="text" class="datepicker-here" value="12-31-2019" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
+                          <input id="search_end_date" type="text" class="datepicker-here" value="02-10-2020" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
                           <label for="search_end_date">End Date</label>
                         </div>
                       </div>
@@ -124,24 +124,26 @@
                     </div>
                     <div class="card-header-action-wrapper" id="cardHeaderAction">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <div class="input-field-wrapper header-action-item header-action-item-select">
-                          <div class="input-field d-flex flex-row justify-content-end align-items-center">
-                            <span class="page-size-label">Item to Show</span>
-                            <select onchange="onPageSizeChanged()" id="page-size">
-                              <option value="10">10</option>
-                              <option value="20">20</option>
-                              <option value="50">50</option>
-                            </select>
-                          </div>
-                        </div>
+                        
                         <!-- <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-filter"></i> Filter</button>
                         <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-sort"></i> Sort</button> -->
                         <button type="button" class="button-stroked button-primary tooltip header-action-item" data-position="bottom" data-tooltip="Download"><i class="fas fa-download"></i></button>
                       </div>
                     </div>
                   </div>
-                  <div id="datatable" class="datatable ag-theme-material"></div>
-                  
+                  <div class="datatable-wrapper">
+                    <div id="datatable" class="datatable ag-theme-material"></div>
+                    <div class="datatable-action-item-select">
+                      <div class="d-flex flex-row justify-content-end align-items-center">
+                        <span class="page-size-label">Item to Show</span>
+                        <select onchange="onPageSizeChanged()" id="page-size">
+                          <option value="10">10</option>
+                          <option value="20">20</option>
+                          <option value="50">50</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -172,7 +174,7 @@
           headerCheckboxSelection: true,
           headerCheckboxSelectionFilteredOnly: true,
           checkboxSelection: true,
-          width: 240
+          minWidth: 240
         },
         {headerName: "Store", field: "store"},
         {headerName: "Vendor", field: "vendor"},

@@ -176,3 +176,16 @@ textarea.materialize-textarea:focus:not([readonly]) {
     }
   }
 }
+
+.select-wrapper {
+  input {
+    &.select-dropdown {
+      @include fontSize(15px);
+      color: $secondary-color;
+    }
+  }
+}
+
+input, textarea {
+  color: $secondary-color;
+}

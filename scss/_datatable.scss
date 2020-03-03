@@ -40,6 +40,12 @@
             &.data-error {
                 background-color: $error-color;
                 color: $color-white;
+
+                input {
+                   &:not([type]), &[type=date], &[type=datetime-local], &[type=number], &[type=tel], &[type=text] {
+                        color: $color-white;
+                    }
+                }
             }
         }
 
@@ -217,5 +223,25 @@
         input.file-path {
             margin-bottom: 0;
         }
+    }
+}
+
+.datatable-action-item-select {
+    .select-wrapper {
+        width: 60px;
+    }
+}
+
+.card-header {
+    margin-bottom: 15px;
+}
+
+.datatable-wrapper {
+    position: relative;
+
+    .datatable-action-item-select {
+        position: absolute;
+        left: 0;
+        bottom: 0;
     }
 }

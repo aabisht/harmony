@@ -2,801 +2,801 @@
   {
     "upc": "UPC000000001",
     "store": "Store 003",
-    "price_unit": "317.44",
-    "unit": 23,
-    "total": "7301.12",
-    "start_date": "08-14-2016"
+    "price_unit": "232.61",
+    "unit": 65,
+    "total": "15119.65",
+    "start_date": "02-02-2020"
   },
   {
     "upc": "UPC000000002",
     "store": "Store 002",
-    "price_unit": "263.80",
-    "unit": 66,
-    "total": "17410.80",
-    "start_date": "05-04-2016"
+    "price_unit": "237.88",
+    "unit": 91,
+    "total": "21647.08",
+    "start_date": "02-03-2020"
   },
   {
     "upc": "UPC000000003",
-    "store": "Store 002",
-    "price_unit": "349.01",
-    "unit": 72,
-    "total": "25128.72",
-    "start_date": "02-25-2018"
+    "store": "Store 003",
+    "price_unit": "112.27",
+    "unit": 74,
+    "total": "8307.98",
+    "start_date": "02-16-2020"
   },
   {
     "upc": "UPC000000004",
     "store": "Store 002",
-    "price_unit": "145.89",
-    "unit": 86,
-    "total": "12546.54",
-    "start_date": "01-08-2017"
+    "price_unit": "319.08",
+    "unit": 21,
+    "total": "6700.68",
+    "start_date": "02-29-2020"
   },
   {
     "upc": "UPC000000005",
     "store": "Store 003",
-    "price_unit": "303.51",
-    "unit": 10,
-    "total": "3035.10",
-    "start_date": "04-24-2015"
+    "price_unit": "139.71",
+    "unit": 25,
+    "total": "3492.75",
+    "start_date": "02-12-2020"
   },
   {
     "upc": "UPC000000006",
-    "store": "Store 004",
-    "price_unit": "128.75",
-    "unit": 14,
-    "total": "1802.50",
-    "start_date": "03-08-2017"
+    "store": "Store 002",
+    "price_unit": "399.01",
+    "unit": 38,
+    "total": "15162.38",
+    "start_date": "02-28-2020"
   },
   {
     "upc": "UPC000000007",
-    "store": "Store 001",
-    "price_unit": "346.56",
-    "unit": 89,
-    "total": "30843.84",
-    "start_date": "04-03-2018"
+    "store": "Store 003",
+    "price_unit": "328.55",
+    "unit": 35,
+    "total": "11499.25",
+    "start_date": "02-09-2020"
   },
   {
     "upc": "UPC000000008",
-    "store": "Store 002",
-    "price_unit": "330.67",
-    "unit": 39,
-    "total": "12896.13",
-    "start_date": "01-12-2018"
+    "store": "Store 004",
+    "price_unit": "182.98",
+    "unit": 36,
+    "total": "6587.28",
+    "start_date": "02-31-2020"
   },
   {
     "upc": "UPC000000009",
     "store": "Store 003",
-    "price_unit": "310.76",
-    "unit": 67,
-    "total": "20820.92",
-    "start_date": "06-17-2015"
+    "price_unit": "353.05",
+    "unit": 21,
+    "total": "7414.05",
+    "start_date": "02-15-2020"
   },
   {
     "upc": "UPC0000000010",
-    "store": "Store 001",
-    "price_unit": "173.25",
-    "unit": 58,
-    "total": "10048.50",
-    "start_date": "05-30-2016"
+    "store": "Store 002",
+    "price_unit": "150.10",
+    "unit": 66,
+    "total": "9906.60",
+    "start_date": "02-07-2020"
   },
   {
     "upc": "UPC0000000011",
-    "store": "Store 002",
-    "price_unit": "272.30",
-    "unit": 36,
-    "total": "9802.80",
-    "start_date": "12-26-2014"
+    "store": "Store 003",
+    "price_unit": "171.61",
+    "unit": 22,
+    "total": "3775.42",
+    "start_date": "02-11-2020"
   },
   {
     "upc": "UPC0000000012",
-    "store": "Store 004",
-    "price_unit": "179.37",
-    "unit": 52,
-    "total": "9327.24",
-    "start_date": "06-29-2014"
+    "store": "Store 003",
+    "price_unit": "388.58",
+    "unit": 62,
+    "total": "24091.96",
+    "start_date": "02-06-2020"
   },
   {
     "upc": "UPC0000000013",
-    "store": "Store 003",
-    "price_unit": "384.41",
-    "unit": 53,
-    "total": "20373.73",
-    "start_date": "04-12-2018"
+    "store": "Store 004",
+    "price_unit": "231.16",
+    "unit": 94,
+    "total": "21729.04",
+    "start_date": "02-26-2020"
   },
   {
     "upc": "UPC0000000014",
-    "store": "Store 004",
-    "price_unit": "383.24",
-    "unit": 41,
-    "total": "15712.84",
-    "start_date": "09-26-2015"
+    "store": "Store 002",
+    "price_unit": "109.87",
+    "unit": 42,
+    "total": "4614.54",
+    "start_date": "02-27-2020"
   },
   {
     "upc": "UPC0000000015",
-    "store": "Store 002",
-    "price_unit": "131.71",
-    "unit": 39,
-    "total": "5136.69",
-    "start_date": "11-28-2014"
+    "store": "Store 003",
+    "price_unit": "222.18",
+    "unit": 79,
+    "total": "17552.22",
+    "start_date": "02-06-2020"
   },
   {
     "upc": "UPC0000000016",
-    "store": "Store 002",
-    "price_unit": "372.17",
-    "unit": 47,
-    "total": "17491.99",
-    "start_date": "10-01-2016"
+    "store": "Store 003",
+    "price_unit": "130.35",
+    "unit": 51,
+    "total": "6647.85",
+    "start_date": "02-02-2020"
   },
   {
     "upc": "UPC0000000017",
-    "store": "Store 002",
-    "price_unit": "238.47",
-    "unit": 100,
-    "total": "23847.00",
-    "start_date": "12-03-2015"
+    "store": "Store 001",
+    "price_unit": "289.15",
+    "unit": 17,
+    "total": "4915.55",
+    "start_date": "03-02-2020"
   },
   {
     "upc": "UPC0000000018",
     "store": "Store 004",
-    "price_unit": "321.24",
-    "unit": 20,
-    "total": "6424.80",
-    "start_date": "08-23-2019"
+    "price_unit": "191.91",
+    "unit": 67,
+    "total": "12857.97",
+    "start_date": "02-26-2020"
   },
   {
     "upc": "UPC0000000019",
     "store": "Store 001",
-    "price_unit": "383.53",
-    "unit": 81,
-    "total": "31065.93",
-    "start_date": "03-16-2014"
+    "price_unit": "143.76",
+    "unit": 42,
+    "total": "6037.92",
+    "start_date": "02-03-2020"
   },
   {
     "upc": "UPC0000000020",
     "store": "Store 001",
-    "price_unit": "293.50",
-    "unit": 56,
-    "total": "16436.00",
-    "start_date": "07-06-2017"
+    "price_unit": "203.66",
+    "unit": 20,
+    "total": "4073.20",
+    "start_date": "02-10-2020"
   },
   {
     "upc": "UPC0000000021",
-    "store": "Store 002",
-    "price_unit": "285.83",
-    "unit": 75,
-    "total": "21437.25",
-    "start_date": "04-17-2014"
+    "store": "Store 001",
+    "price_unit": "330.43",
+    "unit": 92,
+    "total": "30399.56",
+    "start_date": "02-10-2020"
   },
   {
     "upc": "UPC0000000022",
     "store": "Store 002",
-    "price_unit": "114.61",
-    "unit": 48,
-    "total": "5501.28",
-    "start_date": "08-07-2017"
+    "price_unit": "180.97",
+    "unit": 50,
+    "total": "9048.50",
+    "start_date": "02-16-2020"
   },
   {
     "upc": "UPC0000000023",
-    "store": "Store 002",
-    "price_unit": "174.71",
-    "unit": 66,
-    "total": "11530.86",
-    "start_date": "05-09-2017"
+    "store": "Store 001",
+    "price_unit": "106.69",
+    "unit": 16,
+    "total": "1707.04",
+    "start_date": "02-11-2020"
   },
   {
     "upc": "UPC0000000024",
-    "store": "Store 004",
-    "price_unit": "395.89",
-    "unit": 82,
-    "total": "32462.98",
-    "start_date": "08-31-2015"
+    "store": "Store 001",
+    "price_unit": "128.29",
+    "unit": 15,
+    "total": "1924.35",
+    "start_date": "02-24-2020"
   },
   {
     "upc": "UPC0000000025",
-    "store": "Store 003",
-    "price_unit": "236.58",
-    "unit": 50,
-    "total": "11829.00",
-    "start_date": "06-09-2017"
+    "store": "Store 001",
+    "price_unit": "239.68",
+    "unit": 70,
+    "total": "16777.60",
+    "start_date": "02-10-2020"
   },
   {
     "upc": "UPC0000000026",
     "store": "Store 001",
-    "price_unit": "137.60",
-    "unit": 72,
-    "total": "9907.20",
-    "start_date": "06-07-2019"
+    "price_unit": "189.60",
+    "unit": 27,
+    "total": "5119.20",
+    "start_date": "02-14-2020"
   },
   {
     "upc": "UPC0000000027",
-    "store": "Store 003",
-    "price_unit": "135.13",
-    "unit": 58,
-    "total": "7837.54",
-    "start_date": "12-09-2014"
+    "store": "Store 004",
+    "price_unit": "380.11",
+    "unit": 49,
+    "total": "18625.39",
+    "start_date": "02-24-2020"
   },
   {
     "upc": "UPC0000000028",
-    "store": "Store 003",
-    "price_unit": "220.75",
-    "unit": 14,
-    "total": "3090.50",
-    "start_date": "08-22-2019"
+    "store": "Store 001",
+    "price_unit": "190.56",
+    "unit": 63,
+    "total": "12005.28",
+    "start_date": "02-20-2020"
   },
   {
     "upc": "UPC0000000029",
     "store": "Store 002",
-    "price_unit": "181.67",
-    "unit": 51,
-    "total": "9265.17",
-    "start_date": "11-05-2016"
+    "price_unit": "169.13",
+    "unit": 100,
+    "total": "16913.00",
+    "start_date": "02-29-2020"
   },
   {
     "upc": "UPC0000000030",
-    "store": "Store 002",
-    "price_unit": "145.65",
-    "unit": 34,
-    "total": "4952.10",
-    "start_date": "12-04-2019"
+    "store": "Store 004",
+    "price_unit": "341.72",
+    "unit": 80,
+    "total": "27337.60",
+    "start_date": "02-16-2020"
   },
   {
     "upc": "UPC0000000031",
-    "store": "Store 002",
-    "price_unit": "306.28",
-    "unit": 41,
-    "total": "12557.48",
-    "start_date": "08-26-2019"
+    "store": "Store 001",
+    "price_unit": "284.15",
+    "unit": 93,
+    "total": "26425.95",
+    "start_date": "02-23-2020"
   },
   {
     "upc": "UPC0000000032",
-    "store": "Store 004",
-    "price_unit": "214.24",
-    "unit": 62,
-    "total": "13282.88",
-    "start_date": "10-11-2017"
+    "store": "Store 001",
+    "price_unit": "360.76",
+    "unit": 84,
+    "total": "30303.84",
+    "start_date": "02-24-2020"
   },
   {
     "upc": "UPC0000000033",
     "store": "Store 004",
-    "price_unit": "189.46",
-    "unit": 58,
-    "total": "10988.68",
-    "start_date": "09-18-2019"
+    "price_unit": "125.26",
+    "unit": 35,
+    "total": "4384.10",
+    "start_date": "02-07-2020"
   },
   {
     "upc": "UPC0000000034",
-    "store": "Store 004",
-    "price_unit": "305.92",
-    "unit": 17,
-    "total": "5200.64",
-    "start_date": "04-01-2017"
+    "store": "Store 002",
+    "price_unit": "278.18",
+    "unit": 65,
+    "total": "18081.70",
+    "start_date": "02-14-2020"
   },
   {
     "upc": "UPC0000000035",
-    "store": "Store 004",
-    "price_unit": "340.59",
-    "unit": 38,
-    "total": "12942.42",
-    "start_date": "02-05-2014"
+    "store": "Store 002",
+    "price_unit": "337.20",
+    "unit": 17,
+    "total": "5732.40",
+    "start_date": "02-09-2020"
   },
   {
     "upc": "UPC0000000036",
-    "store": "Store 003",
-    "price_unit": "224.14",
-    "unit": 98,
-    "total": "21965.72",
-    "start_date": "10-29-2019"
+    "store": "Store 002",
+    "price_unit": "292.82",
+    "unit": 62,
+    "total": "18154.84",
+    "start_date": "02-29-2020"
   },
   {
     "upc": "UPC0000000037",
-    "store": "Store 002",
-    "price_unit": "251.16",
-    "unit": 57,
-    "total": "14316.12",
-    "start_date": "03-28-2018"
+    "store": "Store 001",
+    "price_unit": "133.24",
+    "unit": 34,
+    "total": "4530.16",
+    "start_date": "02-13-2020"
   },
   {
     "upc": "UPC0000000038",
-    "store": "Store 004",
-    "price_unit": "331.03",
-    "unit": 15,
-    "total": "4965.45",
-    "start_date": "05-15-2016"
+    "store": "Store 002",
+    "price_unit": "290.94",
+    "unit": 99,
+    "total": "28803.06",
+    "start_date": "02-06-2020"
   },
   {
     "upc": "UPC0000000039",
-    "store": "Store 001",
-    "price_unit": "355.76",
-    "unit": 46,
-    "total": "16364.96",
-    "start_date": "08-26-2014"
+    "store": "Store 004",
+    "price_unit": "256.23",
+    "unit": 16,
+    "total": "4099.68",
+    "start_date": "02-09-2020"
   },
   {
     "upc": "UPC0000000040",
     "store": "Store 002",
-    "price_unit": "104.46",
-    "unit": 97,
-    "total": "10132.62",
-    "start_date": "07-07-2015"
+    "price_unit": "176.88",
+    "unit": 16,
+    "total": "2830.08",
+    "start_date": "02-02-2020"
   },
   {
     "upc": "UPC0000000041",
     "store": "Store 001",
-    "price_unit": "273.43",
-    "unit": 61,
-    "total": "16679.23",
-    "start_date": "02-18-2018"
+    "price_unit": "354.86",
+    "unit": 86,
+    "total": "30517.96",
+    "start_date": "03-02-2020"
   },
   {
     "upc": "UPC0000000042",
-    "store": "Store 004",
-    "price_unit": "161.07",
-    "unit": 77,
-    "total": "12402.39",
-    "start_date": "11-03-2019"
+    "store": "Store 001",
+    "price_unit": "224.83",
+    "unit": 12,
+    "total": "2697.96",
+    "start_date": "02-08-2020"
   },
   {
     "upc": "UPC0000000043",
-    "store": "Store 002",
-    "price_unit": "167.96",
-    "unit": 55,
-    "total": "9237.80",
-    "start_date": "06-13-2014"
+    "store": "Store 003",
+    "price_unit": "364.67",
+    "unit": 56,
+    "total": "20421.52",
+    "start_date": "02-21-2020"
   },
   {
     "upc": "UPC0000000044",
-    "store": "Store 001",
-    "price_unit": "364.00",
-    "unit": 98,
-    "total": "35672.00",
-    "start_date": "05-02-2016"
+    "store": "Store 002",
+    "price_unit": "168.18",
+    "unit": 37,
+    "total": "6222.66",
+    "start_date": "02-04-2020"
   },
   {
     "upc": "UPC0000000045",
     "store": "Store 001",
-    "price_unit": "374.50",
-    "unit": 94,
-    "total": "35203.00",
-    "start_date": "09-08-2017"
+    "price_unit": "269.17",
+    "unit": 12,
+    "total": "3230.04",
+    "start_date": "02-20-2020"
   },
   {
     "upc": "UPC0000000046",
-    "store": "Store 003",
-    "price_unit": "193.85",
-    "unit": 74,
-    "total": "14344.90",
-    "start_date": "06-25-2018"
+    "store": "Store 002",
+    "price_unit": "225.92",
+    "unit": 39,
+    "total": "8810.88",
+    "start_date": "02-19-2020"
   },
   {
     "upc": "UPC0000000047",
-    "store": "Store 004",
-    "price_unit": "197.39",
-    "unit": 92,
-    "total": "18159.88",
-    "start_date": "05-22-2018"
+    "store": "Store 003",
+    "price_unit": "327.73",
+    "unit": 11,
+    "total": "3605.03",
+    "start_date": "02-23-2020"
   },
   {
     "upc": "UPC0000000048",
-    "store": "Store 001",
-    "price_unit": "125.02",
-    "unit": 43,
-    "total": "5375.86",
-    "start_date": "07-26-2014"
+    "store": "Store 002",
+    "price_unit": "315.44",
+    "unit": 86,
+    "total": "27127.84",
+    "start_date": "02-28-2020"
   },
   {
     "upc": "UPC0000000049",
-    "store": "Store 002",
-    "price_unit": "170.67",
-    "unit": 87,
-    "total": "14848.29",
-    "start_date": "03-19-2019"
+    "store": "Store 004",
+    "price_unit": "224.58",
+    "unit": 53,
+    "total": "11902.74",
+    "start_date": "02-21-2020"
   },
   {
     "upc": "UPC0000000050",
-    "store": "Store 004",
-    "price_unit": "338.45",
-    "unit": 77,
-    "total": "26060.65",
-    "start_date": "02-04-2014"
+    "store": "Store 002",
+    "price_unit": "282.88",
+    "unit": 94,
+    "total": "26590.72",
+    "start_date": "02-19-2020"
   },
   {
     "upc": "UPC0000000051",
-    "store": "Store 004",
-    "price_unit": "314.72",
-    "unit": 96,
-    "total": "30213.12",
-    "start_date": "08-26-2016"
+    "store": "Store 001",
+    "price_unit": "283.44",
+    "unit": 77,
+    "total": "21824.88",
+    "start_date": "02-09-2020"
   },
   {
     "upc": "UPC0000000052",
-    "store": "Store 004",
-    "price_unit": "283.02",
-    "unit": 63,
-    "total": "17830.26",
-    "start_date": "02-26-2018"
+    "store": "Store 002",
+    "price_unit": "209.54",
+    "unit": 84,
+    "total": "17601.36",
+    "start_date": "02-27-2020"
   },
   {
     "upc": "UPC0000000053",
-    "store": "Store 001",
-    "price_unit": "130.89",
-    "unit": 79,
-    "total": "10340.31",
-    "start_date": "02-18-2017"
+    "store": "Store 002",
+    "price_unit": "364.46",
+    "unit": 44,
+    "total": "16036.24",
+    "start_date": "02-15-2020"
   },
   {
     "upc": "UPC0000000054",
-    "store": "Store 003",
-    "price_unit": "107.12",
-    "unit": 48,
-    "total": "5141.76",
-    "start_date": "08-25-2017"
+    "store": "Store 001",
+    "price_unit": "259.02",
+    "unit": 47,
+    "total": "12173.94",
+    "start_date": "02-27-2020"
   },
   {
     "upc": "UPC0000000055",
     "store": "Store 003",
-    "price_unit": "228.22",
-    "unit": 18,
-    "total": "4107.96",
-    "start_date": "05-01-2016"
+    "price_unit": "307.00",
+    "unit": 49,
+    "total": "15043.00",
+    "start_date": "02-25-2020"
   },
   {
     "upc": "UPC0000000056",
     "store": "Store 001",
-    "price_unit": "349.12",
-    "unit": 49,
-    "total": "17106.88",
-    "start_date": "03-22-2019"
+    "price_unit": "171.08",
+    "unit": 77,
+    "total": "13173.16",
+    "start_date": "02-08-2020"
   },
   {
     "upc": "UPC0000000057",
-    "store": "Store 003",
-    "price_unit": "138.66",
-    "unit": 64,
-    "total": "8874.24",
-    "start_date": "03-22-2018"
+    "store": "Store 001",
+    "price_unit": "322.42",
+    "unit": 75,
+    "total": "24181.50",
+    "start_date": "03-02-2020"
   },
   {
     "upc": "UPC0000000058",
     "store": "Store 001",
-    "price_unit": "389.53",
-    "unit": 98,
-    "total": "38173.94",
-    "start_date": "06-03-2019"
+    "price_unit": "353.25",
+    "unit": 96,
+    "total": "33912.00",
+    "start_date": "02-11-2020"
   },
   {
     "upc": "UPC0000000059",
-    "store": "Store 001",
-    "price_unit": "331.22",
-    "unit": 33,
-    "total": "10930.26",
-    "start_date": "06-14-2016"
+    "store": "Store 003",
+    "price_unit": "244.64",
+    "unit": 98,
+    "total": "23974.72",
+    "start_date": "02-09-2020"
   },
   {
     "upc": "UPC0000000060",
-    "store": "Store 002",
-    "price_unit": "397.87",
-    "unit": 95,
-    "total": "37797.65",
-    "start_date": "08-15-2014"
+    "store": "Store 001",
+    "price_unit": "344.89",
+    "unit": 36,
+    "total": "12416.04",
+    "start_date": "02-20-2020"
   },
   {
     "upc": "UPC0000000061",
-    "store": "Store 003",
-    "price_unit": "305.42",
-    "unit": 17,
-    "total": "5192.14",
-    "start_date": "03-13-2017"
+    "store": "Store 002",
+    "price_unit": "114.79",
+    "unit": 42,
+    "total": "4821.18",
+    "start_date": "02-02-2020"
   },
   {
     "upc": "UPC0000000062",
     "store": "Store 004",
-    "price_unit": "101.68",
-    "unit": 73,
-    "total": "7422.64",
-    "start_date": "01-22-2017"
+    "price_unit": "145.84",
+    "unit": 79,
+    "total": "11521.36",
+    "start_date": "02-03-2020"
   },
   {
     "upc": "UPC0000000063",
-    "store": "Store 004",
-    "price_unit": "248.54",
-    "unit": 67,
-    "total": "16652.18",
-    "start_date": "12-04-2017"
+    "store": "Store 003",
+    "price_unit": "193.18",
+    "unit": 82,
+    "total": "15840.76",
+    "start_date": "02-26-2020"
   },
   {
     "upc": "UPC0000000064",
-    "store": "Store 001",
-    "price_unit": "172.91",
-    "unit": 61,
-    "total": "10547.51",
-    "start_date": "01-04-2018"
+    "store": "Store 004",
+    "price_unit": "118.18",
+    "unit": 74,
+    "total": "8745.32",
+    "start_date": "02-13-2020"
   },
   {
     "upc": "UPC0000000065",
-    "store": "Store 003",
-    "price_unit": "182.20",
-    "unit": 21,
-    "total": "3826.20",
-    "start_date": "01-08-2014"
+    "store": "Store 001",
+    "price_unit": "240.25",
+    "unit": 44,
+    "total": "10571.00",
+    "start_date": "02-02-2020"
   },
   {
     "upc": "UPC0000000066",
-    "store": "Store 002",
-    "price_unit": "325.96",
-    "unit": 49,
-    "total": "15972.04",
-    "start_date": "09-05-2018"
+    "store": "Store 004",
+    "price_unit": "368.06",
+    "unit": 21,
+    "total": "7729.26",
+    "start_date": "02-26-2020"
   },
   {
     "upc": "UPC0000000067",
-    "store": "Store 004",
-    "price_unit": "213.70",
-    "unit": 66,
-    "total": "14104.20",
-    "start_date": "03-28-2015"
+    "store": "Store 002",
+    "price_unit": "376.19",
+    "unit": 14,
+    "total": "5266.66",
+    "start_date": "02-20-2020"
   },
   {
     "upc": "UPC0000000068",
-    "store": "Store 003",
-    "price_unit": "238.02",
-    "unit": 72,
-    "total": "17137.44",
-    "start_date": "12-11-2018"
+    "store": "Store 002",
+    "price_unit": "219.21",
+    "unit": 43,
+    "total": "9426.03",
+    "start_date": "02-24-2020"
   },
   {
     "upc": "UPC0000000069",
-    "store": "Store 003",
-    "price_unit": "284.99",
-    "unit": 100,
-    "total": "28499.00",
-    "start_date": "07-30-2017"
+    "store": "Store 001",
+    "price_unit": "398.64",
+    "unit": 87,
+    "total": "34681.68",
+    "start_date": "02-02-2020"
   },
   {
     "upc": "UPC0000000070",
-    "store": "Store 001",
-    "price_unit": "189.49",
-    "unit": 53,
-    "total": "10042.97",
-    "start_date": "07-03-2016"
+    "store": "Store 003",
+    "price_unit": "168.96",
+    "unit": 16,
+    "total": "2703.36",
+    "start_date": "02-26-2020"
   },
   {
     "upc": "UPC0000000071",
-    "store": "Store 002",
-    "price_unit": "216.78",
-    "unit": 86,
-    "total": "18643.08",
-    "start_date": "02-07-2016"
+    "store": "Store 004",
+    "price_unit": "226.16",
+    "unit": 53,
+    "total": "11986.48",
+    "start_date": "02-20-2020"
   },
   {
     "upc": "UPC0000000072",
-    "store": "Store 003",
-    "price_unit": "124.62",
-    "unit": 34,
-    "total": "4237.08",
-    "start_date": "03-13-2016"
+    "store": "Store 004",
+    "price_unit": "229.55",
+    "unit": 35,
+    "total": "8034.25",
+    "start_date": "02-04-2020"
   },
   {
     "upc": "UPC0000000073",
-    "store": "Store 002",
-    "price_unit": "113.04",
-    "unit": 39,
-    "total": "4408.56",
-    "start_date": "01-10-2014"
+    "store": "Store 001",
+    "price_unit": "209.47",
+    "unit": 46,
+    "total": "9635.62",
+    "start_date": "02-02-2020"
   },
   {
     "upc": "UPC0000000074",
-    "store": "Store 002",
-    "price_unit": "285.93",
-    "unit": 19,
-    "total": "5432.67",
-    "start_date": "05-20-2016"
+    "store": "Store 001",
+    "price_unit": "343.76",
+    "unit": 52,
+    "total": "17875.52",
+    "start_date": "02-22-2020"
   },
   {
     "upc": "UPC0000000075",
-    "store": "Store 002",
-    "price_unit": "231.28",
-    "unit": 19,
-    "total": "4394.32",
-    "start_date": "05-10-2015"
+    "store": "Store 004",
+    "price_unit": "307.02",
+    "unit": 69,
+    "total": "21184.38",
+    "start_date": "02-14-2020"
   },
   {
     "upc": "UPC0000000076",
     "store": "Store 003",
-    "price_unit": "103.04",
-    "unit": 20,
-    "total": "2060.80",
-    "start_date": "02-16-2019"
+    "price_unit": "382.15",
+    "unit": 57,
+    "total": "21782.55",
+    "start_date": "02-26-2020"
   },
   {
     "upc": "UPC0000000077",
-    "store": "Store 003",
-    "price_unit": "295.41",
-    "unit": 65,
-    "total": "19201.65",
-    "start_date": "01-23-2017"
+    "store": "Store 002",
+    "price_unit": "290.57",
+    "unit": 75,
+    "total": "21792.75",
+    "start_date": "02-06-2020"
   },
   {
     "upc": "UPC0000000078",
-    "store": "Store 002",
-    "price_unit": "322.22",
-    "unit": 35,
-    "total": "11277.70",
-    "start_date": "10-02-2016"
+    "store": "Store 003",
+    "price_unit": "292.35",
+    "unit": 95,
+    "total": "27773.25",
+    "start_date": "02-02-2020"
   },
   {
     "upc": "UPC0000000079",
-    "store": "Store 001",
-    "price_unit": "142.96",
-    "unit": 11,
-    "total": "1572.56",
-    "start_date": "02-16-2020"
+    "store": "Store 003",
+    "price_unit": "383.07",
+    "unit": 68,
+    "total": "26048.76",
+    "start_date": "02-04-2020"
   },
   {
     "upc": "UPC0000000080",
-    "store": "Store 004",
-    "price_unit": "351.33",
-    "unit": 68,
-    "total": "23890.44",
-    "start_date": "08-24-2016"
+    "store": "Store 003",
+    "price_unit": "261.66",
+    "unit": 52,
+    "total": "13606.32",
+    "start_date": "02-04-2020"
   },
   {
     "upc": "UPC0000000081",
-    "store": "Store 004",
-    "price_unit": "163.99",
-    "unit": 38,
-    "total": "6231.62",
-    "start_date": "05-20-2015"
+    "store": "Store 001",
+    "price_unit": "182.78",
+    "unit": 51,
+    "total": "9321.78",
+    "start_date": "03-03-2020"
   },
   {
     "upc": "UPC0000000082",
-    "store": "Store 003",
-    "price_unit": "142.59",
-    "unit": 91,
-    "total": "12975.69",
-    "start_date": "10-02-2014"
+    "store": "Store 002",
+    "price_unit": "145.44",
+    "unit": 98,
+    "total": "14253.12",
+    "start_date": "02-16-2020"
   },
   {
     "upc": "UPC0000000083",
     "store": "Store 003",
-    "price_unit": "389.85",
-    "unit": 70,
-    "total": "27289.50",
-    "start_date": "10-11-2017"
+    "price_unit": "200.67",
+    "unit": 59,
+    "total": "11839.53",
+    "start_date": "02-09-2020"
   },
   {
     "upc": "UPC0000000084",
-    "store": "Store 003",
-    "price_unit": "241.67",
-    "unit": 77,
-    "total": "18608.59",
-    "start_date": "06-16-2019"
+    "store": "Store 002",
+    "price_unit": "315.21",
+    "unit": 64,
+    "total": "20173.44",
+    "start_date": "02-29-2020"
   },
   {
     "upc": "UPC0000000085",
     "store": "Store 002",
-    "price_unit": "236.85",
-    "unit": 61,
-    "total": "14447.85",
-    "start_date": "04-21-2015"
+    "price_unit": "126.12",
+    "unit": 14,
+    "total": "1765.68",
+    "start_date": "02-12-2020"
   },
   {
     "upc": "UPC0000000086",
-    "store": "Store 002",
-    "price_unit": "319.90",
-    "unit": 63,
-    "total": "20153.70",
-    "start_date": "07-28-2015"
+    "store": "Store 004",
+    "price_unit": "215.60",
+    "unit": 80,
+    "total": "17248.00",
+    "start_date": "02-04-2020"
   },
   {
     "upc": "UPC0000000087",
-    "store": "Store 001",
-    "price_unit": "390.45",
-    "unit": 45,
-    "total": "17570.25",
-    "start_date": "06-05-2018"
+    "store": "Store 002",
+    "price_unit": "199.04",
+    "unit": 59,
+    "total": "11743.36",
+    "start_date": "02-09-2020"
   },
   {
     "upc": "UPC0000000088",
     "store": "Store 001",
-    "price_unit": "381.17",
-    "unit": 22,
-    "total": "8385.74",
-    "start_date": "11-18-2017"
+    "price_unit": "392.20",
+    "unit": 42,
+    "total": "16472.40",
+    "start_date": "02-12-2020"
   },
   {
     "upc": "UPC0000000089",
-    "store": "Store 003",
-    "price_unit": "238.05",
-    "unit": 71,
-    "total": "16901.55",
-    "start_date": "02-13-2015"
+    "store": "Store 001",
+    "price_unit": "208.01",
+    "unit": 56,
+    "total": "11648.56",
+    "start_date": "02-24-2020"
   },
   {
     "upc": "UPC0000000090",
-    "store": "Store 004",
-    "price_unit": "142.72",
-    "unit": 94,
-    "total": "13415.68",
-    "start_date": "03-17-2016"
+    "store": "Store 003",
+    "price_unit": "276.05",
+    "unit": 32,
+    "total": "8833.60",
+    "start_date": "02-25-2020"
   },
   {
     "upc": "UPC0000000091",
     "store": "Store 003",
-    "price_unit": "296.52",
-    "unit": 17,
-    "total": "5040.84",
-    "start_date": "09-22-2018"
+    "price_unit": "258.23",
+    "unit": 48,
+    "total": "12395.04",
+    "start_date": "02-11-2020"
   },
   {
     "upc": "UPC0000000092",
     "store": "Store 001",
-    "price_unit": "259.20",
-    "unit": 63,
-    "total": "16329.60",
-    "start_date": "12-14-2014"
+    "price_unit": "188.57",
+    "unit": 67,
+    "total": "12634.19",
+    "start_date": "02-30-2020"
   },
   {
     "upc": "UPC0000000093",
-    "store": "Store 003",
-    "price_unit": "230.93",
-    "unit": 73,
-    "total": "16857.89",
-    "start_date": "04-19-2018"
+    "store": "Store 004",
+    "price_unit": "164.13",
+    "unit": 87,
+    "total": "14279.31",
+    "start_date": "02-13-2020"
   },
   {
     "upc": "UPC0000000094",
-    "store": "Store 002",
-    "price_unit": "122.61",
-    "unit": 40,
-    "total": "4904.40",
-    "start_date": "10-16-2015"
+    "store": "Store 003",
+    "price_unit": "389.40",
+    "unit": 23,
+    "total": "8956.20",
+    "start_date": "02-09-2020"
   },
   {
     "upc": "UPC0000000095",
     "store": "Store 001",
-    "price_unit": "185.31",
-    "unit": 35,
-    "total": "6485.85",
-    "start_date": "07-01-2018"
+    "price_unit": "389.87",
+    "unit": 66,
+    "total": "25731.42",
+    "start_date": "02-19-2020"
   },
   {
     "upc": "UPC0000000096",
     "store": "Store 003",
-    "price_unit": "136.93",
-    "unit": 92,
-    "total": "12597.56",
-    "start_date": "11-13-2019"
+    "price_unit": "208.51",
+    "unit": 13,
+    "total": "2710.63",
+    "start_date": "02-26-2020"
   },
   {
     "upc": "UPC0000000097",
-    "store": "Store 004",
-    "price_unit": "151.23",
-    "unit": 67,
-    "total": "10132.41",
-    "start_date": "12-30-2015"
+    "store": "Store 003",
+    "price_unit": "366.14",
+    "unit": 89,
+    "total": "32586.46",
+    "start_date": "02-02-2020"
   },
   {
     "upc": "UPC0000000098",
-    "store": "Store 004",
-    "price_unit": "311.01",
-    "unit": 92,
-    "total": "28612.92",
-    "start_date": "02-01-2019"
+    "store": "Store 001",
+    "price_unit": "342.35",
+    "unit": 96,
+    "total": "32865.60",
+    "start_date": "03-02-2020"
   },
   {
     "upc": "UPC0000000099",
-    "store": "Store 001",
-    "price_unit": "261.00",
-    "unit": 15,
-    "total": "3915.00",
-    "start_date": "03-20-2019"
+    "store": "Store 003",
+    "price_unit": "170.25",
+    "unit": 63,
+    "total": "10725.75",
+    "start_date": "02-11-2020"
   },
   {
     "upc": "UPC00000000100",
     "store": "Store 004",
-    "price_unit": "361.87",
-    "unit": 87,
-    "total": "31482.69",
-    "start_date": "06-04-2019"
+    "price_unit": "323.88",
+    "unit": 25,
+    "total": "8097.00",
+    "start_date": "02-22-2020"
   }
 ]

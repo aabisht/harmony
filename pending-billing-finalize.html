@@ -93,30 +93,6 @@
 
           <div class="main-body-data-wrapper">
             <div class="container-fluid">
-              <!-- <div class="card">
-                <div class="card-content">
-                  <div class="card-header d-flex flex-row justify-content-between align-items-center">
-                    <div class="card-title-wrapper">
-                      <h3 class="card-title">Finalize All <span id="select-row-num"></span></h3>
-                    </div>
-                    <div class="card-header-action-wrapper" id="cardHeaderAction">
-                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <div class="input-field-wrapper header-action-item header-action-item-select">
-                          <div class="input-field d-flex flex-row justify-content-end align-items-center">
-                            <span class="page-size-label">Item to Show</span>
-                            <select onchange="onPageSizeChanged()" id="page-size">
-                              <option value="10">10</option>
-                              <option value="20">20</option>
-                              <option value="50">50</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="datatable" class="datatable ag-theme-material"></div>
-                </div>
-              </div> -->
               <ul class="collapsible collapsible-data-table">
                 <li class="">
                   <div class="align-items-center collapsible-header d-flex flex-row justify-content-between">
@@ -128,23 +104,25 @@
                     </div>
                     <div class="header-action-wrapper">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <div class="input-field-wrapper header-action-item header-action-item-select">
-                          <div class="input-field d-flex flex-row justify-content-end align-items-center">
-                            <span class="page-size-label">Item to Show</span>
-                            <select onchange="onPageSizeChanged()" id="page-size">
-                              <option value="10">10</option>
-                              <option value="20">20</option>
-                              <option value="50">50</option>
-                            </select>
-                          </div>
-                        </div>
-                        <a href="javascript:;" class="button-primary header-action-item tooltip" data-position="bottom" data-tooltip="Downlaod CSV file"><i class="fas fa-file-csv"></i> Downlaod</a>
-                        <a href="javascript:;" class="button-primary header-action-item tooltip" data-position="bottom" data-tooltip="Downlaod PDF file"><i class="fas fa-file-pdf"></i> Downlaod</a>
+                        <a href="javascript:;" class="button-primary header-action-item tooltip download-csv-button" data-position="bottom" data-tooltip="Downlaod CSV file"><i class="fas fa-file-download"></i> CSV</a>
+                        <a href="javascript:;" class="button-primary header-action-item tooltip download-pdf-button" data-position="bottom" data-tooltip="Downlaod PDF file"><i class="fas fa-file-download"></i> PDF</a>
                       </div>
                     </div>
                   </div>
                   <div class="">
-                    <div id="vendor1Data" class="datatable ag-theme-material"></div>
+                    <div class="datatable-wrapper">
+                      <div id="vendor1Data" class="datatable ag-theme-material"></div>
+                      <div class="datatable-action-item-select">
+                        <div class="d-flex flex-row justify-content-end align-items-center">
+                          <span class="page-size-label">Item to Show</span>
+                          <select onchange="onPageSizeChanged()" id="page-size">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </li>
                 <li class="">
@@ -157,23 +135,25 @@
                     </div>
                     <div class="header-action-wrapper">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <div class="input-field-wrapper header-action-item header-action-item-select">
-                          <div class="input-field d-flex flex-row justify-content-end align-items-center">
-                            <span class="page-size-label">Item to Show</span>
-                            <select onchange="onPageSizeChanged()" id="page-size">
-                              <option value="10">10</option>
-                              <option value="20">20</option>
-                              <option value="50">50</option>
-                            </select>
-                          </div>
-                        </div>
-                        <a href="javascript:;" class="button-primary header-action-item tooltip" data-position="bottom" data-tooltip="Downlaod CSV file"><i class="fas fa-file-csv"></i> Downlaod</a>
-                        <a href="javascript:;" class="button-primary header-action-item tooltip" data-position="bottom" data-tooltip="Downlaod PDF file"><i class="fas fa-file-pdf"></i> Downlaod</a>
+                        <a href="javascript:;" class="button-primary header-action-item tooltip download-csv-button" data-position="bottom" data-tooltip="Downlaod CSV file"><i class="fas fa-file-download"></i> CSV</a>
+                        <a href="javascript:;" class="button-primary header-action-item tooltip download-pdf-button" data-position="bottom" data-tooltip="Downlaod PDF file"><i class="fas fa-file-download"></i> PDF</a>
                       </div>
                     </div>
                   </div>
                   <div class="">
-                    <div id="vendor2Data" class="datatable ag-theme-material"></div>
+                    <div class="datatable-wrapper">
+                      <div id="vendor2Data" class="datatable ag-theme-material"></div>
+                      <div class="datatable-action-item-select">
+                        <div class="d-flex flex-row justify-content-end align-items-center">
+                          <span class="page-size-label">Item to Show</span>
+                          <select onchange="onPageSizeChanged()" id="page-size">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -198,7 +178,7 @@
   <script>
   var gridOptions_1, gridOptions_2, data1=[], data2=[], data1_total_price = 0 , data2_total_price = 0;
       var columnDefs = [
-        {headerName: "UPC", field: "upc", width: 240},
+        {headerName: "UPC", field: "upc", minWidth: 240},
         {headerName: "Description", field: "description"},
         {headerName: "Store", field: "store"},
         {headerName: "Type", field: "type"},
@@ -243,7 +223,7 @@
           onGridReady: function(params) {
             params.api.sizeColumnsToFit();
             $('.header-1-action-total-amt').text('$'+Number.parseFloat(data1_total_price).toFixed(2));
-            $('#vendor1Data').parent().addClass('collapsible-body');
+            $('#vendor1Data').parent().parent().addClass('collapsible-body');
           }
         };
         gridOptions_2 = {
@@ -263,7 +243,7 @@
           onGridReady: function(params) {
             params.api.sizeColumnsToFit();
             $('.header-2-action-total-amt').text('$'+Number.parseFloat(data2_total_price).toFixed(2));
-            $('#vendor2Data').parent().addClass('collapsible-body');
+            $('#vendor2Data').parent().parent().addClass('collapsible-body');
           }
         };
         var gridDiv = document.querySelector('#vendor1Data');

@@ -52,8 +52,8 @@ $body-font-weight: 400 !default;
 $body-bg-color: #f2f2f2;
 $body-text-color: $text-color-secondary;
 
-$body-link-color: $primary-color !default;
-$body-link-hover-color: map.get($mat-c-green, 500) !default;
+$body-link-color: map.get($mat-c-green, 600) !default;
+$body-link-hover-color: map.get($mat-c-green, 700) !default;
 
 // $icon-font-path: "./assets/fonts/fontawesome" !default;
 

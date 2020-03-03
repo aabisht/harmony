@@ -133,7 +133,7 @@
                             </select>
                           </div>
                         </div>
-                        <button type="button" class="button-primary header-action-item disabled">Submit</button>
+                        <button type="button" class="button-primary header-action-item">Submit</button>
                       </div>
                     </div>
                   </div>
@@ -193,12 +193,8 @@
       $.get("data/deals.json", function(data, status){
         $(data).each(function(item) {
 
-          if(this.start_date === '01-25-2020'){
-            this.start_date = '25-01-2020'
-          }
-
-          if(this.end_date === '01-15-2020'){
-            this.end_date = '15-01-2020'
+          if(this.allowance_type === 'Scanback'){
+            this.allowance_type = 'Scan back'
           }
 
           gridData.push(this);
