@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
   <link href="./css/vendor/fontawesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/vendor/flatpickr.min.css">
+  <link rel="stylesheet" href="./css/vendor/datepicker.min.css">
   <link rel="stylesheet" href="./css/vendor/materialize.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
@@ -227,6 +227,11 @@
 
 
         gridOptions_1 = {
+          defaultColDef: {
+            resizable: true,
+            sortable:true,
+            filter: true
+          },
           columnDefs: columnDefs,
           rowData: data1,
           suppressContextMenu:true,
@@ -242,6 +247,11 @@
           }
         };
         gridOptions_2 = {
+          defaultColDef: {
+            resizable: true,
+            sortable:true,
+            filter: true
+          },
           columnDefs: columnDefs,
           rowData: data2,
           suppressContextMenu:true,

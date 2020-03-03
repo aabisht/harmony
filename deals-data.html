@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
   <link href="./css/vendor/fontawesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/vendor/flatpickr.min.css">
+  <link rel="stylesheet" href="./css/vendor/datepicker.min.css">
   <link rel="stylesheet" href="./css/vendor/materialize.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
@@ -169,8 +169,9 @@
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="js/vendor/jquery-3.4.1.min.js"></script>
   <script src="js/vendor/ag-grid-enterprise.min.js"></script>
-  <script src="js/vendor/flatpickr.js"></script>
   <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/vendor/datepicker.min.js"></script>
+  <script src="js/vendor/datepicker.en.js"></script>
 
 
   <script src="js/main.js"></script>
@@ -189,19 +190,19 @@
         {headerName: "Allowance Type", field: "allowance_type", editable: true},
         {headerName: "Amount", field: "amount", editable: true},
         {headerName: "Ad Fee", field: "ad_fee", editable: true},
-        {headerName: "Start Date", field: "start_date", editable: true, cellClass: function(params) { return params.value === '21-12-2018' ? 'data-error' : ''; }},
-        {headerName: "End Date", field: "end_date", editable: true, cellClass: function(params) { return params.value === '18-10-2019' ? 'data-error' : ''; }},
+        {headerName: "Start Date", field: "start_date", editable: true, cellClass: function(params) { return params.value === '31-12-2019' ? 'data-error' : ''; }},
+        {headerName: "End Date", field: "end_date", editable: true, cellClass: function(params) { return params.value === '17-07-2019' ? 'data-error' : ''; }},
         // {headerName: "Action", field: "button", cellRenderer: 'actionCellRender', editable: false}
       ];
       $.get("data/deals.json", function(data, status){
         $(data).each(function(item) {
 
-          if(this.start_date === '12-21-2018'){
-            this.start_date = '21-12-2018'
+          if(this.start_date === '12-31-2019'){
+            this.start_date = '31-12-2019'
           }
 
-          if(this.end_date === '10-18-2019'){
-            this.end_date = '18-10-2019'
+          if(this.end_date === '07-17-2019'){
+            this.end_date = '17-07-2019'
           }
 
           gridData.push(this);
@@ -211,6 +212,7 @@
             editable: false,
             resizable: true,
             sortable:true,
+            filter: true
           },
           singleClickEdit: false,
           stopEditingWhenGridLosesFocus: false,
@@ -243,45 +245,9 @@
       gridOptions.api.paginationSetPageSize(Number(value));
     }
 
-    function onBtStartEditing() {
-        gridOptions.api.setFocusedCell(2, 'make');
-        gridOptions.api.startEditingCell({
-            rowIndex: 2,
-            colKey: 'make'
-        });
-    }
-
-    function ActionCellRender() {
-    }
-
-    ActionCellRender.prototype.init = function (params) {
-        this.eGui = document.createElement('div');
-        this.eGui.classList.add('button-wrapper')
-        
-        if (params.value !== "" || params.value !== undefined || params.value !== null) {
-          this.eGui.innerHTML = '<button type="button" class="button-stroked button-primary table-button-edit"><i class="fas fa-edit"></i></button><button type="button" class="button-stroked button-primary table-button-save"><i class="far fa-save"></i></button><button type="button" class="button-stroked button-primary table-button-clancel"><i class="fas fa-times"></i></button>';
-        }
-    };
-
-    ActionCellRender.prototype.getGui = function () {
-        return this.eGui;
-    };
-
     $(document).ready(function() { 
       $(window).on("load resize ",function(e){
         $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
-      });
-
-
-      $('body').on('click', '.table-button-edit', function(event) {
-        // debugger;
-        event.stopPropagation();
-        var rowIndex = parseInt($(this).closest('.ag-row').attr('row-index'));
-        gridOptions.api.setFocusedCell(rowIndex, 'make');
-        gridOptions.api.startEditingCell({
-        rowIndex: rowIndex,
-        colKey: 'make'
-    });
       });
     });
   </script>

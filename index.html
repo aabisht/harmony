@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
   <link href="./css/vendor/fontawesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/vendor/flatpickr.min.css">
+  <link rel="stylesheet" href="./css/vendor/datepicker.min.css">
   <link rel="stylesheet" href="./css/vendor/materialize.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
@@ -155,8 +155,9 @@
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="js/vendor/jquery-3.4.1.min.js"></script>
   <script src="js/vendor/ag-grid-enterprise.min.js"></script>
-  <script src="js/vendor/flatpickr.js"></script>
   <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/vendor/datepicker.min.js"></script>
+  <script src="js/vendor/datepicker.en.js"></script>
 
 
   <script src="js/main.js"></script>
@@ -185,6 +186,7 @@
             editable: false,
             resizable: true,
             sortable:true,
+            filter: true
           },
           rowSelection: 'multiple',
           columnDefs: columnDefs,

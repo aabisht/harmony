@@ -43,6 +43,12 @@
             }
         }
 
+        .ag-header-cell {
+            .ag-header-cell-menu-button {
+                opacity: 1 !important;
+            }
+        }
+
         .ag-header-cell,
         .ag-header-group-cell {
             background-color: $datatable-header-bg-color;
