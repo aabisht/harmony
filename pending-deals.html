@@ -1,0 +1,267 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pending Deals | Bristol Farms</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+  <link href="./css/vendor/fontawesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/vendor/datepicker.min.css">
+  <link rel="stylesheet" href="./css/vendor/materialize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="left-menu-fixed">
+  <style>
+    .collapsible-data-table {
+      height: calc(100vh - 90px);
+      background: #fff;
+    }
+    /* .datatable {
+      height: 620px;
+    } */
+  </style>
+
+  <div class="body-container-wrapper">
+    <div class="body-wrapper">
+
+      <!-- Header -->
+      <header class="header-container">
+        <div class="header-container-wrapper">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-10 header-left-wrapper">
+                <div class="cell-wrapper">
+                  <div class="header-title-nav-wrapper">
+                    <div class="title">
+                      <h3>Pending Deals</h3>
+                      <div aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="/">Home</a></li>
+                          <li class="breadcrumb-item"><a href="/pending-deals.html">Pending Deals</a></li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 header-right-wrapper text-right">
+                <div class="cell-wrapper">
+                  <div class="header-dropdown-wrapper">
+                    <a href="javascript:;" class="header-dropdown-trigger"><i class="far fa-user-circle"></i></a>
+                    <div class="dropdown-menu text-left">
+                      <div class="header-dropdown-user-profile-wrapper text-center">
+                        <div class="user-avatar-wrapper">
+                          <i class="far fa-user-circle"></i>
+                        </div>
+                        <div class="user-detail-wrapper">
+                          <h3><a href="javascript:;">User Name</a></h3>
+                          <h5>Admin</h5>
+                        </div>
+                      </div>
+                      <ul>
+                        <li><a href="javascript:;">Menu 1</a></li>
+                        <li><a href="javascript:;">Menu 2</a></li>
+                        <li><a href="javascript:;">Menu 3</a></li>
+                        <li><a href="javascript:;">Logout</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Left Menu -->
+      <div class="left-menu-wrapper"></div>
+
+      <!-- Main Body Content -->
+      <div class="main-body-content-wrapper">
+        <div class="main-body-content-container">
+
+          <div class="main-body-data-wrapper">
+            <div class="container-fluid">
+              <ul class="collapsible collapsible-data-table">
+                <li class="">
+                  <div class="align-items-center collapsible-header d-flex flex-row justify-content-between">
+                    <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
+                    <div class="header-title">
+                      <h3>Bill To: Vendor 1</h3>
+                      <h4>Total Amout: <span class="header-1-action-total-amt header-action-total-amt"></span></h4>
+                    </div>
+                    <div class="header-action-wrapper">
+                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                        <a href="javascript:;" class="button-primary header-action-item"><i class="fas fa-check"></i> Accept</a>
+                        <a href="javascript:;" class="button-primary header-action-item"><i class="fas fa-times"></i> Reject</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="datatable-wrapper">
+                      <div id="vendor1Data" class="datatable ag-theme-material"></div>
+                      <div class="datatable-action-item-select">
+                        <div class="d-flex flex-row justify-content-end align-items-center">
+                          <span class="page-size-label">Item to Show</span>
+                          <select onchange="onPageSizeChanged(event, 'grid-1')" id="page-size-2">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="">
+                  <div class="align-items-center collapsible-header d-flex flex-row justify-content-between">
+                    <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
+                    <div class="header-title">
+                      <h3>Bill To: Vendor 2</h3>
+                      <h4>Total Amout: <span class="header-2-action-total-amt header-action-total-amt"></span></h4>
+                    </div>
+                    <div class="header-action-wrapper">
+                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                        <a href="javascript:;" class="button-primary header-action-item"><i class="fas fa-check"></i> Accept</a>
+                        <a href="javascript:;" class="button-primary header-action-item"><i class="fas fa-times"></i> Reject</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="datatable-wrapper">
+                      <div id="vendor2Data" class="datatable ag-theme-material"></div>
+                      <div class="datatable-action-item-select">
+                        <div class="d-flex flex-row justify-content-end align-items-center">
+                          <span class="page-size-label">Item to Show</span>
+                          <select onchange="onPageSizeChanged(event, 'grid-2')" id="page-size-2">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="js/vendor/jquery-3.4.1.min.js"></script>
+  <script src="js/vendor/ag-grid-enterprise.min.js"></script>
+  <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/vendor/datepicker.min.js"></script>
+  <script src="js/vendor/datepicker.en.js"></script>
+
+
+  <script src="js/main.js"></script>
+  <script>
+  var gridOptions_1, gridOptions_2, data1=[], data2=[], data1_total_price = 0 , data2_total_price = 0;
+      var columnDefs = [
+      {
+          headerName: "UPC", 
+          field: "upc",
+          minWidth: 240
+        },
+        {headerName: "Store", field: "store"},
+        {headerName: "Cost Type", field: "cost_type"},
+        {headerName: "Allowance Type", field: "allowance_type"},
+        {headerName: "Amount", field: "amount"},
+        {headerName: "Ad Fee", field: "ad_fee"},
+        {headerName: "Start Date", field: "start_date"},
+        {headerName: "End Date", field: "end_date"}
+      ];
+      $.get("data/deals.json", function(data, status){
+
+        $(data).each(function() {
+          if(this.vendor === "Vendor-1") {
+            data1.push(this);
+            data1_total_price = data1_total_price + parseFloat(this.amount.replace('$',''));
+          } else if(this.vendor === "Vendor-2") {
+            data2.push(this);
+            data2_total_price = data1_total_price + parseFloat(this.amount.replace('$',''));
+          }
+        });
+
+
+        gridOptions_1 = {
+          defaultColDef: {
+            resizable: true,
+            sortable:true,
+            filter: true
+          },
+          columnDefs: columnDefs,
+          rowData: data1,
+          suppressContextMenu:true,
+          pagination: true,
+          paginationPageSize: 10,
+          paginationNumberFormatter: function(params) {
+              return '[' + params.value.toLocaleString() + ']';
+          },
+          onGridReady: function(params) {
+            // params.api.sizeColumnsToFit();
+            $('.header-1-action-total-amt').text('$'+Number.parseFloat(data1_total_price).toFixed(2));
+            $('#vendor1Data').parent().parent().addClass('collapsible-body');
+          }
+        };
+        gridOptions_2 = {
+          defaultColDef: {
+            resizable: true,
+            sortable:true,
+            filter: true
+          },
+          columnDefs: columnDefs,
+          rowData: data2,
+          suppressContextMenu:true,
+          pagination: true,
+          paginationPageSize: 10,
+          paginationNumberFormatter: function(params) {
+              return '[' + params.value.toLocaleString() + ']';
+          },
+          onGridReady: function(params) {
+            // params.api.sizeColumnsToFit();
+            $('.header-2-action-total-amt').text('$'+Number.parseFloat(data2_total_price).toFixed(2));
+            $('#vendor2Data').parent().parent().addClass('collapsible-body');
+          }
+        };
+        var gridDiv = document.querySelector('#vendor1Data');
+        new agGrid.Grid(gridDiv, gridOptions_1);    
+        var gridDiv = document.querySelector('#vendor2Data');
+        new agGrid.Grid(gridDiv, gridOptions_2);    
+      });
+
+    function onPageSizeChanged(event, gridNumber) {
+      var value = event.currentTarget.value;
+      if(gridNumber === 'grid-1') {
+        gridOptions_1.api.paginationSetPageSize(Number(value));
+      } else if(gridNumber === 'grid-2') {
+        gridOptions_2.api.paginationSetPageSize(Number(value));
+      }
+    }
+  </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

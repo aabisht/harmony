@@ -193,7 +193,6 @@
         {headerName: "Ad Fee", field: "ad_fee", editable: true},
         {headerName: "Start Date", field: "start_date", editable: true, cellRenderer: 'tooltipCellRenderer'},
         {headerName: "End Date", field: "end_date", editable: true, cellRenderer: 'tooltipCellRenderer'},
-        // {headerName: "Action", field: "button", cellRenderer: 'actionCellRender', editable: false}
       ];
       $.get("data/deals.json", function(data, status){
         $(data).each(function(item) {
