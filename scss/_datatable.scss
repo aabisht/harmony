@@ -225,14 +225,21 @@
             margin-bottom: 0;
         }
     }
+}
 
-    .info-msg {
-        margin-top: 10px;
-        font-style: italic;
+.info-msg {
+    margin-top: 10px;
+    font-style: italic;
 
-        &.error {
-            color: $error-color;
-        }
+    &.error {
+        color: $error-color;
+    }
+}
+
+.datatable-header-select {
+    .input-field {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
