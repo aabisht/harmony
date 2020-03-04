@@ -124,7 +124,7 @@
                     </div>
                     <div class="card-header-action-wrapper" id="cardHeaderAction">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <div class="datatable-header-select input-field-wrapper header-action-item header-action-item-select header-action-item-select-vendoe">
+                        <!-- <div class="datatable-header-select input-field-wrapper header-action-item header-action-item-select header-action-item-select-vendoe">
                           <div class="input-field d-flex flex-row justify-content-end align-items-center">
                             <span class="page-size-label">Bill To</span>
                             <select id="">
@@ -134,7 +134,7 @@
                               <option value="Broker-2">Broker 2</option>
                             </select>
                           </div>
-                        </div>
+                        </div> -->
                         <button type="button" class="button-primary button-stroked header-action-item">Save</button>
                         <button type="button" class="button-primary header-action-item disabled">Submit</button>
                       </div>
@@ -188,6 +188,7 @@
         },
         {headerName: "Store", field: "store", editable: true},
         {headerName: "Vendor", field: "vendor", editable: true},
+        {headerName: "Bill To", field: "bill_to", editable: true},
         {headerName: "Cost Type", field: "cost_type", editable: true},
         {headerName: "Allowance Type", field: "allowance_type", editable: true, cellRenderer: 'tooltipCellRenderer'},
         {headerName: "Amount", field: "amount", editable: true},
@@ -198,12 +199,12 @@
       $.get("data/deals.json", function(data, status){
         $(data).each(function(item) {
 
-          if(this.start_date === '01-25-2020'){
-            this.start_date = '25-01-2020'
+          if(this.start_date === '01-14-2020'){
+            this.start_date = '14-01-2020'
           }
 
-          if(this.end_date === '01-15-2020'){
-            this.end_date = '15-01-2020'
+          if(this.end_date === '01-18-2020'){
+            this.end_date = '18-01-2020'
           }
 
           gridData.push(this);
@@ -251,7 +252,7 @@
         this.eGui = document.createElement('div');
 
         if(params.colDef.field === 'start_date') {
-          if(params.value === '25-01-2020') {
+          if(params.value === '14-01-2020') {
             this.eGui.classList.add('data-error');
             this.eGui.classList.add('tooltip');
             this.eGui.setAttribute("data-tooltip", "Invalid date format");
@@ -259,7 +260,7 @@
         }
 
         if(params.colDef.field === 'end_date') {
-          if(params.value === '15-01-2020') {
+          if(params.value === '18-01-2020') {
             this.eGui.classList.add('data-error');
             this.eGui.classList.add('tooltip');
             this.eGui.setAttribute("data-tooltip", "Invalid date format");

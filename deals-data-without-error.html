@@ -124,7 +124,7 @@
                     </div>
                     <div class="card-header-action-wrapper" id="cardHeaderAction">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <div class="input-field-wrapper header-action-item header-action-item-select header-action-item-select-vendoe">
+                        <!-- <div class="input-field-wrapper header-action-item header-action-item-select header-action-item-select-vendoe">
                           <div class="input-field d-flex flex-row justify-content-end align-items-center">
                             <span class="page-size-label">Bill To</span>
                             <select id="">
@@ -134,7 +134,8 @@
                               <option value="Broker-2">Broker 2</option>
                             </select>
                           </div>
-                        </div>
+                        </div> -->
+                        <button type="button" class="button-primary button-stroked header-action-item">Save</button>
                         <button type="button" class="button-primary header-action-item">Submit</button>
                       </div>
                     </div>
@@ -196,7 +197,7 @@
         $(data).each(function(item) {
 
           if(this.allowance_type === 'Nunc vel'){
-            this.allowance_type = 'Scan back'
+            this.allowance_type = 'Lumpsum'
           }
 
           gridData.push(this);
