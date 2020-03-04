@@ -224,6 +224,15 @@
             margin-bottom: 0;
         }
     }
+
+    .info-msg {
+        margin-top: 10px;
+        font-style: italic;
+
+        &.error {
+            color: $error-color;
+        }
+    }
 }
 
 .datatable-action-item-select {
