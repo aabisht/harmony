@@ -218,7 +218,7 @@
               return '[' + params.value.toLocaleString() + ']';
           },
           onGridReady: function(params) {
-            params.api.sizeColumnsToFit();
+            // params.api.sizeColumnsToFit();
             $('.header-1-action-total-amt').text('$'+Number.parseFloat(data1_total_price).toFixed(2));
             $('#vendor1Data').parent().parent().addClass('collapsible-body');
           }
@@ -238,7 +238,7 @@
               return '[' + params.value.toLocaleString() + ']';
           },
           onGridReady: function(params) {
-            params.api.sizeColumnsToFit();
+            // params.api.sizeColumnsToFit();
             $('.header-2-action-total-amt').text('$'+Number.parseFloat(data2_total_price).toFixed(2));
             $('#vendor2Data').parent().parent().addClass('collapsible-body');
           }

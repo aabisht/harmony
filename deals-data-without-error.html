@@ -195,7 +195,7 @@
       $.get("data/deals.json", function(data, status){
         $(data).each(function(item) {
 
-          if(this.allowance_type === 'Scanback'){
+          if(this.allowance_type === 'Nunc vel'){
             this.allowance_type = 'Scan back'
           }
 
@@ -222,7 +222,7 @@
               return '[' + params.value.toLocaleString() + ']';
           },
           onGridReady: function(params) {
-            params.api.sizeColumnsToFit();
+            // params.api.sizeColumnsToFit();
             $('.datatable.ag-theme-material .ag-cell .tooltip').parent().addClass('data-error');
             $('.datatable.ag-theme-material .ag-cell .tooltip').tooltip();
           },

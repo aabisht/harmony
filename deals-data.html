@@ -108,7 +108,7 @@
                     <div class="col-sm-12">
                       <a href="javascrip:;" class="download-csv-button">Download Template</a>
                       <div class="info-msg error">
-                        <i class="fas fa-info-circle"></i> Fix validation errors to upload deals 
+                        <i class="fas fa-info-circle"></i> Fix validation errors to upload deals.
                       </div>
                     </div>
                   </div>
@@ -229,7 +229,7 @@
               return '[' + params.value.toLocaleString() + ']';
           },
           onGridReady: function(params) {
-            params.api.sizeColumnsToFit();
+            // params.api.sizeColumnsToFit();
             $('.datatable.ag-theme-material .ag-cell .tooltip').parent().addClass('data-error');
             $('.datatable.ag-theme-material .ag-cell .tooltip').tooltip();
           },
@@ -267,7 +267,7 @@
         }
 
         if(params.colDef.field === 'allowance_type') {
-          if(params.value === 'Scanback') {
+          if(params.value === 'Nunc vel') {
             this.eGui.classList.add('data-error');
             this.eGui.classList.add('tooltip');
             this.eGui.setAttribute("data-tooltip", "Invalid allowance type");
