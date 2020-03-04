@@ -44,8 +44,8 @@ $(document).ready(function() {
     $('.tooltip').tooltip();
 
     $('body').on('click', '.collapsible-data-table .collapsible-header .header-action-wrapper .input-field', function(event) {
-        event.preventDefault();
-        event.stopPropagation();
+        // event.preventDefault();
+        // event.stopPropagation();
     });
 
 });
