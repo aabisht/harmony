@@ -185,6 +185,10 @@
             h3 {
                 @extend %card-title-styling;
             }
+
+            .input-field {
+                margin: 0 10px 0 0;
+            }
         }
     }
 
