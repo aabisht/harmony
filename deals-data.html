@@ -198,14 +198,12 @@
       ];
       $.get("data/deals.json", function(data, status){
         $(data).each(function(item) {
-
-          if(this.start_date === '01-14-2020'){
-            this.start_date = '14-01-2020'
+          if(this.start_date === '01-16-2020'){
+            this.start_date = '16-01-2020'
           }
-
-          if(this.end_date === '01-18-2020'){
-            this.end_date = '18-01-2020'
-          }
+          // if(this.end_date === '01-15-2020'){
+          //   this.end_date = '15-01-2020'
+          // }
 
           gridData.push(this);
         });
@@ -231,7 +229,10 @@
           },
           onGridReady: function(params) {
             // params.api.sizeColumnsToFit();
-            $('.datatable.ag-theme-material .ag-cell .tooltip').parent().addClass('data-error');
+            $('.datatable.ag-theme-material .ag-cell .tooltip').each(function() {
+              $(this).parent().addClass('data-error');
+            })
+            
             $('.datatable.ag-theme-material .ag-cell .tooltip').tooltip();
           },
           onRowValueChanged: function(event) {
@@ -252,7 +253,7 @@
         this.eGui = document.createElement('div');
 
         if(params.colDef.field === 'start_date') {
-          if(params.value === '14-01-2020') {
+          if(params.value === '16-01-2020') {
             this.eGui.classList.add('data-error');
             this.eGui.classList.add('tooltip');
             this.eGui.setAttribute("data-tooltip", "Invalid date format");
@@ -260,7 +261,7 @@
         }
 
         if(params.colDef.field === 'end_date') {
-          if(params.value === '18-01-2020') {
+          if(params.value === '15-01-2020') {
             this.eGui.classList.add('data-error');
             this.eGui.classList.add('tooltip');
             this.eGui.setAttribute("data-tooltip", "Invalid date format");
