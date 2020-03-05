@@ -84,7 +84,7 @@
             <div class="container-fluid">
               <div class="card header-search-card-wrapper">
                 <div class="card-content">
-                  <h3 class="card-title d-flex flex-row justify-content-between d-flex align-items-center">
+                  <h3 class="card-title">
                     <span>Search</span>
                   </h3>
                   <div class="row header-search-input-wrapper align-items-start justify-content-center">
@@ -100,7 +100,7 @@
                       <div class="cell-wrapper">
                         <div class="input-field">
                           <input id="Item_Description_Search" type="text" value="" autocomplete="off" placeholder="Enter Item Description value">
-                          <label for="Item_Description_Search" class="active">Item Description</label>
+                          <label for="Item_Description_Search">Item Description</label>
                         </div>
                       </div>
                     </div>
@@ -148,6 +148,44 @@
                             <option value="3">Option 3</option>
                           </select>
                           <label>Vendor Name</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row header-search-input-wrapper align-items-start justify-content-center">
+                    <div class="col-md-3 header-adv-search-input-input-item">
+                      <div class="cell-wrapper">
+                        <div class="input-field input-field-icon input-field-icon-right">
+                          <input id="header_search_field_1" type="text" autocomplete="off" value="Value 1">
+                          <label for="header_search_field_1" class="active">Field 1 [<strong>Operator: </strong>CONTAINS]</label>
+                          <a href="javascript:;" class="input-field-remove-trigger"><i class="far fa-trash-alt"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 header-adv-search-input-input-item">
+                      <div class="cell-wrapper">
+                        <div class="input-field input-field-icon input-field-icon-right">
+                          <input id="header_search_field_2" type="text" autocomplete="off" value="Value 2">
+                          <label for="header_search_field_2" class="active">Field 2 [<strong>Operator: </strong>EQUALS]</label>
+                          <a href="javascript:;" class="input-field-remove-trigger"><i class="far fa-trash-alt"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 header-adv-search-input-input-item">
+                      <div class="cell-wrapper">
+                        <div class="input-field input-field-icon input-field-icon-right">
+                          <input id="header_search_field_3" type="text" autocomplete="off" value="Value 3">
+                          <label for="header_search_field_3" class="active">Field 3 [<strong>Operator: </strong>STARTS]</label>
+                          <a href="javascript:;" class="input-field-remove-trigger"><i class="far fa-trash-alt"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 header-adv-search-input-input-item">
+                      <div class="cell-wrapper">
+                        <div class="input-field input-field-icon input-field-icon-right">
+                          <input id="header_search_field_4" type="text" autocomplete="off" value="Value 4">
+                          <label for="header_search_field_4" class="active">Field 4 Field 3 [<strong>Operator: </strong>EQUALS]</label>
+                          <a href="javascript:;" class="input-field-remove-trigger"><i class="far fa-trash-alt"></i></a>
                         </div>
                       </div>
                     </div>
@@ -240,7 +278,7 @@
     <div class="modal-footer">
       <div class="button-wrapper">
         <a href="javscript:;" class="button-primary button-stroked modal-button-add-more">Add More</a>
-        <a href="/view-item-adv-search-filed.html" class="modal-close button-primary modal-button-submit">Submit</a>
+        <a href="/view-item-adv-search-filed.html" class="modal-close button-primary">Submit</a>
       </div>
     </div>
   </div>
@@ -254,7 +292,6 @@
       <a href="javascript:;" class="modal-close button-primary removed-saved-search"><i class="far fa-trash-alt"></i> Delete</a>
     </div>
   </div>
-
 
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="js/vendor/jquery-3.4.1.min.js"></script>

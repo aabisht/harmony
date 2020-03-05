@@ -1,0 +1,40 @@
+.modal {
+    .modal-title {
+        margin-bottom: calculateRem(20px);
+        h3 {
+            margin-bottom: 0;
+            @include fontSize(24px);
+            line-height: 1.2;
+        }
+    }
+
+    &.modal-fixed-footer {
+        .modal-footer {
+            padding: calculateRem(10px) calculateRem(15px);
+            height: calculateRem(67px);
+        }
+    }
+
+    &#deleteSavedSearchModal {
+        max-width: 400px;
+        text-align: center;
+        
+        .modal-footer {
+            text-align: center;
+        }
+    }
+}
+
+.modal-form-wrapper {
+    .button-wrapper {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        
+        .button-primary {
+
+            & + .button-primary {
+                margin-left: 10px;
+            }
+        }
+    }
+}

@@ -189,3 +189,74 @@ textarea.materialize-textarea:focus:not([readonly]) {
 input, textarea {
   color: $secondary-color;
 }
+
+
+.saved-search-wrapper {
+  min-width: 200px;
+
+  .header-saved-search-item {
+    position: relative;
+    border-bottom: 1px solid #e8e8e8;
+
+    > a {
+      text-decoration: none;
+    }
+
+    .removed-saved-search-modal {
+      position: absolute;
+      right: 0px;
+      top: 10px;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      vertical-align: middle;
+      text-align: center;
+      text-decoration: none;
+      color: $error-color;
+
+      i {
+        margin: 0;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.input-field-icon {
+  position: relative;
+  box-sizing: border-box;
+
+  .input-field-remove-trigger {
+    position: absolute;
+    top: 8px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    color: $error-color;
+  }
+
+  &.input-field-icon-right{
+
+    input {
+      padding-right: 50px;
+      box-sizing: border-box;
+    }
+
+    .input-field-remove-trigger { 
+      right: 10px;
+    }
+  }
+  &.input-field-icon-left {
+    input {
+      padding-left: 50px;
+    }
+
+    .input-field-remove-trigger { 
+      left: 10px;
+    }
+  }
+}
+

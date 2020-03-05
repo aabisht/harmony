@@ -107,6 +107,10 @@
                 urlPath = '/pending-billing.html'
             }
 
+            if(urlPath === '/view-item-adv-search-filed.html') {
+                urlPath = '/view-item.html'
+            }
+
             if($(this).attr('href') === urlPath) {
                 
                 $(this).parent().addClass('active');

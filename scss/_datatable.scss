@@ -3,7 +3,7 @@
     line-height: calculateRem(32px);
     font-weight: 600;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: calculateRem(20px);
 
     small {
         font-size: 50%;
@@ -148,7 +148,7 @@
 }
 
 .card {
-    .card-title {
+    .card-title, .card-content .card-title {
         @extend %card-title-styling;
     }
 }
@@ -263,5 +263,19 @@
         position: absolute;
         left: 0;
         bottom: 0;
+    }
+}
+
+.header-search-card-wrapper {
+    .button-search {
+        min-width: 200px;
+    }
+
+    .button-wrapper {
+        .button-primary {
+            & + .button-primary {
+                margin-left: 10px;
+            }
+        }
     }
 }
