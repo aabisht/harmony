@@ -157,7 +157,7 @@
                       <div class="cell-wrapper d-flex flex-row justify-content-between align-items-center">
                         <div class="button-wrapper text-center">
                           <div class="button-primary button-with-dropdown">
-                            <a href="javascrip:;" class="button-adv-seach">Save Search</a>
+                            <a href="#saveSearchModal" class="button-adv-seach modal-trigger">Save Search</a>
                             <a href="javscript:;" class="dropdown-trigger save-search-trigger" data-target='savedSearchWrapper'><i class="fas fa-caret-down"></i></a>
                             <ul id='savedSearchWrapper' class='dropdown-content saved-search-wrapper'>
                               <li class="header-saved-search-item"><a href="javscript:;">Grocery Items</a> <a href="javascript:;" class="removed-saved-search-modal modal-trigger" data-target="deleteSavedSearchModal" data-item="1" data-name="Grocery Items"><i class="far fa-trash-alt"></i></a></li>
@@ -252,6 +252,24 @@
     <div class="modal-footer">
       <a href="javascript:;" class="modal-close button-stroked button-primary"><i class="fas fa-times"></i> Cancel</a>
       <a href="javascript:;" class="modal-close button-primary removed-saved-search"><i class="far fa-trash-alt"></i> Delete</a>
+    </div>
+  </div>
+
+  <div id="saveSearchModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-title"><h3>Save Search Name</h3></div>
+      <div class="save-search-name-input-wrapper">
+        <div class="input-field">
+          <input id="saveSearchNameInput" type="text" class="saveSearchNameInput-value">
+          <label for="saveSearchNameInput">Enter name for save search</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="button-wrapper">
+        <a href="javascript:;" class="modal-close button-stroked button-primary"><i class="fas fa-times"></i> Cancel</a>
+        <a href="javascript:;" class="modal-close button-primary save-saved-search-name"><i class="far fa-save"></i> Save</a>
+      </div>
     </div>
   </div>
 

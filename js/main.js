@@ -108,7 +108,17 @@ $(document).ready(function() {
 
     $('body').on('click', '.input-field-remove-trigger', function() {
         $(this).closest('.header-adv-search-input-input-item').remove();
-     });
+    });
+
+    $('body').on('click', '.save-saved-search-name', function() {
+        var val = $('#saveSearchNameInput').val(),
+            itemLength = $('#savedSearchWrapper > li').length;
+
+        $('#savedSearchWrapper').append('<li class="header-saved-search-item"><a href="javscript:;">'+val+' </a> <a href="javascript:;" class="removed-saved-search-modal modal-trigger"  data-target="deleteSavedSearchModal" data-item="'+(itemLength+1)+'" data-name="Organic Items"><i class="far fa-trash-alt"></i></a></li>');
+        // debugger;
+    });
+
+    
 
     $('.tooltip').tooltip();
     $('.modal').modal();

@@ -52,6 +52,7 @@
     a {
         color: inherit;
         text-decoration: none;
+        display: block;
     }
 
     &.button-with-dropdown {
@@ -100,6 +101,14 @@
         &:hover { 
             background-color: darken($button-primary-bg-color, 10%);
             color: $color-white;
+        }
+    }
+}
+
+.button-wrapper {
+    .button-primary {
+        & + .button-primary {
+            margin-left: 10px;
         }
     }
 }

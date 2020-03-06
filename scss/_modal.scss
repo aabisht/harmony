@@ -7,6 +7,11 @@
             line-height: 1.2;
         }
     }
+    
+    .modal-footer {
+        padding-left: calculateRem(24px);
+        padding-right: calculateRem(24px);
+    }
 
     &.modal-fixed-footer {
         .modal-footer {
@@ -22,6 +27,11 @@
         .modal-footer {
             text-align: center;
         }
+    }
+
+    &#advSeachModal {
+        width: 100%;
+        max-width: 1050px;
     }
 }
 
