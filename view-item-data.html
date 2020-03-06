@@ -129,8 +129,8 @@
                       <div class="cell-wrapper">
                         <div class="input-field">
                           <select>
-                            <option value="" disabled selected>Choose</option>
-                            <option value="1">Option 1</option>
+                            <option value="" disabled >Choose</option>
+                            <option value="1" selected>Option 1</option>
                             <option value="2">Option 2</option>
                             <option value="3">Option 3</option>
                           </select>
@@ -150,9 +150,9 @@
                       <div class="cell-wrapper">
                         <div class="input-field">
                           <select>
-                            <option value="" disabled selected>Choose</option>
+                            <option value="" disabled >Choose</option>
                             <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
+                            <option value="2" selected>Option 2</option>
                             <option value="3">Option 3</option>
                           </select>
                           <label>Vendor Name</label>
@@ -170,6 +170,41 @@
                           <a href="#advSeachModal" class="button-primary button-stroked button-adv-seach modal-trigger">Advance Search</a>
                           <a href="/view-item-data.html" class="button-primary button-search">Search</a>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-body-data-wrapper">
+            <div class="container-fluid">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-header d-flex flex-row justify-content-between align-items-center">
+                    <div class="card-title-wrapper">
+                      <h3 class="card-title">
+                        View Item
+                        <span id="select-row-num"></span>
+                      </h3>
+                    </div>
+                    <div class="card-header-action-wrapper" id="cardHeaderAction">
+                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="datatable-wrapper">
+                    <div id="datatable" class="datatable ag-theme-material"></div>
+                    <div class="datatable-action-item-select">
+                      <div class="d-flex flex-row justify-content-end align-items-center">
+                        <span class="page-size-label">Item to Show</span>
+                        <select onchange="onPageSizeChanged()" id="page-size">
+                          <option value="10">10</option>
+                          <option value="20">20</option>
+                          <option value="50">50</option>
+                        </select>
                       </div>
                     </div>
                   </div>
@@ -284,6 +319,176 @@
   <script src="js/main.js"></script>
 
   <script>
+    var gridOptions;
+      var columnDefs = [
+        {
+          headerName: "UPC", 
+          field: "upc",
+          headerCheckboxSelection: true,
+          headerCheckboxSelectionFilteredOnly: true,
+          checkboxSelection: true,
+          minWidth: 240
+        },
+        {headerName: "PLU", field: "plu"},
+        {headerName: "Description", field: "description"},
+        {headerName: "Vendor ID", field: "vendor_id"},
+        {headerName: "Vendor", field: "vendor"},
+        {headerName: "Category", field: "category"},
+        {headerName: "Class", field: "class"},
+        {headerName: "Unit Price UPC", field: "unit_price_upc"},
+        {headerName: "Case UPC", field: "case_upc"},
+        {headerName: "Department ID", field: "department_id"},
+        {headerName: "Family ID", field: "family_id"},
+        {headerName: "AllowanceCode", field: "allowance_code"},
+        {headerName: "AllowanceType", field: "allowance_type"},
+        {headerName: "UnitAllow", field: "unit_allow"},
+        {headerName: "StartDate", field: "start_date"},
+        {headerName: "EndDate", field: "end_date"},
+        {headerName: "Pack", field: "pack"},
+        {headerName: "AllowanceCodeID", field: "allowance_code_id"},
+        {headerName: "AllowanceCodeName", field: "allowance_code_name"},
+        {headerName: "AllowanceTypeID", field: "allowance_type_id"},
+        {headerName: "AllowanceTypeName", field: "allowance_type_name"},
+        {headerName: "AlternateUPC", field: "alternate_upc"},
+        {headerName: "AlternateCountRatio", field: "alternate_count_ratio"},
+        {headerName: "CafeMenuID", field: "cafe_menu_id"},
+        {headerName: "CafeMenuName", field: "cafe_menu_name"},
+        {headerName: "BannerID", field: "banner_id"},
+        {headerName: "CategoryID", field: "category_id"},
+        {headerName: "ParentID", field: "parent_id"},
+        {headerName: "CategoryName", field: "category_name"},
+        {headerName: "SpecialistID", field: "specialist_id"},
+        {headerName: "ClassID", field: "class_id"},
+        {headerName: "DataEntryLinkID", field: "data_entry_link_id"},
+        {headerName: "DataEntryLinkDescription", field: "data_entry_link_description"},
+        {headerName: "FinancialDepartment", field: "financial_department"},
+        {headerName: "TransferMargin", field: "transfer_margin"},
+        {headerName: "BFContact", field: "bf_contact"},
+        {headerName: "POSDescription", field: "pos_description"},
+        {headerName: "AdvertisingDescription", field: "advertising_description"},
+        {headerName: "Brand", field: "brand"},
+        {headerName: "Family", field: "family"},
+        {headerName: "Subcategory", field: "subcategory"},
+        {headerName: "UnitSize", field: "unit_size"},
+        {headerName: "RetailPack", field: "retail_pack"},
+        {headerName: "CasePack", field: "case_pack"},
+        {headerName: "OutOfSeason", field: "out_of_season"},
+        {headerName: "PriceRule", field: "price_rule"},
+        {headerName: "MixMatchCode", field: "mix_match_code"},
+        {headerName: "TargetGM", field: "target_gm"},
+        {headerName: "CouponInd", field: "coupon_ind"},
+        {headerName: "POSPricingMethod", field: "pos_pricing_method"},
+        {headerName: "PODLevel", field: "pod_level"},
+        {headerName: "Yield", field: "yield"},
+        {headerName: "BFSeasonalPromo", field: "bf_seasonal_promo"},
+        {headerName: "CBD", field: "cbd"},
+        {headerName: "CoreSet", field: "core_set"},
+        {headerName: "CustomerRequest", field: "customer_request"},
+        {headerName: "FairTrade", field: "fair_rade"},
+        {headerName: "Foodstamp", field: "food_stamp"},
+        {headerName: "GlutenFree", field: "gluten_free"},
+        {headerName: "Instacart", field: "insta_cart"},
+        {headerName: "InstacartTPR", field: "insta_cart_trp"},
+        {headerName: "LASeasonalPromo", field: "la_seasonal_promo"},
+        {headerName: "Local", field: "local"},
+        {headerName: "Natural", field: "natural"},
+        {headerName: "NGMO", field: "ngmo"},
+        {headerName: "NotForSale", field: "not_for_sale"},
+        {headerName: "Organic", field: "organic"},
+        {headerName: "OrganicallyGrown", field: "organically_grown"},
+        {headerName: "OverrideRequired", field: "override_required"},
+        {headerName: "PlantBased", field: "plant_based"},
+        {headerName: "PriceRequired", field: "price_required"},
+        {headerName: "PrivateLabel", field: "private_label"},
+        {headerName: "ProduceFIFO", field: "produce_fifo"},
+        {headerName: "QtyAllowed", field: "qty_allowed"},
+        {headerName: "QtyRequired", field: "qty_required"},
+        {headerName: "Raw", field: "raw"},
+        {headerName: "RemotePrinter", field: "remote_printer"},
+        {headerName: "RPD", field: "rpd"},
+        {headerName: "Seasonal", field: "seasonal"},
+        {headerName: "TaxA", field: "tax_a"},
+        {headerName: "TaxB", field: "tax_b"},
+        {headerName: "TaxC", field: "tax_c"},
+        {headerName: "TaxD", field: "tax_d"},
+        {headerName: "TaxE", field: "tax_e"},
+        {headerName: "Taxf", field: "tax_f"},
+        {headerName: "TaxG", field: "tax_g"},
+        {headerName: "TaxH", field: "tax_h"},
+        {headerName: "ValueBF", field: "value_bf"},
+        {headerName: "ValueLAM", field: "value_lam"},
+        {headerName: "Vegan", field: "vegan"},
+        {headerName: "SchematicName1", field: "schematic_name_1"},
+        {headerName: "SchematicName2", field: "schematic_name_2"},
+        {headerName: "Height", field: "height"},
+        {headerName: "Depth", field: "depth"},
+        {headerName: "Width", field: "width"},
+        {headerName: "MOQ", field: "moq"},
+        {headerName: "MMVendPack", field: "mm_vend_pack"},
+        {headerName: "MMVendSize", field: "mm_vend_size"},
+        {headerName: "MMVendUOM", field: "mm_vend_uom"},
+      ];
+      $.get("data/view-item.json", function(data, status){
+        gridOptions = {
+          defaultColDef: {
+            editable: false,
+            resizable: true,
+            sortable:true,
+            filter: true
+          },
+          rowSelection: 'multiple',
+          columnDefs: columnDefs,
+          rowData: data,
+          pagination: true,
+          paginationPageSize: 10,
+          onRowSelected: onRowSelected,
+          onSelectionChanged: onSelectionChanged,
+          paginationNumberFormatter: function(params) {
+              return '[' + params.value.toLocaleString() + ']';
+          },
+          onGridReady: function(params) {
+            // params.api.sizeColumnsToFit();
+          }
+        };
+        var gridDiv = document.querySelector('#datatable');
+        new agGrid.Grid(gridDiv, gridOptions);    
+      });
+
+    function onPageSizeChanged(newPageSize) {
+      var value = document.getElementById('page-size').value;
+      gridOptions.api.paginationSetPageSize(Number(value));
+    }
+
+    function onRowSelected(event) {
+      console.log("row " + event.node.data.upc + " selected = " + event.node.selected);
+    }
+
+    function onSelectionChanged(event) {
+      var rowCount = event.api.getSelectedNodes().length;
+      console.log('selection changed, ' + rowCount + ' rows selected');
+      if(rowCount > 0) {
+        $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
+        if($('#cardHeaderAction .button-wrapper .header-action-process').length === 0) {
+          $('#cardHeaderAction .button-wrapper').append('<a href="/pending-billing-process.html" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Process</a>');
+        }
+      } else {
+        $('#select-row-num').html('');
+        $('#cardHeaderAction .button-wrapper .header-action-process').remove();
+      }
+    }
+
+    $(document).ready(function() { 
+      $(window).on("load resize ",function(e){
+        $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
+      });
+
+      
+
+      $('.datepicker-here').each(function() {
+        var dp = $(this).datepicker().data('datepicker');
+        dp.selectDate(new Date($(this).attr('value')));
+      });
+    });
   </script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
