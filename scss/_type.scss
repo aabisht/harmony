@@ -260,3 +260,39 @@ input, textarea {
   }
 }
 
+
+.button-with-dropdown {
+  .dropdown-content {
+    top: auto !important;
+    margin-top: 10px;
+    overflow: visible;
+
+    &:before, &:after {
+      content: '';
+      height: 0;
+      width: 0;
+      border: 7px solid transparent;
+      border-top: none;
+      border-bottom-color: #ffffff;
+      position: absolute;
+    }
+
+    &:after {
+      border-width: 8px;
+      border-bottom-color: #d4d4d4;
+      z-index: 2;
+      top: -8px;
+      right: 5px;
+    }
+
+    &:before {
+      z-index: 3;
+      top: -7px;
+      right: 6px;
+    }
+  }
+}
+
+#addNewDropdown {
+  min-width: 190px;
+}

@@ -84,6 +84,30 @@
             background-color: $datatable-selected-row-bg-color;
         }
 
+        .edited-row {
+            background-color: darken($datatable-selected-row-bg-color, 5%);
+        }
+
+        .ag-row{
+            &.disable-row{
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    z-index: 2;
+                    background-color: rgba($color-black,0.1);
+                }
+            }
+
+            .upc-status > a {
+                position: relative;
+                z-index: 3;
+            }
+        }
+
         .ag-icon {
             color: $datatable-text-color;
 
@@ -128,6 +152,9 @@
 
 .button-wrapper {
     .header-action-item {
+        margin-top: 0;
+        margin-bottom: 0;
+
         & + .header-action-item {
             margin-left: 10px;
         }
