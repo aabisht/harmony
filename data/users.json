@@ -1,0 +1,106 @@
+[
+    {
+      "name": {
+        "first": "Millicent",
+        "last": "Hutchinson"
+      },
+      "email": "millicent.hutchinson@undefined.co.uk",
+      "role": "Admin"
+    },
+    {
+      "name": {
+        "first": "Delacruz",
+        "last": "Stein"
+      },
+      "email": "delacruz.stein@undefined.info",
+      "role": "General"
+    },
+    {
+      "name": {
+        "first": "Carrie",
+        "last": "Larsen"
+      },
+      "email": "carrie.larsen@undefined.tv",
+      "role": "Manager"
+    },
+    {
+      "name": {
+        "first": "Rose",
+        "last": "Curtis"
+      },
+      "email": "rose.curtis@undefined.biz",
+      "role": "Manager"
+    },
+    {
+      "name": {
+        "first": "Sheree",
+        "last": "Shields"
+      },
+      "email": "sheree.shields@undefined.ca",
+      "role": "Admin"
+    },
+    {
+      "name": {
+        "first": "Burks",
+        "last": "Fitzgerald"
+      },
+      "email": "burks.fitzgerald@undefined.me",
+      "role": "General"
+    },
+    {
+      "name": {
+        "first": "Jennie",
+        "last": "Burke"
+      },
+      "email": "jennie.burke@undefined.io",
+      "role": "Admin"
+    },
+    {
+      "name": {
+        "first": "Jeanie",
+        "last": "Dominguez"
+      },
+      "email": "jeanie.dominguez@undefined.us",
+      "role": "Admin"
+    },
+    {
+      "name": {
+        "first": "Henrietta",
+        "last": "Macdonald"
+      },
+      "email": "henrietta.macdonald@undefined.name",
+      "role": "Manager"
+    },
+    {
+      "name": {
+        "first": "Atkinson",
+        "last": "Wall"
+      },
+      "email": "atkinson.wall@undefined.net",
+      "role": "Manager"
+    },
+    {
+      "name": {
+        "first": "Pauline",
+        "last": "Mills"
+      },
+      "email": "pauline.mills@undefined.org",
+      "role": "General"
+    },
+    {
+      "name": {
+        "first": "Josefina",
+        "last": "Dillard"
+      },
+      "email": "josefina.dillard@undefined.biz",
+      "role": "General"
+    },
+    {
+      "name": {
+        "first": "Chang",
+        "last": "Key"
+      },
+      "email": "chang.key@undefined.co.uk",
+      "role": "Manager"
+    }
+  ]

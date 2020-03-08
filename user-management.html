@@ -1,0 +1,168 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>User Management | Bristol Farms</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+  <link href="./css/vendor/fontawesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/vendor/datepicker.min.css">
+  <link rel="stylesheet" href="./css/vendor/materialize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="left-menu-fixed">
+
+  <div class="body-container-wrapper">
+    <div class="body-wrapper">
+
+      <!-- Header -->
+      <header class="header-container">
+        <div class="header-container-wrapper">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-10 header-left-wrapper">
+                <div class="cell-wrapper">
+                  <div class="header-title-nav-wrapper">
+                    <div class="title">
+                      <h3>User Management</h3>
+                      <div aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="/">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">User Management</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 header-right-wrapper text-right">
+                <div class="cell-wrapper">
+                  <div class="header-dropdown-wrapper">
+                    <a href="javascript:;" class="header-dropdown-trigger"><i class="far fa-user-circle"></i></a>
+                    <div class="dropdown-menu text-left">
+                      <div class="header-dropdown-user-profile-wrapper text-center">
+                        <div class="user-avatar-wrapper">
+                          <i class="far fa-user-circle"></i>
+                        </div>
+                        <div class="user-detail-wrapper">
+                          <h3><a href="javascript:;">User Name</a></h3>
+                          <h5>Admin</h5>
+                        </div>
+                      </div>
+                      <ul>
+                        <li><a href="javascript:;">Menu 1</a></li>
+                        <li><a href="javascript:;">Menu 2</a></li>
+                        <li><a href="javascript:;">Menu 3</a></li>
+                        <li><a href="javascript:;">Logout</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Left Menu -->
+      <div class="left-menu-wrapper"></div>
+
+      <!-- Main Body Content -->
+      <div class="main-body-content-wrapper">
+        <div class="main-body-content-container">
+          <div class="main-body-data-wrapper">
+            <div class="container-fluid">
+              <div id="usersCards"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="js/vendor/jquery-3.4.1.min.js"></script>
+  <script src="js/vendor/ag-grid-enterprise.min.js"></script>
+  <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/vendor/datepicker.min.js"></script>
+  <script src="js/vendor/datepicker.en.js"></script>
+
+
+  <script src="js/main.js"></script>
+
+  <script>
+    $(document).ready(function() {
+
+      var userTableWrapper = $('#usersCards');
+      userTableWrapper.addClass('user-cards-wrapper');
+
+      $.get("data/users.json", function(data, status){
+        $(data).each(function(i) {
+          var userCardData = '<div class="user-card-wrapper user-card-wrapper-'+i+'"><div class="card"><div class="header-dropdown"><a href="javascript:;" class="dropdown-trigger" data-target="userMore'+i+'"><i class="fas fa-ellipsis-v"></i></a><ul id="userMore'+i+'" class="dropdown-content"><li><a href="javascript:;" class="edit-user-card-trigger"><i class="fas fa-user-edit"></i> Edit Role</a></li><li><a href="javascript:;"><i class="far fa-trash-alt"></i> Delete User</a></li></ul></div>';
+
+          if(this.avatar) {
+            userCardData = userCardData + '<div class="card-image"> <img src="'+this.avatar+'"></div>';
+          } else {
+            userCardData = userCardData + '<div class="card-icon"><i class="far fa-user"></i></div>';
+          }
+
+          userCardData = userCardData + '<div class="card-content"><div class="card-title">'+this.name.first+' '+this.name.last+'</div>';
+          userCardData = userCardData + '<div class="card-subtitle">'+ this.email +'</div>';
+          userCardData = userCardData + '<div class="user-role"><div class="value">'+ this.role +'</div>';
+          userCardData = userCardData +'<div class="input input-field"><select class="user-role-select"><option value="admin"';
+          if(this.role === "Admin") {
+            userCardData = userCardData + 'selected';
+          }
+          userCardData = userCardData + '>Admin</option><option value="manager"'; 
+          if(this.role === "Manager") {
+            userCardData = userCardData + 'selected';
+          }
+          userCardData = userCardData + '>Manager</option><option value="general"';
+          if(this.role === "General") {
+            userCardData = userCardData + 'selected';
+          }
+          userCardData = userCardData + '>General</option></select></div></div>';
+
+          userCardData = userCardData + '</div></div></div>';
+          userTableWrapper.append(userCardData);
+        });
+
+        $('body').on('click', '.edit-user-card-trigger', function(event) {
+          event.preventDefault();
+          $(this).closest('.user-card-wrapper').addClass('edit')
+        });
+
+        $('body').on('change', '.user-role-select', function(event) {
+          event.preventDefault();
+          $(this).closest('.user-role').children('.value').text($(this).val());
+          $(this).closest('.user-card-wrapper').removeClass('edit');
+          M.toast({html: $(this).closest('.card-content').children('.card-title').text()+' role has been updated to '+ $(this).val()});
+        });
+        
+
+        $('.dropdown-trigger').dropdown();
+        $('select').formSelect();
+      });
+
+    });
+  </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>>
