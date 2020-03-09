@@ -1,0 +1,395 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bulk Upload | Bristol Farms</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+  <link href="./css/vendor/fontawesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/vendor/datepicker.min.css">
+  <link rel="stylesheet" href="./css/vendor/materialize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="left-menu-fixed">
+
+  <div class="body-container-wrapper">
+    <div class="body-wrapper">
+
+      <!-- Header -->
+      <header class="header-container">
+        <div class="header-container-wrapper">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-10 header-left-wrapper">
+                <div class="cell-wrapper">
+                  <div class="header-title-nav-wrapper">
+                    <div class="title">
+                      <h3>Bulk Upload</h3>
+                      <div aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="/">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Bulk Upload</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 header-right-wrapper text-right">
+                <div class="cell-wrapper">
+                  <div class="header-dropdown-wrapper">
+                    <a href="javascript:;" class="header-dropdown-trigger"><i class="far fa-user-circle"></i></a>
+                    <div class="dropdown-menu text-left">
+                      <div class="header-dropdown-user-profile-wrapper text-center">
+                        <div class="user-avatar-wrapper">
+                          <i class="far fa-user-circle"></i>
+                        </div>
+                        <div class="user-detail-wrapper">
+                          <h3><a href="javascript:;">User Name</a></h3>
+                          <h5>Admin</h5>
+                        </div>
+                      </div>
+                      <ul>
+                        <li><a href="javascript:;">Menu 1</a></li>
+                        <li><a href="javascript:;">Menu 2</a></li>
+                        <li><a href="javascript:;">Menu 3</a></li>
+                        <li><a href="javascript:;">Logout</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Left Menu -->
+      <div class="left-menu-wrapper"></div>
+
+      <!-- Main Body Content -->
+      <div class="main-body-content-wrapper">
+        <div class="main-body-content-container">
+
+          <div class="main-body-data-wrapper">
+            <div class="container-fluid">
+              <div class="header-collapsible-wrapper">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <ul class="collapsible collapsible-data-table">
+                      <li>
+                        <div class="collapsible-header align-items-start d-flex flex-row justify-content-between">
+                          <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
+                          <div class="header-title">
+                            <h3 class="mb-0">Download Template</h3>
+                          </div>
+                        </div>
+                        <div class="collapsible-body">
+                          <div class="datatable-wrapper">
+                            <div id="downloadTemplateData" class="datatable ag-theme-material"></div>
+                            <div class="datatable-action-item-select">
+                              <div class="d-flex flex-row justify-content-end align-items-center">
+                                <span class="page-size-label">Item to Show</span>
+                                <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
+                                  <option value="10">10</option>
+                                  <option value="20">20</option>
+                                  <option value="50">50</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card header-search-card-wrapper">
+                <div class="card-content">
+                  <h3 class="card-title">Item Upload</h3>
+                  <div class="row justify-content-left align-items-center">
+                    <div class="col-lg-3 col-md-4">
+                      <div class="input-field selectTemplate-wrapper">
+                        <select id="selectTemplate">
+                          <option value="" disabled selected>Choose your option</option>
+                        </select>
+                        <label>Select Template</label>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                      <div class="cell-wrapper">
+                        <div class="file-field input-field">
+                          <div class="btn button-primary button-icon-left">
+                            <span><i class="fas fa-file-upload"></i> Upload File</span>
+                            <input type="file">
+                          </div>
+                          <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" value="vendor_cost.csv">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                      <div class="cell-wrapper">
+                        <div class="button-wrapper">
+                          <a href="./bulk-upload-data.html" class="button-primary button-block">Import</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-header d-flex flex-row justify-content-between align-items-center">
+                    <div class="card-title-wrapper">
+                      <h3 class="card-title mb-0">
+                        View Item <br>
+                        <small>Double Click on row to edit.</small>
+                      </h3>
+                    </div>
+                    <div class="card-header-action-wrapper" id="cardHeaderAction">
+                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                        <button type="button" class="button-primary button-stroked saveRow header-action-item">Save Row</button>
+                        <button type="button" class="button-primary header-action-item disabled">Submit</button>
+                        <!-- <div class="button-primary button-with-dropdown header-action-item">
+                          <a href="javascript:;" class="addNewRow">Add New</a>
+                          <a href="javascript:;" class="dropdown-trigger" data-target='addNewDropdown'><i class="fas fa-caret-down"></i></a>
+                          <ul id='addNewDropdown' class='dropdown-content'>
+                            <li><a href="javascript:;">Single Item</a></li>
+                            <li><a href="javascript:;">Bulk Upload</a></li>
+                          </ul>
+                        </div> -->
+                        <!-- <button type="button" class="button-primary button-stroked addNewRow header-action-item">Add New</button> -->
+                      </div>
+                      <div class="info-msg error text-right">
+                        <i class="fas fa-info-circle"></i> Fix validation errors to submit deals.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="datatable-wrapper">
+                    <div id="datatable" class="datatable ag-theme-material"></div>
+                    <div class="datatable-action-item-select">
+                      <div class="d-flex flex-row justify-content-end align-items-center">
+                        <span class="page-size-label">Item to Show</span>
+                        <select onchange="onPageSizeChanged(event, bulkUploadGridOption)" id="page-size">
+                          <option value="10">10</option>
+                          <option value="20">20</option>
+                          <option value="50">50</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div id="updateItemRowModal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to update <strong id="updateItemRowModalName"></strong>.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="javascript:;" class="modal-close button-stroked button-primary"><i class="fas fa-times"></i> Cancel</a>
+      <a href="javascript:;" class="modal-close button-primary removed-saved-search" id="updateItemRowModalButton" data-upc=""><i class="far fa-save"></i> Save</a>
+    </div>
+  </div>
+
+
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="js/vendor/jquery-3.4.1.min.js"></script>
+  <script src="js/vendor/ag-grid-enterprise.min.js"></script>
+  <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/vendor/datepicker.min.js"></script>
+  <script src="js/vendor/datepicker.en.js"></script>
+
+
+  <script src="js/main.js"></script>
+
+  <script>
+    var gridOptions, bulkUploadGridOption;
+
+    var columnDefs = [
+      {headerName: "Name", field: "file_name"},
+      {headerName: "Description", field: "description"},
+      {headerName: "Action", field: "action", cellRenderer: 'tableAction'}
+    ];
+
+    var bulkUploadColumnDefs = [
+    {
+        headerName: "UPC", 
+        field: "upc",
+        minWidth: 240
+      },
+      {headerName: "PLU", field: "plu", editable: true},
+      {headerName: "Description", field: "description", editable: true},
+      {headerName: "Vendor ID", field: "vendor_id", editable: true},
+      {headerName: "Vendor", field: "vendor", editable: true},
+      {headerName: "Category", field: "category", editable: true},
+      {headerName: "Class", field: "class", editable: true},
+      {headerName: "Unit Price UPC", field: "unit_price_upc", editable: true},
+      {headerName: "Case UPC", field: "case_upc", editable: true},
+      {headerName: "Department ID", field: "department_id", editable: true}
+    ];
+
+    $.get("data/bulk-upload-template.json", function(data, status){
+      gridOptions = {
+        defaultColDef: {
+          resizable: true,
+          sortable:true,
+          filter: true
+        },
+        columnDefs: columnDefs,
+        rowData: data,
+        suppressContextMenu:true,
+        pagination: true,
+        paginationPageSize: 10,
+        components: {
+          'tableAction': TableAction
+        },
+        paginationNumberFormatter: function(params) {
+            return '[' + params.value.toLocaleString() + ']';
+        },
+        onGridReady: function(params) {
+          params.api.sizeColumnsToFit();
+        }
+      }
+
+      var gridDiv = document.querySelector('#downloadTemplateData');
+      new agGrid.Grid(gridDiv, gridOptions);    
+
+      $(data).each(function() {
+        $('#selectTemplate').append('<option value="'+this.file_name+'">'+this.file_name+'</option>');
+      });
+
+      $('#selectTemplate').formSelect();
+    });
+
+    $.get("data/view-item.json", function(data, status){
+      bulkUploadGridOption = {
+        defaultColDef: {
+          editable: false,
+          resizable: true,
+          enableCellChangeFlash: true,
+          sortable:true,
+          filter: true
+        },
+        rowSelection: 'multiple',
+        columnDefs: bulkUploadColumnDefs,
+        rowData: data,
+        pagination: true,
+        editType: 'fullRow',
+        paginationPageSize: 10,
+        onRowSelected: onRowSelected,
+        onSelectionChanged: onSelectionChanged,
+        paginationNumberFormatter: function(params) {
+            return '[' + params.value.toLocaleString() + ']';
+        },
+        onGridReady: function(params) {
+          // params.api.sizeColumnsToFit();
+          $('.disable-row-edit').each(function() {
+            $(this).closest('.ag-row').addClass('disable-row');
+          });
+
+        },
+        onRowEditingStarted: function(event){
+          var _this = this;
+          $('.saveRow').css({'display': 'inline-block'});
+        },
+        onRowValueChanged: function(event) {
+            var data = event.data,
+                saveModalinstance = M.Modal.getInstance(document.querySelector('#updateItemRowModal'));
+            $('#updateItemRowModal #updateItemRowModalName').text(data.upc);
+            $('#updateItemRowModal #updateItemRowModalButton').attr('data-upc', data.upc);
+            $('#updateItemRowModal #updateItemRowModalButton').attr('data-index', event.rowIndex);
+            saveModalinstance.open();
+        }
+      };
+      var gridDiv = document.querySelector('#datatable');
+      new agGrid.Grid(gridDiv, bulkUploadGridOption);
+    });
+
+    function onRowSelected(event) {
+      console.log("row " + event.node.data.upc + " selected = " + event.node.selected);
+    }
+
+    function onSelectionChanged(event) {
+      var rowCount = event.api.getSelectedNodes().length;
+      console.log('selection changed, ' + rowCount + ' rows selected');
+    }
+
+    // cell renderer class
+    function TableAction() {}
+
+    // init method gets the details of the cell to be rendere
+    TableAction.prototype.init = function(params) {
+      this.eGui = document.createElement('div');
+      this.eGui.classList.add('button-wrapper');
+      this.eGui.classList.add('table-action-wrapper');
+      var status = Math.floor(Math.random() * 3) + 1;
+      this.eGui.innerHTML = '<a href="javascript:;" title="'+params.value+'" class="button-primary button-stroked"><i class="fas fa-file-download"></i> ' + params.value + '</a>';
+    };
+
+    TableAction.prototype.getGui = function() {
+      return this.eGui;
+    };
+    
+    function onPageSizeChanged(newPageSize, gridOpt) {
+      var value = $(event.currentTarget).val();
+      gridOpt.api.paginationSetPageSize(Number(value));
+    }
+
+    function updateItemRow(rowIndex, upc) {
+      $('#datatable .ag-center-cols-container .ag-row').each(function(){
+        if(parseInt($(this).attr('row-index')) === parseInt(rowIndex) && !$(this).hasClass('edited-row')){
+            $(this).addClass('edited-row')
+          }
+      });
+      M.toast({html: 'Value for '+upc+' changed.'});
+    }
+
+    $(document).ready(function() { 
+      $('body').on('click', '.collapsible-data-table .collapsible-header', function(event) {
+        // debugger;
+        gridOptions.api.sizeColumnsToFit()
+      });
+
+      $('body').on('click', '.saveRow', function(event) {
+        event.preventDefault();
+        bulkUploadGridOption.api.stopEditing();
+      });
+
+      $('body').on('click', '#updateItemRowModal #updateItemRowModalButton', function(event) {
+        var upc = $('#updateItemRowModal #updateItemRowModalButton').attr('data-upc'),
+            rowIndex = $('#updateItemRowModal #updateItemRowModalButton').attr('data-index');
+
+        updateItemRow(rowIndex, upc);
+        
+      });
+    });
+  </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

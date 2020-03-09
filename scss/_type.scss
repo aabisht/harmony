@@ -296,3 +296,11 @@ input, textarea {
 #addNewDropdown {
   min-width: 190px;
 }
+
+.selectTemplate-wrapper {
+  .dropdown-content {
+    li {
+      text-transform: capitalize;
+    }
+  }
+}

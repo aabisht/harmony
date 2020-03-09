@@ -30,6 +30,16 @@
         outline: 0;
     }
 
+    .table-action-wrapper & {
+        height: 2.3rem;
+        line-height: 2.3rem;
+        @include fontSize(13px);
+
+        i {
+            margin-right: 5px;
+        }
+    }
+
     &.button-icon-left {
         i {
             margin-right: 5px;
