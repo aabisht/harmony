@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>View Item | Bristol Farms</title>
+  <title>Add Item | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -33,11 +33,12 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>View Item</h3>
+                      <h3>Add Item</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">View Item</li>
+                          <li class="breadcrumb-item"><a href="/view-item-data.html">View Item</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Add Item</li>
                         </ol>
                       </div>
                     </div>
@@ -207,7 +208,6 @@
                             <li><a href="javascript:;">Bulk Upload</a></li>
                           </ul>
                         </div>
-                        <!-- <button type="button" class="button-primary button-stroked addNewRow header-action-item">Add New</button> -->
                       </div>
                     </div>
                   </div>
@@ -368,7 +368,8 @@
         headerCheckboxSelectionFilteredOnly: true,
         checkboxSelection: true,
         minWidth: 240,
-        cellRenderer: 'upcStatus'
+        cellRenderer: 'upcStatus',
+        editable: true
       },
       {headerName: "PLU", field: "plu", editable: true},
       {headerName: "Description", field: "description", editable: true},
@@ -469,7 +470,7 @@
       {headerName: "MMVendSize", field: "mm_vend_size", editable: true},
       {headerName: "MMVendUOM", field: "mm_vend_uom", editable: true},
     ];
-    $.get("data/view-item.json", function(data, status){
+    $.get("data/add-item.json", function(data, status){
       gridOptions = {
         defaultColDef: {
           editable: false,
@@ -500,12 +501,14 @@
         },
         onRowEditingStarted: function(event){
           var _this = this;
+          
           $('.saveRow').css({'display': 'inline-block'});
-          $('.disable-row-edit').closest('.ag-row').each(function() {
-              if(parseInt($(this).attr('row-index')) === event.rowIndex) {
-                _this.api.stopEditing();
-              }
-          });
+
+          // $('.disable-row-edit').closest('.ag-row').each(function() {
+          //     if(parseInt($(this).attr('row-index')) === event.rowIndex) {
+          //       _this.api.stopEditing();
+          //     }
+          // });
         },
         onRowValueChanged: function(event) {
             var data = event.data,
@@ -551,15 +554,7 @@
     UPCStatus.prototype.init = function(params) {
       this.eGui = document.createElement('div');
       this.eGui.classList.add('upc-status');
-      var status = Math.floor(Math.random() * 3) + 1;
-      if(status === 1) {
-        this.eGui.innerHTML = '<a href="/item-view.html?upc='+params.value+'" title=""><i class=""></i> ' + params.value + '</a>';
-      } else if(status === 2) {
-        this.eGui.innerHTML = '<a href="/item-view.html?upc='+params.value+'" title="Draft"><i class="fab fa-firstdraft"></i> '+ params.value + '</a>';
-      } else if(status === 3) {
-        this.eGui.classList.add('disable-row-edit');
-        this.eGui.innerHTML = '<a href="/item-view.html?upc='+params.value+'" title="Lock"><i class="fas fa-lock"></i> ' + params.value + '</a>';
-      }
+      this.eGui.innerHTML = '<a href="/item-view.html?upc='+params.value+'" title=""><i class=""></i> ' + params.value + '</a>';
     };
 
     UPCStatus.prototype.getGui = function() {
@@ -581,9 +576,8 @@
       $('body').on('click', '.addNewRow', function(event) {
         event.preventDefault();
           newCount++;
-
-        window.location.href = 'add-item-data.html';
-
+        
+          window.location.href = 'add-item-data.html';
         // var newItem = createNewRowData();
 
         // var res = gridOptions.api;
@@ -596,6 +590,7 @@
               $(this).addClass('edited-row')
             }
         });
+        $('.saveRow').css({'display': 'none'});
         M.toast({html: 'Value for '+upc+' changed.'});
       }
 
@@ -605,14 +600,13 @@
             saveModalinstance = M.Modal.getInstance(document.querySelector('#serverSideItemRowModal')),
             status = Math.floor(Math.random() * 2) + 1;
 
-        $('.saveRow').css({'display': 'none'});
-        if(status === 1) {
-          updateItemRow(rowIndex, upc);
-        } else {
-          $('#serverSideItemRowModallName').text(upc);
-          saveModalinstance.open();
-        }
-        
+        // if(status === 1) {
+        //   updateItemRow(rowIndex, upc);
+        // } else {
+        //   $('#serverSideItemRowModallName').text(upc);
+        //   saveModalinstance.open();
+        // }
+        updateItemRow(rowIndex, upc);
       });
 
       $('body').on('click', '#serverSideItemRowModal .serverSideItemRowModalButton', function(event) {

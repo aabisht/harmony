@@ -104,6 +104,10 @@
             color: $color-white;
         }
     }
+
+    &.saveRow {
+        display: none;
+    }
 }
 
 .button-wrapper {

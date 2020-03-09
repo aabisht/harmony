@@ -105,6 +105,11 @@
             .upc-status > a {
                 position: relative;
                 z-index: 3;
+                
+                i {
+                    width: 20px;
+                    display: inline-block;
+                }
             }
         }
 
