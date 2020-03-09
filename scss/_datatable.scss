@@ -120,6 +120,25 @@
                 color: $datatable-selected-checkbox-color;
             }
         }
+
+        .ag-details-row {
+            padding: $grid-gutter-width/2;
+            
+            .ag-theme-material {
+                border: 1px solid $datatable-header-bg-color;
+            }
+        }
+
+        .datatabel-action-btn-wrapper {
+            a {
+                @include fontSize(24px);
+                display: inline-block;
+
+                & + a {
+                    margin-left: $grid-gutter-width/2;
+                }
+            }
+        }
     }
 
     &.ag-theme-material {

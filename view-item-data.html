@@ -470,6 +470,8 @@
       {headerName: "MMVendUOM", field: "mm_vend_uom", editable: true},
     ];
     $.get("data/view-item.json", function(data, status){
+
+      var mainData = data;
       gridOptions = {
         defaultColDef: {
           editable: false,
@@ -480,14 +482,40 @@
         },
         rowSelection: 'multiple',
         columnDefs: columnDefs,
-        rowData: data,
+        masterDetail: true,
+        rowData: mainData,
         pagination: true,
         editType: 'fullRow',
         paginationPageSize: 10,
         onRowSelected: onRowSelected,
         onSelectionChanged: onSelectionChanged,
+        onFirstDataRendered: onFirstDataRendered,
+        detailCellRendererParams: {
+          detailGridOptions: {
+            columnDefs: [
+            {headerName: "Description", field: "description"},
+            {headerName: "Vendor ID", field: "vendor_id"},
+            {headerName: "Vendor", field: "vendor"},
+            {headerName: "Category", field: "category"},
+            {headerName: "Class", field: "class"},
+            {headerName: "Unit Price UPC", field: "unit_price_upc"},
+            {headerName: "Case UPC", field: "case_upc"},
+            {headerName: "Department ID", field: "department_id"},
+            {headerName: "Family ID", field: "family_id"},
+            {headerName: "AllowanceCode", field: "allowance_code"},
+            {headerName: "AllowanceType", field: "allowance_type"},
+            {headerName: "UnitAllow", field: "unit_allow"},
+            ],
+            onFirstDataRendered: function(params) {
+                // params.api.sizeColumnsToFit();
+            }
+          },
+          getDetailRowData: function(params) {
+            params.successCallback(params.data.childrenData);
+          }
+        },
         paginationNumberFormatter: function(params) {
-            return '[' + params.value.toLocaleString() + ']';
+          return '[' + params.value.toLocaleString() + ']';
         },
         onGridReady: function(params) {
           // params.api.sizeColumnsToFit();
@@ -517,9 +545,13 @@
         }
       };
       var gridDiv = document.querySelector('#datatable');
-      new agGrid.Grid(gridDiv, gridOptions);    
-      newCount = gridOptions.rowData.length;
+      new agGrid.Grid(gridDiv,  gridOptions);   
     });
+
+    function onFirstDataRendered(params) {
+      // arbitrarily expand a row for presentational purposes
+      // setTimeout(function() { params.api.getDisplayedRowAtIndex(1).setExpanded(true); }, 0);
+    }
 
     function onPageSizeChanged(newPageSize) {
       var value = document.getElementById('page-size').value;
@@ -555,7 +587,7 @@
       if(status === 1) {
         this.eGui.innerHTML = '<a href="/item-view.html?upc='+params.value+'" title=""><i class=""></i> ' + params.value + '</a>';
       } else if(status === 2) {
-        this.eGui.innerHTML = '<a href="/item-view.html?upc='+params.value+'" title="Draft"><i class="fab fa-firstdraft"></i> '+ params.value + '</a>';
+        this.eGui.innerHTML = '<a href="/item-view.html?upc='+params.value+'" title="Draft"><i class="fab fa-firstdraft draftIconClick"></i> '+ params.value + '</a>';
       } else if(status === 3) {
         this.eGui.classList.add('disable-row-edit');
         this.eGui.innerHTML = '<a href="/item-view.html?upc='+params.value+'" title="Lock"><i class="fas fa-lock"></i> ' + params.value + '</a>';
@@ -626,6 +658,19 @@
         event.preventDefault();
         gridOptions.api.stopEditing()
       });
+
+      $('body').on('click', '.draftIconClick', function(event) {
+        event.preventDefault();
+        if($(event.currentTarget).closest('.ag-row').hasClass('row-expanded')) {
+          $(event.currentTarget).closest('.ag-row').removeClass('row-expanded');
+          gridOptions.api.getDisplayedRowAtIndex(parseInt($(event.currentTarget).closest('.ag-row').attr('row-id'))).setExpanded(false);
+        } else {
+          $(event.currentTarget).closest('.ag-row').addClass('row-expanded');
+          gridOptions.api.getDisplayedRowAtIndex(parseInt($(event.currentTarget).closest('.ag-row').attr('row-id'))).setExpanded(true);
+        }
+      });
+
+      
 
       $('.datepicker-here').each(function() {
         var dp = $(this).datepicker().data('datepicker');
