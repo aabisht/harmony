@@ -20,8 +20,18 @@
         }
     }
 
-    &#deleteSavedSearchModal {
+    &#deleteSavedSearchModal,
+    &#updateItemRowModal {
         max-width: 400px;
+        text-align: center;
+        
+        .modal-footer {
+            text-align: center;
+        }
+    }
+
+    &#serverSideItemRowModal {
+        max-width: 740px;
         text-align: center;
         
         .modal-footer {

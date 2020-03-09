@@ -323,6 +323,28 @@
     </div>
   </div>
 
+  <div id="updateItemRowModal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to update <strong id="updateItemRowModalName"></strong>.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="javascript:;" class="modal-close button-stroked button-primary"><i class="fas fa-times"></i> Cancel</a>
+      <a href="javascript:;" class="modal-close button-primary removed-saved-search" id="updateItemRowModalButton" data-upc=""><i class="far fa-save"></i> Save</a>
+    </div>
+  </div>
+
+  <div id="serverSideItemRowModal" class="modal">
+    <div class="modal-content">
+      <p><strong id="serverSideItemRowModallName"></strong> has already been updated. You can do following operation.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="javascript:;" class="modal-close button-stroked button-primary"><i class="fas fa-times"></i> Cancel</a>
+      <a href="javascript:;" class="modal-close button-primary removed-saved-search serverSideItemRowModalButton" data-upc=""><i class="fab fa-firstdraft"></i> Show Latest Draft</a>
+      <a href="javascript:;" class="modal-close button-primary removed-saved-search serverSideItemRowModalButton" data-upc=""><i class="fab fa-mixer"></i> Merge and Save</a>
+      <a href="javascript:;" class="modal-close button-primary removed-saved-search serverSideItemRowModalButton" data-upc=""><i class="far fa-save"></i> Ignore and Save</a>
+    </div>
+  </div>
+
 
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="js/vendor/jquery-3.4.1.min.js"></script>
@@ -485,14 +507,12 @@
           });
         },
         onRowValueChanged: function(event) {
-            var data = event.data;
-            $('#datatable .ag-center-cols-container .ag-row').each(function(){
-              // debugger;
-              if(parseInt($(this).attr('row-index')) === event.rowIndex && !$(this).hasClass('edited-row')){
-                  $(this).addClass('edited-row')
-                }
-            });
-            M.toast({html: 'Value for '+data.upc+' changed.'});
+            var data = event.data,
+                saveModalinstance = M.Modal.getInstance(document.querySelector('#updateItemRowModal'));
+            $('#updateItemRowModal #updateItemRowModalName').text(data.upc);
+            $('#updateItemRowModal #updateItemRowModalButton').attr('data-upc', data.upc);
+            $('#updateItemRowModal #updateItemRowModalButton').attr('data-index', event.rowIndex);
+            saveModalinstance.open();
         }
       };
       var gridDiv = document.querySelector('#datatable');
@@ -565,6 +585,37 @@
 
         var res = gridOptions.api;
         res.updateRowData({add: [newItem], addIndex: 0});
+      });
+
+      function updateItemRow(rowIndex, upc) {
+        $('#datatable .ag-center-cols-container .ag-row').each(function(){
+          if(parseInt($(this).attr('row-index')) === parseInt(rowIndex) && !$(this).hasClass('edited-row')){
+              $(this).addClass('edited-row')
+            }
+        });
+        M.toast({html: 'Value for '+upc+' changed.'});
+      }
+
+      $('body').on('click', '#updateItemRowModal #updateItemRowModalButton', function(event) {
+        var upc = $('#updateItemRowModal #updateItemRowModalButton').attr('data-upc'),
+            rowIndex = $('#updateItemRowModal #updateItemRowModalButton').attr('data-index'),
+            saveModalinstance = M.Modal.getInstance(document.querySelector('#serverSideItemRowModal')),
+            status = Math.floor(Math.random() * 2) + 1;
+
+        if(status === 1) {
+          updateItemRow(rowIndex, upc);
+        } else {
+          $('#serverSideItemRowModallName').text(upc);
+          saveModalinstance.open();
+        }
+        
+      });
+
+      $('body').on('click', '#serverSideItemRowModal .serverSideItemRowModalButton', function(event) {
+        var upc = $('#updateItemRowModal #updateItemRowModalButton').attr('data-upc'),
+            rowIndex = $('#updateItemRowModal #updateItemRowModalButton').attr('data-index');
+        
+        updateItemRow(rowIndex, upc);
       });
 
       $('.datepicker-here').each(function() {
