@@ -88,26 +88,73 @@
                     <span>Search</span>
                   </h3>
                   <div class="row header-search-input-wrapper align-items-center justify-content-start">
-                    <div class="col-md-4">
+                    <div class="col-md-1">
                       <div class="cell-wrapper">
                         <div class="input-field">
-                          <input id="UPC_PLU_Search" type="text" value="" autocomplete="off">
+                          <input id="UPC_PLU_Search" type="text" value="" autocomplete="off" placeholder="Enter UPC/PLU value">
                           <label for="UPC_PLU_Search" class="active">UPC/PLU</label>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <div class="cell-wrapper">
                         <div class="input-field">
-                          <input id="Name_Search" type="text" value="" autocomplete="off">
-                          <label for="Name_Search" class="active">Name</label>
+                          <input id="Item_Description_Search" type="text" value="" autocomplete="off" placeholder="Enter Item Description value">
+                          <label for="Item_Description_Search" class="active">Item Description</label>
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-2 col-md-4">
+                    <div class="col-md-2">
                       <div class="cell-wrapper">
-                        <div class="button-wrapper">
-                          <a href="javascrip:;" class="button-primary button-block">Search</a>
+                        <div class="input-field">
+                          <select>
+                            <option value="" disabled selected>Choose</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                          <label>Department</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="cell-wrapper">
+                        <div class="input-field">
+                          <select>
+                            <option value="" disabled selected>Choose</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                          <label>Category</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="cell-wrapper">
+                        <div class="input-field">
+                          <input id="Brand_Search" type="text" value="" autocomplete="off" placeholder="Enter Brand value">
+                          <label for="Brand_Search" class="active">Brand</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="cell-wrapper">
+                        <div class="input-field">
+                          <select>
+                            <option value="" disabled selected>Choose</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                          <label>Vendor Name</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row header-search-btn-wrapper align-items-start justify-content-center">
+                      <div class="col-sm-12">
+                        <div class="cell-wrapper d-flex flex-row justify-content-between align-items-center">
+                          <a href="/view-item-data.html" class="button-primary button-search">Search</a>
                         </div>
                       </div>
                     </div>
@@ -159,6 +206,10 @@
   <div id="updateItemRowModal" class="modal">
     <div class="modal-content">
       <p>Are you sure you want to <span class="statusMsgType"></span> <strong id="updateItemRowModalName"></strong>.</p>
+      <div class="input-field ">
+        <textarea id="updateItemRowModalTextarea" class="materialize-textarea"></textarea>
+        <label for="updateItemRowModalTextarea">Comment</label>
+      </div>
     </div>
     <div class="modal-footer">
       <a href="javascript:;" class="modal-close button-stroked button-primary"><i class="fas fa-times"></i> Cancel</a>
@@ -188,7 +239,7 @@
         },
         {headerName: "PLU", field: "plu"},
         {headerName: "Name", field: "name"},
-        {headerName: "Submitted By", field: "submitted_by"},
+        {headerName: "Submission Info", field: "submitted_by"},
         {headerName: "Action", field: "action", cellRenderer: 'gridAction'},
       ];
       $.get("data/pending-item.json", function(data, status){
@@ -260,7 +311,6 @@
       this.eGui = document.createElement('div');
       this.eGui.classList.add('datatabel-action-btn-wrapper');
       var html = '';
-      debugger;
       if(params.data.old_value && params.data.new_value) {
         html = '<a href="javascript:;" title="Edit" class="editFileBtn"  data-row-index="'+params.rowIndex+'"><i class="far fa-edit"></i></a>';
         html = html + '<a href="javascript:;" title="Revert" class="revertFileBtn"  data-row-index="'+params.rowIndex+'"><i class="fas fa-undo-alt"></i></a>';

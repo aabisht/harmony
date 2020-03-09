@@ -305,6 +305,9 @@ input, textarea {
   }
 }
 
-#downloadTemplateTab .ag-header-cell[col-id="action"] .ag-header-icon.ag-header-cell-menu-button {
-  display: none !important;
+#downloadTemplateTab,
+#datatable {
+  .ag-header-cell[col-id="action"] .ag-header-icon.ag-header-cell-menu-button {
+    display: none !important;
+  }
 }
