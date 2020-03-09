@@ -205,7 +205,7 @@
 
   <div id="updateItemRowModal" class="modal">
     <div class="modal-content">
-      <p>Are you sure you want to <span class="statusMsgType"></span> <strong id="updateItemRowModalName"></strong>.</p>
+      <p>Are you sure you want to <span class="statusMsgType"></span> <strong id="updateItemRowModalName"></strong>?</p>
       <div class="input-field ">
         <textarea id="updateItemRowModalTextarea" class="materialize-textarea"></textarea>
         <label for="updateItemRowModalTextarea">Comment</label>
@@ -262,13 +262,14 @@
             detailGridOptions: {
               columnDefs: [
                 {headerName: "Attribute", field: "attribute"},
-                {headerName: "Old Value", field: "old_value"},
-                {headerName: "New Value", field: "new_value"},
+                {headerName: "Old Value", field: "old_value", editable: true},
+                {headerName: "New Value", field: "new_value", editable: true},
                 {headerName: "Action", field: "action", cellRenderer: 'gridAction'}
               ],
               components: {
                 'gridAction': GidAction
               },
+              editType: 'fullRow',
               onFirstDataRendered: function(params) {
                   params.api.sizeColumnsToFit();
               }
@@ -374,7 +375,6 @@
 
       $('body').on('click', '.editFileBtn', function(event) {
         event.preventDefault();
-        // debugger;
       });
     });
   </script>
