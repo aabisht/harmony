@@ -123,6 +123,7 @@ $(document).ready(function() {
 
     $('.tooltip').tooltip();
     $('.modal').modal();
+    $('.tabs').tabs();
     $('.dropdown-trigger').dropdown();
 
 });

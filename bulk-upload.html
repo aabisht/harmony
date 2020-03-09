@@ -82,66 +82,66 @@
 
           <div class="main-body-data-wrapper">
             <div class="container-fluid">
-              <div class="header-collapsible-wrapper">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <ul class="collapsible collapsible-data-table">
-                      <li>
-                        <div class="collapsible-header align-items-start d-flex flex-row justify-content-between">
-                          <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
-                          <div class="header-title">
-                            <h3 class="mb-0">Download Template</h3>
-                          </div>
+              <ul class="tabs">
+                <li class="tab"><a href="#downloadTemplateTab" class="active">Download Template</a></li>
+                <li class="tab"><a class="active" href="#uploadTemplateTab">Upload Template</a></li>
+              </ul>
+
+              <div id="downloadTemplateTab" class="active">
+                <div class="card">
+                  <div class="card-content">
+                    <div class="card-header d-flex flex-row justify-content-between align-items-center">
+                      <div class="card-title-wrapper">
+                        <h3 class="card-title mb-0">Download Template</h3>
+                      </div>
+                    </div>
+                    <div class="datatable-wrapper">
+                      <div id="downloadTemplateData" class="datatable ag-theme-material"></div>
+                      <div class="datatable-action-item-select">
+                        <div class="d-flex flex-row justify-content-end align-items-center">
+                          <span class="page-size-label">Item to Show</span>
+                          <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                          </select>
                         </div>
-                        <div class="collapsible-body">
-                          <div class="datatable-wrapper">
-                            <div id="downloadTemplateData" class="datatable ag-theme-material"></div>
-                            <div class="datatable-action-item-select">
-                              <div class="d-flex flex-row justify-content-end align-items-center">
-                                <span class="page-size-label">Item to Show</span>
-                                <select onchange="onPageSizeChanged()" id="page-size">
-                                  <option value="10">10</option>
-                                  <option value="20">20</option>
-                                  <option value="50">50</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="card header-search-card-wrapper">
-                <div class="card-content">
-                  <h3 class="card-title">Item Upload</h3>
-                  <div class="row justify-content-left align-items-center">
-                    <div class="col-lg-3 col-md-4">
-                      <div class="input-field selectTemplate-wrapper">
-                        <select id="selectTemplate">
-                          <option value="" disabled selected>Choose your option</option>
-                        </select>
-                        <label>Select Template</label>
+              <div id="uploadTemplateTab">
+                <div class="card header-search-card-wrapper">
+                  <div class="card-content">
+                    <h3 class="card-title">Upload Template</h3>
+                    <div class="row justify-content-left align-items-center">
+                      <div class="col-lg-3 col-md-4">
+                        <div class="input-field selectTemplate-wrapper">
+                          <select id="selectTemplate">
+                            <option value="" disabled selected>Choose your option</option>
+                          </select>
+                          <label>Select Template</label>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                      <div class="cell-wrapper">
-                        <div class="file-field input-field">
-                          <div class="btn button-primary button-icon-left">
-                            <span><i class="fas fa-file-upload"></i> Upload File</span>
-                            <input type="file">
-                          </div>
-                          <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text" value="vendor_cost.csv">
+                      <div class="col-lg-4 col-md-4">
+                        <div class="cell-wrapper">
+                          <div class="file-field input-field">
+                            <div class="btn button-primary button-icon-left">
+                              <span><i class="fas fa-file-upload"></i> Upload File</span>
+                              <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                              <input class="file-path validate" type="text" value="vendor_cost.csv">
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4">
-                      <div class="cell-wrapper">
-                        <div class="button-wrapper">
-                          <a href="./bulk-upload-data.html" class="button-primary button-block">Import</a>
+                      <div class="col-lg-2 col-md-4">
+                        <div class="cell-wrapper">
+                          <div class="button-wrapper">
+                            <a href="./bulk-upload-data.html" class="button-primary button-block">Import</a>
+                          </div>
                         </div>
                       </div>
                     </div>

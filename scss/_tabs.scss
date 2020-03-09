@@ -1,0 +1,23 @@
+.tabs {
+    .tab {
+        a {
+            color: rgba(darken($primary-color, 20%), 0.7);
+            text-decoration: none;
+            @include fontSize(20px);
+            font-family: $secondary-font;
+            font-weight: bold;
+
+            &:hover, &.active {
+                color: darken($primary-color, 20%);
+            }
+
+            &:focus, &:focus.active {
+                background-color: rgba(darken($primary-color, 20%), 0.2);
+            }
+        }
+    }
+
+    .indicator {
+        background-color: darken($primary-color, 20%);
+    }
+}

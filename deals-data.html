@@ -229,11 +229,13 @@
           },
           onGridReady: function(params) {
             // params.api.sizeColumnsToFit();
-            $('.datatable.ag-theme-material .ag-cell .tooltip').each(function() {
-              $(this).parent().addClass('data-error');
-            })
-            
-            $('.datatable.ag-theme-material .ag-cell .tooltip').tooltip();
+            showCellError()
+          },
+          onModelUpdated: function(event) {
+            showCellError();
+          },
+          onPaginationChanged: function(event) {
+            showCellError();
           },
           onRowValueChanged: function(event) {
               var data = event.data;
@@ -243,6 +245,14 @@
         var gridDiv = document.querySelector('#datatable');
         new agGrid.Grid(gridDiv, gridOptions);    
       });
+
+      function showCellError() {
+        $('.datatable.ag-theme-material .ag-cell .tooltip').each(function() {
+          $(this).parent().addClass('data-error');
+        });
+        
+        $('.datatable.ag-theme-material .ag-cell .tooltip').tooltip();
+      }
 
       // cell renderer class
       function TooltipCellRenderer() {}
