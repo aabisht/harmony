@@ -315,3 +315,7 @@ input, textarea {
 #updateItemRowModalTextarea {
   min-height: 100px;
 }
+
+.change-password-form-wrapper {
+  max-width: calculateRem(500px);
+}

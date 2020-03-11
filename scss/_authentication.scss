@@ -33,6 +33,10 @@
   color: $authentication-text-color;
   background-color: $authentication-card-bg-color;
 
+  &.user-registration-wrapper {
+    max-width: calculateRem(700px);
+  }
+
   .logo-wrapper {
     margin-bottom: $grid-gutter-width;
     img {
