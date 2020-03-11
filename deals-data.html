@@ -135,7 +135,7 @@
                             </select>
                           </div>
                         </div> -->
-                        <button type="button" class="button-primary button-stroked header-action-item">Save</button>
+                        <button type="button" class="button-primary button-stroked header-action-item saveRow">Save Row</button>
                         <button type="button" class="button-primary header-action-item disabled">Submit</button>
                       </div>
                       <div class="info-msg error text-right">
@@ -224,6 +224,11 @@
           components: {
             'tooltipCellRenderer': TooltipCellRenderer
           },
+          onRowEditingStarted: function(event){
+            var _this = this;
+            
+            $('.saveRow').css({'display': 'inline-block'});
+          },
           paginationNumberFormatter: function(params) {
               return '[' + params.value.toLocaleString() + ']';
           },
@@ -301,6 +306,11 @@
     $(document).ready(function() { 
       $(window).on("load resize ",function(e){
         $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
+      });
+
+      $('body').on('click', '.saveRow', function(event) {
+        event.preventDefault();
+        gridOptions.api.stopEditing()
       });
     });
   </script>

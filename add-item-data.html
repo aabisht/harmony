@@ -81,7 +81,7 @@
       <div class="main-body-content-wrapper">
         <div class="main-body-content-container">
 
-          <div class="header-search-wrapper">
+          <!-- <div class="header-search-wrapper">
             <div class="container-fluid">
               <div class="card header-search-card-wrapper">
                 <div class="card-content">
@@ -177,7 +177,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="main-body-data-wrapper">
             <div class="container-fluid">
@@ -186,20 +186,21 @@
                   <div class="card-header d-flex flex-row justify-content-between align-items-center">
                     <div class="card-title-wrapper">
                       <h3 class="card-title">
-                        View Item
+                        Add New Item
                         <span id="select-row-num"></span>
                       </h3>
                     </div>
                     <div class="card-header-action-wrapper" id="cardHeaderAction">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <div class="input-field header-action-item">
+                        <!-- <div class="input-field header-action-item">
                           <select>
                             <option value="show_all" selected>Show all</option>
                             <option value="show_original_items _only">Show Original</option>
                             <option value="show_draft_items_only">Show Draft</option>
                             <option value="show_rejected_only">Show Rejected</option>
+                            <option value="show_locked_only">Show Locked</option>
                           </select>
-                        </div>
+                        </div> -->
                         <button type="button" class="button-primary button-stroked saveRow header-action-item">Save Row</button>
                         <a href="/view-item-data.html" class="button-primary header-action-item"><i class="fas fa-long-arrow-alt-left"></i> Back to List</a>
                       </div>
@@ -497,12 +498,6 @@
           var _this = this;
           
           $('.saveRow').css({'display': 'inline-block'});
-
-          // $('.disable-row-edit').closest('.ag-row').each(function() {
-          //     if(parseInt($(this).attr('row-index')) === event.rowIndex) {
-          //       _this.api.stopEditing();
-          //     }
-          // });
         },
         onRowValueChanged: function(event) {
             var data = event.data,

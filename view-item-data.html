@@ -193,19 +193,29 @@
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
                         <div class="input-field header-action-item">
                           <select>
+                            <option value="show_all" selected>Show all Coumns </option>
+                            <option value="show_original_items _only">Option 1</option>
+                            <option value="show_draft_items_only">Option 2</option>
+                            <option value="show_rejected_only">Option 3</option>
+                            <option value="show_locked_only">Option 4</option>
+                          </select>
+                        </div>
+                        <div class="input-field header-action-item">
+                          <select>
                             <option value="show_all" selected>Show all</option>
                             <option value="show_original_items _only">Show Original</option>
                             <option value="show_draft_items_only">Show Draft</option>
                             <option value="show_rejected_only">Show Rejected</option>
+                            <option value="show_locked_only">Show Locked</option>
                           </select>
                         </div>
                         <button type="button" class="button-primary button-stroked saveRow header-action-item">Save Row</button>
                         <div class="button-primary button-with-dropdown header-action-item">
-                          <a href="javascript:;" class="addNewRow">Add New</a>
+                          <a href="/add-item-data.html" class="addNewRow">Add New</a>
                           <a href="javascript:;" class="dropdown-trigger" data-target='addNewDropdown'><i class="fas fa-caret-down"></i></a>
                           <ul id='addNewDropdown' class='dropdown-content'>
-                            <li><a href="javascript:;">Single Item</a></li>
-                            <li><a href="javascript:;">Bulk Upload</a></li>
+                            <li><a href="/add-item-data.html">Single Item</a></li>
+                            <li><a href="/bulk-upload.html">Bulk Upload</a></li>
                           </ul>
                         </div>
                         <!-- <button type="button" class="button-primary button-stroked addNewRow header-action-item">Add New</button> -->
