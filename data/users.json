@@ -1,106 +1,98 @@
 [
-    {
-      "name": {
-        "first": "Millicent",
-        "last": "Hutchinson"
-      },
-      "email": "millicent.hutchinson@undefined.co.uk",
-      "role": "Admin"
+  {
+    "name": {
+      "first": "Mcdaniel",
+      "last": "Santana"
     },
-    {
-      "name": {
-        "first": "Delacruz",
-        "last": "Stein"
-      },
-      "email": "delacruz.stein@undefined.info",
-      "role": "General"
+    "email": "mcdaniel.santana@good-food-holdings.com",
+    "role": "Manager"
+  },
+  {
+    "name": {
+      "first": "Duncan",
+      "last": "Dejesus"
     },
-    {
-      "name": {
-        "first": "Carrie",
-        "last": "Larsen"
-      },
-      "email": "carrie.larsen@undefined.tv",
-      "role": "Manager"
+    "email": "duncan.dejesus@good-food-holdings.com",
+    "role": "General"
+  },
+  {
+    "name": {
+      "first": "Long",
+      "last": "Scott"
     },
-    {
-      "name": {
-        "first": "Rose",
-        "last": "Curtis"
-      },
-      "email": "rose.curtis@undefined.biz",
-      "role": "Manager"
+    "email": "long.scott@good-food-holdings.com",
+    "role": "Manager"
+  },
+  {
+    "name": {
+      "first": "Sofia",
+      "last": "Casey"
     },
-    {
-      "name": {
-        "first": "Sheree",
-        "last": "Shields"
-      },
-      "email": "sheree.shields@undefined.ca",
-      "role": "Admin"
+    "email": "sofia.casey@good-food-holdings.com",
+    "role": "General"
+  },
+  {
+    "name": {
+      "first": "Nikki",
+      "last": "Steele"
     },
-    {
-      "name": {
-        "first": "Burks",
-        "last": "Fitzgerald"
-      },
-      "email": "burks.fitzgerald@undefined.me",
-      "role": "General"
+    "email": "nikki.steele@good-food-holdings.com",
+    "role": "Admin"
+  },
+  {
+    "name": {
+      "first": "Carlson",
+      "last": "Terry"
     },
-    {
-      "name": {
-        "first": "Jennie",
-        "last": "Burke"
-      },
-      "email": "jennie.burke@undefined.io",
-      "role": "Admin"
+    "email": "carlson.terry@good-food-holdings.com",
+    "role": "Manager"
+  },
+  {
+    "name": {
+      "first": "Norris",
+      "last": "Cole"
     },
-    {
-      "name": {
-        "first": "Jeanie",
-        "last": "Dominguez"
-      },
-      "email": "jeanie.dominguez@undefined.us",
-      "role": "Admin"
+    "email": "norris.cole@good-food-holdings.com",
+    "role": "Manager"
+  },
+  {
+    "name": {
+      "first": "Cornelia",
+      "last": "Santos"
     },
-    {
-      "name": {
-        "first": "Henrietta",
-        "last": "Macdonald"
-      },
-      "email": "henrietta.macdonald@undefined.name",
-      "role": "Manager"
+    "email": "cornelia.santos@good-food-holdings.com",
+    "role": "Manager"
+  },
+  {
+    "name": {
+      "first": "Ines",
+      "last": "Kane"
     },
-    {
-      "name": {
-        "first": "Atkinson",
-        "last": "Wall"
-      },
-      "email": "atkinson.wall@undefined.net",
-      "role": "Manager"
+    "email": "ines.kane@good-food-holdings.com",
+    "role": "General"
+  },
+  {
+    "name": {
+      "first": "Clayton",
+      "last": "Wade"
     },
-    {
-      "name": {
-        "first": "Pauline",
-        "last": "Mills"
-      },
-      "email": "pauline.mills@undefined.org",
-      "role": "General"
+    "email": "clayton.wade@good-food-holdings.com",
+    "role": "Manager"
+  },
+  {
+    "name": {
+      "first": "Lola",
+      "last": "Romero"
     },
-    {
-      "name": {
-        "first": "Josefina",
-        "last": "Dillard"
-      },
-      "email": "josefina.dillard@undefined.biz",
-      "role": "General"
+    "email": "lola.romero@good-food-holdings.com",
+    "role": "Manager"
+  },
+  {
+    "name": {
+      "first": "Williams",
+      "last": "Mcconnell"
     },
-    {
-      "name": {
-        "first": "Chang",
-        "last": "Key"
-      },
-      "email": "chang.key@undefined.co.uk",
-      "role": "Manager"
-    }
-  ]
+    "email": "williams.mcconnell@good-food-holdings.com",
+    "role": "Admin"
+  }
+]
