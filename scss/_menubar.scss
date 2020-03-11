@@ -107,6 +107,22 @@
 
             .child-menu {
                 display: none;
+
+                &.level-2 {
+                    li {
+                        a {
+                            padding-left: 2rem;
+                        }
+                    }
+                }
+
+                &.level-3 {
+                    li {
+                        a {
+                            padding-left: 3rem;
+                        }
+                    }
+                }
             }
 
             &.has-children {

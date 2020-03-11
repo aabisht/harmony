@@ -21,96 +21,144 @@
 
 <body class="left-menu-fixed">
 
+  <div class="body-container-wrapper">
     <div class="body-wrapper">
-        <div class="authentication-bg-wrapper">
-          <div class="authentication-container">
-            <div class="authentication-content-wrapapper d-flex justify-content-center align-items-center">
-              <div class="card authentication-wrapper user-registration-wrapper">
+
+      <!-- Header -->
+      <header class="header-container">
+        <div class="header-container-wrapper">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-10 header-left-wrapper">
+                <div class="cell-wrapper">
+                  <div class="header-title-nav-wrapper">
+                    <div class="title">
+                      <h3>User Registration</h3>
+                      <div aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="/">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">User Registration</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 header-right-wrapper text-right">
+                <div class="cell-wrapper">
+                  <div class="header-dropdown-wrapper">
+                    <a href="javascript:;" class="header-dropdown-trigger"><i class="far fa-user-circle"></i></a>
+                    <div class="dropdown-menu text-left">
+                      <div class="header-dropdown-user-profile-wrapper text-center">
+                        <div class="user-avatar-wrapper">
+                          <i class="far fa-user-circle"></i>
+                        </div>
+                        <div class="user-detail-wrapper">
+                          <h3><a href="javascript:;">User Name</a></h3>
+                          <h5>Admin</h5>
+                        </div>
+                      </div>
+                      <ul>
+                        <li><a href="javascript:;">Menu 1</a></li>
+                        <li><a href="javascript:;">Menu 2</a></li>
+                        <li><a href="javascript:;">Menu 3</a></li>
+                        <li><a href="javascript:;">Logout</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Left Menu -->
+      <div class="left-menu-wrapper"></div>
+
+      <!-- Main Body Content -->
+      <div class="main-body-content-wrapper">
+        <div class="main-body-content-container">
+
+          <div class="main-body-data-wrapper">
+            <div class="container-fluid">
+              <div class="card">
                 <div class="card-content">
-                    <div class="logo-wrapper text-center">
-                        <img src="./assets/img/bristol-farms-logo-black.png" class="img-fluid" alt="Bristol Farms">
+                  <div class="card-header d-flex flex-row justify-content-between align-items-center">
+                    <div class="card-title-wrapper">
+                      <h3 class="card-title mb-0">
+                        User Registration
+                      </h3>
                     </div>
-                    <h4 class="text-center text-uppercase title">User Registration</h4>
-                    <div class="row authentication-form-wrapper">
-                        <div class="col-sm-12">
-                          <div class="input-field">
-                            <i class="material-icons prefix far fa-envelope"></i>
-                            <input id="userEmail" type="email">
-                            <label for="userEmail">Email</label>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 ">
-                          <div class="input-field">
-                            <i class="material-icons prefix fas fa-lock"></i>
-                            <input id="userPassword" type="password">
-                            <label for="userPassword">Password</label>
-                          </div>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="input-field">
-                            <i class="material-icons prefix fas fa-lock"></i>
-                            <input id="userRePassword" type="password">
-                            <label for="userRePassword">Re-Password</label>
-                          </div>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="input-field">
-                            <i class="material-icons prefix fas fa-user-tie"></i>
-                            <select>
-                              <option value="" disabled selected>Choose your option</option>
-                              <option value="1">Option 1</option>
-                              <option value="2">Option 2</option>
-                              <option value="3">Option 3</option>
-                            </select>
-                            <label>Supervisor</label>
-                          </div>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="input-field">
-                            <i class="material-icons prefix fas fa-brush"></i>
-                            <select>
-                              <option value="" disabled selected>Choose your option</option>
-                              <option value="1">Option 1</option>
-                              <option value="2">Option 2</option>
-                              <option value="3">Option 3</option>
-                            </select>
-                            <label>Banner</label>
-                          </div>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="input-field">
-                            <i class="material-icons prefix far fa-building"></i>
-                            <select>
-                              <option value="" disabled selected>Choose your option</option>
-                              <option value="1">Option 1</option>
-                              <option value="2">Option 2</option>
-                              <option value="3">Option 3</option>
-                            </select>
-                            <label>Department</label>
-                          </div>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="input-field">
-                            <i class="material-icons prefix fas fa-users"></i>
-                            <select>
-                              <option value="" disabled selected>Choose your option</option>
-                              <option value="1">Option 1</option>
-                              <option value="2">Option 2</option>
-                              <option value="3">Option 3</option>
-                            </select>
-                            <label>Group</label>
-                          </div>
-                        </div>
-                        <div class="col-sm-12 button-wrapper">
-                            <a href="/user-registration-success.html" class="button-primary button-block">Submit</a>
-                        </div>
+                  </div>
+                  <div class="authentication-form-wrapper">
+                    <div class="input-field">
+                      <i class="material-icons prefix far fa-envelope"></i>
+                      <input id="userEmail" type="email">
+                      <label for="userEmail">Email</label>
                     </div>
+                    <div class="input-field">
+                      <i class="material-icons prefix fas fa-user-tie"></i>
+                      <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                      </select>
+                      <label>Supervisor</label>
+                    </div>
+                    <div class="input-field">
+                      <i class="material-icons prefix fas fa-brush"></i>
+                      <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                      </select>
+                      <label>Banner</label>
+                    </div>
+                    <div class="input-field">
+                      <i class="material-icons prefix far fa-building"></i>
+                      <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                      </select>
+                      <label>Department</label>
+                    </div>
+                    <div class="input-field">
+                      <i class="material-icons prefix fas fa-users"></i>
+                      <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                      </select>
+                      <label>Group</label>
+                    </div>
+                    <div class="button-wrapper">
+                      <a href="#createUserModal" class="button-primary modal-trigger">Create User</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      
+    </div>
+  </div>
+
+  <div id="createUserModal" class="modal">
+    <div class="modal-content">
+      <p>User created successfully.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="javascript:;" class="modal-close button-stroked button-primary">Ok</a>
+    </div>
+  </div>
       
 
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>

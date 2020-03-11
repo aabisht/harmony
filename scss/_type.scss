@@ -316,6 +316,11 @@ input, textarea {
   min-height: 100px;
 }
 
-.change-password-form-wrapper {
+.change-password-form-wrapper,
+.authentication-form-wrapper {
   max-width: calculateRem(500px);
+
+  .input-field {
+    padding-bottom: 10px;
+  }
 }
