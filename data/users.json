@@ -1,98 +1,386 @@
 [
   {
     "name": {
-      "first": "Mcdaniel",
-      "last": "Santana"
+      "first": "Cecilia",
+      "last": "Dale"
     },
-    "email": "mcdaniel.santana@good-food-holdings.com",
-    "role": "Manager"
+    "email": "cecilia.dale@good-food-holdings.com",
+    "role": "Admin",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 2",
+    "department": "Department 2",
+    "group": "Group 1"
   },
   {
     "name": {
-      "first": "Duncan",
-      "last": "Dejesus"
+      "first": "Bertha",
+      "last": "Salazar"
     },
-    "email": "duncan.dejesus@good-food-holdings.com",
-    "role": "General"
+    "email": "bertha.salazar@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 1",
+    "supervisor": "Supervisor 3",
+    "department": "Department 3",
+    "group": "Group 2"
   },
   {
     "name": {
-      "first": "Long",
-      "last": "Scott"
+      "first": "Camille",
+      "last": "Dalton"
     },
-    "email": "long.scott@good-food-holdings.com",
-    "role": "Manager"
+    "email": "camille.dalton@good-food-holdings.com",
+    "role": "General",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 2",
+    "department": "Department 2",
+    "group": "Group 1"
   },
   {
     "name": {
-      "first": "Sofia",
-      "last": "Casey"
+      "first": "Rhonda",
+      "last": "Washington"
     },
-    "email": "sofia.casey@good-food-holdings.com",
-    "role": "General"
+    "email": "rhonda.washington@good-food-holdings.com",
+    "role": "Admin",
+    "banner": "Banner 2",
+    "supervisor": "Supervisor 3",
+    "department": "Department 3",
+    "group": "Group 2"
   },
   {
     "name": {
-      "first": "Nikki",
-      "last": "Steele"
+      "first": "Myers",
+      "last": "Tillman"
     },
-    "email": "nikki.steele@good-food-holdings.com",
-    "role": "Admin"
+    "email": "myers.tillman@good-food-holdings.com",
+    "role": "General",
+    "banner": "Banner 1",
+    "supervisor": "Supervisor 2",
+    "department": "Department 2",
+    "group": "Group 3"
   },
   {
     "name": {
-      "first": "Carlson",
-      "last": "Terry"
+      "first": "Ashley",
+      "last": "Vega"
     },
-    "email": "carlson.terry@good-food-holdings.com",
-    "role": "Manager"
+    "email": "ashley.vega@good-food-holdings.com",
+    "role": "Admin",
+    "banner": "Banner 2",
+    "supervisor": "Supervisor 1",
+    "department": "Department 3",
+    "group": "Group 1"
   },
   {
     "name": {
-      "first": "Norris",
-      "last": "Cole"
+      "first": "Welch",
+      "last": "Clarke"
     },
-    "email": "norris.cole@good-food-holdings.com",
-    "role": "Manager"
+    "email": "welch.clarke@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 1",
+    "supervisor": "Supervisor 1",
+    "department": "Department 3",
+    "group": "Group 3"
   },
   {
     "name": {
-      "first": "Cornelia",
-      "last": "Santos"
+      "first": "Shanna",
+      "last": "Swanson"
     },
-    "email": "cornelia.santos@good-food-holdings.com",
-    "role": "Manager"
+    "email": "shanna.swanson@good-food-holdings.com",
+    "role": "General",
+    "banner": "Banner 2",
+    "supervisor": "Supervisor 2",
+    "department": "Department 1",
+    "group": "Group 3"
   },
   {
     "name": {
-      "first": "Ines",
-      "last": "Kane"
+      "first": "Waller",
+      "last": "Richard"
     },
-    "email": "ines.kane@good-food-holdings.com",
-    "role": "General"
+    "email": "waller.richard@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 1",
+    "supervisor": "Supervisor 2",
+    "department": "Department 2",
+    "group": "Group 3"
   },
   {
     "name": {
-      "first": "Clayton",
-      "last": "Wade"
+      "first": "Stephens",
+      "last": "Battle"
     },
-    "email": "clayton.wade@good-food-holdings.com",
-    "role": "Manager"
+    "email": "stephens.battle@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 3",
+    "department": "Department 1",
+    "group": "Group 3"
   },
   {
     "name": {
-      "first": "Lola",
-      "last": "Romero"
+      "first": "Franco",
+      "last": "Rojas"
     },
-    "email": "lola.romero@good-food-holdings.com",
-    "role": "Manager"
+    "email": "franco.rojas@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 1",
+    "supervisor": "Supervisor 1",
+    "department": "Department 1",
+    "group": "Group 2"
   },
   {
     "name": {
-      "first": "Williams",
-      "last": "Mcconnell"
+      "first": "Odessa",
+      "last": "Gonzalez"
     },
-    "email": "williams.mcconnell@good-food-holdings.com",
-    "role": "Admin"
+    "email": "odessa.gonzalez@good-food-holdings.com",
+    "role": "General",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 2",
+    "department": "Department 2",
+    "group": "Group 1"
+  },
+  {
+    "name": {
+      "first": "Cain",
+      "last": "Hamilton"
+    },
+    "email": "cain.hamilton@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 2",
+    "department": "Department 3",
+    "group": "Group 1"
+  },
+  {
+    "name": {
+      "first": "Young",
+      "last": "Spencer"
+    },
+    "email": "young.spencer@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 2",
+    "supervisor": "Supervisor 2",
+    "department": "Department 1",
+    "group": "Group 1"
+  },
+  {
+    "name": {
+      "first": "Tanya",
+      "last": "Maldonado"
+    },
+    "email": "tanya.maldonado@good-food-holdings.com",
+    "role": "Admin",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 1",
+    "department": "Department 3",
+    "group": "Group 2"
+  },
+  {
+    "name": {
+      "first": "Summer",
+      "last": "Mclean"
+    },
+    "email": "summer.mclean@good-food-holdings.com",
+    "role": "Admin",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 3",
+    "department": "Department 3",
+    "group": "Group 1"
+  },
+  {
+    "name": {
+      "first": "Olsen",
+      "last": "Cotton"
+    },
+    "email": "olsen.cotton@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 2",
+    "supervisor": "Supervisor 2",
+    "department": "Department 3",
+    "group": "Group 2"
+  },
+  {
+    "name": {
+      "first": "Lakeisha",
+      "last": "Frank"
+    },
+    "email": "lakeisha.frank@good-food-holdings.com",
+    "role": "General",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 3",
+    "department": "Department 1",
+    "group": "Group 2"
+  },
+  {
+    "name": {
+      "first": "Gilbert",
+      "last": "Kent"
+    },
+    "email": "gilbert.kent@good-food-holdings.com",
+    "role": "General",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 3",
+    "department": "Department 2",
+    "group": "Group 1"
+  },
+  {
+    "name": {
+      "first": "Maggie",
+      "last": "Pennington"
+    },
+    "email": "maggie.pennington@good-food-holdings.com",
+    "role": "General",
+    "banner": "Banner 1",
+    "supervisor": "Supervisor 2",
+    "department": "Department 2",
+    "group": "Group 3"
+  },
+  {
+    "name": {
+      "first": "Jacklyn",
+      "last": "Buchanan"
+    },
+    "email": "jacklyn.buchanan@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 1",
+    "supervisor": "Supervisor 1",
+    "department": "Department 1",
+    "group": "Group 3"
+  },
+  {
+    "name": {
+      "first": "Waters",
+      "last": "Watts"
+    },
+    "email": "waters.watts@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 3",
+    "department": "Department 1",
+    "group": "Group 3"
+  },
+  {
+    "name": {
+      "first": "Gina",
+      "last": "Ashley"
+    },
+    "email": "gina.ashley@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 2",
+    "department": "Department 2",
+    "group": "Group 3"
+  },
+  {
+    "name": {
+      "first": "Brianna",
+      "last": "Randall"
+    },
+    "email": "brianna.randall@good-food-holdings.com",
+    "role": "Admin",
+    "banner": "Banner 1",
+    "supervisor": "Supervisor 3",
+    "department": "Department 3",
+    "group": "Group 3"
+  },
+  {
+    "name": {
+      "first": "Alyce",
+      "last": "Davenport"
+    },
+    "email": "alyce.davenport@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 2",
+    "supervisor": "Supervisor 2",
+    "department": "Department 1",
+    "group": "Group 2"
+  },
+  {
+    "name": {
+      "first": "Karen",
+      "last": "David"
+    },
+    "email": "karen.david@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 1",
+    "supervisor": "Supervisor 2",
+    "department": "Department 1",
+    "group": "Group 1"
+  },
+  {
+    "name": {
+      "first": "Dona",
+      "last": "Nieves"
+    },
+    "email": "dona.nieves@good-food-holdings.com",
+    "role": "Admin",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 3",
+    "department": "Department 3",
+    "group": "Group 1"
+  },
+  {
+    "name": {
+      "first": "Vanessa",
+      "last": "Page"
+    },
+    "email": "vanessa.page@good-food-holdings.com",
+    "role": "General",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 1",
+    "department": "Department 2",
+    "group": "Group 2"
+  },
+  {
+    "name": {
+      "first": "Vickie",
+      "last": "Burton"
+    },
+    "email": "vickie.burton@good-food-holdings.com",
+    "role": "General",
+    "banner": "Banner 2",
+    "supervisor": "Supervisor 1",
+    "department": "Department 2",
+    "group": "Group 1"
+  },
+  {
+    "name": {
+      "first": "Colette",
+      "last": "Delaney"
+    },
+    "email": "colette.delaney@good-food-holdings.com",
+    "role": "Admin",
+    "banner": "Banner 1",
+    "supervisor": "Supervisor 1",
+    "department": "Department 3",
+    "group": "Group 1"
+  },
+  {
+    "name": {
+      "first": "Sophie",
+      "last": "Rowland"
+    },
+    "email": "sophie.rowland@good-food-holdings.com",
+    "role": "Manager",
+    "banner": "Banner 3",
+    "supervisor": "Supervisor 1",
+    "department": "Department 2",
+    "group": "Group 3"
+  },
+  {
+    "name": {
+      "first": "Ruth",
+      "last": "Conley"
+    },
+    "email": "ruth.conley@good-food-holdings.com",
+    "role": "General",
+    "banner": "Banner 1",
+    "supervisor": "Supervisor 2",
+    "department": "Department 3",
+    "group": "Group 2"
   }
 ]

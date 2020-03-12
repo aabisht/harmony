@@ -10,6 +10,13 @@ $(document).ready(function() {
     function loadLeftMenu() {
         return $('.left-menu-wrapper').load("template/left-menu.html", function() { 
             $(this).trigger('create');
+            loadHeaderDropdownMenu();
+        });
+    }
+
+    function loadHeaderDropdownMenu() {
+        return $('#headerDropdownMenu').load("template/header-dropdown.html", function() { 
+            $(this).trigger('create');
             $('.header-container, .main-body-content-wrapper').show();
         });
     }

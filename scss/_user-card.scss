@@ -28,13 +28,17 @@
 
         &.edit {
             .card {
-                .user-role {
+                .user-role, .user-supervisor, .user-banner, .user-department, .user-group {
                     .input {
                         display: block;
                     }
                     .value {
                         display: none;
                     }
+                }
+
+                .user-card-footer-btn-wrapper {
+                    display: block;
                 }
             }
         }
@@ -59,7 +63,7 @@
             }
     
             .dropdown-content {
-                width: 180px !important;
+                width: calculateRem(220px) !important;
     
                 > li {
                     > a, span {
@@ -105,7 +109,7 @@
             font-family: $secondary-font;
         }
 
-        .user-role {
+        .user-role, .user-supervisor, .user-banner, .user-department, .user-group {
             .input {
                 display: none;
             }
@@ -113,6 +117,10 @@
             .value {
                 text-transform: capitalize;
             }
+        }
+
+        .user-card-footer-btn-wrapper {
+            display: none;
         }
     }
 }
