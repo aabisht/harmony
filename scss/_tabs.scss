@@ -28,7 +28,10 @@
         @include box-shadow(0 2px 3px rgba($color-black, 0.2));
 
         .tabs {
+            height: $card-tab-height;
             .tab {
+                line-height: $card-tab-height;
+                height: $card-tab-height;
                 a {
                     &.active {
                         background-color: rgba(darken($primary-color, 20%), 0.2);
@@ -39,10 +42,19 @@
     }
 
     .card-tab-content-wrapper {
-        padding-top: $card-tab-wrapper-padding;
+        // padding-top: $card-tab-wrapper-padding;
+
+        .form-input {
+            height: calc(100vh - 260px);
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin-left: -$card-tab-wrapper-padding;
+            margin-right: -$card-tab-wrapper-padding;
+            padding: $card-tab-wrapper-padding;
+        }
 
         .button-wrapper {
-            margin: $card-tab-wrapper-padding -#{$card-tab-wrapper-padding} -#{$card-tab-wrapper-padding};
+            margin: 0 -#{$card-tab-wrapper-padding} -#{$card-tab-wrapper-padding};
             padding: $card-tab-wrapper-padding;
             border-top: 1px solid #e0e0e0;
 
