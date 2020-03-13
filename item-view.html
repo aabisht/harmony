@@ -1,0 +1,1152 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home | Bristol Farms</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+  <link href="./css/vendor/fontawesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/vendor/datepicker.min.css">
+  <link rel="stylesheet" href="./css/vendor/materialize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="left-menu-fixed">
+
+  <div class="body-container-wrapper">
+    <div class="body-wrapper">
+
+      <!-- Header -->
+      <header class="header-container">
+        <div class="header-container-wrapper">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-10 header-left-wrapper">
+                <div class="cell-wrapper">
+                  <div class="header-title-nav-wrapper">
+                    <div class="title">
+                      <h3>View Item: <strong class="upcValue"></strong></h3>
+                      <div aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="/">Home</a></li>
+                          <li class="breadcrumb-item"><a href="/view-item-data.html">View Items</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">View Item: <strong class="upcValue"></strong></li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 header-right-wrapper text-right">
+                <div class="cell-wrapper">
+                  <div id="headerDropdownMenu"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Left Menu -->
+      <div class="left-menu-wrapper"></div>
+
+      <!-- Main Body Content -->
+      <div class="main-body-content-wrapper">
+        <div class="main-body-content-container">
+
+          <div class="main-body-data-wrapper">
+            <div class="container-fluid">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-tab-wrapper tab-wrapper">
+                    <div class="tab-label-wrapper">
+                      <ul class="tabs tabs-fixed-width">
+                        <li class="tab "><a href="#tabItemMaster1" class="active">Item Master 1</a></li>
+                        <li class="tab "><a href="#tabItemMaster2">Item Master 2</a></li>
+                        <li class="tab "><a href="#tabItemMaster3">Item Master 3</a></li>
+                        <li class="tab "><a href="#tabAuthorization">Authorization</a></li>
+                        <li class="tab "><a href="#tabCost">Cost</a></li>
+                        <li class="tab "><a href="#tabPrice">Price</a></li>
+                        <li class="tab "><a href="#tabSacle">Sacle</a></li>
+                        <li class="tab "><a href="#tabSign">Sign</a></li>
+                      </ul>
+                    </div>
+                    <div id="tabItemMaster1" class="card-tab-content-wrapper">
+                      <div class="row align-items-end form-input">
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_UPC" type="text">
+                              <label for="tabItemMaster1_UPC">UPC</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_PLU" type="text">
+                              <label for="tabItemMaster1_PLU">PLU</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_UnitPriceUPC" type="text">
+                              <label for="tabItemMaster1_UnitPriceUPC">Unit Price UPC</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_CaseUPC" type="text">
+                              <label for="tabItemMaster1_CaseUPC">Case UPC</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_StockCode" type="text">
+                              <label for="tabItemMaster1_StockCode">Stock Code</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_Description" type="text">
+                              <label for="tabItemMaster1_Description">Description</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_POSDescription" type="text">
+                              <label for="tabItemMaster1_POSDescription">POS Description</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_AdvertisingDescription" type="text">
+                              <label for="tabItemMaster1_AdvertisingDescription">Advertising Description</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_Brand" type="text">
+                              <label for="tabItemMaster1_Brand">Brand</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <select>
+                                <option value="" disabled>Choose your option</option>
+                                <option value="1" selected>1 - BAKERY</option>
+                                <option value="2">2 - BAKERY</option>
+                                <option value="3">3 - BAKERY</option>
+                              </select>
+                              <label for="tabItemMaster1_Department">Department</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <select>
+                                <option value="" disabled>Choose your option</option>
+                                <option value="1" selected>1234 - BEVERAGES</option>
+                                <option value="2">1235 - BEVERAGES</option>
+                                <option value="3">1236 - BEVERAGES</option>
+                              </select>
+                              <label for="tabItemMaster1_Family">Family</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <select>
+                                <option value="" disabled>Choose your option</option>
+                                <option value="1">01 - DOMESTIC BEER</option>
+                                <option value="2">02 - DOMESTIC BEER</option>
+                                <option value="3" selected>03 - DOMESTIC BEER</option>
+                              </select>
+                              <label for="tabItemMaster1_Subcategory">Subcategory</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <select>
+                                <option value="" disabled>Choose your option</option>
+                                <option value="2">2 - DIAPERS</option>
+                                <option value="3">3 - DIAPERS</option>
+                                <option value="4" selected>4 - DIAPERS</option>
+                              </select>
+                              <label for="tabItemMaster1_Class">Class</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <select>
+                                <option value="" disabled>Choose your option</option>
+                                <option value="2">0123 - 4 OZ YOPLAIT YOGURTS</option>
+                                <option value="3">0123 - 5 OZ YOPLAIT YOGURT</option>
+                                <option value="4" selected>0123 - 6 OZ YOPLAIT YOGURT</option>
+                              </select>
+                              <label for="tabItemMaster1_LinkCode">Link Code</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_UnitSize" type="text">
+                              <label for="tabItemMaster1_UnitSize">Unit Size</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <select>
+                                <option value="" disabled>Choose your option</option>
+                                <option value="1" selected>MM</option>
+                                <option value="2">CM</option>
+                                <option value="3">M</option>
+                              </select>
+                              <label for="tabItemMaster1_UnitOfMeasureCode">Unit Of Measure Code</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_RetailPack" type="text">
+                              <label for="tabItemMaster1_RetailPack">Retail Pack</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_CasePack" type="text">
+                              <label for="tabItemMaster1_CasePack">Case Pack</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_PriceRule" type="text">
+                              <label for="tabItemMaster1_PriceRule">Price Rule</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_MixMatchCode" type="text">
+                              <label for="tabItemMaster1_MixMatchCode">Mix Match Code</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_TargetGM" type="text">
+                              <label for="tabItemMaster1_TargetGM">Target Gross Margin</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <select>
+                                <option value="" disabled>Choose your option</option>
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                              </select>
+                              <label for="tabItemMaster1_POSPricingMethod">POS Pricing Method</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_LabelCode" type="text">
+                              <label for="tabItemMaster1_LabelCode">Tag Type</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <select>
+                                <option value="" disabled>Choose your option</option>
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                              </select>
+                              <label for="tabItemMaster1_PODLevel">POD Level</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster1_Yield" type="text">
+                              <label for="tabItemMaster1_Yield">Yield</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster1_OutOfSeason">
+                                  <input id="tabItemMaster1_OutOfSeason" type="checkbox" class="filled-in" />
+                                  <span>Out Of Season</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster1_CouponInd">
+                                  <input id="tabItemMaster1_CouponInd" type="checkbox" class="filled-in" />
+                                  <span>Coupon Ind</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="cell-wrapper">
+                            <div class="button-wrapper text-right">
+                              <a href="javascript:;" class="button-primary button-stroked"><i class="fas fa-times"></i> Cancel</a>
+                              <a href="javascript:;" class="button-primary "><i class="far fa-save"></i> Save</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="tabItemMaster2" class="card-tab-content-wrapper">
+                      <div class="row align-items-end form-input">
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster2_AlternateUPC" type="text">
+                              <label for="tabItemMaster2_AlternateUPC">Alt. UPC</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster2_AlternateCountRatio" type="text">
+                              <label for="tabItemMaster2_AlternateCountRatio">Alt. UPC Ratio</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster2_Store" type="text" disabled>
+                              <label for="tabItemMaster2_Store">Store</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster2_Aisle" type="text" disabled>
+                              <label for="tabItemMaster2_Aisle">Aisle</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster2_Section" type="text" disabled>
+                              <label for="tabItemMaster2_Section">Section</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster2_Shelf" type="text" disabled>
+                              <label for="tabItemMaster2_Shelf">Shelf</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster2_Position" type="text" disabled>
+                              <label for="tabItemMaster2_Position">Position</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster2_Placement_Date" type="text" disabled>
+                              <label for="tabItemMaster2_Placement_Date">Placement Date</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster2_User_ID" type="text" disabled>
+                              <label for="tabItemMaster2_User_ID">User ID</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <input id="tabItemMaster2_Facing" type="text" disabled>
+                              <label for="tabItemMaster2_Facing">Facing</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_BFSeasonalPromo">
+                                  <input id="tabItemMaster2_BFSeasonalPromo" type="checkbox" class="filled-in" />
+                                  <span>BF Seasonal Promo</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_CBD">
+                                  <input id="tabItemMaster2_CBD" type="checkbox" class="filled-in" />
+                                  <span>CBD</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_CoreSet">
+                                  <input id="tabItemMaster2_CoreSet" type="checkbox" class="filled-in" />
+                                  <span>Core Set</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_CustomerRequest">
+                                  <input id="tabItemMaster2_CustomerRequest" type="checkbox" class="filled-in" />
+                                  <span>Customer Request</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_FairTrade">
+                                  <input id="tabItemMaster2_FairTrade" type="checkbox" class="filled-in" />
+                                  <span>Fair Trade</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_Foodstamp">
+                                  <input id="tabItemMaster2_Foodstamp" type="checkbox" class="filled-in" />
+                                  <span>Foodstamp</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_GlutenFree">
+                                  <input id="tabItemMaster2_GlutenFree" type="checkbox" class="filled-in" />
+                                  <span>Gluten Free</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_Instacart">
+                                  <input id="tabItemMaster2_Instacart" type="checkbox" class="filled-in" />
+                                  <span>Instacart</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_InstacartTPR">
+                                  <input id="tabItemMaster2_InstacartTPR" type="checkbox" class="filled-in" />
+                                  <span>Instacart TPR</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_LASeasonalPromo">
+                                  <input id="tabItemMaster2_LASeasonalPromo" type="checkbox" class="filled-in" />
+                                  <span>LANM Seasonal Promo</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_Local">
+                                  <input id="tabItemMaster2_Local" type="checkbox" class="filled-in" />
+                                  <span>Local</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_Natural">
+                                  <input id="tabItemMaster2_Natural" type="checkbox" class="filled-in" />
+                                  <span>Natural</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_NGMO">
+                                  <input id="tabItemMaster2_NGMO" type="checkbox" class="filled-in" />
+                                  <span>NGMO</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_NotForSale">
+                                  <input id="tabItemMaster2_NotForSale" type="checkbox" class="filled-in" />
+                                  <span>Not for Sales</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_Organic">
+                                  <input id="tabItemMaster2_Organic" type="checkbox" class="filled-in" />
+                                  <span>Organic</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_OrganicallyGrown">
+                                  <input id="tabItemMaster2_OrganicallyGrown" type="checkbox" class="filled-in" />
+                                  <span>Organically Grown</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_OverrideRequired">
+                                  <input id="tabItemMaster2_OverrideRequired" type="checkbox" class="filled-in" />
+                                  <span>Override Required</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_PlantBased">
+                                  <input id="tabItemMaster2_PlantBased" type="checkbox" class="filled-in" />
+                                  <span>Plant Based</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_PriceRequired">
+                                  <input id="tabItemMaster2_PriceRequired" type="checkbox" class="filled-in" />
+                                  <span>Price Required</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_PrivateLabel">
+                                  <input id="tabItemMaster2_PrivateLabel" type="checkbox" class="filled-in" />
+                                  <span>Private Label</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_ProduceFIFO">
+                                  <input id="tabItemMaster2_ProduceFIFO" type="checkbox" class="filled-in" />
+                                  <span>Produce FIFO</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_QtyAllowed">
+                                  <input id="tabItemMaster2_QtyAllowed" type="checkbox" class="filled-in" />
+                                  <span>Qty Allowed</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_QtyRequired">
+                                  <input id="tabItemMaster2_QtyRequired" type="checkbox" class="filled-in" />
+                                  <span>Qty Required</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_Raw">
+                                  <input id="tabItemMaster2_Raw" type="checkbox" class="filled-in" />
+                                  <span>Raw</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_RemotePrinter">
+                                  <input id="tabItemMaster2_RemotePrinter" type="checkbox" class="filled-in" />
+                                  <span>RemotePrinter</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_RPD">
+                                  <input id="tabItemMaster2_RPD" type="checkbox" class="filled-in" />
+                                  <span>RPD</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_Seasonal">
+                                  <input id="tabItemMaster2_Seasonal" type="checkbox" class="filled-in" />
+                                  <span>Seasonal Item</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_TaxA">
+                                  <input id="tabItemMaster2_TaxA" type="checkbox" class="filled-in" />
+                                  <span>Tax A</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_TaxB">
+                                  <input id="tabItemMaster2_TaxB" type="checkbox" class="filled-in" />
+                                  <span>Tax B</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_TaxC">
+                                  <input id="tabItemMaster2_TaxC" type="checkbox" class="filled-in" />
+                                  <span>Tax C</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_TaxD">
+                                  <input id="tabItemMaster2_TaxD" type="checkbox" class="filled-in" />
+                                  <span>Tax D</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_TaxE">
+                                  <input id="tabItemMaster2_TaxE" type="checkbox" class="filled-in" />
+                                  <span>Tax E</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_TaxF">
+                                  <input id="tabItemMaster2_TaxF" type="checkbox" class="filled-in" />
+                                  <span>Tax F</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_TaxG">
+                                  <input id="tabItemMaster2_TaxG" type="checkbox" class="filled-in" />
+                                  <span>Tax G</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_TaxH">
+                                  <input id="tabItemMaster2_TaxH" type="checkbox" class="filled-in" />
+                                  <span>Tax H</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_ValueBF">
+                                  <input id="tabItemMaster2_ValueBF" type="checkbox" class="filled-in" />
+                                  <span>Value BF</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_ValueLAM">
+                                  <input id="tabItemMaster2_ValueLAM" type="checkbox" class="filled-in" />
+                                  <span>Value LAM</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_Vegan">
+                                  <input id="tabItemMaster2_Vegan" type="checkbox" class="filled-in" />
+                                  <span>Vegan</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                          <div class="cell-wrapper">
+                            <div class="input-field">
+                              <div class="checkbox-wrapper">
+                                <label for="tabItemMaster2_ScaleFlag">
+                                  <input id="tabItemMaster2_ScaleFlag" type="checkbox" class="filled-in" />
+                                  <span>Scale Item</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="cell-wrapper">
+                            <div class="button-wrapper text-right">
+                              <a href="javascript:;" class="button-primary button-stroked"><i class="fas fa-times"></i> Cancel</a>
+                              <a href="javascript:;" class="button-primary "><i class="far fa-save"></i> Save</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="tabItemMaster3" class="card-tab-content-wrapper">Test 3</div>
+                    <div id="tabAuthorization" class="card-tab-content-wrapper">Authorization</div>
+                    <div id="tabCost" class="card-tab-content-wrapper">Cost</div>
+                    <div id="tabPrice" class="card-tab-content-wrapper">Price</div>
+                    <div id="tabSacle" class="card-tab-content-wrapper">Sacle</div>
+                    <div id="tabSign" class="card-tab-content-wrapper">Sign</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="js/vendor/jquery-3.4.1.min.js"></script>
+  <script src="js/vendor/ag-grid-enterprise.min.js"></script>
+  <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/vendor/datepicker.min.js"></script>
+  <script src="js/vendor/datepicker.en.js"></script>
+
+
+  <script src="js/main.js"></script>
+
+  <script>
+
+    var url = new URL(window.location.href),
+        paramName = url.searchParams.get("upc"),
+        itemData;
+    $(document).ready(function() {
+      
+      $.get("data/view-item.json", function(data, status){
+        $(data).each(function(){
+          if(this.upc === paramName) {
+            itemData = this;
+            return false;
+          }
+        });
+
+        // Item Master 1 Input data
+        $('#tabItemMaster1_UPC').attr('value', paramName);
+        $('#tabItemMaster1_UPC').siblings('label').addClass('active');
+        $('#tabItemMaster1_PLU').attr('value', itemData.plu);
+        $('#tabItemMaster1_PLU').siblings('label').addClass('active');
+        $('#tabItemMaster1_UnitPriceUPC').attr('value', itemData.unit_price_upc);
+        $('#tabItemMaster1_UnitPriceUPC').siblings('label').addClass('active');
+        $('#tabItemMaster1_CaseUPC').attr('value', itemData.case_upc);
+        $('#tabItemMaster1_CaseUPC').siblings('label').addClass('active');
+        $('#tabItemMaster1_StockCode').attr('value', itemData.stockcode);
+        $('#tabItemMaster1_StockCode').siblings('label').addClass('active');
+        $('#tabItemMaster1_Description').attr('value', itemData.description);
+        $('#tabItemMaster1_Description').siblings('label').addClass('active');
+        $('#tabItemMaster1_POSDescription').attr('value', itemData.pos_description);
+        $('#tabItemMaster1_POSDescription').siblings('label').addClass('active');
+        $('#tabItemMaster1_AdvertisingDescription').attr('value', itemData.advertising_description);
+        $('#tabItemMaster1_AdvertisingDescription').siblings('label').addClass('active');
+        $('#tabItemMaster1_Brand').attr('value', itemData.brand);
+        $('#tabItemMaster1_Brand').siblings('label').addClass('active');
+        $('#tabItemMaster1_UnitSize').attr('value', itemData.unit_size);
+        $('#tabItemMaster1_UnitSize').siblings('label').addClass('active');
+        $('#tabItemMaster1_RetailPack').attr('value', itemData.retail_pack);
+        $('#tabItemMaster1_RetailPack').siblings('label').addClass('active');
+        $('#tabItemMaster1_CasePack').attr('value', itemData.case_pack);
+        $('#tabItemMaster1_CasePack').siblings('label').addClass('active');
+        $('#tabItemMaster1_PriceRule').attr('value', itemData.price_rule);
+        $('#tabItemMaster1_PriceRule').siblings('label').addClass('active');
+        $('#tabItemMaster1_MixMatchCode').attr('value', itemData.mix_match_code);
+        $('#tabItemMaster1_MixMatchCode').siblings('label').addClass('active');
+        $('#tabItemMaster1_TargetGM').attr('value', itemData.target_gm);
+        $('#tabItemMaster1_TargetGM').siblings('label').addClass('active');
+        $('#tabItemMaster1_LabelCode').attr('value', itemData.labelcode);
+        $('#tabItemMaster1_LabelCode').siblings('label').addClass('active');
+        $('#tabItemMaster1_Yield').attr('value', itemData.yield);
+        $('#tabItemMaster1_Yield').siblings('label').addClass('active');
+        if(itemData.out_of_season === 'True') {
+          $( "#tabItemMaster1_OutOfSeason" ).prop( "checked", true );
+        }
+        if(itemData.coupon_ind === 'True') {
+          $( "#tabItemMaster1_CouponInd" ).prop( "checked", true );
+        }
+
+        // Item Master 2 Input data
+        $('#tabItemMaster2_AlternateUPC').attr('value', itemData.alternate_upc);
+        $('#tabItemMaster2_AlternateUPC').siblings('label').addClass('active');
+        $('#tabItemMaster2_AlternateCountRatio').attr('value', itemData.alternate_count_ratio);
+        $('#tabItemMaster2_AlternateCountRatio').siblings('label').addClass('active');
+        $('#tabItemMaster2_Store').attr('value', itemData.store);
+        $('#tabItemMaster2_Store').siblings('label').addClass('active');
+        $('#tabItemMaster2_Aisle').attr('value', itemData.aisle);
+        $('#tabItemMaster2_Aisle').siblings('label').addClass('active');
+        $('#tabItemMaster2_Section').attr('value', itemData.section);
+        $('#tabItemMaster2_Section').siblings('label').addClass('active');
+        $('#tabItemMaster2_Shelf').attr('value', itemData.shelf);
+        $('#tabItemMaster2_Shelf').siblings('label').addClass('active');
+        $('#tabItemMaster2_Position').attr('value', itemData.position);
+        $('#tabItemMaster2_Position').siblings('label').addClass('active');
+        $('#tabItemMaster2_Placement_Date').attr('value', itemData.placement_date);
+        $('#tabItemMaster2_Placement_Date').siblings('label').addClass('active');
+        $('#tabItemMaster2_User_ID').attr('value', itemData.user_id);
+        $('#tabItemMaster2_User_ID').siblings('label').addClass('active');
+        $('#tabItemMaster2_Facing').attr('value', itemData.facing);
+        $('#tabItemMaster2_Facing').siblings('label').addClass('active');
+        if(itemData.bf_seasonal_promo === 'True') {
+          $( "#tabItemMaster2_BFSeasonalPromo" ).prop( "checked", true );
+        }
+        if(itemData.cbd === 'True') {
+          $( "#tabItemMaster2_CBD" ).prop( "checked", true );
+        }
+        if(itemData.core_set === 'True') {
+          $( "#tabItemMaster2_CoreSet" ).prop( "checked", true );
+        }
+        if(itemData.customer_request === 'True') {
+          $( "#tabItemMaster2_CustomerRequest" ).prop( "checked", true );
+        }
+        if(itemData.fair_trade === 'True') {
+          $( "#tabItemMaster2_FairTrade" ).prop( "checked", true );
+        }
+        if(itemData.food_stamp === 'True') {
+          $( "#tabItemMaster2_Foodstamp" ).prop( "checked", true );
+        }
+        if(itemData.gluten_free === 'True') {
+          $( "#tabItemMaster2_GlutenFree" ).prop( "checked", true );
+        }
+        if(itemData.insta_cart === 'True') {
+          $( "#tabItemMaster2_Instacart" ).prop( "checked", true );
+        }
+        if(itemData.insta_cart_trp === 'True') {
+          $( "#tabItemMaster2_InstacartTPR" ).prop( "checked", true );
+        }
+        if(itemData.la_seasonal_promo === 'True') {
+          $( "#tabItemMaster2_LASeasonalPromo" ).prop( "checked", true );
+        }
+        if(itemData.local === 'True') {
+          $( "#tabItemMaster2_Local" ).prop( "checked", true );
+        }
+        if(itemData.organic === 'True') {
+          $( "#tabItemMaster2_Organic" ).prop( "checked", true );
+        }
+        if(itemData.organically_grown === 'True') {
+          $( "#tabItemMaster2_OrganicallyGrown" ).prop( "checked", true );
+        }
+        if(itemData.override_required === 'True') {
+          $( "#tabItemMaster2_OverrideRequired" ).prop( "checked", true );
+        }
+        if(itemData.plant_based === 'True') {
+          $( "#tabItemMaster2_PlantBased" ).prop( "checked", true );
+        }
+        if(itemData.price_required === 'True') {
+          $( "#tabItemMaster2_PriceRequired" ).prop( "checked", true );
+        }
+        if(itemData.private_label === 'True') {
+          $( "#tabItemMaster2_PrivateLabel" ).prop( "checked", true );
+        }
+        if(itemData.produce_fifo === 'True') {
+          $( "#tabItemMaster2_ProduceFIFO" ).prop( "checked", true );
+        }
+        if(itemData.qty_allowed === 'True') {
+          $( "#tabItemMaster2_QtyAllowed" ).prop( "checked", true );
+        }
+        if(itemData.qty_required === 'True') {
+          $( "#tabItemMaster2_QtyRequired" ).prop( "checked", true );
+        }
+        if(itemData.raw === 'True') {
+          $( "#tabItemMaster2_Raw" ).prop( "checked", true );
+        }
+        if(itemData.remote_printer === 'True') {
+          $( "#tabItemMaster2_RemotePrinter" ).prop( "checked", true );
+        }
+        if(itemData.rpd === 'True') {
+          $( "#tabItemMaster2_RPD" ).prop( "checked", true );
+        }
+        if(itemData.seasonal === 'True') {
+          $( "#tabItemMaster2_Seasonal" ).prop( "checked", true );
+        }
+        if(itemData.tax_a === 'True') {
+          $( "#tabItemMaster2_TaxA" ).prop( "checked", true );
+        }
+        if(itemData.tax_b === 'True') {
+          $( "#tabItemMaster2_TaxB" ).prop( "checked", true );
+        }
+        if(itemData.tax_c === 'True') {
+          $( "#tabItemMaster2_TaxC" ).prop( "checked", true );
+        }
+        if(itemData.tax_d === 'True') {
+          $( "#tabItemMaster2_TaxD" ).prop( "checked", true );
+        }
+        if(itemData.tax_e === 'True') {
+          $( "#tabItemMaster2_TaxE" ).prop( "checked", true );
+        }
+        if(itemData.tax_f === 'True') {
+          $( "#tabItemMaster2_TaxF" ).prop( "checked", true );
+        }
+        if(itemData.tax_g === 'True') {
+          $( "#tabItemMaster2_TaxG" ).prop( "checked", true );
+        }
+        if(itemData.tax_h === 'True') {
+          $( "#tabItemMaster2_TaxH" ).prop( "checked", true );
+        }
+        if(itemData.value_bf === 'True') {
+          $( "#tabItemMaster2_ValueBF" ).prop( "checked", true );
+        }
+        if(itemData.value_lam === 'True') {
+          $( "#tabItemMaster2_ValueLAM" ).prop( "checked", true );
+        }
+        if(itemData.vegan === 'True') {
+          $( "#tabItemMaster2_Vegan" ).prop( "checked", true );
+        }
+        if(itemData.scale_flag === 'True') {
+          $( "#tabItemMaster2_ScaleFlag" ).prop( "checked", true );
+        }
+
+      });
+
+      $('.upcValue').text(paramName);
+    });
+
+  </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

@@ -21,3 +21,38 @@
         background-color: darken($primary-color, 20%);
     }
 }
+
+.card-tab-wrapper {
+    .tab-label-wrapper {
+        margin: -#{$card-tab-wrapper-padding} -#{$card-tab-wrapper-padding} 0;
+        @include box-shadow(0 2px 3px rgba($color-black, 0.2));
+
+        .tabs {
+            .tab {
+                a {
+                    &.active {
+                        background-color: rgba(darken($primary-color, 20%), 0.2);
+                    }
+                }
+            }
+        }
+    }
+
+    .card-tab-content-wrapper {
+        padding-top: $card-tab-wrapper-padding;
+
+        .button-wrapper {
+            margin: $card-tab-wrapper-padding -#{$card-tab-wrapper-padding} -#{$card-tab-wrapper-padding};
+            padding: $card-tab-wrapper-padding;
+            border-top: 1px solid #e0e0e0;
+
+            .button-primary {
+                min-width: 200px;
+
+                i {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
