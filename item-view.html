@@ -1150,11 +1150,330 @@
                         </div>
                       </div>
                     </div>
-                    <div id="tabAuthorization" class="card-tab-content-wrapper">Authorization</div>
+                    <div id="tabAuthorization" class="card-tab-content-wrapper">
+                      <div class="align-items-end form-input">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <select>
+                                  <option value="" disabled>Choose your option</option>
+                                  <option value="1">Store 1</option>
+                                  <option value="2" selected>Store 2</option>
+                                  <option value="3">Store 3</option>
+                                </select>
+                                <label for="tabAuthorization_Store">Store</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <select>
+                                  <option value="" disabled>Choose your option</option>
+                                  <option value="1">Department 1</option>
+                                  <option value="2">Department 2</option>
+                                  <option value="3" selected>Department 3</option>
+                                </select>
+                                <label for="tabAuthorization_Department">Department</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabAuthorization_TagQuantity" type="text">
+                                <label for="tabAuthorization_TagQuantity">Tag Quantity</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <div class="checkbox-wrapper">
+                                  <label for="tabAuthorization_Tag">
+                                    <input id="tabAuthorization_Tag" type="checkbox" class="filled-in" />
+                                    <span>Tag</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="cell-wrapper">
+                            <div class="button-wrapper text-right">
+                              <a href="javascript:;" class="button-primary button-stroked"><i class="fas fa-times"></i> Cancel</a>
+                              <a href="javascript:;" class="button-primary "><i class="far fa-save"></i> Save</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div id="tabCost" class="card-tab-content-wrapper">Cost</div>
                     <div id="tabPrice" class="card-tab-content-wrapper">Price</div>
-                    <div id="tabSacle" class="card-tab-content-wrapper">Sacle</div>
-                    <div id="tabSign" class="card-tab-content-wrapper">Sign</div>
+                    <div id="tabSacle" class="card-tab-content-wrapper">
+                      <div class="align-items-end form-input">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSacle_PLU" type="text">
+                                <label for="tabSacle_PLU">PLU</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSacle_Description1" type="text">
+                                <label for="tabSacle_Description1">Description 1</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSacle_Description2" type="text">
+                                <label for="tabSacle_Description2">Description 2</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSacle_TareA" type="text">
+                                <label for="tabSacle_TareA">Tare A</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSacle_TareB" type="text">
+                                <label for="tabSacle_TareB">Tare B</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSacle_ShelfLife" type="text">
+                                <label for="tabSacle_ShelfLife">Shelf Life</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSacle_ProductLife" type="text">
+                                <label for="tabSacle_ProductLife">Product Life</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSacle_Ingredients" type="text">
+                                <label for="tabSacle_Ingredients">Ingredients</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <div class="checkbox-wrapper">
+                                  <label for="tabSacle_ForceA">
+                                    <input id="tabSacle_ForceA" type="checkbox" class="filled-in" />
+                                    <span>Force A</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <div class="checkbox-wrapper">
+                                  <label for="tabSacle_ForceB">
+                                    <input id="tabSacle_ForceB" type="checkbox" class="filled-in" />
+                                    <span>Force B</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <div class="checkbox-wrapper">
+                                  <label for="tabSacle_SelfService">
+                                    <input id="tabSacle_SelfService" type="checkbox" class="filled-in" />
+                                    <span>Self Service</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <div class="checkbox-wrapper">
+                                  <label for="tabSacle_FullService">
+                                    <input id="tabSacle_FullService" type="checkbox" class="filled-in" />
+                                    <span>Full Service</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="cell-wrapper">
+                            <div class="button-wrapper text-right">
+                              <a href="javascript:;" class="button-primary button-stroked"><i class="fas fa-times"></i> Cancel</a>
+                              <a href="javascript:;" class="button-primary "><i class="far fa-save"></i> Save</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="tabSign" class="card-tab-content-wrapper">
+                      <div class="align-items-end form-input">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSign_SignAdText1" type="text">
+                                <label for="tabSign_SignAdText1">Ad Sign text 1</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSign_SignAdText2" type="text">
+                                <label for="tabSign_SignAdText2">Ad Sign text 2</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSign_SignAdText3" type="text">
+                                <label for="tabSign_SignAdText3">Ad Sign text 3</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSign_SignProdName" type="text">
+                                <label for="tabSign_SignProdName">Sign Product Name</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSign_SignTagline" type="text">
+                                <label for="tabSign_SignTagline">Sign Tag Line</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSign_SignOrigin" type="text">
+                                <label for="tabSign_SignOrigin">Origin</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSign_SignVinyard" type="text">
+                                <label for="tabSign_SignVinyard">Wine Vinyard</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSign_SignVintage" type="text">
+                                <label for="tabSign_SignVintage">Wine Vintage</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSign_SignMilk" type="text">
+                                <label for="tabSign_SignMilk">Milk</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSign_Serves" type="text">
+                                <label for="tabSign_Serves">Serves</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSign_USDA" type="text">
+                                <label for="tabSign_USDA">USDA</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <select>
+                                  <option value="" disabled>Choose your option</option>
+                                  <option value="1">Sign Type 1</option>
+                                  <option value="2">Sign Type 2</option>
+                                  <option value="3" selected>Sign Type 3</option>
+                                </select>
+                                <label for="tabSign_SignType">Sign Type</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSign_SignProdDesc" type="text">
+                                <label for="tabSign_SignProdDesc">Sign Product Description</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="cell-wrapper">
+                              <div class="input-field">
+                                <input id="tabSign_SignDirect" type="text">
+                                <label for="tabSign_SignDirect">Pronunciation</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="cell-wrapper">
+                            <div class="button-wrapper text-right">
+                              <a href="javascript:;" class="button-primary button-stroked"><i class="fas fa-times"></i> Cancel</a>
+                              <a href="javascript:;" class="button-primary "><i class="far fa-save"></i> Save</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -1389,6 +1708,71 @@
         $('#tabItemMaster3_WarehousePack').siblings('label').addClass('active');
         $('#tabItemMaster3_FrontEndTare').attr('value', itemData.front_end_tare);
         $('#tabItemMaster3_FrontEndTare').siblings('label').addClass('active');
+
+        // Authorization Input data
+        $('#tabAuthorization_TagQuantity').attr('value', itemData.tag_count);
+        $('#tabAuthorization_TagQuantity').siblings('label').addClass('active');
+        if(itemData.tag_eligible === 'True') {
+          $( "#tabAuthorization_Tag" ).prop( "checked", true );
+        }
+
+        // Sacle Input data
+        $('#tabSacle_PLU').attr('value', itemData.plu);
+        $('#tabSacle_PLU').siblings('label').addClass('active');
+        $('#tabSacle_Description1').attr('value', itemData.description_1);
+        $('#tabSacle_Description1').siblings('label').addClass('active');
+        $('#tabSacle_Description2').attr('value', itemData.description_2);
+        $('#tabSacle_Description2').siblings('label').addClass('active');
+        $('#tabSacle_TareA').attr('value', itemData.tare_a);
+        $('#tabSacle_TareA').siblings('label').addClass('active');
+        $('#tabSacle_TareB').attr('value', itemData.tare_b);
+        $('#tabSacle_TareB').siblings('label').addClass('active');
+        $('#tabSacle_ShelfLife').attr('value', itemData.shelf_life);
+        $('#tabSacle_ShelfLife').siblings('label').addClass('active');
+        $('#tabSacle_ProductLife').attr('value', itemData.shelf_life);
+        $('#tabSacle_ProductLife').siblings('label').addClass('active');
+        $('#tabSacle_Ingredients').attr('value', itemData.ingredients);
+        $('#tabSacle_Ingredients').siblings('label').addClass('active');
+        if(itemData.force_a === 'True') {
+          $( "#tabSacle_ForceA" ).prop( "checked", true );
+        }
+        if(itemData.force_b === 'True') {
+          $( "#tabSacle_ForceB" ).prop( "checked", true );
+        }
+        if(itemData.self_service === 'True') {
+          $( "#tabSacle_SelfService" ).prop( "checked", true );
+        }
+        if(itemData.full_service === 'True') {
+          $( "#tabSacle_FullService" ).prop( "checked", true );
+        }
+
+         // Sign Input data
+        $('#tabSign_SignAdText1').attr('value', itemData.sign_ad_text_1);
+        $('#tabSign_SignAdText1').siblings('label').addClass('active');
+        $('#tabSign_SignAdText2').attr('value', itemData.sign_ad_text_2);
+        $('#tabSign_SignAdText2').siblings('label').addClass('active');
+        $('#tabSign_SignAdText3').attr('value', itemData.sign_ad_text_3);
+        $('#tabSign_SignAdText3').siblings('label').addClass('active');
+        $('#tabSign_SignProdName').attr('value', itemData.sign_prod_name);
+        $('#tabSign_SignProdName').siblings('label').addClass('active');
+        $('#tabSign_SignTagline').attr('value', itemData.sign_tagline);
+        $('#tabSign_SignTagline').siblings('label').addClass('active');
+        $('#tabSign_SignOrigin').attr('value', itemData.sign_origin);
+        $('#tabSign_SignOrigin').siblings('label').addClass('active');
+        $('#tabSign_SignVinyard').attr('value', itemData.sign_vinyard);
+        $('#tabSign_SignVinyard').siblings('label').addClass('active');
+        $('#tabSign_SignVintage').attr('value', itemData.sign_vintage);
+        $('#tabSign_SignVintage').siblings('label').addClass('active');
+        $('#tabSign_SignMilk').attr('value', itemData.sign_milk);
+        $('#tabSign_SignMilk').siblings('label').addClass('active');
+        $('#tabSign_Serves').attr('value', itemData.sign_serves);
+        $('#tabSign_Serves').siblings('label').addClass('active');
+        $('#tabSign_USDA').attr('value', itemData.sign_usda);
+        $('#tabSign_USDA').siblings('label').addClass('active');
+        $('#tabSign_SignProdDesc').attr('value', itemData.sign_prod_desc);
+        $('#tabSign_SignProdDesc').siblings('label').addClass('active');
+        $('#tabSign_SignDirect').attr('value', itemData.sign_direct);
+        $('#tabSign_SignDirect').siblings('label').addClass('active');
       });
 
       $('.upcValue').text(paramName);
