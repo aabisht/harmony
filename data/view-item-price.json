@@ -1,0 +1,62 @@
+[
+    {
+      "store": "Store 003",
+      "price_multi": 5,
+      "price": "$39.54",
+      "eff_date": "01-17-2020"
+    },
+    {
+      "store": "Store 003",
+      "price_multi": 5,
+      "price": "$15.81",
+      "eff_date": "01-13-2020"
+    },
+    {
+      "store": "Store 004",
+      "price_multi": 2,
+      "price": "$21.12",
+      "eff_date": "01-04-2020"
+    },
+    {
+      "store": "Store 002",
+      "price_multi": 2,
+      "price": "$17.48",
+      "eff_date": "01-17-2020"
+    },
+    {
+      "store": "Store 002",
+      "price_multi": 1,
+      "price": "$14.58",
+      "eff_date": "01-03-2020"
+    },
+    {
+      "store": "Store 003",
+      "price_multi": 2,
+      "price": "$22.78",
+      "eff_date": "01-06-2020"
+    },
+    {
+      "store": "Store 002",
+      "price_multi": 4,
+      "price": "$29.01",
+      "eff_date": "01-30-2020"
+    },
+    {
+      "store": "Store 003",
+      "price_multi": 3,
+      "price": "$22.51",
+      "eff_date": "01-14-2020"
+    },
+    {
+      "store": "Store 004",
+      "price_multi": 3,
+      "price": "$38.66",
+      "eff_date": "01-02-2020"
+    },
+    {
+      "store": "Store 002",
+      "price_multi": 4,
+      "price": "$27.84",
+      "eff_date": "01-01-2020"
+    }
+  ]
