@@ -27,7 +27,8 @@
     &#createUserModal,
     &#cloneItemRowModal,
     &#saveItemRowModal,
-    &#addNewCost {
+    &#addNewCost,
+    &#addNewCurrentRetail {
         max-width: 400px;
         text-align: center;
         
@@ -69,3 +70,8 @@
         }
     }
 }
+
+.datepickers-container {
+    z-index: 9999;
+}
+

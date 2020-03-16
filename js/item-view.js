@@ -4,10 +4,10 @@ var url = new URL(window.location.href),
 $(document).ready(function() {
 
     if(paramName === "UPC000000001") {
-    $('.footer-pre-btn').hide();
+        $('.footer-pre-btn').addClass('disabled');
     }
     if(paramName === "UPC00000000100") {
-    $('.footer-next-btn').hide();
+        $('.footer-next-btn').addClass('disabled');
     }
     
     $.get("data/view-item.json", function(data, status){
@@ -287,26 +287,37 @@ $(document).ready(function() {
     $('.upcValue').text(paramName);
 
     $('body').on('click', '.footer-next-btn', function(event) {
-    if(parseInt(paramName.split('UPC')[1]) < 10) {
-        console.log('/item-view.html?upc=UPC00000000'+(parseInt(paramName.split('UPC')[1])+1));
-        window.location.href = '/item-view.html?upc=UPC00000000'+(parseInt(paramName.split('UPC')[1])+1);
-    }
-    if(parseInt(paramName.split('UPC')[1]) > 9 && parseInt(paramName.split('UPC')[1]) < 100) {
-        window.location.href = '/item-view.html?upc=UPC00000000'+(parseInt(paramName.split('UPC')[1])+1);
-    } else if(paramName === 'UPC0000000099') {
-        window.location.href = '/item-view.html?upc=UPC00000000100';
-    }
+        event.preventDefault();
+        if(paramName === 'UPC00000000100') {
+            return false;
+        } else {
+            if(parseInt(paramName.split('UPC')[1]) < 10) {
+                console.log('/item-view.html?upc=UPC00000000'+(parseInt(paramName.split('UPC')[1])+1));
+                window.location.href = '/item-view.html?upc=UPC00000000'+(parseInt(paramName.split('UPC')[1])+1);
+            }
+            if(parseInt(paramName.split('UPC')[1]) > 9 && parseInt(paramName.split('UPC')[1]) < 100) {
+                window.location.href = '/item-view.html?upc=UPC00000000'+(parseInt(paramName.split('UPC')[1])+1);
+            } else if(paramName === 'UPC0000000099') {
+                window.location.href = '/item-view.html?upc=UPC00000000100';
+            } 
+        }
     });
 
     $('body').on('click', '.footer-pre-btn', function(event) {
-    if(parseInt(paramName.split('UPC')[1]) < 10) {
-        window.location.href = '/item-view.html?upc=UPC00000000'+(parseInt(paramName.split('UPC')[1])-1);
-    }
-    if(parseInt(paramName.split('UPC')[1]) > 9 && parseInt(paramName.split('UPC')[1]) < 100) {
-        window.location.href = '/item-view.html?upc=UPC00000000'+(parseInt(paramName.split('UPC')[1])-1);
-    } else if(paramName === 'UPC00000000100') {
-        window.location.href = '/item-view.html?upc=UPC0000000099';
-    }
+        event.preventDefault();
+        if(paramName === 'UPC000000001') {
+            return false;
+        } else {
+            if(parseInt(paramName.split('UPC')[1]) < 10) {
+                window.location.href = '/item-view.html?upc=UPC00000000'+(parseInt(paramName.split('UPC')[1])-1);
+            }
+            if(parseInt(paramName.split('UPC')[1]) > 9 && parseInt(paramName.split('UPC')[1]) < 100) {
+                window.location.href = '/item-view.html?upc=UPC00000000'+(parseInt(paramName.split('UPC')[1])-1);
+            } else if(paramName === 'UPC00000000100') {
+                window.location.href = '/item-view.html?upc=UPC0000000099';
+            }
+        }
+
     });
     
 
@@ -314,10 +325,11 @@ $(document).ready(function() {
 
 var priceGridOption, priceGridCurrentOption, costGridOption, allowancesGridOption;
 var columnDefsPrice = [
-    {headerName: "Store/Zone", field: "store"},
-    {headerName: "Price Multi.", field: "price_multi"},
-    {headerName: "Price", field: "price"},
-    {headerName: "Effective Date", field: "eff_date"},
+    {headerName: "Store/Zone", field: "store", cellRenderer: 'priorityAction', editable: true},
+    {headerName: "Price Multi.", field: "price_multi", editable: true},
+    {headerName: "Price", field: "price", editable: true},
+    {headerName: "Effective Date", field: "eff_date", editable: true},
+    {headerName: "Action", field: "action", cellRenderer: 'gridAction'},
 ],
 columnDefsPriceCurrent = [
     {headerName: "Store/Zone", field: "store"},
@@ -344,22 +356,31 @@ columnDefsAllowances = [
 
 $.get("data/view-item-price.json", function(data, status){
     priceGridOption = {
-    defaultColDef: {
-        resizable: true,
-        sortable:true,
-        filter: true
-    },
-    columnDefs: columnDefsPrice,
-    rowData: data,
-    suppressContextMenu:true,
-    pagination: true,
-    paginationPageSize: 10,
-    paginationNumberFormatter: function(params) {
-        return '[' + params.value.toLocaleString() + ']';
-    },
-    onGridReady: function(params) {
-        params.api.sizeColumnsToFit();
-    }
+        defaultColDef: {
+            resizable: true,
+            sortable:true,
+            filter: true
+        },
+        columnDefs: columnDefsPrice,
+        rowData: data,
+        suppressContextMenu:true,
+        pagination: true,
+        paginationPageSize: 10,
+        editType: 'fullRow',
+        components: {
+            'gridAction': GidAction,
+            'priorityAction': PriorityAction
+        },
+        paginationNumberFormatter: function(params) {
+            return '[' + params.value.toLocaleString() + ']';
+        },
+        onGridReady: function(params) {
+            params.api.sizeColumnsToFit();
+        },
+        onRowEditingStarted: function(event){
+            var _this = this;
+            $('.saveRowPrice').css({'display': 'inline-block'});
+        }
     };
     var gridPriceDiv = document.querySelector('#datatablePrice');
     new agGrid.Grid(gridPriceDiv, priceGridOption); 
@@ -414,11 +435,6 @@ $.get("data/view-item-cost.json", function(data, status){
         onRowEditingStarted: function(event){
             var _this = this;
             $('.saveRow').css({'display': 'inline-block'});
-            $('.disable-row-edit').closest('.ag-row').each(function() {
-                if(parseInt($(this).attr('row-index')) === event.rowIndex) {
-                    _this.api.stopEditing();
-                }
-            });
         }
     };
     var gridCosttDiv = document.querySelector('#datatableCost');
@@ -514,7 +530,9 @@ $(document).ready(function() {
     
     var cloneItemRowModalInstance  = M.Modal.getInstance(document.querySelector('#cloneItemRowModal')),
         saveItemRowModalInstance  = M.Modal.getInstance(document.querySelector('#saveItemRowModal')),
-        addNewCostinstance = M.Modal.getInstance(document.querySelector('#addNewCost'));
+        addNewCostinstance = M.Modal.getInstance(document.querySelector('#addNewCost')),
+        addNewCurrentRetail = M.Modal.getInstance(document.querySelector('#addNewCurrentRetail'));
+
     $('body').on('click', '.cloneButton', function(event) {
         event.preventDefault();
         cloneItemRowModalInstance.open();
@@ -541,11 +559,41 @@ $(document).ready(function() {
             action: ''
         };
         costGridOption.api.updateRowData({add: [newItem], addIndex: 0});
+        costGridOption.api.sizeColumnsToFit();
+        M.toast({html: $('#costVendor').val() + ' has been added.'});
     });
+
+    $('body').on('click', '.addNewCurrentRetailRow', function(event) {
+        event.preventDefault();
+        addNewCurrentRetail.open();
+    });
+
+    $('body').on('click', '.addNewCurrentRetail', function(event) {
+        event.preventDefault();
+        // costGridOption
+        var newItem = {
+            store: $('#addNewCurrentRetailStore').val(),
+            price_multi: $('#addNewCurrentRetailPriceMulti').val(),
+            price: $('#addNewCurrentRetailPrice').val(),
+            eff_date: $('#addNewCurrentRetailEffectiveDate').val(),
+            action: ''
+        };
+        priceGridOption.api.updateRowData({add: [newItem], addIndex: 0});
+        priceGridOption.api.sizeColumnsToFit();
+        M.toast({html: $('#addNewCurrentRetailStore').val() + ' has been added.'});
+    });
+    
     
     $('body').on('click', '.saveRow', function(event) {
         event.preventDefault();
         costGridOption.api.stopEditing();
         $(this).css({'display': 'none'});
     });
+
+    $('body').on('click', '.saveRowPrice', function(event) {
+        event.preventDefault();
+        priceGridOption.api.stopEditing();
+        $(this).css({'display': 'none'});
+    });
+    
 });

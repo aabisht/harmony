@@ -84,6 +84,10 @@
                     display: inline-block;
                     text-align: center;
                     vertical-align: middle;
+
+                    &.disabled {
+                        opacity: 0.5;
+                    }
                 }
             }
         }
