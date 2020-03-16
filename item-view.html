@@ -73,7 +73,7 @@
                         <li class="tab "><a href="#tabItemMaster2">Item Master 2</a></li>
                         <li class="tab "><a href="#tabItemMaster3">Item Master 3</a></li>
                         <li class="tab "><a href="#tabAuthorization">Authorization</a></li>
-                        <li class="tab "><a href="#tabCost">Cost</a></li>
+                        <li class="tab "><a href="#tabCost" class="costTabTigger">Cost</a></li>
                         <li class="tab "><a href="#tabPrice" class="priceTabTigger">Price</a></li>
                         <li class="tab "><a href="#tabSacle">Sacle</a></li>
                         <li class="tab "><a href="#tabSign">Sign</a></li>
@@ -1238,11 +1238,30 @@
                     </div>
                     <div id="tabCost" class="card-tab-content-wrapper">
                       <div class="datatable-wrapper">
+                        <div class="card-tab-table-header">
+                          <h3>Costs</h3>
+                        </div>
                         <div id="datatableCost" class="datatable ag-theme-material"></div>
                         <div class="datatable-action-item-select">
                           <div class="d-flex flex-row justify-content-end align-items-center">
                             <span class="page-size-label">Item to Show</span>
-                            <select onchange="onPageSizeChanged()" id="page-size">
+                            <select onchange="onPageSizeChanged()" data-table="priceGridOption">
+                              <option value="10">10</option>
+                              <option value="20">20</option>
+                              <option value="50">50</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="datatable-wrapper">
+                        <div class="card-tab-table-header">
+                          <h3>Allowances</h3>
+                        </div>
+                        <div id="datatableCostAllowances" class="datatable ag-theme-material"></div>
+                        <div class="datatable-action-item-select">
+                          <div class="d-flex flex-row justify-content-end align-items-center">
+                            <span class="page-size-label">Item to Show</span>
+                            <select onchange="onPageSizeChanged()" data-table="priceGridOption">
                               <option value="10">10</option>
                               <option value="20">20</option>
                               <option value="50">50</option>
@@ -1269,11 +1288,30 @@
                     </div>
                     <div id="tabPrice" class="card-tab-content-wrapper">
                       <div class="datatable-wrapper">
+                        <div class="card-tab-table-header">
+                          <h3>Current Retail</h3>
+                        </div>
                         <div id="datatablePrice" class="datatable ag-theme-material"></div>
                         <div class="datatable-action-item-select">
                           <div class="d-flex flex-row justify-content-end align-items-center">
                             <span class="page-size-label">Item to Show</span>
-                            <select onchange="onPageSizeChanged()" id="page-size">
+                            <select onchange="onPageSizeChanged()" data-table="priceGridOption">
+                              <option value="10">10</option>
+                              <option value="20">20</option>
+                              <option value="50">50</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="datatable-wrapper">
+                        <div class="card-tab-table-header">
+                          <h3>Current Promos</h3>
+                        </div>
+                        <div id="datatablePriceCurrent" class="datatable ag-theme-material"></div>
+                        <div class="datatable-action-item-select">
+                          <div class="d-flex flex-row justify-content-end align-items-center">
+                            <span class="page-size-label">Item to Show</span>
+                            <select onchange="onPageSizeChanged()" data-table="priceGridOption">
                               <option value="10">10</option>
                               <option value="20">20</option>
                               <option value="50">50</option>
@@ -1903,46 +1941,186 @@
         }
       });
       
-      var priceGridOption;
-      var columnDefsPrice = [
-        {headerName: "Store/Zone", field: "store"},
-        {headerName: "Price Multi.", field: "price_multi"},
-        {headerName: "Price", field: "price"},
-        {headerName: "Effective Date", field: "eff_date"},
-      ];
-
-      $.get("data/view-item-price.json", function(data, status){
-        priceGridOption = {
-          defaultColDef: {
-            resizable: true,
-            sortable:true,
-            filter: true
-          },
-          columnDefs: columnDefsPrice,
-          rowData: data,
-          suppressContextMenu:true,
-          pagination: true,
-          paginationPageSize: 10,
-          paginationNumberFormatter: function(params) {
-              return '[' + params.value.toLocaleString() + ']';
-          },
-          onGridReady: function(params) {
-            params.api.sizeColumnsToFit();
-          }
-        }
-        var gridPriceDiv = document.querySelector('#datatablePrice');
-        new agGrid.Grid(gridPriceDiv, priceGridOption); 
-      });
-      
-      function onPageSizeChanged(newPageSize) {
-        var value = document.getElementById('page-size').value;
-        gridOptions.api.paginationSetPageSize(Number(value));
-      }
-      $('body').on('click', '.priceTabTigger', function(event) {
-        priceGridOption.api.sizeColumnsToFit();
-      });
-      
     
+    });
+
+    var priceGridOption, priceGridCurrentOption, costGridOption, allowancesGridOption;
+    var columnDefsPrice = [
+      {headerName: "Store/Zone", field: "store"},
+      {headerName: "Price Multi.", field: "price_multi"},
+      {headerName: "Price", field: "price"},
+      {headerName: "Effective Date", field: "eff_date"},
+    ],
+    columnDefsPriceCurrent = [
+      {headerName: "Store/Zone", field: "store"},
+      {headerName: "Price Multi.", field: "price_multi"},
+      {headerName: "Price", field: "price"},
+      {headerName: "Start Date", field: "start_date"},
+      {headerName: "End Date", field: "end_date"},
+      {headerName: "Type", field: "type"},
+    ],
+    columnDefsCost = [
+      {headerName: "Vendor", field: "vendor", cellRenderer: 'priorityAction'},
+      {headerName: "Case Pack", field: "case_pack"},
+      {headerName: "Case Cost", field: "case_cost"},
+      {headerName: "Vendor Item", field: "vendor_item"},
+      {headerName: "Action", field: "action", cellRenderer: 'gridAction'},
+    ],
+    columnDefsAllowances = [
+      {headerName: "Vendor", field: "vendor"},
+      {headerName: "Type", field: "type"},
+      {headerName: "Case $", field: "case"},
+      {headerName: "Start Date", field: "start_date"},
+      {headerName: "End Date", field: "end_date"},
+    ];
+
+    $.get("data/view-item-price.json", function(data, status){
+      priceGridOption = {
+        defaultColDef: {
+          resizable: true,
+          sortable:true,
+          filter: true
+        },
+        columnDefs: columnDefsPrice,
+        rowData: data,
+        suppressContextMenu:true,
+        pagination: true,
+        paginationPageSize: 10,
+        paginationNumberFormatter: function(params) {
+            return '[' + params.value.toLocaleString() + ']';
+        },
+        onGridReady: function(params) {
+          params.api.sizeColumnsToFit();
+        }
+      }
+      var gridPriceDiv = document.querySelector('#datatablePrice');
+      new agGrid.Grid(gridPriceDiv, priceGridOption); 
+    });
+
+    $.get("data/view-item-price-current.json", function(data, status){
+      priceGridCurrentOption = {
+        defaultColDef: {
+          resizable: true,
+          sortable:true,
+          filter: true
+        },
+        columnDefs: columnDefsPriceCurrent,
+        rowData: data,
+        suppressContextMenu:true,
+        pagination: true,
+        paginationPageSize: 10,
+        paginationNumberFormatter: function(params) {
+            return '[' + params.value.toLocaleString() + ']';
+        },
+        onGridReady: function(params) {
+          params.api.sizeColumnsToFit();
+        }
+      };
+      var gridPriceCurrentDiv = document.querySelector('#datatablePriceCurrent');
+      new agGrid.Grid(gridPriceCurrentDiv, priceGridCurrentOption); 
+    });
+
+    $.get("data/view-item-cost.json", function(data, status){
+      costGridOption = {
+        defaultColDef: {
+          resizable: true,
+          sortable:true,
+          filter: true
+        },
+        columnDefs: columnDefsCost,
+        rowData: data,
+        suppressContextMenu:true,
+        pagination: true,
+        paginationPageSize: 10,
+        components: {
+          'gridAction': GidAction,
+          'priorityAction': PriorityAction
+        },
+        paginationNumberFormatter: function(params) {
+            return '[' + params.value.toLocaleString() + ']';
+        },
+        onGridReady: function(params) {
+          params.api.sizeColumnsToFit();
+        }
+      }
+      var gridCosttDiv = document.querySelector('#datatableCost');
+      new agGrid.Grid(gridCosttDiv, costGridOption); 
+    });
+    
+    $.get("data/view-item-allowances.json", function(data, status){
+      allowancesGridOption = {
+        defaultColDef: {
+          resizable: true,
+          sortable:true,
+          filter: true
+        },
+        columnDefs: columnDefsAllowances,
+        rowData: data,
+        suppressContextMenu:true,
+        pagination: true,
+        paginationPageSize: 10,
+        paginationNumberFormatter: function(params) {
+            return '[' + params.value.toLocaleString() + ']';
+        },
+        onGridReady: function(params) {
+          params.api.sizeColumnsToFit();
+        }
+      };
+      var gridAllowancesDiv = document.querySelector('#datatableCostAllowances');
+      new agGrid.Grid(gridAllowancesDiv, allowancesGridOption); 
+    });
+
+      
+    function onPageSizeChanged() {
+      var value = $(event.currentTarget).val();
+      $(event.currentTarget).attr('data-table').api.paginationSetPageSize(Number(value));
+    }
+
+    // cell renderer class
+    function GidAction() {}
+
+    // init method gets the details of the cell to be rendere
+    GidAction.prototype.init = function(params) {
+      this.eGui = document.createElement('div');
+      this.eGui.classList.add('table-action-wrapper');
+      var html = '';
+      html = '<a href="javascript:;" title="Make Priority" class="button-primary button-stroked makePriorityBtn"  data-row-index="'+params.rowIndex+'">Make Priority</a>';
+      this.eGui.innerHTML = html;
+    };
+
+    GidAction.prototype.getGui = function() {
+      return this.eGui;
+    };
+
+    // cell renderer class
+    function PriorityAction() {}
+
+    // init method gets the details of the cell to be rendere
+    PriorityAction.prototype.init = function(params) {
+      this.eGui = document.createElement('div');
+      this.eGui.classList.add('vendor-priority');
+      var html = '';
+      html = '<i class="fas fa-exclamation-circle d-none"></i> ' + params.value;
+      this.eGui.innerHTML = html;
+    };
+
+    PriorityAction.prototype.getGui = function() {
+      return this.eGui;
+    };
+
+
+    $('body').on('click', '.priceTabTigger', function(event) {
+      priceGridOption.api.sizeColumnsToFit();
+      priceGridCurrentOption.api.sizeColumnsToFit();
+    });
+
+    $('body').on('click', '.costTabTigger', function(event) {
+      costGridOption.api.sizeColumnsToFit();
+      allowancesGridOption.api.sizeColumnsToFit();
+    });
+
+    $('body').on('click', '.makePriorityBtn', function(event) {
+      $(this).closest('.ag-row').find('.vendor-priority').children('i').removeClass('d-none');
     });
 
   </script>

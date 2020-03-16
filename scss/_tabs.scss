@@ -86,4 +86,9 @@
             }
         }
     }
+
+    .card-tab-table-header {
+        margin-top: $grid-gutter-width;
+        margin-bottom: $grid-gutter-width/2;
+    }
 }

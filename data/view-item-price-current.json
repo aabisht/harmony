@@ -1,0 +1,50 @@
+[
+    {
+      "store": "Store 003",
+      "price_multi": 5,
+      "price": "$21.04",
+      "start_date": "01-31-2020",
+      "end_date": "02-10-2020",
+      "type": "cupidatat"
+    },
+    {
+      "store": "Store 002",
+      "price_multi": 2,
+      "price": "$34.67",
+      "start_date": "01-02-2020",
+      "end_date": "01-12-2020",
+      "type": "commodo"
+    },
+    {
+      "store": "Store 004",
+      "price_multi": 2,
+      "price": "$24.87",
+      "start_date": "01-24-2020",
+      "end_date": "02-03-2020",
+      "type": "sit"
+    },
+    {
+      "store": "Store 001",
+      "price_multi": 1,
+      "price": "$32.39",
+      "start_date": "01-05-2020",
+      "end_date": "01-15-2020",
+      "type": "est"
+    },
+    {
+      "store": "Store 004",
+      "price_multi": 2,
+      "price": "$17.47",
+      "start_date": "01-10-2020",
+      "end_date": "01-20-2020",
+      "type": "in"
+    },
+    {
+      "store": "Store 003",
+      "price_multi": 2,
+      "price": "$29.81",
+      "start_date": "01-18-2020",
+      "end_date": "01-28-2020",
+      "type": "do"
+    }
+  ]
