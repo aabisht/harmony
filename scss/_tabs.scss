@@ -6,6 +6,8 @@
             @include fontSize(20px);
             font-family: $secondary-font;
             font-weight: bold;
+            padding-left: 12px;
+            padding-right: 12px;
 
             &:hover, &.active {
                 color: darken($primary-color, 20%);
@@ -45,7 +47,7 @@
         // padding-top: $card-tab-wrapper-padding;
 
         .form-input {
-            height: calc(100vh - 260px);
+            height: calc(100vh - 372px);
             overflow-x: hidden;
             overflow-y: auto;
             margin-left: -$card-tab-wrapper-padding;

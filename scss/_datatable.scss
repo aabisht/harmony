@@ -84,7 +84,7 @@
             background-color: $datatable-selected-row-bg-color;
         }
 
-        .edited-row {
+        .edited-row, .primary-row {
             background-color: darken($datatable-selected-row-bg-color, 5%);
         }
 
@@ -327,6 +327,15 @@
             & + .button-primary {
                 margin-left: 10px;
             }
+        }
+    }
+}
+
+
+.item-detail-tab-wrapper {
+    .datatable.ag-theme-material .ag-header-cell {
+        .ag-header-cell-menu-button  .ag-icon {
+            display: none;
         }
     }
 }
