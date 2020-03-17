@@ -7,3 +7,23 @@
 .authentication-form-wrapper {
     padding-top: 10px;
 }
+
+
+[type="checkbox"] {
+    &.filled-in {
+        &:checked {
+            & + span {
+                &:not(.lever) {
+                    &:after {
+                        border-color: darken($primary-color, 20%);
+                        background-color: darken($primary-color, 20%);
+                    }
+                }
+            }
+        }
+
+        &:not(:checked)+span:not(.lever):after {
+            border-color: $secondary-color;
+        }
+    }
+}

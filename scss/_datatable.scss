@@ -84,7 +84,7 @@
             background-color: $datatable-selected-row-bg-color;
         }
 
-        .edited-row {
+        .edited-row, .primary-row {
             background-color: darken($datatable-selected-row-bg-color, 5%);
         }
 
@@ -205,6 +205,13 @@
 }
 
 .collapsible-data-table {
+
+    .card-tab-content-wrapper & {
+        margin: 4px -#{$card-tab-wrapper-padding} -1px;
+        border: none;
+        box-shadow: none;
+    }
+
     .collapsible-header {
         position: relative;
         padding-left: calculateRem(50px);
@@ -327,6 +334,15 @@
             & + .button-primary {
                 margin-left: 10px;
             }
+        }
+    }
+}
+
+
+.item-detail-tab-wrapper {
+    .datatable.ag-theme-material .ag-header-cell {
+        .ag-header-cell-menu-button  .ag-icon {
+            display: none;
         }
     }
 }

@@ -37,7 +37,7 @@
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">View Item</li>
+                          <li class="breadcrumb-item active" aria-current="page">View Items</li>
                         </ol>
                       </div>
                     </div>
@@ -663,12 +663,11 @@
         }
       });
 
-      
-
       $('.datepicker-here').each(function() {
         var dp = $(this).datepicker().data('datepicker');
         dp.selectDate(new Date($(this).attr('value')));
       });
+      
     });
   </script>
 

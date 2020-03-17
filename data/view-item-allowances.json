@@ -1,0 +1,51 @@
+[
+    {
+      "vendor": "Vendor 001",
+      "type": "id",
+      "case": "$33.62",
+      "start_date": "01-03-2020",
+      "end_date": "01-13-2020"
+    },
+    {
+      "vendor": "Vendor 003",
+      "type": "consectetur",
+      "case": "$23.67",
+      "start_date": "01-12-2020",
+      "end_date": "01-22-2020"
+    },
+    {
+      "vendor": "Vendor 003",
+      "type": "dolore",
+      "case": "$16.01",
+      "start_date": "01-03-2020",
+      "end_date": "01-13-2020"
+    },
+    {
+      "vendor": "Vendor 004",
+      "type": "cillum",
+      "case": "$35.82",
+      "start_date": "01-28-2020",
+      "end_date": "02-07-2020"
+    },
+    {
+      "vendor": "Vendor 004",
+      "type": "laboris",
+      "case": "$16.67",
+      "start_date": "01-14-2020",
+      "end_date": "01-24-2020"
+    },
+    {
+      "vendor": "Vendor 004",
+      "type": "ut",
+      "case": "$12.46",
+      "start_date": "01-16-2020",
+      "end_date": "01-26-2020"
+    },
+    {
+      "vendor": "Vendor 001",
+      "type": "do",
+      "case": "$29.25",
+      "start_date": "01-20-2020",
+      "end_date": "01-30-2020"
+    }
+  ]

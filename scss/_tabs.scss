@@ -6,6 +6,8 @@
             @include fontSize(20px);
             font-family: $secondary-font;
             font-weight: bold;
+            padding-left: 12px;
+            padding-right: 12px;
 
             &:hover, &.active {
                 color: darken($primary-color, 20%);
@@ -19,5 +21,80 @@
 
     .indicator {
         background-color: darken($primary-color, 20%);
+    }
+}
+
+.card-tab-wrapper {
+    .tab-label-wrapper {
+        margin: -#{$card-tab-wrapper-padding} -#{$card-tab-wrapper-padding} 0;
+        @include box-shadow(0 2px 3px rgba($color-black, 0.2));
+
+        .tabs {
+            height: $card-tab-height;
+            .tab {
+                line-height: $card-tab-height;
+                height: $card-tab-height;
+                a {
+                    &.active {
+                        background-color: rgba(darken($primary-color, 20%), 0.2);
+                    }
+                }
+            }
+        }
+    }
+
+    .card-tab-content-wrapper {
+        // padding-top: $card-tab-wrapper-padding;
+
+        .form-input {
+            height: calc(100vh - 400px);
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin-left: -$card-tab-wrapper-padding;
+            margin-right: -$card-tab-wrapper-padding;
+            padding: $card-tab-wrapper-padding;
+        }
+
+        .datatable-wrapper {
+            .datatable.ag-theme-material {
+                margin-bottom: 0;
+            }
+        }
+
+        .footer-wrapper {
+            margin: 0 -#{$card-tab-wrapper-padding} -#{$card-tab-wrapper-padding};
+            padding: $card-tab-wrapper-padding;
+            border-top: 1px solid #e0e0e0;
+
+            .button-primary {
+                min-width: 200px;
+
+                i {
+                    margin-right: 8px;
+                }
+            }
+
+            .footer-pre-next-wrapper {
+                a {
+                    text-decoration: none;
+                    @include fontSize(24px);
+                    width: calculateRem($footer-pre-next-wrapper-size);
+                    height: calculateRem($footer-pre-next-wrapper-size);
+                    line-height: calculateRem($footer-pre-next-wrapper-size);
+                    display: inline-block;
+                    text-align: center;
+                    vertical-align: middle;
+
+                    &.disabled {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-tab-table-header {
+        margin-top: $grid-gutter-width;
+        margin-bottom: $grid-gutter-width/2;
     }
 }

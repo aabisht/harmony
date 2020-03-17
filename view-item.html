@@ -37,7 +37,7 @@
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">View Item</li>
+                          <li class="breadcrumb-item active" aria-current="page">View Items</li>
                         </ol>
                       </div>
                     </div>
@@ -158,6 +158,49 @@
               </div>
             </div>
           </div>
+          
+          <div class="main-body-data-wrapper">
+            <div class="container-fluid">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-header d-flex flex-row justify-content-between align-items-center">
+                    <div class="card-title-wrapper">
+                      <h3 class="card-title">
+                        View Item
+                        <span id="select-row-num"></span>
+                      </h3>
+                    </div>
+                    <div class="card-header-action-wrapper" id="cardHeaderAction">
+                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                        <button type="button" class="button-primary button-stroked saveRow header-action-item">Save Row</button>
+                        <div class="button-primary button-with-dropdown header-action-item">
+                          <a href="/add-item-data.html" class="addNewRow">Add New</a>
+                          <a href="javascript:;" class="dropdown-trigger" data-target='addNewDropdown'><i class="fas fa-caret-down"></i></a>
+                          <ul id='addNewDropdown' class='dropdown-content'>
+                            <li><a href="/add-item-data.html">Single Item</a></li>
+                            <li><a href="/bulk-upload.html">Bulk Upload</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="datatable-wrapper">
+                    <div id="datatable" class="datatable ag-theme-material"></div>
+                    <div class="datatable-action-item-select">
+                      <div class="d-flex flex-row justify-content-end align-items-center">
+                        <span class="page-size-label">Item to Show</span>
+                        <select onchange="onPageSizeChanged()" id="page-size">
+                          <option value="10">10</option>
+                          <option value="20">20</option>
+                          <option value="50">50</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -266,6 +309,329 @@
   <script src="js/main.js"></script>
 
   <script>
+    var gridOptions;
+    var newCount = 0;
+
+    var columnDefs = [
+      {
+        headerName: "UPC", 
+        field: "upc",
+        headerCheckboxSelection: true,
+        headerCheckboxSelectionFilteredOnly: true,
+        checkboxSelection: true,
+        minWidth: 240,
+        cellRenderer: 'upcStatus'
+      },
+      {headerName: "PLU", field: "plu", editable: true},
+      {headerName: "Description", field: "description", editable: true},
+      {headerName: "Vendor ID", field: "vendor_id", editable: true},
+      {headerName: "Vendor", field: "vendor", editable: true},
+      {headerName: "Category", field: "category", editable: true},
+      {headerName: "Class", field: "class", editable: true},
+      {headerName: "Unit Price UPC", field: "unit_price_upc", editable: true},
+      {headerName: "Case UPC", field: "case_upc", editable: true},
+      {headerName: "Department ID", field: "department_id", editable: true},
+      {headerName: "Family ID", field: "family_id", editable: true},
+      {headerName: "AllowanceCode", field: "allowance_code", editable: true},
+      {headerName: "AllowanceType", field: "allowance_type", editable: true},
+      {headerName: "UnitAllow", field: "unit_allow", editable: true},
+      {headerName: "StartDate", field: "start_date", editable: true},
+      {headerName: "EndDate", field: "end_date", editable: true},
+      {headerName: "Pack", field: "pack", editable: true},
+      {headerName: "AllowanceCodeID", field: "allowance_code_id", editable: true},
+      {headerName: "AllowanceCodeName", field: "allowance_code_name", editable: true},
+      {headerName: "AllowanceTypeID", field: "allowance_type_id", editable: true},
+      {headerName: "AllowanceTypeName", field: "allowance_type_name", editable: true},
+      {headerName: "AlternateUPC", field: "alternate_upc", editable: true},
+      {headerName: "AlternateCountRatio", field: "alternate_count_ratio", editable: true},
+      {headerName: "CafeMenuID", field: "cafe_menu_id", editable: true},
+      {headerName: "CafeMenuName", field: "cafe_menu_name", editable: true},
+      {headerName: "BannerID", field: "banner_id", editable: true},
+      {headerName: "CategoryID", field: "category_id", editable: true},
+      {headerName: "ParentID", field: "parent_id", editable: true},
+      {headerName: "CategoryName", field: "category_name", editable: true},
+      {headerName: "SpecialistID", field: "specialist_id", editable: true},
+      {headerName: "ClassID", field: "class_id", editable: true},
+      {headerName: "DataEntryLinkID", field: "data_entry_link_id", editable: true},
+      {headerName: "DataEntryLinkDescription", field: "data_entry_link_description", editable: true},
+      {headerName: "FinancialDepartment", field: "financial_department", editable: true},
+      {headerName: "TransferMargin", field: "transfer_margin", editable: true},
+      {headerName: "BFContact", field: "bf_contact", editable: true},
+      {headerName: "POSDescription", field: "pos_description", editable: true},
+      {headerName: "AdvertisingDescription", field: "advertising_description", editable: true},
+      {headerName: "Brand", field: "brand", editable: true},
+      {headerName: "Family", field: "family", editable: true},
+      {headerName: "Subcategory", field: "subcategory", editable: true},
+      {headerName: "UnitSize", field: "unit_size", editable: true},
+      {headerName: "RetailPack", field: "retail_pack", editable: true},
+      {headerName: "CasePack", field: "case_pack", editable: true},
+      {headerName: "OutOfSeason", field: "out_of_season", editable: true},
+      {headerName: "PriceRule", field: "price_rule", editable: true},
+      {headerName: "MixMatchCode", field: "mix_match_code", editable: true},
+      {headerName: "TargetGM", field: "target_gm", editable: true},
+      {headerName: "CouponInd", field: "coupon_ind", editable: true},
+      {headerName: "POSPricingMethod", field: "pos_pricing_method", editable: true},
+      {headerName: "PODLevel", field: "pod_level", editable: true},
+      {headerName: "Yield", field: "yield", editable: true},
+      {headerName: "BFSeasonalPromo", field: "bf_seasonal_promo", editable: true},
+      {headerName: "CBD", field: "cbd", editable: true},
+      {headerName: "CoreSet", field: "core_set", editable: true},
+      {headerName: "CustomerRequest", field: "customer_request", editable: true},
+      {headerName: "FairTrade", field: "fair_rade", editable: true},
+      {headerName: "Foodstamp", field: "food_stamp", editable: true},
+      {headerName: "GlutenFree", field: "gluten_free", editable: true},
+      {headerName: "Instacart", field: "insta_cart", editable: true},
+      {headerName: "InstacartTPR", field: "insta_cart_trp", editable: true},
+      {headerName: "LASeasonalPromo", field: "la_seasonal_promo", editable: true},
+      {headerName: "Local", field: "local", editable: true},
+      {headerName: "Natural", field: "natural", editable: true},
+      {headerName: "NGMO", field: "ngmo", editable: true},
+      {headerName: "NotForSale", field: "not_for_sale", editable: true},
+      {headerName: "Organic", field: "organic", editable: true},
+      {headerName: "OrganicallyGrown", field: "organically_grown", editable: true},
+      {headerName: "OverrideRequired", field: "override_required", editable: true},
+      {headerName: "PlantBased", field: "plant_based", editable: true},
+      {headerName: "PriceRequired", field: "price_required", editable: true},
+      {headerName: "PrivateLabel", field: "private_label", editable: true},
+      {headerName: "ProduceFIFO", field: "produce_fifo", editable: true},
+      {headerName: "QtyAllowed", field: "qty_allowed", editable: true},
+      {headerName: "QtyRequired", field: "qty_required", editable: true},
+      {headerName: "Raw", field: "raw", editable: true},
+      {headerName: "RemotePrinter", field: "remote_printer", editable: true},
+      {headerName: "RPD", field: "rpd", editable: true},
+      {headerName: "Seasonal", field: "seasonal", editable: true},
+      {headerName: "TaxA", field: "tax_a", editable: true},
+      {headerName: "TaxB", field: "tax_b", editable: true},
+      {headerName: "TaxC", field: "tax_c", editable: true},
+      {headerName: "TaxD", field: "tax_d", editable: true},
+      {headerName: "TaxE", field: "tax_e", editable: true},
+      {headerName: "Taxf", field: "tax_f", editable: true},
+      {headerName: "TaxG", field: "tax_g", editable: true},
+      {headerName: "TaxH", field: "tax_h", editable: true},
+      {headerName: "ValueBF", field: "value_bf", editable: true},
+      {headerName: "ValueLAM", field: "value_lam", editable: true},
+      {headerName: "Vegan", field: "vegan", editable: true},
+      {headerName: "SchematicName1", field: "schematic_name_1", editable: true},
+      {headerName: "SchematicName2", field: "schematic_name_2", editable: true},
+      {headerName: "Height", field: "height", editable: true},
+      {headerName: "Depth", field: "depth", editable: true},
+      {headerName: "Width", field: "width", editable: true},
+      {headerName: "MOQ", field: "moq", editable: true},
+      {headerName: "MMVendPack", field: "mm_vend_pack", editable: true},
+      {headerName: "MMVendSize", field: "mm_vend_size", editable: true},
+      {headerName: "MMVendUOM", field: "mm_vend_uom", editable: true},
+    ];
+    // $.get("data/view-item.json", function(data, status){
+
+      var mainData = [];
+      gridOptions = {
+        defaultColDef: {
+          editable: false,
+          resizable: true,
+          enableCellChangeFlash: true,
+          sortable:true,
+          filter: true
+        },
+        rowSelection: 'multiple',
+        columnDefs: columnDefs,
+        rowData: mainData,
+        masterDetail: true,
+        pagination: true,
+        editType: 'fullRow',
+        paginationPageSize: 10,
+        onRowSelected: onRowSelected,
+        onSelectionChanged: onSelectionChanged,
+        onFirstDataRendered: onFirstDataRendered,
+        localeText: {
+          noRowsToShow: '<i class="far fa-frown"></i> No result found'
+        },
+        detailCellRendererParams: {
+          detailGridOptions: {
+            columnDefs: [
+            {headerName: "Description", field: "description"},
+            {headerName: "Vendor ID", field: "vendor_id"},
+            {headerName: "Vendor", field: "vendor"},
+            {headerName: "Category", field: "category"},
+            {headerName: "Class", field: "class"},
+            {headerName: "Unit Price UPC", field: "unit_price_upc"},
+            {headerName: "Case UPC", field: "case_upc"},
+            {headerName: "Department ID", field: "department_id"},
+            {headerName: "Family ID", field: "family_id"},
+            {headerName: "AllowanceCode", field: "allowance_code"},
+            {headerName: "AllowanceType", field: "allowance_type"},
+            {headerName: "UnitAllow", field: "unit_allow"},
+            ],
+            onFirstDataRendered: function(params) {
+                // params.api.sizeColumnsToFit();
+            }
+          },
+          getDetailRowData: function(params) {
+            params.successCallback(params.data.childrenData);
+          }
+        },
+        paginationNumberFormatter: function(params) {
+          return '[' + params.value.toLocaleString() + ']';
+        },
+        onGridReady: function(params) {
+          // params.api.sizeColumnsToFit();
+          $('.disable-row-edit').each(function() {
+            $(this).closest('.ag-row').addClass('disable-row');
+          });
+
+        },components: {
+          'upcStatus': UPCStatus
+        },
+        onRowEditingStarted: function(event){
+          var _this = this;
+          $('.saveRow').css({'display': 'inline-block'});
+          $('.disable-row-edit').closest('.ag-row').each(function() {
+              if(parseInt($(this).attr('row-index')) === event.rowIndex) {
+                _this.api.stopEditing();
+              }
+          });
+        },
+        onRowValueChanged: function(event) {
+            var data = event.data,
+                saveModalinstance = M.Modal.getInstance(document.querySelector('#updateItemRowModal'));
+            $('#updateItemRowModal #updateItemRowModalName').text(data.upc);
+            $('#updateItemRowModal #updateItemRowModalButton').attr('data-upc', data.upc);
+            $('#updateItemRowModal #updateItemRowModalButton').attr('data-index', event.rowIndex);
+            saveModalinstance.open();
+        }
+      };
+      var gridDiv = document.querySelector('#datatable');
+      new agGrid.Grid(gridDiv,  gridOptions);   
+    // });
+
+    function onFirstDataRendered(params) {
+      // arbitrarily expand a row for presentational purposes
+      // setTimeout(function() { params.api.getDisplayedRowAtIndex(1).setExpanded(true); }, 0);
+    }
+
+    function onPageSizeChanged(newPageSize) {
+      var value = document.getElementById('page-size').value;
+      gridOptions.api.paginationSetPageSize(Number(value));
+    }
+
+    function onRowSelected(event) {
+      console.log("row " + event.node.data.upc + " selected = " + event.node.selected);
+    }
+
+    function onSelectionChanged(event) {
+      var rowCount = event.api.getSelectedNodes().length;
+      console.log('selection changed, ' + rowCount + ' rows selected');
+      if(rowCount > 0) {
+        $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
+        if($('#cardHeaderAction .button-wrapper .header-action-process').length === 0) {
+          // $('#cardHeaderAction .button-wrapper').append('<a href="/pending-billing-process.html" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Process</a>');
+        }
+      } else {
+        $('#select-row-num').html('');
+        $('#cardHeaderAction .button-wrapper .header-action-process').remove();
+      }
+    }
+
+    // cell renderer class
+    function UPCStatus() {}
+
+    // init method gets the details of the cell to be rendere
+    UPCStatus.prototype.init = function(params) {
+      this.eGui = document.createElement('div');
+      this.eGui.classList.add('upc-status');
+      var status = Math.floor(Math.random() * 3) + 1;
+      if(status === 1) {
+        this.eGui.innerHTML = '<a href="/item-view.html?upc='+params.value+'" title=""><i class=""></i> ' + params.value + '</a>';
+      } else if(status === 2) {
+        this.eGui.innerHTML = '<a href="/item-view.html?upc='+params.value+'" title="Draft"><i class="fab fa-firstdraft draftIconClick"></i> '+ params.value + '</a>';
+      } else if(status === 3) {
+        this.eGui.classList.add('disable-row-edit');
+        this.eGui.innerHTML = '<a href="/item-view.html?upc='+params.value+'" title="Lock"><i class="fas fa-lock"></i> ' + params.value + '</a>';
+      }
+    };
+
+    UPCStatus.prototype.getGui = function() {
+      return this.eGui;
+    };
+
+    $(document).ready(function() { 
+      $(window).on("load resize ",function(e){
+        $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
+      });
+
+      function createNewRowData() {
+          var newData = {
+            upc:"UPC00000000"+newCount
+          };
+          return newData;
+      }
+
+      $('body').on('click', '.addNewRow', function(event) {
+        event.preventDefault();
+          newCount++;
+
+        window.location.href = 'add-item-data.html';
+
+        // var newItem = createNewRowData();
+
+        // var res = gridOptions.api;
+        // res.updateRowData({add: [newItem], addIndex: 0});
+      });
+
+      function updateItemRow(rowIndex, upc) {
+        $('#datatable .ag-center-cols-container .ag-row').each(function(){
+          if(parseInt($(this).attr('row-index')) === parseInt(rowIndex) && !$(this).hasClass('edited-row')){
+              $(this).addClass('edited-row')
+            }
+        });
+        M.toast({html: 'Value for '+upc+' changed.'});
+      }
+
+      $('body').on('click', '#updateItemRowModal #updateItemRowModalButton', function(event) {
+        var upc = $('#updateItemRowModal #updateItemRowModalButton').attr('data-upc'),
+            rowIndex = $('#updateItemRowModal #updateItemRowModalButton').attr('data-index'),
+            saveModalinstance = M.Modal.getInstance(document.querySelector('#serverSideItemRowModal')),
+            status = Math.floor(Math.random() * 2) + 1;
+
+        $('.saveRow').css({'display': 'none'});
+        if(status === 1) {
+          updateItemRow(rowIndex, upc);
+        } else {
+          $('#serverSideItemRowModallName').text(upc);
+          saveModalinstance.open();
+        }
+        
+      });
+
+      $('body').on('click', '#serverSideItemRowModal .serverSideItemRowModalButton', function(event) {
+        var upc = $('#updateItemRowModal #updateItemRowModalButton').attr('data-upc'),
+            rowIndex = $('#updateItemRowModal #updateItemRowModalButton').attr('data-index');
+        
+        updateItemRow(rowIndex, upc);
+      });
+
+      $('body').on('click', '.saveRow', function(event) {
+        event.preventDefault();
+        gridOptions.api.stopEditing()
+      });
+
+      $('body').on('click', '.draftIconClick', function(event) {
+        event.preventDefault();
+        if($(event.currentTarget).closest('.ag-row').hasClass('row-expanded')) {
+          $(event.currentTarget).closest('.ag-row').removeClass('row-expanded');
+          gridOptions.api.getDisplayedRowAtIndex(parseInt($(event.currentTarget).closest('.ag-row').attr('row-id'))).setExpanded(false);
+        } else {
+          $(event.currentTarget).closest('.ag-row').addClass('row-expanded');
+          gridOptions.api.getDisplayedRowAtIndex(parseInt($(event.currentTarget).closest('.ag-row').attr('row-id'))).setExpanded(true);
+        }
+      });
+
+      
+
+      $('.datepicker-here').each(function() {
+        var dp = $(this).datepicker().data('datepicker');
+        dp.selectDate(new Date($(this).attr('value')));
+      });
+    });
   </script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

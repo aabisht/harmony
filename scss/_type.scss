@@ -49,6 +49,10 @@ a {
   }
 }
 
+.text-truncate {
+  @include text-truncate;
+}
+
 .mat-form-field-label {
   margin-bottom: 0;
 }
@@ -323,4 +327,10 @@ input, textarea {
   .input-field {
     padding-bottom: 10px;
   }
+}
+
+
+.header-title {
+  width: 100%;
+  max-width: 500px;
 }

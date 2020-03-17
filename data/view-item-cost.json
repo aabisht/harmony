@@ -1,0 +1,44 @@
+[
+    {
+      "vendor": "Vendor 002",
+      "case_pack": 29,
+      "case_cost": "$29.52",
+      "vendor_item": 86,
+      "action": ""
+    },
+    {
+      "vendor": "Vendor 002",
+      "case_pack": 30,
+      "case_cost": "$13.68",
+      "vendor_item": 93,
+      "action": ""
+    },
+    {
+      "vendor": "Vendor 004",
+      "case_pack": 29,
+      "case_cost": "$10.28",
+      "vendor_item": 48,
+      "action": ""
+    },
+    {
+      "vendor": "Vendor 003",
+      "case_pack": 28,
+      "case_cost": "$36.71",
+      "vendor_item": 64,
+      "action": ""
+    },
+    {
+      "vendor": "Vendor 002",
+      "case_pack": 16,
+      "case_cost": "$30.09",
+      "vendor_item": 92,
+      "action": ""
+    },
+    {
+      "vendor": "Vendor 001",
+      "case_pack": 13,
+      "case_cost": "$12.07",
+      "vendor_item": 91,
+      "action": ""
+    }
+  ]
