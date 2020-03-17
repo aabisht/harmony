@@ -1,0 +1,164 @@
+[
+    {
+      "groups": "Group 1",
+      "description": "sint reprehenderit aliquip amet et laborum laborum occaecat aliquip in Lorem labore consectetur ullamco excepteur sunt reprehenderit consequat commodo non do labore ad pariatur tempor exercitation proident nisi consectetur reprehenderit",
+      "view_item": false,
+      "add_item": false,
+      "update_item": false,
+      "view_promo": true,
+      "add_promo": false
+    },
+    {
+      "groups": "Group 2",
+      "description": "et velit Lorem adipisicing amet qui nulla enim ullamco sint fugiat consectetur minim nostrud non ullamco consequat cupidatat commodo esse non magna excepteur aliquip voluptate magna occaecat cillum pariatur exercitation",
+      "view_item": false,
+      "add_item": false,
+      "update_item": true,
+      "view_promo": false,
+      "add_promo": true
+    },
+    {
+      "groups": "Group 3",
+      "description": "cillum Lorem consequat irure ut Lorem aliquip cillum eu ad aute ea fugiat mollit excepteur amet elit ex consectetur in non velit ut ut amet ex dolor fugiat ullamco do",
+      "view_item": false,
+      "add_item": true,
+      "update_item": true,
+      "view_promo": false,
+      "add_promo": true
+    },
+    {
+      "groups": "Group 4",
+      "description": "Lorem anim qui nostrud sint id deserunt eiusmod mollit proident nostrud aute ut ipsum pariatur ad fugiat ullamco sunt sint in incididunt ipsum nulla sint et laborum laborum quis quis",
+      "view_item": true,
+      "add_item": false,
+      "update_item": true,
+      "view_promo": true,
+      "add_promo": true
+    },
+    {
+      "groups": "Group 5",
+      "description": "occaecat aliquip aliquip tempor nostrud in est culpa magna consequat nisi magna cupidatat quis cupidatat incididunt ad ipsum et ut esse labore laborum ea quis adipisicing reprehenderit ut elit dolore",
+      "view_item": true,
+      "add_item": false,
+      "update_item": false,
+      "view_promo": true,
+      "add_promo": false
+    },
+    {
+      "groups": "Group 6",
+      "description": "tempor tempor tempor aute sunt occaecat aute non dolor Lorem nostrud proident irure nisi enim labore laboris sit cillum mollit cupidatat mollit aliquip officia adipisicing excepteur sint labore ea sint",
+      "view_item": true,
+      "add_item": true,
+      "update_item": true,
+      "view_promo": true,
+      "add_promo": false
+    },
+    {
+      "groups": "Group 7",
+      "description": "minim ullamco mollit nulla labore nostrud exercitation consectetur labore et laborum mollit ex laboris deserunt Lorem nulla ipsum elit elit do duis commodo cupidatat fugiat culpa velit cupidatat amet veniam",
+      "view_item": true,
+      "add_item": false,
+      "update_item": false,
+      "view_promo": false,
+      "add_promo": true
+    },
+    {
+      "groups": "Group 8",
+      "description": "consectetur minim id minim ut excepteur ad mollit ullamco pariatur pariatur nulla non id deserunt esse irure ex aliqua magna voluptate irure labore ipsum in dolore sunt sunt tempor in",
+      "view_item": false,
+      "add_item": false,
+      "update_item": true,
+      "view_promo": true,
+      "add_promo": false
+    },
+    {
+      "groups": "Group 9",
+      "description": "reprehenderit duis culpa tempor magna irure ipsum id Lorem qui adipisicing culpa cupidatat adipisicing in sunt exercitation sit magna magna irure et sint dolore nostrud ipsum nisi consectetur deserunt sunt",
+      "view_item": false,
+      "add_item": false,
+      "update_item": false,
+      "view_promo": true,
+      "add_promo": true
+    },
+    {
+      "groups": "Group 10",
+      "description": "non commodo nisi et amet occaecat laboris in ut ullamco pariatur tempor fugiat incididunt ad ullamco reprehenderit veniam irure occaecat nulla commodo culpa cillum et pariatur excepteur sint reprehenderit veniam",
+      "view_item": true,
+      "add_item": false,
+      "update_item": false,
+      "view_promo": false,
+      "add_promo": true
+    },
+    {
+      "groups": "Group 11",
+      "description": "elit Lorem aliquip ut non tempor magna enim nostrud est eu tempor duis voluptate esse anim cupidatat id aliqua do velit culpa ad aute aliqua ullamco et fugiat sunt ex",
+      "view_item": true,
+      "add_item": true,
+      "update_item": false,
+      "view_promo": true,
+      "add_promo": true
+    },
+    {
+      "groups": "Group 12",
+      "description": "eu ullamco officia consectetur in mollit irure ex non nostrud dolore consectetur minim mollit ipsum proident esse cupidatat officia Lorem elit consequat ullamco pariatur voluptate Lorem amet laboris magna nulla",
+      "view_item": true,
+      "add_item": false,
+      "update_item": false,
+      "view_promo": true,
+      "add_promo": false
+    },
+    {
+      "groups": "Group 13",
+      "description": "sunt aliquip anim quis magna cillum eiusmod occaecat anim esse ea quis consectetur anim nostrud nulla ex ea quis aliquip do veniam laborum cillum reprehenderit et dolore mollit fugiat enim",
+      "view_item": false,
+      "add_item": false,
+      "update_item": true,
+      "view_promo": true,
+      "add_promo": false
+    },
+    {
+      "groups": "Group 14",
+      "description": "est amet nulla aute amet ex duis Lorem nostrud cillum mollit cupidatat nisi irure nostrud quis ad do labore ea aute est ea officia adipisicing amet elit non ad aute",
+      "view_item": false,
+      "add_item": true,
+      "update_item": true,
+      "view_promo": true,
+      "add_promo": true
+    },
+    {
+      "groups": "Group 15",
+      "description": "excepteur culpa velit veniam tempor ipsum aute duis voluptate in tempor irure dolor nostrud do aute mollit excepteur officia non consectetur sit aliqua id culpa adipisicing voluptate in dolor aliquip",
+      "view_item": true,
+      "add_item": true,
+      "update_item": false,
+      "view_promo": false,
+      "add_promo": false
+    },
+    {
+      "groups": "Group 16",
+      "description": "ea aute quis officia do ea cupidatat enim quis elit amet nisi adipisicing laborum minim culpa amet nostrud duis culpa cillum non duis nisi veniam commodo anim ex dolor labore",
+      "view_item": true,
+      "add_item": true,
+      "update_item": true,
+      "view_promo": true,
+      "add_promo": false
+    },
+    {
+      "groups": "Group 17",
+      "description": "mollit ex excepteur excepteur sit proident enim et ullamco et mollit officia duis occaecat eu voluptate duis in eiusmod sint eiusmod dolor aute eu cillum deserunt proident sit culpa cupidatat",
+      "view_item": false,
+      "add_item": true,
+      "update_item": true,
+      "view_promo": true,
+      "add_promo": true
+    },
+    {
+      "groups": "Group 18",
+      "description": "ex proident anim officia in elit esse cupidatat adipisicing anim id commodo laboris dolor reprehenderit irure commodo eiusmod enim duis irure non laboris qui eu mollit excepteur officia sunt do",
+      "view_item": false,
+      "add_item": false,
+      "update_item": false,
+      "view_promo": true,
+      "add_promo": false
+    }
+  ]

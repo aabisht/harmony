@@ -1,0 +1,43 @@
+%group-link-hover-styling {
+    text-decoration: none;
+    outline: none;
+    background-color: lighten($primary-color, 15%);
+    color: darken($primary-color, 20%);
+}
+
+.groups-name-list {
+    max-height: 197px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid #efefef;
+    
+    li {
+        a {
+            display: block;
+            border: 1px solid #efefef;
+            border-bottom: none;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: $secondary-color;
+            @include fontSize(16px);
+            background-color: $color-white;
+            @include transition(all 0.2s);
+
+            &:hover {
+                @extend %group-link-hover-styling;
+            }
+        }
+
+        &:last-child {
+            a {
+                border-bottom: 1px solid #efefef;
+            }
+        }
+
+        &.active {
+            a {
+                @extend %group-link-hover-styling;
+            }
+        }
+    }
+}

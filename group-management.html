@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Groups Management | Bristol Farms</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+  <link href="./css/vendor/fontawesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/vendor/datepicker.min.css">
+  <link rel="stylesheet" href="./css/vendor/materialize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <style>
+    #datatable {
+      height: calc(100vh - 380px);
+    }
+  </style>
+
+</head>
+
+<body class="left-menu-fixed">
+
+  <div class="body-container-wrapper">
+    <div class="body-wrapper">
+
+      <!-- Header -->
+      <header class="header-container">
+        <div class="header-container-wrapper">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-10 header-left-wrapper">
+                <div class="cell-wrapper">
+                  <div class="header-title-nav-wrapper">
+                    <div class="title">
+                      <h3>Groups Management</h3>
+                      <div aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="/">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Groups Management</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 header-right-wrapper text-right">
+                <div class="cell-wrapper">
+                  <div id="headerDropdownMenu"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Left Menu -->
+      <div class="left-menu-wrapper"></div>
+
+      <!-- Main Body Content -->
+      <div class="main-body-content-wrapper">
+        <div class="main-body-content-container">
+          <div class="main-body-data-wrapper">
+            <div class="container-fluid">
+              <div class="card">
+                <div class="card-content">
+                  <!-- <div class="card-header d-flex flex-row justify-content-between align-items-center">
+                    <div class="card-title-wrapper">
+                      <h3 class="card-title mb-0">Groups Management</h3>
+                    </div>
+                    <div class="header-action-wrapper">
+                      <div class="button-wrapper">
+                        <button type="button" class="button-primary button-stroked header-action-item">Save Changes</button>
+                      </div>
+                    </div>
+                  </div> -->
+                  <div class="groups-management-wrapper">
+                    <div class="row">
+                      <div class="col-sm-4 groups-name-wrapper">
+                        <div class="cell-wrapper">
+                          <h3 class="group-management-title mb-4">Groups Name</h3>
+                          <ul class="list-unstyled groups-name-list"></ul>
+                        </div>
+                      </div>
+                      <div class="col-sm-8 groups-description-wrapper">
+                        <div class="cell-wrapper">
+                          <h3 class="group-management-title mb-4">Groups Description</h3>
+                          <p></p>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 groups-permission-wrapper">
+                        <div class="cell-wrapper">
+                          <h3 class="group-management-title mt-4 mb-4">Groups Permissions</h3>
+                          <div class="row">
+                            <div class="col-sm-4">
+                              <div class="cell-wrapper">
+                                <p><label for="group_management_view_item"><input type="checkbox" class="filled-in" id="group_management_view_item" disabled><span>View Item</span></label></p>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="cell-wrapper">
+                                <p><label for="group_management_add_item"><input type="checkbox" class="filled-in" id="group_management_add_item" disabled><span>Add Item</span></label></p>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="cell-wrapper">
+                                <p><label for="group_management_update_item"><input type="checkbox" class="filled-in" id="group_management_update_item" disabled><span>Update Item</span></label></p>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="cell-wrapper">
+                                <p><label for="group_management_view_promo"><input type="checkbox" class="filled-in" id="group_management_view_promo" disabled><span>View Promo</span></label></p>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="cell-wrapper">
+                                <p><label for="group_management_add_promo"><input type="checkbox" class="filled-in" id="group_management_add_promo" disabled><span>Add Promo</span></label></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="js/vendor/jquery-3.4.1.min.js"></script>
+  <script src="js/vendor/ag-grid-enterprise.min.js"></script>
+  <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/vendor/datepicker.min.js"></script>
+  <script src="js/vendor/datepicker.en.js"></script>
+
+
+  <script src="js/main.js"></script>
+  <script src="js/groups-management.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
