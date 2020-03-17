@@ -11,14 +11,16 @@ $(document).ready(function() {
     }
     
     $.get("data/view-item.json", function(data, status){
-    $(data).each(function(){
-        if(this.upc === paramName) {
-        itemData = this;
-        return false;
-        }
-    });
+        $(data).each(function(){
+            if(this.upc === paramName) {
+            itemData = this;
+            return false;
+            }
+        });
 
-    $('.pluValue').text(itemData.plu);
+        $('.pluValue').text(itemData.plu);
+        $('.description').text(itemData.description);
+        
 
     // Item Master 1 Input data
     $('#tabItemMaster1_UPC').attr('value', paramName);

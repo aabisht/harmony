@@ -68,8 +68,9 @@
                 <div class="card-content">
                   <div class="align-items-start d-flex flex-row justify-content-between">
                     <div class="header-title">
-                      <h3>UPC: <strong class="upcValue"></strong></h3>
-                      <h4>PLU: <strong class="pluValue"></strong></h4>
+                      <h3>UPC: <span class="upcValue"></span></h3>
+                      <h4>PLU: <span class="pluValue"></span></h4>
+                      <p class="text-truncate"><strong>Description</strong>: <span class="description"></span></p>
                     </div>
                     <div class="header-action-wrapper">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
@@ -1258,50 +1259,60 @@
                       </div>
                     </div>
                     <div id="tabCost" class="card-tab-content-wrapper">
-                      <div class="datatable-wrapper">
-                        <div class="card-tab-table-header">
-                          <div class="card-header d-flex flex-row justify-content-between align-items-center">
-                            <div class="card-title-wrapper">
-                              <h3 class="card-title mb-0">Costs <br><small>Double Click on row to edit.</small></h3>
+                      <ul class="collapsible collapsible-data-table">
+                        <li class="active">
+                          <div class="collapsible-header align-items-start d-flex flex-row justify-content-between">
+                            <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
+                            <div class="header-title">
+                              <h3 class="mb-0">Costs <br><small>Double Click on row to edit.</small></h3>
                             </div>
-                            <div class="card-header-action-wrapper">
-                              <button type="button" class="button-primary button-stroked saveRow header-action-item">Save Row</button>
-                              <button type="button" class="button-primary addNewCostRow header-action-item">Add New</button>
-                            </div>
-                          </div>
-                        </div>
-                        <div id="datatableCost" class="datatable ag-theme-material"></div>
-                        <div class="datatable-action-item-select">
-                          <div class="d-flex flex-row justify-content-end align-items-center">
-                            <span class="page-size-label">Item to Show</span>
-                            <select onchange="onPageSizeChanged()" data-table="priceGridOption">
-                              <option value="10">10</option>
-                              <option value="20">20</option>
-                              <option value="50">50</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="datatable-wrapper">
-                        <div class="card-tab-table-header">
-                          <div class="card-header d-flex flex-row justify-content-between align-items-center">
-                            <div class="card-title-wrapper">
-                              <h3 class="card-title mb-0">Allowances</h3>
+                            <div class="header-action-wrapper">
+                              <div class="button-wrapper">
+                                <button type="button" class="button-primary button-stroked saveRow header-action-item">Save Row</button>
+                                <button type="button" class="button-primary addNewCostRow header-action-item">Add New</button>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div id="datatableCostAllowances" class="datatable ag-theme-material"></div>
-                        <div class="datatable-action-item-select">
-                          <div class="d-flex flex-row justify-content-end align-items-center">
-                            <span class="page-size-label">Item to Show</span>
-                            <select onchange="onPageSizeChanged()" data-table="priceGridOption">
-                              <option value="10">10</option>
-                              <option value="20">20</option>
-                              <option value="50">50</option>
-                            </select>
+                          <div class="collapsible-body">
+                            <div class="datatable-wrapper">
+                              <div id="datatableCost" class="datatable ag-theme-material"></div>
+                              <div class="datatable-action-item-select">
+                                <div class="d-flex flex-row justify-content-end align-items-center">
+                                  <span class="page-size-label">Item to Show</span>
+                                  <select onchange="onPageSizeChanged()" data-table="priceGridOption">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header align-items-start d-flex flex-row justify-content-between">
+                            <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
+                            <div class="header-title">
+                              <h3 class="mb-0">Allowances</h3>
+                            </div>
+                          </div>
+                          <div class="collapsible-body">
+                            <div class="datatable-wrapper">
+                              <div id="datatableCostAllowances" class="datatable ag-theme-material"></div>
+                              <div class="datatable-action-item-select">
+                                <div class="d-flex flex-row justify-content-end align-items-center">
+                                  <span class="page-size-label">Item to Show</span>
+                                  <select onchange="onPageSizeChanged()" data-table="priceGridOption">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                       <div class="row">
                         <div class="col-sm-12">
                           <div class="cell-wrapper">
@@ -1320,46 +1331,60 @@
                       </div>
                     </div>
                     <div id="tabPrice" class="card-tab-content-wrapper">
-                      <div class="datatable-wrapper">
-                        <div class="card-tab-table-header">
-                          <div class="card-header d-flex flex-row justify-content-between align-items-center">
-                            <div class="card-title-wrapper">
-                              <h3 class="card-title mb-0">Current Retail <br><small>Double Click on row to edit.</small></h3>
+                      <ul class="collapsible collapsible-data-table">
+                        <li class="active">
+                          <div class="collapsible-header align-items-start d-flex flex-row justify-content-between">
+                            <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
+                            <div class="header-title">
+                              <h3 class="mb-0">Current Retail <br><small>Double Click on row to edit.</small></h3>
                             </div>
-                            <div class="card-header-action-wrapper">
-                              <button type="button" class="button-primary button-stroked saveRowPrice header-action-item">Save Row</button>
-                              <button type="button" class="button-primary addNewCurrentRetailRow header-action-item">Add New</button>
+                            <div class="header-action-wrapper">
+                              <div class="button-wrapper">
+                                <button type="button" class="button-primary button-stroked saveRowPrice header-action-item">Save Row</button>
+                                <button type="button" class="button-primary addNewCurrentRetailRow header-action-item">Add New</button>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div id="datatablePrice" class="datatable ag-theme-material"></div>
-                        <div class="datatable-action-item-select">
-                          <div class="d-flex flex-row justify-content-end align-items-center">
-                            <span class="page-size-label">Item to Show</span>
-                            <select onchange="onPageSizeChanged()" data-table="priceGridOption">
-                              <option value="10">10</option>
-                              <option value="20">20</option>
-                              <option value="50">50</option>
-                            </select>
+                          <div class="collapsible-body">
+                            <div class="datatable-wrapper">
+                              <div id="datatablePrice" class="datatable ag-theme-material"></div>
+                              <div class="datatable-action-item-select">
+                                <div class="d-flex flex-row justify-content-end align-items-center">
+                                  <span class="page-size-label">Item to Show</span>
+                                  <select onchange="onPageSizeChanged()" data-table="priceGridOption">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="datatable-wrapper">
-                        <div class="card-tab-table-header">
-                          <h3>Current Promos</h3>
-                        </div>
-                        <div id="datatablePriceCurrent" class="datatable ag-theme-material"></div>
-                        <div class="datatable-action-item-select">
-                          <div class="d-flex flex-row justify-content-end align-items-center">
-                            <span class="page-size-label">Item to Show</span>
-                            <select onchange="onPageSizeChanged()" data-table="priceGridOption">
-                              <option value="10">10</option>
-                              <option value="20">20</option>
-                              <option value="50">50</option>
-                            </select>
+                        </li>
+                        <li>
+                          <div class="collapsible-header align-items-start d-flex flex-row justify-content-between">
+                            <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
+                            <div class="header-title">
+                              <h3 class="mb-0">Current Promos</h3>
+                            </div>
                           </div>
-                        </div>
-                      </div>
+                          <div class="collapsible-body">
+                            <div class="datatable-wrapper">
+                              <div id="datatablePriceCurrent" class="datatable ag-theme-material"></div>
+                              <div class="datatable-action-item-select">
+                                <div class="d-flex flex-row justify-content-end align-items-center">
+                                  <span class="page-size-label">Item to Show</span>
+                                  <select onchange="onPageSizeChanged()" data-table="priceGridOption">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                       <div class="row">
                         <div class="col-sm-12">
                           <div class="cell-wrapper">

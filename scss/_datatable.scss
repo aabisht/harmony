@@ -205,6 +205,13 @@
 }
 
 .collapsible-data-table {
+
+    .card-tab-content-wrapper & {
+        margin: 4px -#{$card-tab-wrapper-padding} -1px;
+        border: none;
+        box-shadow: none;
+    }
+
     .collapsible-header {
         position: relative;
         padding-left: calculateRem(50px);
