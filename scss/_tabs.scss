@@ -55,6 +55,10 @@
             padding: $card-tab-wrapper-padding;
         }
 
+        &#tabItemMaster .form-input {
+            height: calc(100vh - 590px);
+        }
+
         .datatable-wrapper {
             .datatable.ag-theme-material {
                 margin-bottom: 0;
@@ -73,28 +77,30 @@
                     margin-right: 8px;
                 }
             }
-
-            .footer-pre-next-wrapper {
-                a {
-                    text-decoration: none;
-                    @include fontSize(24px);
-                    width: calculateRem($footer-pre-next-wrapper-size);
-                    height: calculateRem($footer-pre-next-wrapper-size);
-                    line-height: calculateRem($footer-pre-next-wrapper-size);
-                    display: inline-block;
-                    text-align: center;
-                    vertical-align: middle;
-
-                    &.disabled {
-                        opacity: 0.5;
-                    }
-                }
-            }
         }
     }
 
     .card-tab-table-header {
         margin-top: $grid-gutter-width;
         margin-bottom: $grid-gutter-width/2;
+    }
+}
+
+
+
+.header-pre-next-wrapper {
+    a {
+        text-decoration: none;
+        @include fontSize(24px);
+        width: calculateRem($footer-pre-next-wrapper-size);
+        height: calculateRem($footer-pre-next-wrapper-size);
+        line-height: calculateRem($footer-pre-next-wrapper-size);
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+
+        &.disabled {
+            opacity: 0.5;
+        }
     }
 }
