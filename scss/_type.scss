@@ -311,8 +311,11 @@ input, textarea {
 
 #downloadTemplateTab,
 #datatable {
-  .ag-header-cell[col-id="action"] .ag-header-icon.ag-header-cell-menu-button {
-    display: none !important;
+  .ag-header-cell[col-id="action"],
+  .ag-header-cell[col-id="icon"] {
+    .ag-header-icon.ag-header-cell-menu-button {
+      display: none !important;
+    }
   }
 }
 
