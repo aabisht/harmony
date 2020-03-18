@@ -1,0 +1,356 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>View Promo | Bristol Farms</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+  <link href="./css/vendor/fontawesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/vendor/datepicker.min.css">
+  <link rel="stylesheet" href="./css/vendor/materialize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="left-menu-fixed">
+
+  <div class="body-container-wrapper">
+    <div class="body-wrapper">
+
+      <!-- Header -->
+      <header class="header-container">
+        <div class="header-container-wrapper">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-10 header-left-wrapper">
+                <div class="cell-wrapper">
+                  <div class="header-title-nav-wrapper">
+                    <div class="title">
+                      <h3>View Promo</h3>
+                      <div aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="/">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">View Promo</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 header-right-wrapper text-right">
+                <div class="cell-wrapper">
+                  <div id="headerDropdownMenu"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Left Menu -->
+      <div class="left-menu-wrapper"></div>
+
+      <!-- Main Body Content -->
+      <div class="main-body-content-wrapper">
+        <div class="main-body-content-container">
+
+          <div class="header-search-wrapper">
+            <div class="container-fluid">
+              <div class="card header-search-card-wrapper">
+                <div class="card-content">
+                  <h3 class="card-title d-flex flex-row justify-content-between d-flex align-items-center">
+                    <span>Search</span>
+                    <div class="header-search-dropdown-wrapper">
+                      <a href="javscript:;" class="button-primary button-stroked dropdown-trigger save-search-trigger" data-target='savedSearchWrapper'>Saved Search <i class="fas fa-caret-down"></i></a>
+                      <ul id='savedSearchWrapper' class='dropdown-content saved-search-wrapper'>
+                        <li class="header-saved-search-item"><a href="javscript:;">Grocery Items</a> <a href="javascript:;" class="removed-saved-search-modal modal-trigger" data-target="deleteSavedSearchModal" data-item="1" data-name="Grocery Items"><i class="far fa-trash-alt"></i></a></li>
+                        <li class="header-saved-search-item"><a href="javscript:;">Vendor X Items</a> <a href="javascript:;" class="removed-saved-search-modal modal-trigger"  data-target="deleteSavedSearchModal" data-item="2" data-name="Vendor X Items"><i class="far fa-trash-alt"></i></a></li>
+                        <li class="header-saved-search-item"><a href="javscript:;">Organic Items </a> <a href="javascript:;" class="removed-saved-search-modal modal-trigger"  data-target="deleteSavedSearchModal" data-item="3" data-name="Organic Items"><i class="far fa-trash-alt"></i></a></li>
+                      </ul>
+                    </div>
+                  </h3>
+                  <div class="row header-search-input-wrapper align-items-start justify-content-center">
+                    <div class="col-md-4">
+                      <div class="cell-wrapper">
+                        <div class="input-field">
+                          <input id="eventNameSearch" type="text" value="" autocomplete="off" placeholder="Enter Event Name">
+                          <label for="eventNameSearch" class="active">Event Name</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="cell-wrapper">
+                        <div class="input-field">
+                          <select>
+                            <option value="" disabled selected>Choose</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                          <label>Event Status</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="cell-wrapper">
+                        <div class="input-field">
+                          <select>
+                            <option value="" disabled selected>Choose</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                          </select>
+                          <label>Ad Status</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="cell-wrapper">
+                        <div class="input-field">
+                          <input id="search_start_date" type="text" class="datepicker-here" value="01-01-2020" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
+                          <label for="search_start_date">Start Date</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="cell-wrapper">
+                        <div class="input-field">
+                          <input id="search_end_date" type="text" class="datepicker-here" value="02-10-2020" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
+                          <label for="search_end_date">End Date</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row header-search-btn-wrapper align-items-start justify-content-center">
+                    <div class="col-sm-12">
+                      <div class="cell-wrapper d-flex flex-row justify-content-between align-items-center">
+                        <div class="button-wrapper text-center">
+                          <a href="#saveSearchModal" class="button-primary button-adv-seach modal-trigger">Save Search</a>
+                        </div>
+                        <div class="button-wrapper text-center">
+                          <a href="#advSeachModal" class="button-primary button-stroked button-adv-seach modal-trigger">Advance Search</a>
+                          <a href="/view-promo-data.html" class="button-primary button-search">Search</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-body-data-wrapper">
+            <div class="container-fluid">
+              <ul class="collapsible collapsible-data-table">
+                <li class="active">
+                  <div class="collapsible-header align-items-start d-flex flex-row justify-content-between">
+                    <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
+                    <div class="header-title">
+                      <h3 class="mb-0">Event 1 - Approved</h3>
+                    </div>
+                    <div class="header-action-wrapper">
+                      <div class="button-wrapper">
+                        <button type="button" class="button-primary button-stroked saveRow header-action-item" data-grid="grid1">Save Row</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collapsible-body">
+                    <div class="datatable-wrapper">
+                      <div id="viewPromoData1" class="datatable ag-theme-material"></div>
+                      <div class="datatable-action-item-select">
+                        <div class="d-flex flex-row justify-content-end align-items-center">
+                          <span class="page-size-label">Item to Show</span>
+                          <select id="viewPromoData1-page-size" class="onPageSizeChanged" data-grid="grid1">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="">
+                  <div class="collapsible-header align-items-start d-flex flex-row justify-content-between">
+                    <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
+                    <div class="header-title">
+                      <h3 class="mb-0">Event 2 - Pending</h3>
+                    </div>
+                    <div class="header-action-wrapper">
+                      <div class="button-wrapper">
+                        <button type="button" class="button-primary button-stroked saveRow header-action-item" data-grid="grid2">Save Row</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collapsible-body">
+                    <div class="datatable-wrapper">
+                      <div id="viewPromoData2" class="datatable ag-theme-material"></div>
+                      <div class="datatable-action-item-select">
+                        <div class="d-flex flex-row justify-content-end align-items-center">
+                          <span class="page-size-label">Item to Show</span>
+                          <select id="viewPromoData2-page-size" class="onPageSizeChanged" data-grid="grid2">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="">
+                  <div class="collapsible-header align-items-start d-flex flex-row justify-content-between">
+                    <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
+                    <div class="header-title">
+                      <h3 class="mb-0">Event 3 - Reject</h3>
+                    </div>
+                    <div class="header-action-wrapper">
+                      <div class="button-wrapper">
+                        <button type="button" class="button-primary button-stroked saveRow header-action-item" data-grid="grid3">Save Row</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collapsible-body">
+                    <div class="datatable-wrapper">
+                      <div id="viewPromoData3" class="datatable ag-theme-material"></div>
+                      <div class="datatable-action-item-select">
+                        <div class="d-flex flex-row justify-content-end align-items-center">
+                          <span class="page-size-label">Item to Show</span>
+                          <select id="viewPromoData3-page-size" class="onPageSizeChanged" data-grid="grid3">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div id="advSeachModal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <div class="modal-title"><h3>Add New Field</h3></div>
+      <div class="modal-form-wrapper">
+        <div class="modal-form-item modal-form-item-1" data-index="1">
+          <div class="row align-items-start justify-content-center">
+            <div class="col-md-10 modal-form-input-wrapper">
+              <div class="row align-items-start justify-content-center">
+                <div class="col-sm-4">
+                  <div class="cell-wrapper">
+                    <div class="input-field">
+                      <select id="modal-attribute-list-1" class="modal-attribute-list">
+                        <option value="" disabled selected>Choose Attribute List</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                      </select>
+                      <label for="modal-attribute-list-1">Attribute List</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="cell-wrapper">
+                    <div class="input-field">
+                      <select id="modal-operator-1" class="modal-operator">
+                        <option value="" disabled selected>Choose Operator</option>
+                        <option value="contains">CONTAINS</option>
+                        <option value="equals">EQUALS</option>
+                        <option value="starts">STARTS</option>
+                      </select>
+                      <label for="modal-operator-1">Operator</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="cell-wrapper">
+                    <div class="input-field">
+                      <input placeholder="Enter default value" id="modal-value-1" type="text" class="modal-value">
+                      <label for="modal-value-1">Value</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 modal-form-input-action-wrapper">
+              <div class="button-wrapper d-none">
+                <a href="javascript:;" class="button-primary button-stroked tooltip modal-button-clear-row" data-tooltip="Clear Field"><i class="fas fa-times-circle"></i></a>
+                <a href="javascript:;" class="button-primary button-stroked tooltip modal-button-remove-row" data-tooltip="Remove Field"><i class="fas fa-minus-circle"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="button-wrapper">
+        <a href="javscript:;" class="modal-close button-primary button-stroked">Cancel</a>
+        <a href="javscript:;" class="button-primary button-stroked modal-button-add-more">Add More</a>
+        <a href="/view-promo-adv-search-filed.html" class="modal-close button-primary modal-button-submit">Submit</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="deleteSavedSearchModal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to delete <strong id="deleteSavedSearchName"></strong> from saved search.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="javascript:;" class="modal-close button-stroked button-primary"><i class="fas fa-times"></i> Cancel</a>
+      <a href="javascript:;" class="modal-close button-primary removed-saved-search"><i class="far fa-trash-alt"></i> Delete</a>
+    </div>
+  </div>
+
+  <div id="saveSearchModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-title"><h3>Save Search Name</h3></div>
+      <div class="save-search-name-input-wrapper">
+        <div class="input-field">
+          <input id="saveSearchNameInput" type="text" class="saveSearchNameInput-value">
+          <label for="saveSearchNameInput" class="active">Enter name for save search</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="button-wrapper">
+        <a href="javascript:;" class="modal-close button-stroked button-primary"><i class="fas fa-times"></i> Cancel</a>
+        <a href="javascript:;" class="modal-close button-primary save-saved-search-name"><i class="far fa-save"></i> Save</a>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="js/vendor/jquery-3.4.1.min.js"></script>
+  <script src="js/vendor/ag-grid-enterprise.min.js"></script>
+  <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/vendor/datepicker.min.js"></script>
+  <script src="js/vendor/datepicker.en.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <script src="js/view-promo.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

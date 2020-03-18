@@ -121,6 +121,10 @@
                 urlPath = '/view-item.html'
             }
 
+            if(urlPath === '/view-promo-adv-search-filed.html' || urlPath === '/view-promo-data.html') {
+                urlPath = '/view-promo.html'
+            }
+
             if($(this).attr('href') === urlPath) {
                 
                 $(this).parent().addClass('active');
