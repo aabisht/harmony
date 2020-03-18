@@ -77,19 +77,32 @@
                     </div>
                   </h3>
                   <div class="row header-search-input-wrapper align-items-start justify-content-center">
-                    <div class="col-md-1">
+                    <div class="col-md-2">
                       <div class="cell-wrapper">
                         <div class="input-field">
-                          <input id="UPC_PLU_Search" type="text" value="" autocomplete="off" placeholder="Enter UPC/PLU value">
-                          <label for="UPC_PLU_Search" class="active">UPC/PLU</label>
+                          <input id="eventNameSearch" type="text" value="" autocomplete="off" placeholder="Enter Event Name">
+                          <label for="eventNameSearch" class="active">Event Name</label>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                       <div class="cell-wrapper">
                         <div class="input-field">
-                          <input id="Item_Description_Search" type="text" value="" autocomplete="off" placeholder="Enter Item Description value">
-                          <label for="Item_Description_Search">Item Description</label>
+                          <input id="eventAdNameSearch" type="text" value="" autocomplete="off" placeholder="Enter Ad Name">
+                          <label for="eventAdNameSearch" class="active">Ad Name</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="cell-wrapper">
+                        <div class="input-field">
+                          <select>
+                            <option value="" disabled selected>Choose</option>
+                            <option value="1">Approved</option>
+                            <option value="2">Pending</option>
+                            <option value="3">Reject</option>
+                          </select>
+                          <label>Event Status</label>
                         </div>
                       </div>
                     </div>
@@ -102,41 +115,23 @@
                             <option value="2">Option 2</option>
                             <option value="3">Option 3</option>
                           </select>
-                          <label>Department</label>
+                          <label>Ad Status</label>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-2">
                       <div class="cell-wrapper">
                         <div class="input-field">
-                          <select>
-                            <option value="" disabled selected>Choose</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                          </select>
-                          <label>Category</label>
+                          <input id="search_start_date" type="text" class="datepicker-here" value="01-01-2020" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
+                          <label for="search_start_date">Start Date</label>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-2">
                       <div class="cell-wrapper">
                         <div class="input-field">
-                          <input id="Brand_Search" type="text" value="" autocomplete="off" placeholder="Enter Brand value">
-                          <label for="Brand_Search" class="active">Brand</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="cell-wrapper">
-                        <div class="input-field">
-                          <select>
-                            <option value="" disabled selected>Choose</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                          </select>
-                          <label>Vendor Name</label>
+                          <input id="search_end_date" type="text" class="datepicker-here" value="02-10-2020" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
+                          <label for="search_end_date">End Date</label>
                         </div>
                       </div>
                     </div>
