@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>View Promo | Bristol Farms</title>
+  <title>Promo Management | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -33,11 +33,11 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>View Promo</h3>
+                      <h3>Promo Management</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">View Promo</li>
+                          <li class="breadcrumb-item active" aria-current="page">Promo Management</li>
                         </ol>
                       </div>
                     </div>
@@ -67,17 +67,17 @@
                 <div class="card-content">
                   <h3 class="card-title d-flex flex-row justify-content-between d-flex align-items-center">
                     <span>Search</span>
-                    <div class="header-search-dropdown-wrapper">
+                    <!-- <div class="header-search-dropdown-wrapper">
                       <a href="javscript:;" class="button-primary button-stroked dropdown-trigger save-search-trigger" data-target='savedSearchWrapper'>Saved Search <i class="fas fa-caret-down"></i></a>
                       <ul id='savedSearchWrapper' class='dropdown-content saved-search-wrapper'>
                         <li class="header-saved-search-item"><a href="javscript:;">Grocery Items</a> <a href="javascript:;" class="removed-saved-search-modal modal-trigger" data-target="deleteSavedSearchModal" data-item="1" data-name="Grocery Items"><i class="far fa-trash-alt"></i></a></li>
                         <li class="header-saved-search-item"><a href="javscript:;">Vendor X Items</a> <a href="javascript:;" class="removed-saved-search-modal modal-trigger"  data-target="deleteSavedSearchModal" data-item="2" data-name="Vendor X Items"><i class="far fa-trash-alt"></i></a></li>
                         <li class="header-saved-search-item"><a href="javscript:;">Organic Items </a> <a href="javascript:;" class="removed-saved-search-modal modal-trigger"  data-target="deleteSavedSearchModal" data-item="3" data-name="Organic Items"><i class="far fa-trash-alt"></i></a></li>
                       </ul>
-                    </div>
+                    </div> -->
                   </h3>
                   <div class="row header-search-input-wrapper align-items-start justify-content-center">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <div class="cell-wrapper">
                         <div class="input-field">
                           <input id="eventNameSearch" type="text" value="" autocomplete="off" placeholder="Enter Event Name">
@@ -85,15 +85,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-2">
-                      <div class="cell-wrapper">
-                        <div class="input-field">
-                          <input id="eventAdNameSearch" type="text" value="" autocomplete="off" placeholder="Enter Ad Name">
-                          <label for="eventAdNameSearch" class="active">Ad Name</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <div class="cell-wrapper">
                         <div class="input-field">
                           <select>
@@ -106,7 +98,16 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-2">
+                    
+                    <div class="col-md-3">
+                      <div class="cell-wrapper">
+                        <div class="input-field">
+                          <input id="eventAdNameSearch" type="text" value="" autocomplete="off" placeholder="Enter Ad Name">
+                          <label for="eventAdNameSearch" class="active">Ad Name</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
                       <div class="cell-wrapper">
                         <div class="input-field">
                           <select>
@@ -119,7 +120,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <div class="cell-wrapper">
                         <div class="input-field">
                           <input id="search_start_date" type="text" class="datepicker-here" value="01-01-2020" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
@@ -127,7 +128,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <div class="cell-wrapper">
                         <div class="input-field">
                           <input id="search_end_date" type="text" class="datepicker-here" value="02-10-2020" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
@@ -135,15 +136,34 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="row header-search-btn-wrapper align-items-start justify-content-center">
-                    <div class="col-sm-12">
+                    <div class="col-md-3">
+                      <div class="cell-wrapper">
+                        <div class="input-field">
+                          <select>
+                            <option value="" disabled selected>Choose</option>
+                            <option value="Zone 1">Zone 1</option>
+                            <option value="Zone 2">Zone 2</option>
+                            <option value="Zone 3">Zone 3</option>
+                            <option value="Zone 3">Zone 4</option>
+                            <option value="Store 1">Store 1</option>
+                            <option value="Store 2">Store 2</option>
+                            <option value="Store 3">Store 3</option>
+                            <option value="Store 4">Store 4</option>
+                            <option value="Store 5">Store 5</option>
+                            <option value="Store 6">Store 6</option>
+                            <option value="Store 7">Store 7</option>
+                          </select>
+                          <label>Zone/ Status</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="header-search-btn-wrapper col-md-3">
                       <div class="cell-wrapper d-flex flex-row justify-content-between align-items-center">
                         <div class="button-wrapper text-center">
-                          <a href="#saveSearchModal" class="button-primary button-adv-seach modal-trigger">Save Search</a>
+                          <!-- <a href="#saveSearchModal" class="button-primary button-adv-seach modal-trigger">Save Search</a> -->
                         </div>
                         <div class="button-wrapper text-center">
-                          <a href="#advSeachModal" class="button-primary button-stroked button-adv-seach modal-trigger">Advance Search</a>
+                          <!-- <a href="#advSeachModal" class="button-primary button-stroked button-adv-seach modal-trigger">Advance Search</a> -->
                           <a href="/view-promo-data.html" class="button-primary button-search">Search</a>
                         </div>
                       </div>

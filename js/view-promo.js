@@ -11,17 +11,17 @@ $(document).ready(function() {
     {
       headerName: "Ad Name", 
       field: "ad_name",
-      headerCheckboxSelection: true,
-      headerCheckboxSelectionFilteredOnly: true,
-      checkboxSelection: true,
+      // headerCheckboxSelection: true,
+      // headerCheckboxSelectionFilteredOnly: true,
+      // checkboxSelection: true,
       minWidth: 240
     },
-    {headerName: "Department", field: "department", editable: true},
+    // {headerName: "Department", field: "department", editable: true},
     {headerName: "Start Date", field: "start_date", editable: true},
     {headerName: "End Date", field: "end_date", editable: true},
     {headerName: "Deadline", field: "deadline", editable: true},
     {headerName: "Status", field: "status", editable: true},
-    {headerName: "Action", field: "action", editable: false, cellRenderer: 'gridAction'}
+    {headerName: "", field: "action", editable: false, cellRenderer: 'gridAction'}
   ];
 
   $.get("data/view-promo.json", function(data){
@@ -84,6 +84,9 @@ $(document).ready(function() {
           $('.saveRow[data-grid="grid3"]').css({'display': 'inline-block'});
         }
       },
+      onGridReady: function(params) {
+          params.api.sizeColumnsToFit();
+      },
       onRowValueChanged: function(event) {
         M.toast({html: '<strong>'+ event.data.event_name + '</strong>&nbsp; tab with add name &nbsp;<strong class="text-capitalize"><i>' + event.data.ad_name + '</i></strong>&nbsp; updated.'});
       }
@@ -101,7 +104,7 @@ $(document).ready(function() {
     this.eGui = document.createElement('div');
     this.eGui.classList.add('button-wrapper');
     this.eGui.classList.add('table-action-wrapper');
-    this.eGui.innerHTML = '<a href="javascript:;" title="Submit" class="button-primary button-stroked">Submit</a>';
+    this.eGui.innerHTML = '<a href="javascript:;" title="View Ad" class="button-primary button-stroked">View Ad</a>';
   };
 
   GridAction.prototype.getGui = function() {
@@ -141,5 +144,11 @@ $(document).ready(function() {
     var gridOption = getGrid($(this).attr('data-grid'));
     gridOption.api.stopEditing()
     $(this).hide();
+  });
+
+  $('body').on('click', '.collapsible > li .collapsible-header', function() {
+    gridOption1.api.sizeColumnsToFit();
+    gridOption2.api.sizeColumnsToFit();
+    gridOption3.api.sizeColumnsToFit();
   });
 });
