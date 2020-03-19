@@ -1,0 +1,54 @@
+.ad-planer-template {
+    position: relative;
+    border: 0 none;
+    outline: none;
+    padding: $grid-gutter-width/2;
+
+    > .cell-wrapper {
+        border: 1px solid $ad-planer-template-border-color;
+        border-radius: 4px;
+        padding: $grid-gutter-width;
+        @include box-shadow(none);
+        @include scale(1);
+        @include transition(all 0.2s);
+    }
+
+    &.selected-template {
+        > .cell-wrapper {
+            border-color: transparent;
+            @include box-shadow(0 0 4px $ad-planer-template-border-color);
+            @include scale(1.02);
+        }
+    }
+
+    .ad-planer-template-body {
+        margin-bottom: $grid-gutter-width/2;
+
+        .ad-planer-template-img-wrapper {
+            border: 1px solid $secondary-color;
+            margin-bottom: $grid-gutter-width/2;
+        }
+
+        .ad-planer-template-form-wrapper {
+            display: none;
+
+            .file-field {
+                .button-primary {
+                    @include fontSize(13px);
+                    height: 2.5rem;
+                    line-height: 2.5rem;
+                }
+
+                .file-path-wrapper {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    .ad-planer-template-footer {
+        .templateSaveBtn, .templateNextBtn {
+            display: none;
+        }
+    }
+}

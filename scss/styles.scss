@@ -19,6 +19,7 @@
 @import "vendor/bootstrap/helpers";
 @import "vendor/bootstrap/utilities/api";
 
+@import "vendor/slick/slick";
 
 @import 'variables';
 @import 'mixins';
@@ -38,3 +39,4 @@
 @import 'user-card';
 @import 'tabs';
 @import 'group-management';
+@import 'ad-planer';

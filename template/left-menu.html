@@ -46,7 +46,7 @@
                             <a href="/view-promo.html" class="tooltip" data-position="right" data-tooltip="View Promo"><i class="label-icon fas fa-binoculars"></i> <span class="label">View Promo</span></a>
                         </li>
                         <li>
-                            <a href="javscript:;" class="tooltip" data-position="right" data-tooltip="Add New"><i class="label-icon far fa-plus-square"></i> <span class="label">Add New</span></a>
+                            <a href="/add-promo.html" class="tooltip" data-position="right" data-tooltip="Add New"><i class="label-icon far fa-plus-square"></i> <span class="label">Add New</span></a>
                         </li>
                     </ul>
                 </li>
@@ -123,6 +123,10 @@
 
             if(urlPath === '/view-promo-adv-search-filed.html' || urlPath === '/view-promo-data.html') {
                 urlPath = '/view-promo.html'
+            }
+
+            if(urlPath === '/add-promo-template-selection.html') {
+                urlPath = '/add-promo.html'
             }
 
             if($(this).attr('href') === urlPath) {
