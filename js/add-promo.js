@@ -103,7 +103,7 @@ $(document).ready(function() {
         this.eGui.classList.add('table-action-wrapper');
         this.eGui.classList.add('button-wrapper');
         var html = '';
-        html = '<a href="javascript:;" title="Edit" class="button-primary button-stroked" ><i class="far fa-edit"></i></a><a href="javascript:;" title="Save" class="button-primary button-stroked" ><i class="far fa-save"></i></a>';
+        html = '<a href="/add-promo-item-detail.html" title="Edit" class="button-primary button-stroked" ><i class="far fa-edit"></i></a><a href="javascript:;" title="Save" class="button-primary button-stroked" ><i class="far fa-save"></i></a>';
         this.eGui.innerHTML = html;
     };
 
