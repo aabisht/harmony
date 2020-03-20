@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Add New Promo | Bristol Farms</title>
+  <title>Add New Ad | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -33,11 +33,11 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>Add New Promo</h3>
+                      <h3>Add New Ad</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Add New Promo</li>
+                          <li class="breadcrumb-item active" aria-current="page">Add New Ad</li>
                         </ol>
                       </div>
                     </div>
@@ -71,183 +71,120 @@
                     </div>
                   </div>
                   <div class="card-input-wrapper">
+                    <div class="ad-planer-template-selection-wrapper d-flex justify-content-start align-items-start">
+                      <div class="ad-planer-template-selection-item">
+                        <label>
+                          <input class="with-gap templateSelectorRadio" name="adPlannerTemplate" type="radio"  id="adPlannerDefaultTemplate" data-target="#detaultTemplate" checked />
+                          <span>Default Template</span>
+                        </label>
+                      </div>
+                      <div class="ad-planer-template-selection-item">
+                        <label>
+                          <input class="with-gap templateSelectorRadio" name="adPlannerTemplate" type="radio" id="adPlannerCustomTemplate" data-target="#customTemplate" />
+                          <span>Upload New Template</span>
+                        </label>
+                      </div>
+                      <div class="ad-planer-template-selection-item">
+                        <label>
+                          <input class="with-gap templateSelectorRadio" name="adPlannerTemplate" type="radio" id="adPlannerExistingTemplate" data-target="#copyFromTemplate" />
+                          <span>Copy From Existing Template</span>
+                        </label>
+                      </div>
+                    </div>
                     <div class="row align-items-center">
                       <div class="col-md-12">
-                        <div id="adPlannerTemplates">
-                          <div class="ad-planer-template selected-template">
-                            <div class="cell-wrapper">
-                              <div class="ad-planer-template-header">
-                                <label>
-                                  <input class="with-gap templateSelectorRadio" name="adPlannerTemplate" type="radio"  id="adPlannerDefaultTemplate" checked />
-                                  <span>Default Template</span>
-                                </label>
-                              </div>
-                              <div class="ad-planer-template-body">
-                                <div class="ad-planer-template-img-wrapper">
-                                  <img src="./assets/img/default-template.jpg" alt="Default Teamplate" class="img-fluid">
+                        <div class="ad-planer-template-selection-items-wrapper active" id="detaultTemplate">
+                          <div id="adPlannerTemplates">
+                            <div class="ad-planer-template selected-template">
+                              <div class="cell-wrapper">
+                                <div class="ad-planer-template-header text-center">
+                                  <h3>Default Template 1</h3>
                                 </div>
-                              </div>
-                              <div class="ad-planer-template-footer">
-                                <div class="button-wrapper text-center">
-                                  <a href="javascrip:;" class="button-primary disabled templateSelectorBtn" data-target="#adPlannerDefaultTemplate">Select</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="ad-planer-template adPlannerCustomTemplateWrapper">
-                            <div class="cell-wrapper">
-                              <div class="ad-planer-template-header">
-                                <label>
-                                  <input class="with-gap templateSelectorRadio" name="adPlannerTemplate" type="radio" id="adPlannerCustomTemplate" />
-                                  <span>Create New Template</span>
-                                </label>
-                              </div>
-                              <div class="ad-planer-template-body">
-                                <div class="ad-planer-template-img-wrapper">
-                                  <img src="./assets/img/create-new-teamplate.jpg" alt="Create New Teamplate" class="img-fluid">
-                                </div>
-                                <div class="ad-planer-template-form-wrapper">
-                                  <div class="file-field input-field">
-                                    <div class="button-primary button-icon-left">
-                                      <span><i class="fas fa-file-upload"></i> Upload Template</span>
-                                      <input type="file">
-                                    </div>
-                                    <div class="file-path-wrapper">
-                                      <input class="file-path validate" type="text" value="">
-                                    </div>
+                                <div class="ad-planer-template-body">
+                                  <div class="ad-planer-template-img-wrapper">
+                                    <img src="./assets/img/default-template.jpg" alt="Default Teamplate" class="img-fluid">
                                   </div>
-                                  <div class="file-field input-field">
-                                    <div class="button-primary button-icon-left">
-                                      <span><i class="fas fa-file-upload"></i> Upload TPOS Mapping</span>
-                                      <input type="file">
-                                    </div>
-                                    <div class="file-path-wrapper">
-                                      <input class="file-path validate" type="text" value="">
-                                    </div>
-                                  </div>
-                                  <div class="button-wrapper">
-                                    <a href="javascrip:;" class="download-button">Download TPOS Mapping</a>
+                                </div>
+                                <div class="ad-planer-template-footer">
+                                  <div class="button-wrapper text-center">
+                                    <a href="/add-promo-custom-template.html" class="button-primary disabled templateSelectorBtn" data-target="#adPlannerDefaultTemplate">Select</a>
                                   </div>
                                 </div>
                               </div>
-                              <div class="ad-planer-template-footer">
-                                <div class="button-wrapper text-center">
-                                  <a href="javascrip:;" class="button-primary button-stroked templateSaveBtn">Save</a>
-                                  <a href="javascrip:;" class="button-primary templateNextBtn">Next</a>
-                                  <a href="javascrip:;" class="button-primary templateSelectorBtn" data-target="#adPlannerCustomTemplate">Select</a>
+                            </div>
+                            <div class="ad-planer-template">
+                              <div class="cell-wrapper">
+                                <div class="ad-planer-template-header text-center">
+                                  <h3>Default Template 2</h3>
+                                </div>
+                                <div class="ad-planer-template-body">
+                                  <div class="ad-planer-template-img-wrapper">
+                                    <img src="./assets/img/create-new-teamplate.jpg" alt="Create New Teamplate" class="img-fluid">
+                                  </div>
+                                </div>
+                                <div class="ad-planer-template-footer">
+                                  <div class="button-wrapper text-center">
+                                    <a href="/add-promo-custom-template.html" class="button-primary templateSelectorBtn" data-target="#adPlannerCustomTemplate">Select</a>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="ad-planer-template">
-                            <div class="cell-wrapper">
-                              <div class="ad-planer-template-header">
-                                <label>
-                                  <input class="with-gap templateSelectorRadio" name="adPlannerTemplate" type="radio" id="adPlannerExistingTemplate" />
-                                  <span>Existing Template</span>
-                                </label>
-                              </div>
-                              <div class="ad-planer-template-body">
-                                <div class="ad-planer-template-img-wrapper">
-                                  <img src="./assets/img/existing-template.jpg" alt="Existing Teamplate" class="img-fluid">
+                            <div class="ad-planer-template">
+                              <div class="cell-wrapper">
+                                <div class="ad-planer-template-header text-center">
+                                  <h3>Default Template 3</h3>
                                 </div>
-                              </div>
-                              <div class="ad-planer-template-footer">
-                                <div class="button-wrapper text-center">
-                                  <a href="javascrip:;" class="button-primary templateSelectorBtn" data-target="#adPlannerExistingTemplate">Select</a>
+                                <div class="ad-planer-template-body">
+                                  <div class="ad-planer-template-img-wrapper">
+                                    <img src="./assets/img/existing-template.jpg" alt="Existing Teamplate" class="img-fluid">
+                                  </div>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- Dummy Data -->
-                          <div class="ad-planer-template">
-                            <div class="cell-wrapper">
-                              <div class="ad-planer-template-header">
-                                <label>
-                                  <input class="with-gap templateSelectorRadio" name="adPlannerTemplate" type="radio" id="adPlannerExistingTemplate1" />
-                                  <span>Existing Template 1</span>
-                                </label>
-                              </div>
-                              <div class="ad-planer-template-body">
-                                <div class="ad-planer-template-img-wrapper">
-                                  <img src="./assets/img/existing-template.jpg" alt="Existing Teamplate" class="img-fluid">
-                                </div>
-                              </div>
-                              <div class="ad-planer-template-footer">
-                                <div class="button-wrapper text-center">
-                                  <a href="javascrip:;" class="button-primary templateSelectorBtn" data-target="#adPlannerExistingTemplate1">Select</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="ad-planer-template">
-                            <div class="cell-wrapper">
-                              <div class="ad-planer-template-header">
-                                <label>
-                                  <input class="with-gap templateSelectorRadio" name="adPlannerTemplate" type="radio" id="adPlannerExistingTemplate2" />
-                                  <span>Existing Template 2</span>
-                                </label>
-                              </div>
-                              <div class="ad-planer-template-body">
-                                <div class="ad-planer-template-img-wrapper">
-                                  <img src="./assets/img/existing-template.jpg" alt="Existing Teamplate" class="img-fluid">
-                                </div>
-                              </div>
-                              <div class="ad-planer-template-footer">
-                                <div class="button-wrapper text-center">
-                                  <a href="javascrip:;" class="button-primary templateSelectorBtn" data-target="#adPlannerExistingTemplate2">Select</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="ad-planer-template">
-                            <div class="cell-wrapper">
-                              <div class="ad-planer-template-header">
-                                <label>
-                                  <input class="with-gap templateSelectorRadio" name="adPlannerTemplate" type="radio" id="adPlannerExistingTemplate3" />
-                                  <span>Existing Template 3</span>
-                                </label>
-                              </div>
-                              <div class="ad-planer-template-body">
-                                <div class="ad-planer-template-img-wrapper">
-                                  <img src="./assets/img/existing-template.jpg" alt="Existing Teamplate" class="img-fluid">
-                                </div>
-                              </div>
-                              <div class="ad-planer-template-footer">
-                                <div class="button-wrapper text-center">
-                                  <a href="javascrip:;" class="button-primary templateSelectorBtn" data-target="#adPlannerExistingTemplate3">Select</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="ad-planer-template">
-                            <div class="cell-wrapper">
-                              <div class="ad-planer-template-header">
-                                <label>
-                                  <input class="with-gap templateSelectorRadio" name="adPlannerTemplate" type="radio" id="adPlannerExistingTemplate4" />
-                                  <span>Existing Template 4</span>
-                                </label>
-                              </div>
-                              <div class="ad-planer-template-body">
-                                <div class="ad-planer-template-img-wrapper">
-                                  <img src="./assets/img/existing-template.jpg" alt="Existing Teamplate" class="img-fluid">
-                                </div>
-                              </div>
-                              <div class="ad-planer-template-footer">
-                                <div class="button-wrapper text-center">
-                                  <a href="javascrip:;" class="button-primary templateSelectorBtn" data-target="#adPlannerExistingTemplate4">Select</a>
+                                <div class="ad-planer-template-footer">
+                                  <div class="button-wrapper text-center">
+                                    <a href="/add-promo-custom-template.html" class="button-primary templateSelectorBtn" data-target="#adPlannerExistingTemplate">Select</a>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="cell-wrapper">
-                          <div class="button-wrapper">
-                            <!-- <a href="javascrip:;" class="button-primary button-stroked">Select Template</a> -->
-                            <!-- <a href="javascrip:;" class="button-primary">Save</a> -->
+                        <div class="ad-planer-template-selection-items-wrapper" id="customTemplate">
+                          <div class="ad-planer-template-form-wrapper">
+                            <div class="row justify-content-left align-items-center">
+                              <div class="col-sm-6">
+                                <div class="file-field input-field">
+                                  <div class="btn button-primary button-icon-left">
+                                    <span><i class="fas fa-file-upload"></i> Upload Template</span>
+                                    <input type="file">
+                                  </div>
+                                  <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" value="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="file-field input-field">
+                                  <div class="btn button-primary button-icon-left">
+                                    <span><i class="fas fa-file-upload"></i> Upload TPOS Mapping</span>
+                                    <input type="file">
+                                  </div>
+                                  <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" value="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="button-wrapper">
+                                  <a href="javascrip:;" class="download-button">Download TPOS Mapping</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ad-planer-template-footer">
+                            <div class="button-wrapper">
+                              <a href="javascrip:;" class="button-primary button-stroked templateSaveBtn">Save</a>
+                              <a href="/add-promo-custom-template.html" class="button-primary templateNextBtn">Next</a>
+                            </div>
                           </div>
                         </div>
                       </div>

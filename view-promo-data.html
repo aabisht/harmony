@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>View Promo | Bristol Farms</title>
+  <title>Promo Management | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -33,11 +33,11 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>View Promo</h3>
+                      <h3>Promo Management</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">View Promo</li>
+                          <li class="breadcrumb-item active" aria-current="page">Promo Management</li>
                         </ol>
                       </div>
                     </div>
@@ -112,9 +112,9 @@
                         <div class="input-field">
                           <select>
                             <option value="" disabled selected>Choose</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
+                            <option value="Approve">Approve</option>
+                            <option value="Draft">Draft</option>
+                            <option value="Pending">Pending</option>
                           </select>
                           <label>Ad Status</label>
                         </div>
@@ -216,7 +216,7 @@
                     <div class="header-title">
                       <h3 class="mb-0">
                         <a href="javascript:;">Event 2</a>
-                        <small><strong>[01-01-2020 - 01-05-2020]</strong> - Pending</small>
+                        <small><strong>[01-01-2020 - 01-05-2020]</strong> - Draft</small>
                         <br>
                         <small>Double Click on row to edit.</small>
                       </h3>
@@ -224,6 +224,8 @@
                     <div class="header-action-wrapper">
                       <div class="button-wrapper">
                         <button type="button" class="button-primary button-stroked saveRow header-action-item" data-grid="grid2">Save Row</button>
+                        <button type="button" class="button-primary header-action-item" data-grid="grid2">Approve</button>
+                        <button type="button" class="button-primary button-stroked header-action-item" data-grid="grid2">Reject</button>
                       </div>
                     </div>
                   </div>

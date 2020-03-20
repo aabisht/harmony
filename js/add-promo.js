@@ -16,40 +16,98 @@ $(document).ready(function() {
         ]
     });
 
-    function customTemplateShowHide(target) {
-        if(target === "#adPlannerCustomTemplate") {
-            $('.adPlannerCustomTemplateWrapper').find('.ad-planer-template-img-wrapper').hide();
-            $('.adPlannerCustomTemplateWrapper').find('.ad-planer-template-form-wrapper').show();
-            $('.adPlannerCustomTemplateWrapper').find('.templateSaveBtn').css({'display': 'inline-block'});
-            $('.adPlannerCustomTemplateWrapper').find('.templateNextBtn').css({'display': 'inline-block'});
-            $('.adPlannerCustomTemplateWrapper').find('.templateSelectorBtn').hide();
-        } else {
-            $('.adPlannerCustomTemplateWrapper').find('.ad-planer-template-img-wrapper').show();
-            $('.adPlannerCustomTemplateWrapper').find('.ad-planer-template-form-wrapper').hide();
-            $('.adPlannerCustomTemplateWrapper').find('.templateSaveBtn').hide();
-            $('.adPlannerCustomTemplateWrapper').find('.templateNextBtn').hide();
-            $('.adPlannerCustomTemplateWrapper').find('.templateSelectorBtn').show();
-        }
-    }
-    
     $('body').on('click', '.templateSelectorBtn', function(event) {
         event.preventDefault();
-        var target = $(this).attr('data-target');
-        $(target).prop("checked", true);
         $(this).closest('.ad-planer-template').siblings().find('.templateSelectorBtn').removeClass('disabled');
         $(this).closest('.ad-planer-template').siblings().removeClass('selected-template');
         $(this).closest('.ad-planer-template').addClass('selected-template');
         $(this).addClass('disabled');
-
-        customTemplateShowHide(target);
+        window.location.href = $(this).attr('href');
     });
 
     $('body').on('change', '.templateSelectorRadio', function(event) {
         event.preventDefault();
-        $(this).closest('.ad-planer-template').siblings().removeClass('selected-template');
-        $(this).closest('.ad-planer-template').addClass('selected-template');
-        $(this).closest('.ad-planer-template').siblings().find('.templateSelectorBtn').removeClass('disabled');
-        $(this).closest('.ad-planer-template').find('.templateSelectorBtn').addClass('disabled');
-        customTemplateShowHide('#'+$(this).attr('id'));
+        $('.ad-planer-template-selection-items-wrapper').removeClass('active');
+        $('.ad-planer-template-selection-items-wrapper').hide();
+        $($(this).attr('data-target')).addClass('active');
+        $($(this).attr('data-target')).show();
     });
+
+
+    var gridOptions;
+
+    var columnDefs = [
+        {
+            headerName: "TPOS", 
+            field: "tpos",
+            headerCheckboxSelection: true,
+            headerCheckboxSelectionFilteredOnly: true,
+            checkboxSelection: true,
+            minWidth: 200
+        },
+        {headerName: "Department", field: "department"},
+        {headerName: "Due Date", field: "due_date"},
+        {headerName: "Action", field: "action", cellRenderer: 'gridAction'},
+    ];
+
+    $.get("data/ad-panner-tpos-mapping.json", function(data, status){
+        gridOptions = {
+            defaultColDef: {
+              editable: false,
+              resizable: true,
+              sortable:true,
+              filter: true
+            },
+            rowSelection: 'multiple',
+            columnDefs: columnDefs,
+            rowData: data,
+            pagination: true,
+            paginationPageSize: 10,
+            onRowSelected: onRowSelected,
+            onSelectionChanged: onSelectionChanged,
+            paginationNumberFormatter: function(params) {
+                return '[' + params.value.toLocaleString() + ']';
+            },
+            components: {
+                'gridAction': GidAction
+            },
+            onGridReady: function(params) {
+                params.api.sizeColumnsToFit();
+            }
+        }
+
+        var gridDiv = document.querySelector('#datatableAdPlanerCustomTemplate');
+        new agGrid.Grid(gridDiv, gridOptions);  
+    });
+
+    function onRowSelected(event) {
+      console.log("row " + event.node.data.upc + " selected = " + event.node.selected);
+    }
+
+    function onSelectionChanged(event) {
+      var rowCount = event.api.getSelectedNodes().length;
+      console.log('selection changed, ' + rowCount + ' rows selected');
+      if(rowCount > 0) {
+        $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
+      } else {
+        $('#select-row-num').html('');
+      }
+    }
+
+    // cell renderer class
+    function GidAction() {}
+
+    // init method gets the details of the cell to be rendere
+    GidAction.prototype.init = function(params) {
+        this.eGui = document.createElement('div');
+        this.eGui.classList.add('table-action-wrapper');
+        this.eGui.classList.add('button-wrapper');
+        var html = '';
+        html = '<a href="javascript:;" title="Edit" class="button-primary button-stroked" ><i class="far fa-edit"></i></a><a href="javascript:;" title="Save" class="button-primary button-stroked" ><i class="far fa-save"></i></a>';
+        this.eGui.innerHTML = html;
+    };
+
+    GidAction.prototype.getGui = function() {
+        return this.eGui;
+    };
 });
