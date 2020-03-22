@@ -100,7 +100,7 @@
                         </div>
                       </div>
                       <div class="col-lg-9 col-sm-8">
-                        <div class="cell-wrapper ad-promo-template-table-wrapper">
+                        <div class="cell-wrapper ad-promo-item-data-wrapper">
                           <div class="card-tab-wrapper tab-wrapper add-promo-tabs-wrapper">
                             <div class="tab-label-wrapper">
                               <ul class="tabs">
@@ -204,6 +204,51 @@
                                         <a href="#advSeachModal" class="button-primary button-stroked button-adv-seach modal-trigger">Advance Search</a>
                                         <a href="/add-promo-item-data.html" class="button-primary button-search">Search</a>
                                       </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="ad-promo-template-title-wrapper d-flex flex-row justify-content-between d-flex align-items-center">
+                                  <h3 class="card-title mb-3 mt-5">Search Results</h3>
+                                </div>
+                                <div class="datatable-wrapper">
+                                  <div id="adPromoItemSearchDatatable" class="datatable ag-theme-material"></div>
+                                  <div class="datatable-action-item-select">
+                                    <div class="d-flex flex-row justify-content-end align-items-center">
+                                      <span class="page-size-label">Item to Show</span>
+                                      <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="50">50</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="ad-promo-template-title-wrapper d-flex flex-row justify-content-between d-flex align-items-center">
+                                  <h3 class="card-title mb-3 mt-5">Item Details<br><small>Double Click on row to edit.</small></h3>
+                                  <div class="card-header-action-wrapper" id="cardHeaderAction">
+                                    <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                                      <button type="button" class="button-primary button-stroked header-action-item saveRow">Save Row</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="datatable-wrapper">
+                                  <div id="adPromoItemDetailDatatable" class="datatable ag-theme-material"></div>
+                                  <div class="datatable-action-item-select">
+                                    <div class="d-flex flex-row justify-content-end align-items-center">
+                                      <span class="page-size-label">Item to Show</span>
+                                      <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="50">50</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row header-search-btn-wrapper align-items-end justify-content-center mt-3">
+                                  <div class="col-sm-12">
+                                    <div class="button-wrapper text-center">
+                                      <a href="javascript:;" class="button-primary button-stroked">Save</a>
+                                      <a href="javascript:;" class="button-primary button-search">Submit</a>
                                     </div>
                                   </div>
                                 </div>

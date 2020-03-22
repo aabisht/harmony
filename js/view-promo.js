@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var gridOption1, gridOption2, gridOption3, 
+  var gridOption1, gridOption2, gridOption3, adPromoItemSearchDatatableOption, 
     mainData = {
       data_1: [],
       data_2: [],
@@ -55,7 +55,7 @@ $(document).ready(function() {
 
   
   function gridOptionFunction(data) {
-    gridOptionsData = {
+    var gridOptionsData = {
       defaultColDef: {
         editable: true,
         resizable: true,

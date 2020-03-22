@@ -379,3 +379,23 @@ input, textarea {
   }
 }
 
+.checkbox-field {
+  margin-bottom: 1rem;
+}
+
+
+.collection {
+  > li {
+    border-bottom: 1px solid #e0e0e0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  a {
+    &.collection-item {
+      text-decoration: none;
+      color: darken($primary-color, 20%);
+    }
+  }
+}

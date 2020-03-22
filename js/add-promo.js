@@ -1,20 +1,22 @@
 $(document).ready(function() {
-    $('#adPlannerTemplates').slick({
-        infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
+    if($('#adPlannerTemplates').length>0) {
+        $('#adPlannerTemplates').slick({
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
                 }
-            }
-        ]
-    });
+            ]
+        });
+    }
 
     $('body').on('click', '.templateSelectorBtn', function(event) {
         event.preventDefault();
@@ -34,7 +36,7 @@ $(document).ready(function() {
     });
 
 
-    var gridOptions;
+    var gridOptions, adPromoItemDetailDatatableData = [], adPromoItemSearchDatatableGridData, adPromoItemDetailDatatableGridData;
 
     var columnDefs = [
         {
@@ -50,55 +52,166 @@ $(document).ready(function() {
         {headerName: "Action", field: "action", cellRenderer: 'gridAction'},
     ];
 
-    $.get("data/ad-panner-tpos-mapping.json", function(data, status){
-        gridOptions = {
+    var adPromoItemSearchDatatableColDefs = [
+      {
+        headerName: "UPC", 
+        field: "upc",
+        headerCheckboxSelection: true,
+        headerCheckboxSelectionFilteredOnly: true,
+        checkboxSelection: true,
+        minWidth: 240
+      },
+      {headerName: "Unit Size", field: "unit_size"},
+      {headerName: "Regular Retail", field: "regular_retail"},
+      {headerName: "Deal Value", field: "deal_value"},
+      {headerName: "Reg Unit Cost", field: "reg_unit_cost"},
+      {headerName: "Deal Start Date", field: "deal_start_date"},
+      {headerName: "Deal End Date", field: "deal_end_date"},
+      {headerName: "Linked Code", field: "linked_code", cellRenderer: 'linkedCode'},
+    ],
+    adPromoItemDetailDatatable = [
+        {
+            headerName: "TPOS", 
+            field: "tpos",
+            headerCheckboxSelection: true,
+            headerCheckboxSelectionFilteredOnly: true,
+            checkboxSelection: true,
+            minWidth: 240, 
+            editable: false
+          },
+          {headerName: "Department", field: "department", editable: true},
+          {headerName: "UPC", field: "upc", editable: true},
+          {headerName: "Description", field: "description", editable: true},
+          {headerName: "Unit Size", field: "unit_size", editable: true},
+          {headerName: "Ad Multiplier", field: "ad_multiplier", editable: true},
+          {headerName: "Ad Retail", field: "ad_retail", editable: true},
+          {headerName: "Regular Retail", field: "regular_retail", editable: true},
+          {headerName: "Linked Code", field: "linked_code", editable: true},
+          {headerName: "Sign Text 1", field: "sign_text_1", editable: true},
+          {headerName: "Sign Text 2", field: "sign_text_2", editable: true},
+          {headerName: "Sign Text 3", field: "sign_text_3", editable: true},
+          {headerName: "Action", field: "action", editable: false}
+    ];
+    if($('#datatableAdPlanerCustomTemplate').length > 0) {
+        $.get("data/ad-panner-tpos-mapping.json", function(data, status){
+            gridOptions = {
+                defaultColDef: {
+                    editable: false,
+                    resizable: true,
+                    sortable:true,
+                    filter: true
+                },
+                rowSelection: 'multiple',
+                columnDefs: columnDefs,
+                rowData: data,
+                pagination: true,
+                paginationPageSize: 10,
+                onRowSelected: onRowSelected,
+                onSelectionChanged: onSelectionChanged,
+                paginationNumberFormatter: function(params) {
+                    return '[' + params.value.toLocaleString() + ']';
+                },
+                components: {
+                    'gridAction': GridAction
+                },
+                onGridReady: function(params) {
+                    params.api.sizeColumnsToFit();
+                }
+            }
+
+            var gridDiv = document.querySelector('#datatableAdPlanerCustomTemplate');
+            new agGrid.Grid(gridDiv, gridOptions);  
+        });
+    }
+
+    
+    if($('#adPromoItemSearchDatatable').length > 0) {
+        $.get("data/add-promo-item-detail.json", function(data){
+            adPromoItemSearchDatatableGridData = {
+                defaultColDef: {
+                    editable: false,
+                    resizable: true,
+                    sortable:true,
+                    filter: true
+                },
+                stopEditingWhenGridLosesFocus: false,
+                columnDefs: adPromoItemSearchDatatableColDefs,
+                rowData: data,
+                pagination: true,
+                paginationPageSize: 10,
+                rowSelection: 'multiple',
+                onSelectionChanged: onSelectionChanged,
+                paginationNumberFormatter: function(params) {
+                    return '[' + params.value.toLocaleString() + ']';
+                },
+                components: {
+                'linkedCode': LinkedCode
+                },
+                onRowSelected: onRowSelected,
+                onGridReady: function(params) {
+                }
+            };
+          var adPromoItemSearchDatatableDiv = document.querySelector('#adPromoItemSearchDatatable');
+          new agGrid.Grid(adPromoItemSearchDatatableDiv, adPromoItemSearchDatatableGridData);  
+          idemDetailGridRender();
+        });
+    }
+
+    function idemDetailGridRender() {
+        adPromoItemDetailDatatableGridData = {
             defaultColDef: {
-              editable: false,
-              resizable: true,
-              sortable:true,
-              filter: true
+                editable: true,
+                resizable: true,
+                sortable:true,
+                filter: true
             },
-            rowSelection: 'multiple',
-            columnDefs: columnDefs,
-            rowData: data,
+            stopEditingWhenGridLosesFocus: false,
+            columnDefs: adPromoItemDetailDatatable,
+            rowData: adPromoItemDetailDatatableData,
+            editType: 'fullRow',
             pagination: true,
             paginationPageSize: 10,
-            onRowSelected: onRowSelected,
+            rowSelection: 'multiple',
             onSelectionChanged: onSelectionChanged,
             paginationNumberFormatter: function(params) {
                 return '[' + params.value.toLocaleString() + ']';
             },
-            components: {
-                'gridAction': GidAction
+            onRowEditingStarted: function(event){
+              var _this = this;
+              
+              $('.saveRow').css({'display': 'inline-block'});
             },
+            onRowSelected: onRowSelected,
             onGridReady: function(params) {
-                params.api.sizeColumnsToFit();
             }
-        }
-
-        var gridDiv = document.querySelector('#datatableAdPlanerCustomTemplate');
-        new agGrid.Grid(gridDiv, gridOptions);  
-    });
-
+        };
+        var adPromoItemDetailDatatableDiv = document.querySelector('#adPromoItemDetailDatatable');
+        new agGrid.Grid(adPromoItemDetailDatatableDiv, adPromoItemDetailDatatableGridData);  
+    }
+    
     function onRowSelected(event) {
-      console.log("row " + event.node.data.upc + " selected = " + event.node.selected);
+        if($(event.columnApi.columnController.columnFactory.gridOptionsWrapper.environment.eGridDiv).attr('id') === 'adPromoItemSearchDatatable') {
+            adPromoItemDetailDatatableData = adPromoItemSearchDatatableGridData.api.getSelectedRows();
+            adPromoItemDetailDatatableGridData.api.setRowData(adPromoItemDetailDatatableData);
+        }
+        // console.log(adPromoItemDetailDatatableData);
     }
 
     function onSelectionChanged(event) {
-      var rowCount = event.api.getSelectedNodes().length;
-      console.log('selection changed, ' + rowCount + ' rows selected');
-      if(rowCount > 0) {
-        $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
-      } else {
-        $('#select-row-num').html('');
-      }
+    //   var rowCount = event.api.getSelectedNodes().length;
+    //   console.log('selection changed, ' + rowCount + ' rows selected');
+    //   if(rowCount > 0) {
+    //     $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
+    //   } else {
+    //     $('#select-row-num').html('');
+    //   }
     }
 
     // cell renderer class
-    function GidAction() {}
+    function GridAction() {}
 
     // init method gets the details of the cell to be rendere
-    GidAction.prototype.init = function(params) {
+    GridAction.prototype.init = function(params) {
         this.eGui = document.createElement('div');
         this.eGui.classList.add('table-action-wrapper');
         this.eGui.classList.add('button-wrapper');
@@ -107,7 +220,31 @@ $(document).ready(function() {
         this.eGui.innerHTML = html;
     };
 
-    GidAction.prototype.getGui = function() {
+    GridAction.prototype.getGui = function() {
         return this.eGui;
     };
+
+    // cell renderer class
+    function LinkedCode() {}
+
+    // init method gets the details of the cell to be rendere
+    LinkedCode.prototype.init = function(params) {
+        this.eGui = document.createElement('div');
+        this.eGui.classList.add('table-action-wrapper');
+        this.eGui.classList.add('button-wrapper');
+        var html = '';
+        html = '<a href="javascript:;" title="Edit" class="button-primary button-stroked" >Link Code</a>';
+        this.eGui.innerHTML = html;
+    };
+
+    LinkedCode.prototype.getGui = function() {
+        return this.eGui;
+    };
+
+    $('body').on('click', '.saveRow', function(event) {
+        event.preventDefault();
+        adPromoItemDetailDatatableGridData.api.stopEditing();
+        $(this).hide();
+    });
+    
 });

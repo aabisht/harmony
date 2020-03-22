@@ -92,3 +92,37 @@
         border-left: 1px solid $datatable-header-bg-color;
     }
 }
+
+.add-promo-tabs-search-wrapper {
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 24px;
+}
+
+.ad-promo-item-data-wrapper {
+    .ad-promo-template-title-wrapper,
+    .header-search-input-wrapper,
+    .header-search-btn-wrapper {
+        margin-left: -24px;
+    }
+
+    .header-search-input-wrapper,
+    .header-search-btn-wrapper {
+        margin-right: -24px;
+    }
+}
+
+.ad-promo-item-data-wrapper {
+    .card-tab-wrapper {
+        .tab-label-wrapper {
+            box-shadow: none;
+            border-bottom: 1px solid $datatable-header-bg-color;
+        }
+        
+        .datatable-wrapper {
+            .datatable {
+                border-left: 1px solid $datatable-header-bg-color;
+            }
+        }
+    }
+}
