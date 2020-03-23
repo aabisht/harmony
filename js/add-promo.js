@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    if($('#adPlannerTemplates').length>0) {
+    if($('#adPlannerTemplates').length > 0) {
         $('#adPlannerTemplates').slick({
             infinite: false,
             slidesToShow: 3,
@@ -17,7 +17,7 @@ $(document).ready(function() {
                 }
             ]
         });
-    }
+    };
 
     $('body').on('click', '.templateSelectorBtn', function(event) {
         event.preventDefault();
