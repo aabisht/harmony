@@ -9,7 +9,6 @@
     border: 0 none;
     outline: none;
     padding: $grid-gutter-width/2;
-    width: 33.33%;
 
     > .cell-wrapper {
         border: 1px solid $ad-planer-template-border-color;
@@ -125,17 +124,5 @@
                 border-left: 1px solid $datatable-header-bg-color;
             }
         }
-    }
-}
-
-#adPlannerTemplates {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease;
-    -webkit-transition: opacity 1s ease;
-
-    &.slick-initialized {
-        visibility: visible;
-        opacity: 1;    
     }
 }
