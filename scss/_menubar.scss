@@ -36,13 +36,26 @@
     .menu-wrapper {
       margin-left: -$grid-gutter-width/2;
       margin-right: -$grid-gutter-width/2;
-      height: calc(100vh - 82px);
+      height: calc(100vh - 142px);
       overflow: auto;
     }
   
     .left-menu-logo,
     .left-sidebar-menu-wrapper .label {
         display: none;
+    }
+
+    .select-wrapper {
+        input {
+            &.select-dropdown {
+                color: $left-menu-menu-color;
+                border-bottom-color: $left-menu-menu-color;
+            }
+        }
+
+        .caret {
+            fill: rgba($left-menu-menu-color, 0.87);
+        }
     }
 }
   
