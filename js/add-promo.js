@@ -1,23 +1,21 @@
 $(document).ready(function() {
-    if($('#adPlannerTemplates').length > 0) {
-        $('#adPlannerTemplates').slick({
-            infinite: false,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            dots: true,
-            arrows: false,
-            lazyLoad: 'ondemand',
-            responsive: [
-                {
-                    breakpoint: 991,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
+    var adPalnerTamplate = $('#adPlannerTemplates').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        lazyLoad: 'ondemand',
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
                 }
-            ]
-        });
-    };
+            }
+        ]
+    });
 
     $('body').on('click', '.templateSelectorBtn', function(event) {
         event.preventDefault();
