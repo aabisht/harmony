@@ -6,6 +6,7 @@ $(document).ready(function() {
             slidesToScroll: 1,
             dots: true,
             arrows: false,
+            lazyLoad: 'ondemand',
             responsive: [
                 {
                     breakpoint: 991,
@@ -36,7 +37,7 @@ $(document).ready(function() {
     });
 
 
-    var gridOptions, adPromoItemDetailDatatableData = [], adPromoItemSearchDatatableGridData, adPromoItemDetailDatatableGridData;
+    var gridOptions, adPromoItemDetailDatatableData = [], adPromoItemSearchDatatableGridData, adPromoItemDetailDatatableGridData, gridOptionsPriorAd;
 
     var columnDefs = [
         {
@@ -91,7 +92,23 @@ $(document).ready(function() {
           {headerName: "Sign Text 2", field: "sign_text_2", editable: true},
           {headerName: "Sign Text 3", field: "sign_text_3", editable: true},
           {headerName: "Action", field: "action", editable: false}
+    ],
+    colDefsPriorAd = [
+        {
+            headerName: "TPOS", 
+            field: "tpos",
+            minWidth: 240,
+            cellRenderer: 'agGroupCellRenderer'
+        },
+        {headerName: "Department", field: "department"},
+        {headerName: "Ad Fee", field: "ad_fee"},
+        {headerName: "Due Date", field: "due_date"},
+        {headerName: "Sign Text 1", field: "sign_text_1"},
+        {headerName: "Sign Text 2", field: "sign_text_2"},
+        {headerName: "Sign Text 3", field: "sign_text_3"},
+        {headerName: "Action", field: "action", cellRenderer: 'priorAdAction'},
     ];
+
     if($('#datatableAdPlanerCustomTemplate').length > 0) {
         $.get("data/ad-panner-tpos-mapping.json", function(data, status){
             gridOptions = {
@@ -157,6 +174,47 @@ $(document).ready(function() {
         });
     }
 
+    if($('#adPromoItemPriorAdsDatatable').length > 0) {
+        $.get("data/add-promo-prior-item-detail.json", function(data){
+            gridOptionsPriorAd = {
+                defaultColDef: {
+                    editable: false,
+                    resizable: true,
+                    sortable:true,
+                    filter: true
+                },
+                columnDefs: colDefsPriorAd,
+                rowData: data,
+                pagination: true,
+                paginationPageSize: 10,
+                masterDetail: true,
+                suppressContextMenu:true,
+                components: {
+                'priorAdAction': PriorAdAction
+                },
+                detailCellRendererParams: {
+                    detailGridOptions: {
+                        columnDefs: [
+                            {headerName: "UPC", field: "upc"},
+                            {headerName: "Description", field: "description"},
+                            {headerName: "Unit Size", field: "unit_size"},
+                            {headerName: "Ad Multiplier", field: "ad_multiplier"},
+                            {headerName: "Ad Retail", field: "ad_retail"},
+                            {headerName: "Regular Retail", field: "regular_retail"},
+                            {headerName: "Linked Code", field: "linked_code"},
+                        ],
+                    },
+                    getDetailRowData: function(params) {
+                        params.successCallback(params.data.item_details);
+                    }
+                }
+            };
+
+            var gridDivPriorAd = document.querySelector('#adPromoItemPriorAdsDatatable');
+            new agGrid.Grid(gridDivPriorAd, gridOptionsPriorAd);   
+        });
+    }
+
     function idemDetailGridRender() {
         adPromoItemDetailDatatableGridData = {
             defaultColDef: {
@@ -194,7 +252,6 @@ $(document).ready(function() {
             adPromoItemDetailDatatableData = adPromoItemSearchDatatableGridData.api.getSelectedRows();
             adPromoItemDetailDatatableGridData.api.setRowData(adPromoItemDetailDatatableData);
         }
-        // console.log(adPromoItemDetailDatatableData);
     }
 
     function onSelectionChanged(event) {
@@ -238,6 +295,33 @@ $(document).ready(function() {
     };
 
     LinkedCode.prototype.getGui = function() {
+        return this.eGui;
+    };
+
+    $('body').on('click', '.saveRow', function(event) {
+        event.preventDefault();
+        adPromoItemDetailDatatableGridData.api.stopEditing();
+        $(this).hide();
+    });
+    
+    function PriorAdAction() {}
+
+    // init method gets the details of the cell to be rendere
+    PriorAdAction.prototype.init = function(params) {
+        this.eGui = document.createElement('div');
+        this.eGui.classList.add('table-action-wrapper');
+        this.eGui.classList.add('button-wrapper');
+        var status = Math.floor(Math.random() * 2) + 1;
+        var html = '';
+        if(status === 1) {
+            html = '<a href="javascript:;" title="Approve" class="button-primary button-stroked" >Approve</a><a href="javascript:;" title="Reject" class="button-primary button-stroked" >Reject</a>';
+        } else {
+            html = '<a href="javascript:;" title="Re-open" class="button-primary button-stroked" >Re-open</a>';
+        }
+        this.eGui.innerHTML = html;
+    };
+
+    PriorAdAction.prototype.getGui = function() {
         return this.eGui;
     };
 
