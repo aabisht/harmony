@@ -104,7 +104,11 @@ $(document).ready(function() {
     this.eGui = document.createElement('div');
     this.eGui.classList.add('button-wrapper');
     this.eGui.classList.add('table-action-wrapper');
-    this.eGui.innerHTML = '<a href="javascript:;" title="View Ad" class="button-primary button-stroked">View Ad</a>';
+    if(window.location.pathname === '/add-promo-template-selection.html') { 
+      this.eGui.innerHTML = '<a href="/add-promo-custom-template.html" title="Select" class="button-primary button-stroked">Select</a>';
+    } else {
+      this.eGui.innerHTML = '<a href="/add-promo-custom-template.html" title="View Ad" class="button-primary button-stroked">View Ad</a>';
+    }
   };
 
   GridAction.prototype.getGui = function() {
