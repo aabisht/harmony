@@ -92,7 +92,7 @@ $(document).ready(function() {
           {headerName: "Sign Text 1", field: "sign_text_1", editable: true},
           {headerName: "Sign Text 2", field: "sign_text_2", editable: true},
           {headerName: "Sign Text 3", field: "sign_text_3", editable: true},
-          {headerName: "Action", field: "action", editable: false}
+          {headerName: "Action", field: "action", editable: false, cellRenderer: 'priorAdAction'}
     ],
     colDefsManageTPOS = [
         {
@@ -235,7 +235,7 @@ $(document).ready(function() {
                 columnDefs: colDefsManageTPOS,
                 rowData: data,
                 pagination: true,
-                paginationPageSize: 10,
+                paginationPageSize: 50,
                 masterDetail: true,
                 suppressContextMenu:true,
                 components: {
@@ -290,7 +290,10 @@ $(document).ready(function() {
             },
             onRowSelected: onRowSelected,
             onGridReady: function(params) {
-            }
+            },
+            components: {
+                'priorAdAction': PriorAdAction
+            },
         };
         var adPromoItemDetailDatatableDiv = document.querySelector('#adPromoItemDetailDatatable');
         new agGrid.Grid(adPromoItemDetailDatatableDiv, adPromoItemDetailDatatableGridData);  
@@ -381,7 +384,7 @@ $(document).ready(function() {
         this.eGui = document.createElement('div');
         this.eGui.classList.add('table-action-wrapper');
         this.eGui.classList.add('button-wrapper');
-        html = '<a href="javascript:;" title="Action" class="button-primary button-stroked" >Action</a>';
+        html = '<a href="/manage-tpos.html" title="Manage TPOS" class="button-primary button-stroked" >Manage TPOS</a>';
         this.eGui.innerHTML = html;
     };
 
