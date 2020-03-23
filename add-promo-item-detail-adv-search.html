@@ -96,11 +96,15 @@
                               <li><a href="javascript:;" class="collection-item">Sign Text</a></li>
                               <li><a href="javascript:;" class="collection-item">Deal Text </a></li>
                             </ul>
+                            <div class="button-wrapper text-center">
+                              <a href="javascript:;" class="button-primary button-stroked">Save</a>
+                              <a href="javascript:;" class="button-primary button-search">Submit</a>
+                            </div>
                           </div>
                         </div>
                       </div>
                       <div class="col-lg-9 col-sm-8">
-                        <div class="cell-wrapper ad-promo-template-table-wrapper">
+                        <div class="cell-wrapper ad-promo-item-data-wrapper">
                           <div class="card-tab-wrapper tab-wrapper add-promo-tabs-wrapper">
                             <div class="tab-label-wrapper">
                               <ul class="tabs">
@@ -112,13 +116,13 @@
                               <div class="add-promo-tabs-search-wrapper">
                                 <div class="ad-promo-template-title-wrapper d-flex flex-row justify-content-between d-flex align-items-center mb-4">
                                   <h3 class="card-title mb-0">Search</h3>
-                                  <div class="header-search-dropdown-wrapper">
+                                  <!-- <div class="header-search-dropdown-wrapper">
                                     <a href="javscript:;" class="button-primary button-stroked dropdown-trigger save-search-trigger" data-target="savedSearchWrapper">Saved Search <i class="fas fa-caret-down"></i></a><ul id="savedSearchWrapper" class="dropdown-content saved-search-wrapper" tabindex="0" style="">
                                       <li class="header-saved-search-item" tabindex="0"><a href="javscript:;">Grocery Items</a> <a href="javascript:;" class="removed-saved-search-modal modal-trigger" data-target="deleteSavedSearchModal" data-item="1" data-name="Grocery Items"><i class="far fa-trash-alt"></i></a></li>
                                       <li class="header-saved-search-item" tabindex="0"><a href="javscript:;">Vendor X Items</a> <a href="javascript:;" class="removed-saved-search-modal modal-trigger" data-target="deleteSavedSearchModal" data-item="2" data-name="Vendor X Items"><i class="far fa-trash-alt"></i></a></li>
                                       <li class="header-saved-search-item" tabindex="0"><a href="javscript:;">Organic Items </a> <a href="javascript:;" class="removed-saved-search-modal modal-trigger" data-target="deleteSavedSearchModal" data-item="3" data-name="Organic Items"><i class="far fa-trash-alt"></i></a></li>
                                     </ul>
-                                  </div>
+                                  </div> -->
                                 </div>
                                 <div class="row header-search-input-wrapper align-items-start justify-content-center">
                                   <div class="col-md-2">
@@ -236,7 +240,7 @@
                                   <div class="col-sm-12">
                                     <div class="cell-wrapper d-flex flex-row justify-content-between align-items-center">
                                       <div class="button-wrapper text-center">
-                                        <a href="#saveSearchModal" class="button-primary button-adv-seach modal-trigger">Save Search</a>
+                                        <!-- <a href="#saveSearchModal" class="button-primary button-adv-seach modal-trigger">Save Search</a> -->
                                       </div>
                                       <div class="button-wrapper text-center">
                                         <a href="#advSeachModal" class="button-primary button-stroked button-adv-seach modal-trigger">Advance Search</a>
@@ -245,10 +249,48 @@
                                     </div>
                                   </div>
                                 </div>
+                                <div class="ad-promo-template-title-wrapper d-flex flex-row justify-content-between d-flex align-items-center">
+                                  <h3 class="card-title mb-3">Item Details<br><small>Double Click on row to edit.</small></h3>
+                                  <div class="card-header-action-wrapper" id="cardHeaderAction">
+                                    <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                                      <button type="button" class="button-primary button-stroked header-action-item saveRow">Save Row</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="datatable-wrapper">
+                                  <div id="adPromoItemDetailDatatable" class="datatable ag-theme-material"></div>
+                                  <div class="datatable-action-item-select">
+                                    <div class="d-flex flex-row justify-content-end align-items-center">
+                                      <span class="page-size-label">Item to Show</span>
+                                      <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="50">50</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                             <div class="card-tab-content-wrapper" id="tabPriorAds">
-                              Prio Ads
+                              <div class="add-promo-tabs-search-wrapper">
+                                <div class="ad-promo-template-title-wrapper d-flex flex-row justify-content-between d-flex align-items-center">
+                                  <h3 class="card-title mb-3">Prior Ads</h3>
+                                </div>
+                                <div class="datatable-wrapper">
+                                  <div id="adPromoItemPriorAdsDatatable" class="datatable ag-theme-material"></div>
+                                  <div class="datatable-action-item-select">
+                                    <div class="d-flex flex-row justify-content-end align-items-center">
+                                      <span class="page-size-label">Item to Show</span>
+                                      <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="50">50</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>

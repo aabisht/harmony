@@ -66,52 +66,20 @@
                 <div class="card-content">
                   <div class="card-header d-flex flex-row justify-content-between align-items-center">
                     <div class="card-title-wrapper">
-                      <h3 class="card-title">AD Planner - Template Assignment</h3>
-                      <h4 class="card-sub-title">Christmas Promo Ad - 23rd Dec 2020 to 5th Jan 2021</h4>
+                      <h3 class="card-title">AD Planner - Manage TPOS</h3>
                     </div>
                   </div>
-                  <div class="ad-promo-template-content-wrapper">
-                    <div class="row">
-                      <div class="col-lg-3 col-sm-4">
-                        <div class="cell-wrapper">
-                          <div class="card-header d-flex flex-row justify-content-start align-items-center">
-                            <div class="card-title-wrapper">
-                              <h3 class="card-title mb-0">
-                                TPOS Template
-                              </h3>
-                            </div>
-                          </div>
-                          <div class="ad-promo-template-img-wrapper">
-                            <img src="./assets/img/add-promo-custom-template.jpg" alt="Custom Template" class="img-fluid">
-                          </div>
-                          <div class="buttton-wrapper text-center">
-                            <button class="button-primary">Create</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-9 col-sm-8">
-                        <div class="cell-wrapper ad-promo-template-table-wrapper">
-                          <div class="card-header d-flex flex-row justify-content-start align-items-center">
-                            <div class="card-title-wrapper">
-                              <h3 class="card-title mb-0">
-                                TPOS Assignment <br> <small>Double Click on row to edit.</small>
-                                <span id="select-row-num"></span>
-                              </h3>
-                            </div>
-                          </div>
-                          <div class="datatable-wrapper">
-                            <div id="datatableAdPlanerCustomTemplate" class="datatable ag-theme-material"></div>
-                            <div class="datatable-action-item-select">
-                              <div class="d-flex flex-row justify-content-end align-items-center">
-                                <span class="page-size-label">Item to Show</span>
-                                <select onchange="onPageSizeChanged()" id="page-size">
-                                  <option value="10">10</option>
-                                  <option value="20">20</option>
-                                  <option value="50">50</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
+                  <div class="card-tab-content-wrapper">
+                    <div class="datatable-wrapper">
+                      <div id="adPromoItemManageTPOS" class="datatable ag-theme-material"></div>
+                      <div class="datatable-action-item-select">
+                        <div class="d-flex flex-row justify-content-end align-items-center">
+                          <span class="page-size-label">Item to Show</span>
+                          <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                          </select>
                         </div>
                       </div>
                     </div>
@@ -134,7 +102,6 @@
   <script src="js/vendor/materialize.min.js"></script>
   <script src="js/vendor/datepicker.min.js"></script>
   <script src="js/vendor/datepicker.en.js"></script>
-  <script src="js/vendor/slick.min.js"></script>
 
   <script src="js/main.js"></script>
 

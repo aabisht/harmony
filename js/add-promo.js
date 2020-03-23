@@ -46,11 +46,12 @@ $(document).ready(function() {
             headerCheckboxSelection: true,
             headerCheckboxSelectionFilteredOnly: true,
             checkboxSelection: true,
-            minWidth: 200
+            minWidth: 200, 
+            editable: false
         },
-        {headerName: "Department", field: "department"},
-        {headerName: "Due Date", field: "due_date"},
-        {headerName: "Action", field: "action", cellRenderer: 'gridAction'},
+        {headerName: "Department", field: "department", editable: true},
+        {headerName: "Due Date", field: "due_date", editable: true},
+        {headerName: "Action", field: "action", cellRenderer: 'gridAction', editable: false},
     ];
 
     var adPromoItemSearchDatatableColDefs = [
@@ -93,7 +94,7 @@ $(document).ready(function() {
           {headerName: "Sign Text 3", field: "sign_text_3", editable: true},
           {headerName: "Action", field: "action", editable: false}
     ],
-    colDefsPriorAd = [
+    colDefsManageTPOS = [
         {
             headerName: "TPOS", 
             field: "tpos",
@@ -106,14 +107,62 @@ $(document).ready(function() {
         {headerName: "Sign Text 1", field: "sign_text_1"},
         {headerName: "Sign Text 2", field: "sign_text_2"},
         {headerName: "Sign Text 3", field: "sign_text_3"},
+        {headerName: "Action", field: "action", cellRenderer: 'manageTPOSAction'},
+    ],
+    priorAdcolDefs = [
+        {
+            headerName: "Ad", 
+            field: "tpos",
+            minWidth: 240,
+            headerCheckboxSelection: true,
+            headerCheckboxSelectionFilteredOnly: true,
+            checkboxSelection: true,
+        },
+        {headerName: "tpos", field: "tpos"},
+        {headerName: "UPC", field: "upc"},
+        {headerName: "Description", field: "description"},
+        {headerName: "Department", field: "department"},
+        {headerName: "Start Date", field: "start_date"},
+        {headerName: "End Date", field: "end_date"},
+        {headerName: "Unit Size", field: "unit_size"},
+        {headerName: "AD Multiplier", field: "ad_multiplier"},
+        {headerName: "AD Retail", field: "ad_retail"},
+        {headerName: "Regular Retail", field: "regular_retail"},
+        {headerName: "Linked Code", field: "linked_code"},
+        {headerName: "Sign text 1", field: "sign_text_1"},
+        {headerName: "Sign text 1", field: "linked_code"},
+        {headerName: "Sign text 1", field: "linked_code"},
         {headerName: "Action", field: "action", cellRenderer: 'priorAdAction'},
     ];
+
+    if($('#adPromoItemPriorAdsDatatable').length > 0) {
+        $.get("data/ad-promo-prior-ad.json", function(data, status){
+            gridOptionsPriorAd = {
+                defaultColDef: {
+                    resizable: true,
+                    sortable:true,
+                    filter: true
+                },
+                rowSelection: 'multiple',
+                columnDefs: priorAdcolDefs,
+                rowData: data,
+                pagination: true,
+                paginationPageSize: 10,
+                components: {
+                    'priorAdAction': PriorAdAction
+                },
+            };
+
+            var gridDiv = document.querySelector('#adPromoItemPriorAdsDatatable');
+            new agGrid.Grid(gridDiv, gridOptionsPriorAd);  
+        });
+    }
 
     if($('#datatableAdPlanerCustomTemplate').length > 0) {
         $.get("data/ad-panner-tpos-mapping.json", function(data, status){
             gridOptions = {
                 defaultColDef: {
-                    editable: false,
+                    editable: true,
                     resizable: true,
                     sortable:true,
                     filter: true
@@ -123,6 +172,7 @@ $(document).ready(function() {
                 rowData: data,
                 pagination: true,
                 paginationPageSize: 10,
+                editType: 'fullRow',
                 onRowSelected: onRowSelected,
                 onSelectionChanged: onSelectionChanged,
                 paginationNumberFormatter: function(params) {
@@ -140,9 +190,8 @@ $(document).ready(function() {
             new agGrid.Grid(gridDiv, gridOptions);  
         });
     }
-
     
-    if($('#adPromoItemSearchDatatable').length > 0) {
+    if($('#adPromoItemSearchDatatable').length > 0 || $('#adPromoItemDetailDatatable').length>  0) {
         $.get("data/add-promo-item-detail.json", function(data){
             adPromoItemSearchDatatableGridData = {
                 defaultColDef: {
@@ -174,23 +223,23 @@ $(document).ready(function() {
         });
     }
 
-    if($('#adPromoItemPriorAdsDatatable').length > 0) {
-        $.get("data/add-promo-prior-item-detail.json", function(data){
-            gridOptionsPriorAd = {
+    if($('#adPromoItemManageTPOS').length > 0) {
+        $.get("data/add-promo-manage-tpos-item-detail.json", function(data){
+            gridOptionsManageTPOS = {
                 defaultColDef: {
                     editable: false,
                     resizable: true,
                     sortable:true,
                     filter: true
                 },
-                columnDefs: colDefsPriorAd,
+                columnDefs: colDefsManageTPOS,
                 rowData: data,
                 pagination: true,
                 paginationPageSize: 10,
                 masterDetail: true,
                 suppressContextMenu:true,
                 components: {
-                'priorAdAction': PriorAdAction
+                'manageTPOSAction': manageTPOSAction
                 },
                 detailCellRendererParams: {
                     detailGridOptions: {
@@ -210,8 +259,8 @@ $(document).ready(function() {
                 }
             };
 
-            var gridDivPriorAd = document.querySelector('#adPromoItemPriorAdsDatatable');
-            new agGrid.Grid(gridDivPriorAd, gridOptionsPriorAd);   
+            var gridDivManageTPOS = document.querySelector('#adPromoItemManageTPOS');
+            new agGrid.Grid(gridDivManageTPOS, gridOptionsManageTPOS);   
         });
     }
 
@@ -304,10 +353,10 @@ $(document).ready(function() {
         $(this).hide();
     });
     
-    function PriorAdAction() {}
+    function manageTPOSAction() {}
 
     // init method gets the details of the cell to be rendere
-    PriorAdAction.prototype.init = function(params) {
+    manageTPOSAction.prototype.init = function(params) {
         this.eGui = document.createElement('div');
         this.eGui.classList.add('table-action-wrapper');
         this.eGui.classList.add('button-wrapper');
@@ -321,6 +370,21 @@ $(document).ready(function() {
         this.eGui.innerHTML = html;
     };
 
+    manageTPOSAction.prototype.getGui = function() {
+        return this.eGui;
+    };
+
+    function PriorAdAction() {}
+
+    // init method gets the details of the cell to be rendere
+    PriorAdAction.prototype.init = function(params) {
+        this.eGui = document.createElement('div');
+        this.eGui.classList.add('table-action-wrapper');
+        this.eGui.classList.add('button-wrapper');
+        html = '<a href="javascript:;" title="Action" class="button-primary button-stroked" >Action</a>';
+        this.eGui.innerHTML = html;
+    };
+
     PriorAdAction.prototype.getGui = function() {
         return this.eGui;
     };
@@ -329,6 +393,16 @@ $(document).ready(function() {
         event.preventDefault();
         adPromoItemDetailDatatableGridData.api.stopEditing();
         $(this).hide();
+    });
+
+    $('body').on('change', '#showEventInput', function(event) {
+        event.preventDefault();
+        // debugger;
+        if($(this).prop('checked') === true) {
+            $('.ad-panner-ad-search-input').hide();
+        } else {
+            $('.ad-panner-ad-search-input').show();
+        }
     });
     
 });
