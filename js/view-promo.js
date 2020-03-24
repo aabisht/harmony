@@ -107,7 +107,7 @@ $(document).ready(function() {
     if(window.location.pathname === '/add-promo-template-selection.html') { 
       this.eGui.innerHTML = '<a href="/add-promo-custom-template.html" title="Select" class="button-primary button-stroked">Select</a>';
     } else {
-      this.eGui.innerHTML = '<a href="/add-promo-custom-template.html" title="View Ad" class="button-primary button-stroked">View Ad</a>';
+      this.eGui.innerHTML = '<a href="/manage-tpos.html" title="View Ad" class="button-primary button-stroked">View Ad</a>';
     }
   };
 

@@ -11,6 +11,10 @@ $text-color-secondary: $secondary-color !default;
 
 $error-color: #f44336 !default;
 
+$approve-text-color: darken($primary-color, 30%) !default;
+$reject-text-color: $error-color !default;
+$draft-text-color: $primary-color !default;
+
 $mat-c-green: (
   50: lighten($primary-color, 10%),
   100: lighten($primary-color, 5%),

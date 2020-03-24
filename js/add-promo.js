@@ -43,9 +43,6 @@ $(document).ready(function() {
         {
             headerName: "TPOS", 
             field: "tpos",
-            headerCheckboxSelection: true,
-            headerCheckboxSelectionFilteredOnly: true,
-            checkboxSelection: true,
             minWidth: 200, 
             editable: false
         },
@@ -81,7 +78,7 @@ $(document).ready(function() {
             minWidth: 240, 
             editable: false
           },
-          {headerName: "Department", field: "department", editable: true},
+        //   {headerName: "Department", field: "department", editable: true},
           {headerName: "UPC", field: "upc", editable: true},
           {headerName: "Description", field: "description", editable: true},
           {headerName: "Unit Size", field: "unit_size", editable: true},
@@ -110,15 +107,15 @@ $(document).ready(function() {
         {headerName: "Action", field: "action", cellRenderer: 'manageTPOSAction'},
     ],
     priorAdcolDefs = [
-        {
-            headerName: "Ad", 
-            field: "tpos",
-            minWidth: 240,
-            headerCheckboxSelection: true,
-            headerCheckboxSelectionFilteredOnly: true,
-            checkboxSelection: true,
-        },
-        {headerName: "tpos", field: "tpos"},
+        // {
+        //     headerName: "Ad", 
+        //     field: "ad",
+        //     minWidth: 240,
+        //     headerCheckboxSelection: true,
+        //     headerCheckboxSelectionFilteredOnly: true,
+        //     checkboxSelection: true,
+        // },
+        {headerName: "TPOS", field: "tpos", minWidth: 240, headerCheckboxSelection: true, headerCheckboxSelectionFilteredOnly: true, checkboxSelection: true,},
         {headerName: "UPC", field: "upc"},
         {headerName: "Description", field: "description"},
         {headerName: "Department", field: "department"},
@@ -132,10 +129,10 @@ $(document).ready(function() {
         {headerName: "Sign text 1", field: "sign_text_1"},
         {headerName: "Sign text 1", field: "linked_code"},
         {headerName: "Sign text 1", field: "linked_code"},
-        {headerName: "Action", field: "action", cellRenderer: 'priorAdAction'},
+        // {headerName: "Action", field: "action", cellRenderer: 'priorAdAction'},
     ];
 
-    if($('#adPromoItemPriorAdsDatatable').length > 0) {
+    if($('#adPromoItemPriorAdsDatatable1').length > 0 || $('#adPromoItemPriorAdsDatatable2').length > 0 || $('#adPromoItemPriorAdsDatatable3').length > 0) {
         $.get("data/ad-promo-prior-ad.json", function(data, status){
             gridOptionsPriorAd = {
                 defaultColDef: {
@@ -153,8 +150,13 @@ $(document).ready(function() {
                 },
             };
 
-            var gridDiv = document.querySelector('#adPromoItemPriorAdsDatatable');
-            new agGrid.Grid(gridDiv, gridOptionsPriorAd);  
+            var gridDiv1 = document.querySelector('#adPromoItemPriorAdsDatatable1'),
+                gridDiv2 = document.querySelector('#adPromoItemPriorAdsDatatable2'),
+                gridDiv3 = document.querySelector('#adPromoItemPriorAdsDatatable3');
+
+            new agGrid.Grid(gridDiv1, gridOptionsPriorAd);
+            new agGrid.Grid(gridDiv2, gridOptionsPriorAd);
+            new agGrid.Grid(gridDiv3, gridOptionsPriorAd);  
         });
     }
 
@@ -167,7 +169,6 @@ $(document).ready(function() {
                     sortable:true,
                     filter: true
                 },
-                rowSelection: 'multiple',
                 columnDefs: columnDefs,
                 rowData: data,
                 pagination: true,
@@ -183,8 +184,11 @@ $(document).ready(function() {
                 },
                 onGridReady: function(params) {
                     params.api.sizeColumnsToFit();
+                },
+                onRowValueChanged: function(event) {
+                    M.toast({html: '<strong><i>'+ event.data.tpos +'</i></strong>&nbsp;value update.'});
                 }
-            }
+            };
 
             var gridDiv = document.querySelector('#datatableAdPlanerCustomTemplate');
             new agGrid.Grid(gridDiv, gridOptions);  
@@ -325,7 +329,7 @@ $(document).ready(function() {
         this.eGui.classList.add('table-action-wrapper');
         this.eGui.classList.add('button-wrapper');
         var html = '';
-        html = '<a href="/add-promo-item-detail.html" title="Edit" class="button-primary button-stroked" ><i class="far fa-edit"></i></a><a href="javascript:;" title="Save" class="button-primary button-stroked" ><i class="far fa-save"></i></a>';
+        html = '<a href="/add-promo-item-detail.html" title="Edit" class="button-primary button-stroked" ><i class="far fa-edit"></i></a>';
         this.eGui.innerHTML = html;
     };
 
@@ -406,6 +410,12 @@ $(document).ready(function() {
         } else {
             $('.ad-panner-ad-search-input').show();
         }
+    });
+
+    $('body').on('click', '.tposAssinmentSave', function(event) {
+        event.preventDefault();
+        gridOptions.api.stopEditing();
+        M.toast({html: '<strong><i>'+ $(this).attr('data-tpos') +'</i></strong>&nbsp;value update.'})
     });
     
 });

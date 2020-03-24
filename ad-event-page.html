@@ -1,0 +1,228 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Event 1 | Bristol Farms</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+  <link href="./css/vendor/fontawesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/vendor/datepicker.min.css">
+  <link rel="stylesheet" href="./css/vendor/materialize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="left-menu-fixed">
+
+  <div class="body-container-wrapper">
+    <div class="body-wrapper">
+
+      <!-- Header -->
+      <header class="header-container">
+        <div class="header-container-wrapper">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-10 header-left-wrapper">
+                <div class="cell-wrapper">
+                  <div class="header-title-nav-wrapper">
+                    <div class="title">
+                      <h3>Event 1</h3>
+                      <div aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="/">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Event 1</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 header-right-wrapper text-right">
+                <div class="cell-wrapper">
+                  <div id="headerDropdownMenu"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Left Menu -->
+      <div class="left-menu-wrapper"></div>
+
+      <!-- Main Body Content -->
+      <div class="main-body-content-wrapper">
+        <div class="main-body-content-container">
+          <div class="main-body-data-wrapper">
+            <div class="container-fluid">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-header d-flex flex-row justify-content-between align-items-center">
+                    <div class="card-title-wrapper">
+                      <h3 class="card-title">Event 1</h3>
+                      <h4 class="card-sub-title">[01-01-2020 - 01-05-2020] <strong class="draft">Draft</strong></h4>
+                    </div>
+                    <div class="card-header-action-wrapper" id="cardHeaderAction">
+                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                        <button type="button" class="button-primary header-action-item">Approve</button>
+                        <button type="button" class="button-primary button-stroked header-action-item">Reject</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="datatable-wrapper">
+                    <div id="adEventDatatable" class="datatable ag-theme-material"></div>
+                    <div class="datatable-action-item-select">
+                      <div class="d-flex flex-row justify-content-end align-items-center">
+                        <span class="page-size-label">Item to Show</span>
+                        <select onchange="onPageSizeChanged()" id="page-size">
+                          <option value="10">10</option>
+                          <option value="20" selected>20</option>
+                          <option value="50">50</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="js/vendor/jquery-3.4.1.min.js"></script>
+  <script src="js/vendor/ag-grid-enterprise.min.js"></script>
+  <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/vendor/datepicker.min.js"></script>
+  <script src="js/vendor/datepicker.en.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    var columnDefs = [
+    {
+      headerName: "Ad Name", 
+      field: "ad_name",
+      // headerCheckboxSelection: true,
+      // headerCheckboxSelectionFilteredOnly: true,
+      // checkboxSelection: true,
+      minWidth: 240
+    },
+    // {headerName: "Department", field: "department", editable: true},
+    {headerName: "Start Date", field: "start_date", editable: true},
+    {headerName: "End Date", field: "end_date", editable: true},
+    {headerName: "Deadline", field: "deadline", editable: true},
+    {headerName: "Status", field: "status", editable: true},
+    {headerName: "", field: "action", editable: false, cellRenderer: 'gridAction'}
+  ], data_1 = [], gridOption1;
+
+  function gridOptionFunction(data) {
+    var gridOptionsData = {
+      defaultColDef: {
+        editable: true,
+        resizable: true,
+        sortable:true,
+        filter: true
+      },
+      stopEditingWhenGridLosesFocus: false,
+      columnDefs: columnDefs,
+      rowData: data,
+      editType: 'fullRow',
+      pagination: true,
+      paginationPageSize: 20,
+      onSelectionChanged: onSelectionChanged,
+      paginationNumberFormatter: function(params) {
+          return '[' + params.value.toLocaleString() + ']';
+      },
+      components: {
+        'gridAction': GridAction
+      },
+      onRowEditingStarted: function(event){
+        if(event.data.event_name === 'Event 1') {
+          $('.saveRow[data-grid="grid1"]').css({'display': 'inline-block'});
+        } else if(event.data.event_name === 'Event 2') {
+          $('.saveRow[data-grid="grid2"]').css({'display': 'inline-block'});
+        } else if(event.data.event_name === 'Event 3') {
+          $('.saveRow[data-grid="grid3"]').css({'display': 'inline-block'});
+        }
+      },
+      onGridReady: function(params) {
+          params.api.sizeColumnsToFit();
+      },
+      onRowValueChanged: function(event) {
+        M.toast({html: '<strong>'+ event.data.event_name + '</strong>&nbsp; tab with add name &nbsp;<strong class="text-capitalize"><i>' + event.data.ad_name + '</i></strong>&nbsp; updated.'});
+      }
+    };
+
+    return gridOptionsData;
+  };
+
+  // cell renderer class
+  function GridAction() {}
+
+  // init method gets the details of the cell to be rendere
+  GridAction.prototype.init = function(params) {
+    // debugger;
+    this.eGui = document.createElement('div');
+    this.eGui.classList.add('button-wrapper');
+    this.eGui.classList.add('table-action-wrapper');
+    this.eGui.innerHTML = '<a href="/manage-tpos.html" title="View Ad" class="button-primary button-stroked">View Ad</a>';
+  };
+
+  GridAction.prototype.getGui = function() {
+      return this.eGui;
+  };
+
+  function getGrid(gridName) {
+    if(gridName === "grid1"){
+      return gridOption1;
+    } else if(gridName === "grid2"){
+      return gridOption2;
+    } else if(gridName === "grid3"){
+      return gridOption3;
+    }
+  }
+
+  function onRowSelected(event) {
+    console.log("row " + event.node.data.upc + " selected = " + event.node.selected);
+  }
+
+  function onSelectionChanged(event) {
+    var rowCount = event.api.getSelectedNodes().length;
+    console.log('selection changed, ' + rowCount + ' rows selected');
+  }
+  
+  $.get("data/view-promo.json", function(data){
+    $(data).each(function() {
+      if(this.event_name === "Event 1") {
+        data_1.push(this);
+      }
+    });
+
+    // Grid 1
+    gridOption1 = gridOptionFunction(data_1);
+    var gridDiv1 = document.querySelector('#adEventDatatable');
+    new agGrid.Grid(gridDiv1, gridOption1);  
+  });
+  
+  </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

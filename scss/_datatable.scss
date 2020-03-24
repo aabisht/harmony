@@ -13,6 +13,25 @@
     }
 }
 
+
+.approved {
+    color: $approve-text-color;
+}
+
+.draft {
+    color: $draft-text-color;
+}
+
+.reject {
+    color: $reject-text-color;
+}
+
+.approved, .draft, .reject { 
+    font-size: 120%;
+    font-weight: bold;
+    font-family: $primary-font;
+}
+
 .datatable {
     height: 400px;
     margin-left: -24px;

@@ -33,11 +33,11 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>Add New Ad</h3>
+                      <h3>Bulk Maintenance</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Add New Ad</li>
+                          <li class="breadcrumb-item active" aria-current="page">Bulk Maintenance</li>
                         </ol>
                       </div>
                     </div>
@@ -60,21 +60,33 @@
       <!-- Main Body Content -->
       <div class="main-body-content-wrapper">
         <div class="main-body-content-container">
+          <div class="header-search-wrapper">
+            <div class="container-fluid">
+              <div class="card header-search-card-wrapper">
+                <div class="card-content">
+                  <h3 class="card-title d-flex flex-row justify-content-between d-flex align-items-center">
+                    <span>Search</span>
+                  </h3>
+                </div>
+              </div>
+              <div class="row header-search-input-wrapper align-items-start justify-content-center">
+                
+              </div>
+            </div>
+          </div>
+
           <div class="main-body-data-wrapper">
             <div class="container-fluid">
               <div class="card">
                 <div class="card-content">
                   <div class="card-header d-flex flex-row justify-content-between align-items-center">
                     <div class="card-title-wrapper">
-                      <h3 class="card-title">AD Planner - Manage TPOS</h3>
-                    </div>
-                    <div class="button-wrapper">
-                      <a href="javascript:;" class="button-primary header-action-item tooltip download-csv-button" data-position="bottom" data-tooltip="Downlaod CSV file"><i class="fas fa-file-download"></i> CSV</a>
+                      <h3 class="card-title">Bulk Maintenance</h3>
                     </div>
                   </div>
                   <div class="card-tab-content-wrapper">
                     <div class="datatable-wrapper">
-                      <div id="adPromoItemManageTPOS" class="datatable ag-theme-material"></div>
+                      <div id="bulkMaintanceTable" class="datatable ag-theme-material"></div>
                       <div class="datatable-action-item-select">
                         <div class="d-flex flex-row justify-content-end align-items-center">
                           <span class="page-size-label">Item to Show</span>
@@ -108,7 +120,7 @@
 
   <script src="js/main.js"></script>
 
-  <script src="js/add-promo.js"></script>
+  <!-- <script src="js/add-promo.js"></script>   -->
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
