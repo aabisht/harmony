@@ -142,4 +142,18 @@
 #adPromoItemManageTPOS,
 #adEventDatatable {
     height: calc(100vh - 178px);
+    min-height: 400px;
+}
+
+#bulkMaintanceTable {
+    min-height: calc(100vh - 382px);
+}
+
+.bulk-maintenance-template-table-wrapper {
+    margin-bottom: 0;
+    height: calc(100% + 24px);
+
+    .datatable-wrapper {
+        height: 100%;
+    }
 }

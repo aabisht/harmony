@@ -67,10 +67,42 @@
                   <h3 class="card-title d-flex flex-row justify-content-between d-flex align-items-center">
                     <span>Search</span>
                   </h3>
+                  <div class="row header-search-input-wrapper align-items-start justify-content-start">
+                    <div class="col-sm-4">
+                      <div class="cell-wrapper">
+                        <div class="input-field">
+                          <select>
+                            <option value="" disabled selected>Choose an Ad</option>
+                            <option value="Ad 1">Ad 1</option>
+                            <option value="Ad 2">Ad 2</option>
+                            <option value="Ad 3">Ad 3</option>
+                          </select>
+                          <label>Ad Name</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="cell-wrapper">
+                        <div class="input-field">
+                          <select>
+                            <option value="" disabled selected>Choose status</option>
+                            <option value="Approved">Approved</option>
+                            <option value="Draft">Draft</option>
+                            <option value="Reject">Reject</option>
+                          </select>
+                          <label>Status</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="cell-wrapper">
+                        <div class="button-wrapper">
+                          <a href="/view-promo-data.html" class="button-primary button-search">Search</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="row header-search-input-wrapper align-items-start justify-content-center">
-                
               </div>
             </div>
           </div>
@@ -83,18 +115,34 @@
                     <div class="card-title-wrapper">
                       <h3 class="card-title">Bulk Maintenance</h3>
                     </div>
+                    <div class="button-wrapper">
+                      <a href="javascript:;" class="button-primary header-action-item tooltip download-csv-button" data-position="bottom" data-tooltip="Downlaod CSV file"><i class="fas fa-file-download"></i> CSV</a>
+                    </div>
                   </div>
                   <div class="card-tab-content-wrapper">
-                    <div class="datatable-wrapper">
-                      <div id="bulkMaintanceTable" class="datatable ag-theme-material"></div>
-                      <div class="datatable-action-item-select">
-                        <div class="d-flex flex-row justify-content-end align-items-center">
-                          <span class="page-size-label">Item to Show</span>
-                          <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="50">50</option>
-                          </select>
+                    <div class="ad-promo-template-content-wrapper">
+                      <div class="row">
+                        <div class="col-lg-3 col-sm-4">
+                          <div class="ad-promo-template-img-wrapper">
+                            <img src="./assets/img/add-promo-custom-template.jpg" alt="Custom Template" class="img-fluid">
+                          </div>
+                        </div>
+                        <div class="col-lg-9 col-sm-8">
+                          <div class="cell-wrapper ad-promo-template-table-wrapper bulk-maintenance-template-table-wrapper">
+                            <div class="datatable-wrapper">
+                              <div id="bulkMaintanceTable" class="datatable ag-theme-material"></div>
+                              <div class="datatable-action-item-select">
+                                <div class="d-flex flex-row justify-content-end align-items-center">
+                                  <span class="page-size-label">Item to Show</span>
+                                  <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -120,8 +168,68 @@
 
   <script src="js/main.js"></script>
 
-  <!-- <script src="js/add-promo.js"></script>   -->
+<script>
+var colDefsManageTPOS = [
+    {
+        headerName: "TPOS", 
+        field: "tpos",
+        minWidth: 240,
+    },
+    {headerName: "Department", field: "department"},
+    {headerName: "Ad Fee", field: "ad_fee"},
+    {headerName: "Due Date", field: "due_date"},
+    {headerName: "Sign Text 1", field: "sign_text_1"},
+    {headerName: "Sign Text 2", field: "sign_text_2"},
+    {headerName: "Sign Text 3", field: "sign_text_3"},
+    {headerName: "Action", field: "action", cellRenderer: 'manageTPOSAction'},
+];
 
+$.get("data/add-promo-manage-tpos-item-detail.json", function(data){
+    gridOptionsManageTPOS = {
+        defaultColDef: {
+            editable: false,
+            resizable: true,
+            sortable:true,
+            filter: true
+        },
+        columnDefs: colDefsManageTPOS,
+        rowData: data,
+        pagination: true,
+        paginationPageSize: 50,
+        masterDetail: true,
+        suppressContextMenu:true,
+        components: {
+        'manageTPOSAction': manageTPOSAction
+        }
+    };
+
+    var gridDivManageTPOS = document.querySelector('#bulkMaintanceTable');
+    new agGrid.Grid(gridDivManageTPOS, gridOptionsManageTPOS);   
+});
+
+function manageTPOSAction() {}
+
+// init method gets the details of the cell to be rendere
+manageTPOSAction.prototype.init = function(params) {
+    this.eGui = document.createElement('div');
+    this.eGui.classList.add('table-action-wrapper');
+    this.eGui.classList.add('button-wrapper');
+    var status = Math.floor(Math.random() * 2) + 1;
+    var html = '';
+    if(status === 1) {
+        html = '<a href="javascript:;" title="Approve" class="button-primary button-stroked" >Approve</a><a href="javascript:;" title="Reject" class="button-primary button-stroked" >Reject</a>';
+    } else {
+        html = '<a href="javascript:;" title="Re-open" class="button-primary button-stroked" >Re-open</a>';
+    }
+    this.eGui.innerHTML = html;
+};
+
+manageTPOSAction.prototype.getGui = function() {
+    return this.eGui;
+};
+
+
+</script>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
