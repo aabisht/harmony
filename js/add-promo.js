@@ -69,17 +69,8 @@ $(document).ready(function() {
       {headerName: "Linked Code", field: "linked_code", cellRenderer: 'linkedCode'},
     ],
     adPromoItemDetailDatatable = [
-        {
-            headerName: "TPOS", 
-            field: "tpos",
-            headerCheckboxSelection: true,
-            headerCheckboxSelectionFilteredOnly: true,
-            checkboxSelection: true,
-            minWidth: 240, 
-            editable: false
-          },
-        //   {headerName: "Department", field: "department", editable: true},
           {headerName: "UPC", field: "upc", editable: true},
+        //   {headerName: "TPOS", field: "tpos", editable: true},
           {headerName: "Description", field: "description", editable: true},
           {headerName: "Unit Size", field: "unit_size", editable: true},
           {headerName: "Ad Multiplier", field: "ad_multiplier", editable: true},
@@ -269,6 +260,11 @@ $(document).ready(function() {
     }
 
     function idemDetailGridRender() {
+
+        if(window.location.pathname === '/bulk-maintenance.html' || window.location.pathname === '/bulk-maintenance-data.html' || window.location.pathname === '/bulk-maintenance-adv-search.html') {
+            adPromoItemDetailDatatable.splice(1, 0, {headerName: "TPOS", field: "tpos", editable: true});
+        }
+
         adPromoItemDetailDatatableGridData = {
             defaultColDef: {
                 editable: true,
@@ -416,6 +412,14 @@ $(document).ready(function() {
         event.preventDefault();
         gridOptions.api.stopEditing();
         M.toast({html: '<strong><i>'+ $(this).attr('data-tpos') +'</i></strong>&nbsp;value update.'})
+    });
+    
+    $('body').on('click', '.leftSidebarToggle', function(event) {
+        event.preventDefault();
+        $('.left-sidebar-wrapper').toggle();
+        $('.right-content-wrapper').toggleClass('col-lg-9 col-sm-8');
+        $('.right-content-wrapper').toggleClass('col-sm-12');
+        // debugger;
     });
     
 });

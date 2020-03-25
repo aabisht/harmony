@@ -101,10 +101,13 @@
 }
 
 .ad-promo-item-data-wrapper {
-    .ad-promo-template-title-wrapper,
     .header-search-input-wrapper,
     .header-search-btn-wrapper {
         margin-left: -24px;
+    }
+
+    .ad-promo-template-title-wrapper {
+        margin-left: -9px;
     }
 
     .header-search-input-wrapper,
