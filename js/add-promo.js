@@ -69,7 +69,15 @@ $(document).ready(function() {
       {headerName: "Linked Code", field: "linked_code", cellRenderer: 'linkedCode'},
     ],
     adPromoItemDetailDatatable = [
-          {headerName: "UPC", field: "upc", editable: true},
+        {
+            headerName: "UPC", 
+            field: "upc",
+            headerCheckboxSelection: true,
+            headerCheckboxSelectionFilteredOnly: true,
+            checkboxSelection: true,
+            minWidth: 240,
+            editable: false
+        },
         //   {headerName: "TPOS", field: "tpos", editable: true},
           {headerName: "Description", field: "description", editable: true},
           {headerName: "Department", field: "department", editable: true},
@@ -81,7 +89,7 @@ $(document).ready(function() {
           {headerName: "Sign Text 1", field: "sign_text_1", editable: true},
           {headerName: "Sign Text 2", field: "sign_text_2", editable: true},
           {headerName: "Sign Text 3", field: "sign_text_3", editable: true},
-          {headerName: "Action", field: "action", editable: false, cellRenderer: 'priorAdAction', minWidth: 240}
+        //   {headerName: "Action", field: "action", editable: false, cellRenderer: 'priorAdAction', minWidth: 240}
     ],
     colDefsManageTPOS = [
         {
