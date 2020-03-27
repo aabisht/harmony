@@ -240,7 +240,7 @@ $(document).ready(function() {
                 columnDefs: colDefsManageTPOS,
                 rowData: data,
                 pagination: true,
-                paginationPageSize: 50,
+                paginationPageSize: 20,
                 masterDetail: true,
                 suppressContextMenu:true,
                 components: {
