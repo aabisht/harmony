@@ -37,7 +37,7 @@ $(document).ready(function() {
         pagination: true,
         paginationPageSize: 10,
         onRowEditingStarted: function(event){
-          $('.saveRow').css({'display': 'inline-block'});
+          $('.saveRow').removeClass('disabled');
         },
         paginationNumberFormatter: function(params) {
             return '' + params.value.toLocaleString() + '';
@@ -111,7 +111,7 @@ $(document).ready(function() {
 
     $('body').on('click', '.saveRow', function(event) {
         event.preventDefault();
-        $(this).hide();
+        $(this).addClass('disabled');
         gridOptions.api.stopEditing();
     });
 
