@@ -191,6 +191,106 @@
                           </div>
                         </div>
                         <div class="ad-planer-template-selection-items-wrapper" id="copyFromTemplate">
+                          <div class="header-search-card-wrapper mt-3">
+                            <div class="header-search-card-content">
+                              <h3 class="card-title d-flex flex-row justify-content-between d-flex align-items-center">
+                                <span>Search</span>
+                              </h3>
+                              <div class="row header-search-input-wrapper align-items-start justify-content-center">
+                                <div class="col-md-3">
+                                  <div class="cell-wrapper">
+                                    <div class="input-field">
+                                      <input id="eventNameSearch" type="text" value="" autocomplete="off" placeholder="Enter Event Name">
+                                      <label for="eventNameSearch" class="active">Event Name</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="cell-wrapper">
+                                    <div class="input-field">
+                                      <select>
+                                        <option value="" disabled selected>Choose</option>
+                                        <option value="1">Approved</option>
+                                        <option value="2">Pending</option>
+                                        <option value="3">Reject</option>
+                                      </select>
+                                      <label>Event Status</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                                <div class="col-md-3">
+                                  <div class="cell-wrapper">
+                                    <div class="input-field">
+                                      <input id="eventAdNameSearch" type="text" value="" autocomplete="off" placeholder="Enter Ad Name">
+                                      <label for="eventAdNameSearch" class="active">Ad Name</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="cell-wrapper">
+                                    <div class="input-field">
+                                      <select>
+                                        <option value="" disabled selected>Choose</option>
+                                        <option value="Approve">Approve</option>
+                                        <option value="Draft">Draft</option>
+                                        <option value="Pending">Pending</option>
+                                      </select>
+                                      <label>Ad Status</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="cell-wrapper">
+                                    <div class="input-field">
+                                      <input id="search_start_date" type="text" placeholder="Enter Start Date" class="datepicker-here" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
+                                      <label for="search_start_date">Start Date</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="cell-wrapper">
+                                    <div class="input-field">
+                                      <input id="search_end_date" type="text" placeholder="Enter End Date" class="datepicker-here" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
+                                      <label for="search_end_date">End Date</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="cell-wrapper">
+                                    <div class="input-field">
+                                      <select>
+                                        <option value="" disabled selected>Choose</option>
+                                        <option value="Zone 1">Zone 1</option>
+                                        <option value="Zone 2">Zone 2</option>
+                                        <option value="Zone 3">Zone 3</option>
+                                        <option value="Zone 3">Zone 4</option>
+                                        <option value="Store 1">Store 1</option>
+                                        <option value="Store 2">Store 2</option>
+                                        <option value="Store 3">Store 3</option>
+                                        <option value="Store 4">Store 4</option>
+                                        <option value="Store 5">Store 5</option>
+                                        <option value="Store 6">Store 6</option>
+                                        <option value="Store 7">Store 7</option>
+                                      </select>
+                                      <label>Zone/ Store</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="header-search-btn-wrapper col-md-3">
+                                  <div class="cell-wrapper d-flex flex-row justify-content-between align-items-center">
+                                    <div class="button-wrapper text-center">
+                                      <!-- <a href="#saveSearchModal" class="button-primary button-adv-seach modal-trigger">Save Search</a> -->
+                                    </div>
+                                    <div class="button-wrapper text-center">
+                                      <!-- <a href="#advSeachModal" class="button-primary button-stroked button-adv-seach modal-trigger">Advance Search</a> -->
+                                      <a href="/view-promo-data.html" class="button-primary button-search">Search</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                           <ul class="collapsible collapsible-data-table collapsible-add-promo-template-selection">
                             <li>
                               <div class="collapsible-header align-items-start d-flex flex-row justify-content-between">
@@ -306,7 +406,14 @@
     </div>
   </div>
 
-
+  <div id="adPromoTemplate" class="modal">
+    <div class="modal-content">
+      <div class="modal-title"><h3>TPOS Template</h3></div>
+      <div class="text-center">
+        <img src="./assets/img/add-promo-custom-template.jpg" alt="Custom Template" class="img-fluid" >
+      </div>
+    </div>
+  </div>
 
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="js/vendor/jquery-3.4.1.min.js"></script>

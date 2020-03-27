@@ -105,7 +105,7 @@ $(document).ready(function() {
     this.eGui.classList.add('button-wrapper');
     this.eGui.classList.add('table-action-wrapper');
     if(window.location.pathname === '/add-promo-template-selection.html') { 
-      this.eGui.innerHTML = '<a href="/add-promo-custom-template.html" title="Select" class="button-primary button-stroked">Select</a>';
+      this.eGui.innerHTML = '<a href="#adPromoTemplate" title="Select" class="button-primary button-stroked modal-trigger">View Template</a><a href="/add-promo-custom-template.html" title="Select" class="button-primary button-stroked">Copy Template</a>';
     } else {
       this.eGui.innerHTML = '<a href="/add-promo-custom-template.html" title="View Ad" class="button-primary button-stroked">View Ad</a>';
     }
