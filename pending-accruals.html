@@ -66,7 +66,7 @@
                 <div class="card-content">
                   <h3 class="card-title">Select Month</h3>
                   <div class="row justify-content-left align-items-center">
-                    <div class="col-lg-5 col-md-4">
+                    <div class="col-lg-4 col-md-4">
                       <div class="cell-wrapper">
                         <div class="input-field">
                           <input id="search_start_date" type="text" class="datepicker-here" data-language='en' data-min-view="months" data-view="months" data-date-format="MM yyyy" autocomplete="off" value="February 2020">
@@ -107,7 +107,7 @@
                     <div id="datatable" class="datatable ag-theme-material"></div>
                     <div class="datatable-action-item-select">
                       <div class="d-flex flex-row justify-content-end align-items-center">
-                        <span class="page-size-label">Item to Show</span>
+                        <span class="page-size-label">Items to Show</span>
                         <select onchange="onPageSizeChanged()" id="page-size">
                           <option value="10">10</option>
                           <option value="20">20</option>
@@ -177,7 +177,7 @@
           onRowSelected: onRowSelected,
           onSelectionChanged: onSelectionChanged,
           paginationNumberFormatter: function(params) {
-              return '[' + params.value.toLocaleString() + ']';
+              return '' + params.value.toLocaleString() + '';
           },
           onGridReady: function(params) {
             params.api.sizeColumnsToFit();
@@ -216,7 +216,9 @@
       });
 
       $('.datepicker-here').each(function() {
-        var dp = $(this).datepicker().data('datepicker');
+        var dp = $(this).datepicker({
+          maxDate: new Date()
+        }).data('datepicker');
         dp.selectDate(new Date($(this).attr('value')));
       });
     });

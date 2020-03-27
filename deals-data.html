@@ -116,7 +116,7 @@
                             </select>
                           </div>
                         </div> -->
-                        <button type="button" class="button-primary button-stroked header-action-item saveRow">Save Row</button>
+                        <button type="button" class="button-primary button-stroked header-action-item saveRow disabled">Save Row</button>
                         <button type="button" class="button-primary header-action-item disabled">Submit</button>
                       </div>
                       <div class="info-msg error text-right">
@@ -128,7 +128,7 @@
                     <div id="datatable" class="datatable ag-theme-material"></div>
                     <div class="datatable-action-item-select">
                       <div class="d-flex flex-row justify-content-end align-items-center">
-                        <span class="page-size-label">Item to Show</span>
+                        <span class="page-size-label">Items to Show</span>
                         <select onchange="onPageSizeChanged()" id="page-size">
                           <option value="10">10</option>
                           <option value="20">20</option>
@@ -167,15 +167,15 @@
           editable: false,
           minWidth: 240
         },
-        {headerName: "Store", field: "store", editable: true},
         {headerName: "Vendor", field: "vendor", editable: true},
-        {headerName: "Bill To", field: "bill_to", editable: true},
-        // {headerName: "Cost Type", field: "cost_type", editable: true},
-        {headerName: "Allowance Type", field: "allowance_type", editable: true, cellRenderer: 'tooltipCellRenderer'},
-        {headerName: "Amount", field: "amount", editable: true},
-        // {headerName: "Ad Fee", field: "ad_fee", editable: true},
+        {headerName: "Deal Type", field: "allowance_type", editable: true, cellRenderer: 'tooltipCellRenderer'},
+        {headerName: "Deal Amount", field: "amount", editable: true},
         {headerName: "Start Date", field: "start_date", editable: true, cellRenderer: 'tooltipCellRenderer'},
         {headerName: "End Date", field: "end_date", editable: true, cellRenderer: 'tooltipCellRenderer'},
+        {headerName: "Store/Zone", field: "store", editable: true},
+        // {headerName: "Bill To", field: "bill_to", editable: true},
+        // {headerName: "Cost Type", field: "cost_type", editable: true},
+        // {headerName: "Ad Fee", field: "ad_fee", editable: true},
       ];
       $.get("data/deals.json", function(data, status){
         $(data).each(function(item) {
@@ -208,10 +208,11 @@
           onRowEditingStarted: function(event){
             var _this = this;
             
-            $('.saveRow').css({'display': 'inline-block'});
+            // $('.saveRow').css({'display': 'inline-block'});
+            $('.saveRow').removeClass('disabled');
           },
           paginationNumberFormatter: function(params) {
-              return '[' + params.value.toLocaleString() + ']';
+              return '' + params.value.toLocaleString() + '';
           },
           onGridReady: function(params) {
             // params.api.sizeColumnsToFit();
@@ -291,6 +292,7 @@
 
       $('body').on('click', '.saveRow', function(event) {
         event.preventDefault();
+        $(this).addClass('disabled');
         gridOptions.api.stopEditing()
       });
     });

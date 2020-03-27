@@ -70,7 +70,7 @@ $(document).ready(function() {
       paginationPageSize: 10,
       onSelectionChanged: onSelectionChanged,
       paginationNumberFormatter: function(params) {
-          return '[' + params.value.toLocaleString() + ']';
+          return '' + params.value.toLocaleString() + '';
       },
       components: {
         'gridAction': GridAction

@@ -116,7 +116,7 @@
           onRowSelected: onRowSelected,
           onSelectionChanged: onSelectionChanged,
           paginationNumberFormatter: function(params) {
-              return '[' + params.value.toLocaleString() + ']';
+              return '' + params.value.toLocaleString() + '';
           }
         };
         var gridDiv = document.querySelector('#datatable');

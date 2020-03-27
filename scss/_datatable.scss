@@ -40,6 +40,8 @@
 
     &.ag-theme-material {
         color: $datatable-text-color;
+        font-family: $primary-font;
+        color: $secondary-color;
 
         .card & {
             margin-bottom: -24px;
@@ -51,6 +53,9 @@
 
         .ag-header {
             background-color: $datatable-header-bg-color;
+            font-family: $secondary-font;
+            @include fontSize(15px);
+            color: $secondary-color;
         }
 
         .ag-cell {

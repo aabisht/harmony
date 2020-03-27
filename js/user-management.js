@@ -7,9 +7,9 @@ $(document).ready(function() {
     var gridOptions;
     var columnDefs = [
       {headerName: "", field: "icon", width: 70, cellRenderer: 'userTypeIcon', editable: false},
-      {headerName: "Email", field: "email", editable: true, minWidth: 330},
       {headerName: "First Name", field: "name.first", editable: true},
       {headerName: "Last Name", field: "name.last", editable: true},
+      {headerName: "Email", field: "email", editable: true, minWidth: 330},
       {headerName: "Primary Banner", field: "banner", editable: true},
       {headerName: "Department", field: "department", editable: true},
       {headerName: "Supervisor", field: "supervisor", editable: true},
@@ -19,6 +19,7 @@ $(document).ready(function() {
 
     $.get("data/users.json", function(data, status){
       $(data).each(function(i) {
+        searchData[this.email] = null;
         searchData[this.name.first+' '+this.name.last] = null;
       });
 
@@ -39,7 +40,7 @@ $(document).ready(function() {
           $('.saveRow').css({'display': 'inline-block'});
         },
         paginationNumberFormatter: function(params) {
-            return '[' + params.value.toLocaleString() + ']';
+            return '' + params.value.toLocaleString() + '';
         },
         components: {
           'userTypeIcon': UserTypeIcon,

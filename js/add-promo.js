@@ -178,7 +178,7 @@ $(document).ready(function() {
                 onRowSelected: onRowSelected,
                 onSelectionChanged: onSelectionChanged,
                 paginationNumberFormatter: function(params) {
-                    return '[' + params.value.toLocaleString() + ']';
+                    return '' + params.value.toLocaleString() + '';
                 },
                 components: {
                     'gridAction': GridAction
@@ -213,7 +213,7 @@ $(document).ready(function() {
                 rowSelection: 'multiple',
                 onSelectionChanged: onSelectionChanged,
                 paginationNumberFormatter: function(params) {
-                    return '[' + params.value.toLocaleString() + ']';
+                    return '' + params.value.toLocaleString() + '';
                 },
                 components: {
                 'linkedCode': LinkedCode
@@ -291,7 +291,7 @@ $(document).ready(function() {
             rowSelection: 'multiple',
             onSelectionChanged: onSelectionChanged,
             paginationNumberFormatter: function(params) {
-                return '[' + params.value.toLocaleString() + ']';
+                return '' + params.value.toLocaleString() + '';
             },
             onRowEditingStarted: function(event){
               var _this = this;
