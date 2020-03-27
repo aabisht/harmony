@@ -77,11 +77,11 @@ $(document).ready(function() {
       },
       onRowEditingStarted: function(event){
         if(event.data.event_name === 'Event 1') {
-          $('.saveRow[data-grid="grid1"]').css({'display': 'inline-block'});
+          $('.saveRow[data-grid="grid1"]').removeClass('disabled');
         } else if(event.data.event_name === 'Event 2') {
-          $('.saveRow[data-grid="grid2"]').css({'display': 'inline-block'});
+          $('.saveRow[data-grid="grid2"]').removeClass('disabled');
         } else if(event.data.event_name === 'Event 3') {
-          $('.saveRow[data-grid="grid3"]').css({'display': 'inline-block'});
+          $('.saveRow[data-grid="grid3"]').removeClass('disabled');
         }
       },
       onGridReady: function(params) {
@@ -147,7 +147,7 @@ $(document).ready(function() {
     event.stopPropagation();
     var gridOption = getGrid($(this).attr('data-grid'));
     gridOption.api.stopEditing()
-    $(this).hide();
+    $(this).addClass('disabled');
   });
 
   $('body').on('click', '.collapsible > li .collapsible-header', function() {

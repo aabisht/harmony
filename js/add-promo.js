@@ -296,7 +296,7 @@ $(document).ready(function() {
             onRowEditingStarted: function(event){
               var _this = this;
               
-              $('.saveRow').css({'display': 'inline-block'});
+              $('.saveRow').removeClass('disabled');
             },
             onRowSelected: onRowSelected,
             onGridReady: function(params) {
@@ -364,7 +364,7 @@ $(document).ready(function() {
     $('body').on('click', '.saveRow', function(event) {
         event.preventDefault();
         adPromoItemDetailDatatableGridData.api.stopEditing();
-        $(this).hide();
+        $(this).addClass('disabled');
     });
     
     function manageTPOSAction() {}
@@ -406,7 +406,7 @@ $(document).ready(function() {
     $('body').on('click', '.saveRow', function(event) {
         event.preventDefault();
         adPromoItemDetailDatatableGridData.api.stopEditing();
-        $(this).hide();
+        $(this).addClass('disabled');
     });
 
     $('body').on('change', '#showEventInput', function(event) {
