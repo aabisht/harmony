@@ -95,6 +95,7 @@ $(document).ready(function() {
         {headerName: "Sign Text 1", field: "sign_text_1"},
         {headerName: "Sign Text 2", field: "sign_text_2"},
         {headerName: "Sign Text 3", field: "sign_text_3"},
+        {headerName: "TPOS Status", field: "tpos_Status"},
         {headerName: "Action", field: "action", cellRenderer: 'manageTPOSAction'},
     ],
     priorAdcolDefs = [
@@ -365,11 +366,11 @@ $(document).ready(function() {
         this.eGui.classList.add('button-wrapper');
         var status = Math.floor(Math.random() * 2) + 1;
         var html = '';
-        if(status === 1) {
+        // if(status === 1) {
             html = '<a href="javascript:;" title="Approve" class="button-primary button-stroked" >Approve</a><a href="javascript:;" title="Reject" class="button-primary button-stroked" >Reject</a>';
-        } else {
-            html = '<a href="javascript:;" title="Re-open" class="button-primary button-stroked" >Re-open</a>';
-        }
+        // } else {
+            // html = '<a href="javascript:;" title="Re-open" class="button-primary button-stroked" >Re-open</a>';
+        // }
         this.eGui.innerHTML = html;
     };
 

@@ -21,7 +21,7 @@ $(document).ready(function() {
     {headerName: "End Date", field: "end_date", editable: true},
     {headerName: "Deadline", field: "deadline", editable: true},
     {headerName: "Status", field: "status", editable: true},
-    {headerName: "", field: "action", editable: false, cellRenderer: 'gridAction'}
+    {headerName: "", field: "action", editable: false, cellRenderer: 'gridAction', minWidth: 340}
   ];
 
   $.get("data/view-promo.json", function(data){
