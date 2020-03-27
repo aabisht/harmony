@@ -190,7 +190,7 @@
                             <option value="show_locked_only">Show Locked</option>
                           </select>
                         </div>
-                        <button type="button" class="button-primary button-stroked saveRow header-action-item">Save Row</button>
+                        <button type="button" class="button-primary button-stroked saveRow header-action-item disabled">Save Row</button>
                         <div class="button-primary button-with-dropdown header-action-item">
                           <a href="/add-item-data.html" class="addNewRow">Add New</a>
                           <a href="javascript:;" class="dropdown-trigger" data-target='addNewDropdown'><i class="fas fa-caret-down"></i></a>
@@ -521,7 +521,7 @@
         },
         onRowEditingStarted: function(event){
           var _this = this;
-          $('.saveRow').css({'display': 'inline-block'});
+          $('.saveRow').removeClass('disabled');
           $('.disable-row-edit').closest('.ag-row').each(function() {
               if(parseInt($(this).attr('row-index')) === event.rowIndex) {
                 _this.api.stopEditing();
@@ -630,7 +630,7 @@
             saveModalinstance = M.Modal.getInstance(document.querySelector('#serverSideItemRowModal')),
             status = Math.floor(Math.random() * 2) + 1;
 
-        $('.saveRow').css({'display': 'none'});
+        $('.saveRow').addClass('disabled');
         if(status === 1) {
           updateItemRow(rowIndex, upc);
         } else {

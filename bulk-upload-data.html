@@ -139,7 +139,7 @@
                       </div>
                       <div class="card-header-action-wrapper" id="cardHeaderAction">
                         <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                          <button type="button" class="button-primary button-stroked saveRow header-action-item">Save Row</button>
+                          <button type="button" class="button-primary button-stroked saveRow header-action-item disabled">Save Row</button>
                           <button type="button" class="button-primary header-action-item disabled">Submit</button>
                         </div>
                         <div class="info-msg error text-right">
@@ -290,7 +290,7 @@
         },
         onRowEditingStarted: function(event){
           var _this = this;
-          $('.saveRow').css({'display': 'inline-block'});
+          $('.saveRow').removeClass('disabled');
         },
         onRowValueChanged: function(event) {
             var data = event.data,
@@ -383,6 +383,7 @@
 
       $('body').on('click', '.saveRow', function(event) {
         event.preventDefault();
+        $(this).addClass('disabled');
         bulkUploadGridOption.api.stopEditing();
       });
 
