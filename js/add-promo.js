@@ -72,6 +72,7 @@ $(document).ready(function() {
           {headerName: "UPC", field: "upc", editable: true},
         //   {headerName: "TPOS", field: "tpos", editable: true},
           {headerName: "Description", field: "description", editable: true},
+          {headerName: "Department", field: "department", editable: true},
           {headerName: "Unit Size", field: "unit_size", editable: true},
           {headerName: "Ad Multiplier", field: "ad_multiplier", editable: true},
           {headerName: "Ad Retail", field: "ad_retail", editable: true},
@@ -80,7 +81,7 @@ $(document).ready(function() {
           {headerName: "Sign Text 1", field: "sign_text_1", editable: true},
           {headerName: "Sign Text 2", field: "sign_text_2", editable: true},
           {headerName: "Sign Text 3", field: "sign_text_3", editable: true},
-          {headerName: "Action", field: "action", editable: false, cellRenderer: 'priorAdAction'}
+          {headerName: "Action", field: "action", editable: false, cellRenderer: 'priorAdAction', minWidth: 240}
     ],
     colDefsManageTPOS = [
         {
@@ -291,6 +292,7 @@ $(document).ready(function() {
             },
             onRowSelected: onRowSelected,
             onGridReady: function(params) {
+                // params.api.sizeColumnsToFit();
             },
             components: {
                 'priorAdAction': PriorAdAction
@@ -385,7 +387,7 @@ $(document).ready(function() {
         this.eGui = document.createElement('div');
         this.eGui.classList.add('table-action-wrapper');
         this.eGui.classList.add('button-wrapper');
-        html = '<a href="/manage-tpos.html" title="Manage TPOS" class="button-primary button-stroked" >Manage TPOS</a>';
+        html = '<a href="" title="Submit" class="button-primary button-stroked">Save</a><a href="" title="Submit" class="button-primary button-stroked" >Submit</a>';
         this.eGui.innerHTML = html;
     };
 
