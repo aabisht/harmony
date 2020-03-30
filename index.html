@@ -62,6 +62,94 @@
 
           <div class="main-body-data-wrapper">
             <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="cell-wrapper">
+                    <div class="card">
+                      <div class="card-content">
+                        <div class="card-header">
+                          <div class="card-title-wrapper">
+                            <h3 class="card-title mb-0">
+                              Pending Allowances
+                            </h3>
+                          </div>
+                        </div>
+                        <div class="datatable-wrapper">
+                          <div id="pendingAllowancesDatatable" class="datatable ag-theme-material"></div>
+                          <div class="datatable-action-item-select">
+                            <div class="d-flex flex-row justify-content-end align-items-center">
+                              <span class="page-size-label">Items to Show</span>
+                              <select data-table="pendingAllowancesDatatableGridData" class="itemDropdownSelect">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="cell-wrapper">
+                    <div class="card">
+                      <div class="card-content">
+                        <div class="card-header">
+                          <div class="card-title-wrapper">
+                            <h3 class="card-title mb-0">
+                              Vendor Billing
+                            </h3>
+                          </div>
+                        </div>
+                        <div class="datatable-wrapper">
+                          <div id="vendorBillingDatatable" class="datatable ag-theme-material"></div>
+                          <div class="datatable-action-item-select">
+                            <div class="d-flex flex-row justify-content-end align-items-center">
+                              <span class="page-size-label">Items to Show</span>
+                              <select data-table="vendorBillingDatatableGridData" class="itemDropdownSelect">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12">
+                  <div class="cell-wrapper">
+                    <div class="card">
+                      <div class="card-content">
+                        <div class="card-header">
+                          <div class="card-title-wrapper">
+                            <h3 class="card-title mb-0">
+                              Ads Pending for Approval
+                            </h3>
+                          </div>
+                        </div>
+                        <div class="datatable-wrapper">
+                          <div id="adsPendingApprovalDatatable" class="datatable ag-theme-material"></div>
+                          <div class="datatable-action-item-select">
+                            <div class="d-flex flex-row justify-content-end align-items-center">
+                              <span class="page-size-label">Items to Show</span>
+                              <select data-table="adsPendingApprovalDatatableGridData" class="itemDropdownSelect">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -81,77 +169,129 @@
 
   <script src="js/main.js"></script>
 
-  <script>
-    var gridOptions;
-      var columnDefs = [
-        {
-          headerName: "UPC", 
-          field: "upc",
-          headerCheckboxSelection: true,
-          headerCheckboxSelectionFilteredOnly: true,
-          checkboxSelection: true,
-          minWidth: 240
-        },
-        {headerName: "Store", field: "store"},
-        {headerName: "Vendor", field: "vendor"},
-        {headerName: "Bill To", field: "bill_to"},
-        {headerName: "Type", field: "type"},
-        {headerName: "Price", field: "price"},
-        {headerName: "Start Date", field: "start_date"},
-        {headerName: "End Date", field: "end_date"},
-      ];
-      $.get("data/pendin-bills.json", function(data, status){
-        gridOptions = {
-          defaultColDef: {
-            editable: false,
-            resizable: true,
-            sortable:true,
-            filter: true
-          },
-          rowSelection: 'multiple',
-          columnDefs: columnDefs,
-          rowData: data,
-          pagination: true,
-          paginationPageSize: 10,
-          onRowSelected: onRowSelected,
-          onSelectionChanged: onSelectionChanged,
-          paginationNumberFormatter: function(params) {
-              return '' + params.value.toLocaleString() + '';
-          }
-        };
-        var gridDiv = document.querySelector('#datatable');
-        new agGrid.Grid(gridDiv, gridOptions);    
-      });
+<script>
 
-    function onPageSizeChanged(newPageSize) {
-      var value = document.getElementById('page-size').value;
-      gridOptions.api.paginationSetPageSize(Number(value));
-    }
+  var adsPendingApprovalDatatableColumnDefs = [
+    {headerName: "Ad Name", field: "ad", cellRenderer: 'linking'},
+    {headerName: "Department", field: "department"},
+    {headerName: "Start Date", field: "start_date"},
+    {headerName: "End Date", field: "end_date"},
+  ], 
+  pendingAllowancesDatatableColumnDefs = [
+    {headerName: "Deal Name", field: "pendingAllowancesDealName", cellRenderer: 'linking'},
+    {headerName: "Submission Date", field: "pendingAllowancesSubmissionDate"},
+  ],
+  vendorBillingDatatableColumnDefs = [
+    {headerName: "UPC", field: "upc", cellRenderer: 'linking'},
+    {headerName: "Bill To", field: "bill_to"},
+    {headerName: "Start Date", field: "start_date"},
+    {headerName: "End Date", field: "end_date"},
+  ],
+  emptyData = [];
 
-    function onRowSelected(event) {
-      console.log("row " + event.node.data.upc + " selected = " + event.node.selected);
-    }
+  var adsPendingApprovalDatatableGridData = {
+    defaultColDef: {
+      resizable: true,
+      sortable:true,
+      filter: true
+    },
+    columnDefs: adsPendingApprovalDatatableColumnDefs,
+    rowData: emptyData,
+    pagination: true,
+    paginationPageSize: 10,
+    paginationNumberFormatter: function(params) {
+      return '' + params.value.toLocaleString() + '';
+    },
+    onGridReady: function(params) {
+      params.api.sizeColumnsToFit();
+    },
+    components: {
+      'linking': Linking
+    },
+  };
 
-    function onSelectionChanged(event) {
-      var rowCount = event.api.getSelectedNodes().length;
-      console.log('selection changed, ' + rowCount + ' rows selected');
-      if(rowCount > 0) {
-        $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
-        if($('#cardHeaderAction .button-wrapper .header-action-process').length === 0) {
-          $('#cardHeaderAction .button-wrapper').append('<a href="/pending-billing-process.html" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Process</a>');
-        }
-      } else {
-        $('#select-row-num').html('');
-        $('#cardHeaderAction .button-wrapper .header-action-process').remove();
-      }
-    }
+  var adsPendingApprovalDatatableDiv = document.querySelector('#adsPendingApprovalDatatable');
+  new agGrid.Grid(adsPendingApprovalDatatableDiv, adsPendingApprovalDatatableGridData); 
 
-    $(document).ready(function() { 
-      $(window).on("load resize ",function(e){
-        $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
-      });
-    });
-  </script>
+  var pendingAllowancesDatatableGridData = {
+    defaultColDef: {
+      resizable: true,
+      sortable:true,
+      filter: true
+    },
+    columnDefs: pendingAllowancesDatatableColumnDefs,
+    rowData: emptyData,
+    pagination: true,
+    paginationPageSize: 10,
+    paginationNumberFormatter: function(params) {
+      return '' + params.value.toLocaleString() + '';
+    },
+    onGridReady: function(params) {
+      params.api.sizeColumnsToFit();
+    },
+    components: {
+      'linking': Linking
+    },
+  };
+  
+  var pendingAllowancesDatatableDiv = document.querySelector('#pendingAllowancesDatatable');
+  new agGrid.Grid(pendingAllowancesDatatableDiv, pendingAllowancesDatatableGridData); 
+
+  var vendorBillingDatatableGridData = {
+    defaultColDef: {
+      resizable: true,
+      sortable:true,
+      filter: true
+    },
+    columnDefs: vendorBillingDatatableColumnDefs,
+    rowData: emptyData,
+    pagination: true,
+    paginationPageSize: 10,
+    paginationNumberFormatter: function(params) {
+      return '' + params.value.toLocaleString() + '';
+    },
+    onGridReady: function(params) {
+      params.api.sizeColumnsToFit();
+    },
+    components: {
+      'linking': Linking
+    },
+  };
+  
+  var vendorBillingDatatableDiv = document.querySelector('#vendorBillingDatatable');
+  new agGrid.Grid(vendorBillingDatatableDiv, vendorBillingDatatableGridData); 
+
+$.get("data/home.json", function(data, status){
+  adsPendingApprovalDatatableGridData.api.setRowData(data);
+  pendingAllowancesDatatableGridData.api.setRowData(data);
+  vendorBillingDatatableGridData.api.setRowData(data);
+});
+
+function Linking() {}
+
+// init method gets the details of the cell to be rendere
+Linking.prototype.init = function(params) {
+  this.eGui = document.createElement('div');
+  if(params.colDef.headerName === 'Ad Name') {
+    this.eGui.innerHTML = '<a href="/add-promo-item-data.html" title="">' + params.value + '</a>';
+  } else if(params.colDef.headerName === 'Deal Name') {
+    this.eGui.innerHTML = '<a href="/pending-deals.html" title="">' + params.value + '</a>';
+  } else if(params.colDef.headerName === 'UPC') {
+    this.eGui.innerHTML = '<a href="/pending-billing.html" title="">' + params.value + '</a>';
+  }
+};
+
+Linking.prototype.getGui = function() {
+    return this.eGui;
+};
+
+
+$('body').on('change', '.itemDropdownSelect', function(event) {
+    event.preventDefault();
+    eval($(this).attr('data-table')).api.paginationSetPageSize(Number($(this).val()));
+}); 
+
+</script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
