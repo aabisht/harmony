@@ -21,10 +21,19 @@ $(document).ready(function() {
     {headerName: "End Date", field: "end_date", editable: true},
     {headerName: "Deadline", field: "deadline", editable: true},
     {headerName: "Status", field: "status", editable: true},
-    {headerName: "", field: "action", editable: false, cellRenderer: 'gridAction', minWidth: 340}
   ];
 
   $.get("data/view-promo.json", function(data){
+
+    if(window.location.pathname === '/add-promo-template-selection.html') {
+      columnDefs.push(
+        {headerName: "", field: "action", editable: false, cellRenderer: 'gridAction', minWidth: 340}
+      );
+    } else {
+      columnDefs.push(
+        {headerName: "", field: "action", editable: false, cellRenderer: 'gridAction', width: 100}
+      );
+    }
 
     $(data).each(function() {
       if(this.event_name === "Event 1") {
