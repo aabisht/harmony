@@ -17,6 +17,12 @@
   <link rel="stylesheet" href="css/styles.css">
 
   <meta name="theme-color" content="#fafafa">
+<style>
+  .datatable.ag-theme-material {
+    height: calc(100vh - 390px);
+    min-height: 230px;
+  }
+</style>
 </head>
 
 <body class="left-menu-fixed">
@@ -68,7 +74,7 @@
                   <div class="row justify-content-left align-items-center">
                     <div class="col-lg-5 col-md-4">
                       <div class="cell-wrapper">
-                        <div class="file-field input-field">
+                        <div class="file-field input-field mt-0">
                           <div class="btn button-primary button-icon-left">
                             <span><i class="fas fa-file-upload"></i> Upload File</span>
                             <input type="file">
@@ -86,7 +92,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12">
+                    <div class="col-lg-5 col-md-4">
                       <a href="javascrip:;" class="download-csv-button">Download Template</a>
                     </div>
                   </div>
@@ -286,9 +292,9 @@
     }
 
     $(document).ready(function() { 
-      $(window).on("load resize ",function(e){
-        $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
-      });
+      // $(window).on("load resize ",function(e){
+      //   $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
+      // });
 
       $('body').on('click', '.saveRow', function(event) {
         event.preventDefault();

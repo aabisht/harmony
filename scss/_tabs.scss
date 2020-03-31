@@ -43,6 +43,12 @@
         }
     }
 
+    &.card-tab-without-header-wrapper {
+        .tab-label-wrapper {
+            margin-top: -$card-tab-wrapper-padding;
+        }
+    }
+
     .card-tab-content-wrapper {
         // padding-top: $card-tab-wrapper-padding;
 

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Pending Bills | Bristol Farms</title>
+  <title>Past Accruals | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -17,13 +17,6 @@
   <link rel="stylesheet" href="css/styles.css">
 
   <meta name="theme-color" content="#fafafa">
-
-<style>
-  .datatable.ag-theme-material {
-    height: calc(100vh - 370px);
-    min-height: 230px;
-  }
-</style>
 </head>
 
 <body class="left-menu-fixed">
@@ -40,11 +33,11 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>Pending Bills</h3>
+                      <h3>Past Accruals</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Pending Bills</li>
+                          <li class="breadcrumb-item active" aria-current="page">Past Accruals</li>
                         </ol>
                       </div>
                     </div>
@@ -71,28 +64,13 @@
             <div class="container-fluid">
               <div class="card header-search-card-wrapper">
                 <div class="card-content">
-                  <h3 class="card-title">Search for deals that ended between</h3>
-                  <div class="row align-items-center">
-                    <!-- <div class="col-lg-4 col-md-4">
+                  <h3 class="card-title">Select Month</h3>
+                  <div class="row justify-content-left align-items-center">
+                    <div class="col-lg-4 col-md-4">
                       <div class="cell-wrapper">
-                        <div class="input-field mt-0">
-                          <input type="text"
-                                data-range="true"
-                                data-multiple-dates-separator=" - "
-                                data-language="en"
-                                id="search_start_date"
-                                autocomplete="false"
-                                class="datepicker-here"/>
-                          <label for="search_start_date">Select Date Range Between</label>
-                        </div>
-                      </div>
-                    </div> -->
-                    <div class="col-lg-5 col-md-4">
-                      <div class="cell-wrapper">
-                        <div class="input-field date-range-wrapper">
-                          <input id="search_start_date" type="text" class="datepicker-here" value="01-01-2020" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
-                          <span class="input-seperator">And</span>
-                          <input id="search_end_date" type="text" class="datepicker-here" value="02-10-2020" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
+                        <div class="input-field">
+                          <input id="search_start_date" type="text" class="datepicker-here" data-language='en' data-min-view="months" data-view="months" data-date-format="MM yyyy" autocomplete="off" value="February 2020">
+                          <!-- <label for="search_start_date">Select Accrual Start Date</label> -->
                         </div>
                       </div>
                     </div>
@@ -115,11 +93,10 @@
                 <div class="card-content">
                   <div class="card-header d-flex flex-row justify-content-between align-items-center">
                     <div class="card-title-wrapper">
-                      <h3 class="card-title">Pending Bills <span id="select-row-num"></span></h3>
+                      <h3 class="card-title">Pending Accruals <span id="select-row-num"></span></h3>
                     </div>
                     <div class="card-header-action-wrapper" id="cardHeaderAction">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        
                         <!-- <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-filter"></i> Filter</button>
                         <button type="button" class="button-stroked button-primary header-action-item"><i class="fas fa-sort"></i> Sort</button> -->
                         <button type="button" class="button-stroked button-primary tooltip header-action-item" data-position="bottom" data-tooltip="Download"><i class="fas fa-download"></i></button>
@@ -139,6 +116,7 @@
                       </div>
                     </div>
                   </div>
+                  
                 </div>
               </div>
             </div>
@@ -161,7 +139,7 @@
   <script src="js/main.js"></script>
 
   <script>
-    var gridOptions;
+    var gridOptions, gridData=[];
       var columnDefs = [
         {
           headerName: "UPC", 
@@ -172,14 +150,18 @@
           minWidth: 240
         },
         {headerName: "Store", field: "store"},
-        {headerName: "Vendor", field: "vendor"},
-        {headerName: "Bill To", field: "bill_to"},
-        {headerName: "Type", field: "type"},
-        {headerName: "Amount", field: "price"},
-        {headerName: "Start Date", field: "start_date"},
-        {headerName: "End Date", field: "end_date"},
+        {headerName: "$/Unit", field: "price_unit"},
+        {headerName: "Total Units Sold", field: "unit"},
+        {headerName: "Total", field: "total"},
+        {headerName: "Accrual Start Date", field: "start_date"},
       ];
-      $.get("data/pendin-bills.json", function(data, status){
+      $.get("data/pending-accurals.json", function(data, status){
+        $(data).each(function(item) {
+          this.price_unit = '$'+this.price_unit;
+          this.total = '$'+this.total;
+
+          gridData.push(this);
+        });
         gridOptions = {
           defaultColDef: {
             editable: false,
@@ -189,7 +171,7 @@
           },
           rowSelection: 'multiple',
           columnDefs: columnDefs,
-          rowData: data,
+          rowData: gridData,
           pagination: true,
           paginationPageSize: 10,
           onRowSelected: onRowSelected,
@@ -198,7 +180,7 @@
               return '' + params.value.toLocaleString() + '';
           },
           onGridReady: function(params) {
-            // params.api.sizeColumnsToFit();
+            params.api.sizeColumnsToFit();
           }
         };
         var gridDiv = document.querySelector('#datatable');
@@ -220,7 +202,7 @@
       if(rowCount > 0) {
         $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
         if($('#cardHeaderAction .button-wrapper .header-action-process').length === 0) {
-          $('#cardHeaderAction .button-wrapper').append('<a href="/pending-billing-process.html" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Process</a>');
+          $('#cardHeaderAction .button-wrapper').append('<a href="javascript:;" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Run Accruals</a>');
         }
       } else {
         $('#select-row-num').html('');
@@ -229,14 +211,14 @@
     }
 
     $(document).ready(function() { 
-      // $(window).on("load resize ",function(e){
-      //   $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
-      // });
-
-      
+      $(window).on("load resize ",function(e){
+        $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
+      });
 
       $('.datepicker-here').each(function() {
-        var dp = $(this).datepicker().data('datepicker');
+        var dp = $(this).datepicker({
+          maxDate: new Date()
+        }).data('datepicker');
         dp.selectDate(new Date($(this).attr('value')));
       });
     });
