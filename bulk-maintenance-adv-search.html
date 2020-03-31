@@ -210,8 +210,21 @@
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="row header-search-input-wrapper align-items-start justify-content-center">
-                                    <div class="col-md-6">
+                                  <div class="row header-search-input-wrapper align-items-baseline justify-content-center">
+                                    <div class="col-md-2">
+                                      <div class="cell-wrapper">
+                                        <div class="input-field">
+                                          <select>
+                                            <option value="" disabled selected>Choose</option>
+                                            <option value="1">Department 1</option>
+                                            <option value="2">Department 2</option>
+                                            <option value="3">Department 3</option>
+                                          </select>
+                                          <label>Department</label>
+                                        </div>
+                                      </div>
+                                    </div> 
+                                    <div class="col-md-5">
                                       <div class="cell-wrapper">
                                         <div class="checkbox-field">
                                           <label>
@@ -221,7 +234,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-5">
                                       <div class="cell-wrapper">
                                         <div class="checkbox-field">
                                           <label>
@@ -249,7 +262,7 @@
                                     <h3 class="card-title mb-3">Item Details<br><small>Double Click on row to edit.</small></h3>
                                     <div class="card-header-action-wrapper" id="cardHeaderAction">
                                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                                        <button type="button" class="button-primary button-stroked header-action-item saveRow">Save Row</button>
+                                        <button type="button" class="button-primary button-stroked header-action-item saveRow disabled">Save Row</button>
                                       </div>
                                     </div>
                                   </div>
@@ -257,7 +270,7 @@
                                     <div id="adPromoItemDetailDatatable" class="datatable ag-theme-material"></div>
                                     <div class="datatable-action-item-select">
                                       <div class="d-flex flex-row justify-content-end align-items-center">
-                                        <span class="page-size-label">Item to Show</span>
+                                        <span class="page-size-label">Items to Show</span>
                                         <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
                                           <option value="10">10</option>
                                           <option value="20">20</option>
@@ -282,7 +295,7 @@
                                         <div id="adPromoItemPriorAdsDatatable1" class="datatable ag-theme-material"></div>
                                         <div class="datatable-action-item-select">
                                           <div class="d-flex flex-row justify-content-end align-items-center">
-                                            <span class="page-size-label">Item to Show</span>
+                                            <span class="page-size-label">Items to Show</span>
                                             <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
                                               <option value="10">10</option>
                                               <option value="20">20</option>
@@ -305,7 +318,7 @@
                                         <div id="adPromoItemPriorAdsDatatable2" class="datatable ag-theme-material"></div>
                                         <div class="datatable-action-item-select">
                                           <div class="d-flex flex-row justify-content-end align-items-center">
-                                            <span class="page-size-label">Item to Show</span>
+                                            <span class="page-size-label">Items to Show</span>
                                             <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
                                               <option value="10">10</option>
                                               <option value="20">20</option>
@@ -328,7 +341,7 @@
                                         <div id="adPromoItemPriorAdsDatatable3" class="datatable ag-theme-material"></div>
                                         <div class="datatable-action-item-select">
                                           <div class="d-flex flex-row justify-content-end align-items-center">
-                                            <span class="page-size-label">Item to Show</span>
+                                            <span class="page-size-label">Items to Show</span>
                                             <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
                                               <option value="10">10</option>
                                               <option value="20">20</option>

@@ -40,6 +40,8 @@
 
     &.ag-theme-material {
         color: $datatable-text-color;
+        font-family: $primary-font;
+        color: $secondary-color;
 
         .card & {
             margin-bottom: -24px;
@@ -49,8 +51,20 @@
             }
         }
 
+        .card .datatable-2-col & {
+            .ag-paging-panel { 
+                height: 102px;
+                padding-top: $grid-gutter-width/2;
+                @include align-items(start);
+                @include justify-content(center);
+            }
+        }
+
         .ag-header {
             background-color: $datatable-header-bg-color;
+            font-family: $secondary-font;
+            @include fontSize(15px);
+            color: $secondary-color;
         }
 
         .ag-cell {
@@ -340,6 +354,14 @@
         position: absolute;
         left: 0;
         bottom: 0;
+    }
+
+    &.datatable-2-col  {
+
+        .datatable-action-item-select { 
+            right: 0;
+            width: 100%;
+        }
     }
 }
 

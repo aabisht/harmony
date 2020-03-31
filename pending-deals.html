@@ -82,12 +82,12 @@
                     </div>
                     <div class="header-action-wrapper">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <div class="input-field">
+                        <!-- <div class="input-field">
                           <textarea id="textarea1" class="materialize-textarea" maxlength="60" style="min-width: 300px;"></textarea>
                           <label for="textarea1">Comment</label>
-                        </div>
+                        </div> -->
                         <a href="javascript:;" class="button-primary header-action-item"><i class="fas fa-check"></i> Accept</a>
-                        <a href="javascript:;" class="button-primary header-action-item"><i class="fas fa-times"></i> Reject</a>
+                        <a href="#updateItemRowModal" class="button-primary header-action-item modal-trigger"><i class="fas fa-times"></i> Reject</a>
                       </div>
                     </div>
                   </div>
@@ -96,7 +96,7 @@
                       <div id="vendor1Data" class="datatable ag-theme-material"></div>
                       <div class="datatable-action-item-select">
                         <div class="d-flex flex-row justify-content-end align-items-center">
-                          <span class="page-size-label">Item to Show</span>
+                          <span class="page-size-label">Items to Show</span>
                           <select onchange="onPageSizeChanged(event, 'grid-1')" id="page-size-2">
                             <option value="10">10</option>
                             <option value="20">20</option>
@@ -116,12 +116,12 @@
                     </div>
                     <div class="header-action-wrapper">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <div class="input-field">
+                        <!-- <div class="input-field">
                           <textarea id="textarea1" class="materialize-textarea" maxlength="60" style="min-width: 300px;"></textarea>
                           <label for="textarea1">Comment</label>
-                        </div>
+                        </div> -->
                         <a href="javascript:;" class="button-primary header-action-item"><i class="fas fa-check"></i> Accept</a>
-                        <a href="javascript:;" class="button-primary header-action-item"><i class="fas fa-times"></i> Reject</a>
+                        <a href="#updateItemRowModal" class="button-primary header-action-item modal-trigger"><i class="fas fa-times"></i> Reject</a>
                       </div>
                     </div>
                   </div>
@@ -130,7 +130,7 @@
                       <div id="vendor2Data" class="datatable ag-theme-material"></div>
                       <div class="datatable-action-item-select">
                         <div class="d-flex flex-row justify-content-end align-items-center">
-                          <span class="page-size-label">Item to Show</span>
+                          <span class="page-size-label">Items to Show</span>
                           <select onchange="onPageSizeChanged(event, 'grid-2')" id="page-size-2">
                             <option value="10">10</option>
                             <option value="20">20</option>
@@ -151,6 +151,20 @@
   </div>
 
 
+  <div id="updateItemRowModal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to reject?</p>
+      <div class="input-field ">
+        <textarea id="updateItemRowModalTextarea" class="materialize-textarea" style="height: 46px;"></textarea>
+        <label for="updateItemRowModalTextarea">Comment</label>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="javascript:;" class="modal-close button-stroked button-primary"><i class="fas fa-times"></i> Cancel</a>
+      <a href="javascript:;" class="modal-close button-primary removed-saved-search"><i class="fas fa-times"></i> Reject</a>
+    </div>
+  </div>
+
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="js/vendor/jquery-3.4.1.min.js"></script>
   <script src="js/vendor/ag-grid-enterprise.min.js"></script>
@@ -166,15 +180,17 @@
       {
           headerName: "UPC", 
           field: "upc",
-          minWidth: 240
+          minWidth: 240,
+          editable: false
         },
-        {headerName: "Store", field: "store"},
+        {headerName: "Vendor", field: "vendor", editable: true},
+        {headerName: "Deal Type", field: "allowance_type", editable: true},
+        {headerName: "Deal Amount", field: "amount", editable: true},
+        {headerName: "Start Date", field: "start_date", editable: true},
+        {headerName: "End Date", field: "end_date", editable: true},
+        {headerName: "Store/Zone", field: "store", editable: true},
         // {headerName: "Cost Type", field: "cost_type"},
-        {headerName: "Allowance Type", field: "allowance_type"},
-        {headerName: "Amount", field: "amount"},
         // {headerName: "Ad Fee", field: "ad_fee"},
-        {headerName: "Start Date", field: "start_date"},
-        {headerName: "End Date", field: "end_date"}
       ];
       $.get("data/deals.json", function(data, status){
 
@@ -200,8 +216,9 @@
           suppressContextMenu:true,
           pagination: true,
           paginationPageSize: 10,
+          editType: 'fullRow',
           paginationNumberFormatter: function(params) {
-              return '[' + params.value.toLocaleString() + ']';
+              return '' + params.value.toLocaleString() + '';
           },
           onGridReady: function(params) {
             // params.api.sizeColumnsToFit();
@@ -220,8 +237,9 @@
           suppressContextMenu:true,
           pagination: true,
           paginationPageSize: 10,
+          editType: 'fullRow',
           paginationNumberFormatter: function(params) {
-              return '[' + params.value.toLocaleString() + ']';
+              return '' + params.value.toLocaleString() + '';
           },
           onGridReady: function(params) {
             // params.api.sizeColumnsToFit();

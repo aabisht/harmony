@@ -374,7 +374,7 @@ $.get("data/view-item-price.json", function(data, status){
             'priorityAction': PriorityAction
         },
         paginationNumberFormatter: function(params) {
-            return '[' + params.value.toLocaleString() + ']';
+            return '' + params.value.toLocaleString() + '';
         },
         onGridReady: function(params) {
             params.api.sizeColumnsToFit();
@@ -401,7 +401,7 @@ $.get("data/view-item-price-current.json", function(data, status){
     pagination: true,
     paginationPageSize: 10,
     paginationNumberFormatter: function(params) {
-        return '[' + params.value.toLocaleString() + ']';
+        return '' + params.value.toLocaleString() + '';
     },
     onGridReady: function(params) {
         params.api.sizeColumnsToFit();
@@ -429,7 +429,7 @@ $.get("data/view-item-cost.json", function(data, status){
             'priorityAction': PriorityAction
         },
         paginationNumberFormatter: function(params) {
-            return '[' + params.value.toLocaleString() + ']';
+            return '' + params.value.toLocaleString() + '';
         },
         onGridReady: function(params) {
             params.api.sizeColumnsToFit();
@@ -456,7 +456,7 @@ $.get("data/view-item-allowances.json", function(data, status){
     pagination: true,
     paginationPageSize: 10,
     paginationNumberFormatter: function(params) {
-        return '[' + params.value.toLocaleString() + ']';
+        return '' + params.value.toLocaleString() + '';
     },
     onGridReady: function(params) {
         params.api.sizeColumnsToFit();

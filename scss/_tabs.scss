@@ -26,7 +26,7 @@
 
 .card-tab-wrapper {
     .tab-label-wrapper {
-        margin: -#{$card-tab-wrapper-padding} -#{$card-tab-wrapper-padding} 0;
+        margin: 0 -#{$card-tab-wrapper-padding} 0;
         @include box-shadow(0 2px 3px rgba($color-black, 0.2));
 
         .tabs {
@@ -40,6 +40,12 @@
                     }
                 }
             }
+        }
+    }
+
+    &.card-tab-without-header-wrapper {
+        .tab-label-wrapper {
+            margin-top: -$card-tab-wrapper-padding;
         }
     }
 

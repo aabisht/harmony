@@ -142,10 +142,13 @@
     }
 }
 
-#adPromoItemManageTPOS,
 #adEventDatatable {
     height: calc(100vh - 178px);
     min-height: 400px;
+}
+
+#adPromoItemManageTPOS {
+    height: calc(100vh - 210px);
 }
 
 #bulkMaintanceTable {

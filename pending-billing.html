@@ -17,6 +17,13 @@
   <link rel="stylesheet" href="css/styles.css">
 
   <meta name="theme-color" content="#fafafa">
+
+<style>
+  .datatable.ag-theme-material {
+    height: calc(100vh - 370px);
+    min-height: 230px;
+  }
+</style>
 </head>
 
 <body class="left-menu-fixed">
@@ -64,21 +71,28 @@
             <div class="container-fluid">
               <div class="card header-search-card-wrapper">
                 <div class="card-content">
-                  <h3 class="card-title">Deals ended between</h3>
+                  <h3 class="card-title">Search for deals that ended between</h3>
                   <div class="row align-items-center">
-                    <div class="col-lg-5 col-md-4">
+                    <!-- <div class="col-lg-4 col-md-4">
                       <div class="cell-wrapper">
-                        <div class="input-field">
-                          <input id="search_start_date" type="text" class="datepicker-here" value="01-01-2020" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
-                          <label for="search_start_date">Start Date</label>
+                        <div class="input-field mt-0">
+                          <input type="text"
+                                data-range="true"
+                                data-multiple-dates-separator=" - "
+                                data-language="en"
+                                id="search_start_date"
+                                autocomplete="false"
+                                class="datepicker-here"/>
+                          <label for="search_start_date">Select Date Range Between</label>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-5 col-md-4">
                       <div class="cell-wrapper">
-                        <div class="input-field">
+                        <div class="input-field date-range-wrapper">
+                          <input id="search_start_date" type="text" class="datepicker-here" value="01-01-2020" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
+                          <span class="input-seperator">And</span>
                           <input id="search_end_date" type="text" class="datepicker-here" value="02-10-2020" autocomplete="off" data-language='en' data-date-format="mm-dd-yyyy">
-                          <label for="search_end_date">End Date</label>
                         </div>
                       </div>
                     </div>
@@ -116,7 +130,7 @@
                     <div id="datatable" class="datatable ag-theme-material"></div>
                     <div class="datatable-action-item-select">
                       <div class="d-flex flex-row justify-content-end align-items-center">
-                        <span class="page-size-label">Item to Show</span>
+                        <span class="page-size-label">Items to Show</span>
                         <select onchange="onPageSizeChanged()" id="page-size">
                           <option value="10">10</option>
                           <option value="20">20</option>
@@ -181,7 +195,7 @@
           onRowSelected: onRowSelected,
           onSelectionChanged: onSelectionChanged,
           paginationNumberFormatter: function(params) {
-              return '[' + params.value.toLocaleString() + ']';
+              return '' + params.value.toLocaleString() + '';
           },
           onGridReady: function(params) {
             // params.api.sizeColumnsToFit();
@@ -215,9 +229,9 @@
     }
 
     $(document).ready(function() { 
-      $(window).on("load resize ",function(e){
-        $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
-      });
+      // $(window).on("load resize ",function(e){
+      //   $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
+      // });
 
       
 

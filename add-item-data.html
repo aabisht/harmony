@@ -182,7 +182,7 @@
                             <option value="show_locked_only">Show Locked</option>
                           </select>
                         </div> -->
-                        <button type="button" class="button-primary button-stroked saveRow header-action-item">Save Row</button>
+                        <button type="button" class="button-primary button-stroked saveRow header-action-item disabled">Save Row</button>
                         <a href="/view-item-data.html" class="button-primary header-action-item"><i class="fas fa-long-arrow-alt-left"></i> Back to List</a>
                       </div>
                     </div>
@@ -191,7 +191,7 @@
                     <div id="datatable" class="datatable ag-theme-material"></div>
                     <div class="datatable-action-item-select">
                       <div class="d-flex flex-row justify-content-end align-items-center">
-                        <span class="page-size-label">Item to Show</span>
+                        <span class="page-size-label">Items to Show</span>
                         <select onchange="onPageSizeChanged()" id="page-size">
                           <option value="10">10</option>
                           <option value="20">20</option>
@@ -464,7 +464,7 @@
         onRowSelected: onRowSelected,
         onSelectionChanged: onSelectionChanged,
         paginationNumberFormatter: function(params) {
-            return '[' + params.value.toLocaleString() + ']';
+            return '' + params.value.toLocaleString() + '';
         },
         onGridReady: function(params) {
           // params.api.sizeColumnsToFit();
@@ -478,7 +478,7 @@
         onRowEditingStarted: function(event){
           var _this = this;
           
-          $('.saveRow').css({'display': 'inline-block'});
+          $('.saveRow').removeClass('disabled');
         },
         onRowValueChanged: function(event) {
             var data = event.data,
@@ -560,7 +560,7 @@
               $(this).addClass('edited-row')
             }
         });
-        $('.saveRow').css({'display': 'none'});
+        $('.saveRow').addClass('disabled');
         M.toast({html: 'Value for '+upc+' changed.'});
       }
 

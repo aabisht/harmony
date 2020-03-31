@@ -80,7 +80,7 @@
                       <div id="downloadTemplateData" class="datatable ag-theme-material"></div>
                       <div class="datatable-action-item-select">
                         <div class="d-flex flex-row justify-content-end align-items-center">
-                          <span class="page-size-label">Item to Show</span>
+                          <span class="page-size-label">Items to Show</span>
                           <select onchange="onPageSizeChanged(event, gridOptions)" id="page-size" class="page-size">
                             <option value="10">10</option>
                             <option value="20">20</option>
@@ -139,7 +139,7 @@
                       </div>
                       <div class="card-header-action-wrapper" id="cardHeaderAction">
                         <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                          <button type="button" class="button-primary button-stroked saveRow header-action-item">Save Row</button>
+                          <button type="button" class="button-primary button-stroked saveRow header-action-item disabled">Save Row</button>
                           <button type="button" class="button-primary header-action-item disabled">Submit</button>
                         </div>
                         <div class="info-msg error text-right">
@@ -151,7 +151,7 @@
                       <div id="datatable" class="datatable ag-theme-material"></div>
                       <div class="datatable-action-item-select">
                         <div class="d-flex flex-row justify-content-end align-items-center">
-                          <span class="page-size-label">Item to Show</span>
+                          <span class="page-size-label">Items to Show</span>
                           <select onchange="onPageSizeChanged(event, bulkUploadGridOption)" id="page-size">
                             <option value="10">10</option>
                             <option value="20">20</option>
@@ -236,7 +236,7 @@
           'tableAction': TableAction
         },
         paginationNumberFormatter: function(params) {
-            return '[' + params.value.toLocaleString() + ']';
+            return '' + params.value.toLocaleString() + '';
         },
         onGridReady: function(params) {
           params.api.sizeColumnsToFit();
@@ -274,7 +274,7 @@
           'tooltipCellRenderer': TooltipCellRenderer
         },
         paginationNumberFormatter: function(params) {
-            return '[' + params.value.toLocaleString() + ']';
+            return '' + params.value.toLocaleString() + '';
         },
         onGridReady: function(params) {
           $('.datatable.ag-theme-material .ag-cell .tooltip').tooltip();
@@ -290,7 +290,7 @@
         },
         onRowEditingStarted: function(event){
           var _this = this;
-          $('.saveRow').css({'display': 'inline-block'});
+          $('.saveRow').removeClass('disabled');
         },
         onRowValueChanged: function(event) {
             var data = event.data,
@@ -383,6 +383,7 @@
 
       $('body').on('click', '.saveRow', function(event) {
         event.preventDefault();
+        $(this).addClass('disabled');
         bulkUploadGridOption.api.stopEditing();
       });
 

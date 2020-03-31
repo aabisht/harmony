@@ -69,9 +69,18 @@ $(document).ready(function() {
       {headerName: "Linked Code", field: "linked_code", cellRenderer: 'linkedCode'},
     ],
     adPromoItemDetailDatatable = [
-          {headerName: "UPC", field: "upc", editable: true},
+        {
+            headerName: "UPC", 
+            field: "upc",
+            headerCheckboxSelection: true,
+            headerCheckboxSelectionFilteredOnly: true,
+            checkboxSelection: true,
+            minWidth: 240,
+            editable: false
+        },
         //   {headerName: "TPOS", field: "tpos", editable: true},
           {headerName: "Description", field: "description", editable: true},
+          {headerName: "Department", field: "department", editable: true},
           {headerName: "Unit Size", field: "unit_size", editable: true},
           {headerName: "Ad Multiplier", field: "ad_multiplier", editable: true},
           {headerName: "Ad Retail", field: "ad_retail", editable: true},
@@ -80,7 +89,7 @@ $(document).ready(function() {
           {headerName: "Sign Text 1", field: "sign_text_1", editable: true},
           {headerName: "Sign Text 2", field: "sign_text_2", editable: true},
           {headerName: "Sign Text 3", field: "sign_text_3", editable: true},
-          {headerName: "Action", field: "action", editable: false, cellRenderer: 'priorAdAction'}
+        //   {headerName: "Action", field: "action", editable: false, cellRenderer: 'priorAdAction', minWidth: 240}
     ],
     colDefsManageTPOS = [
         {
@@ -95,6 +104,7 @@ $(document).ready(function() {
         {headerName: "Sign Text 1", field: "sign_text_1"},
         {headerName: "Sign Text 2", field: "sign_text_2"},
         {headerName: "Sign Text 3", field: "sign_text_3"},
+        {headerName: "TPOS Status", field: "tpos_Status"},
         {headerName: "Action", field: "action", cellRenderer: 'manageTPOSAction'},
     ],
     priorAdcolDefs = [
@@ -168,7 +178,7 @@ $(document).ready(function() {
                 onRowSelected: onRowSelected,
                 onSelectionChanged: onSelectionChanged,
                 paginationNumberFormatter: function(params) {
-                    return '[' + params.value.toLocaleString() + ']';
+                    return '' + params.value.toLocaleString() + '';
                 },
                 components: {
                     'gridAction': GridAction
@@ -203,7 +213,7 @@ $(document).ready(function() {
                 rowSelection: 'multiple',
                 onSelectionChanged: onSelectionChanged,
                 paginationNumberFormatter: function(params) {
-                    return '[' + params.value.toLocaleString() + ']';
+                    return '' + params.value.toLocaleString() + '';
                 },
                 components: {
                 'linkedCode': LinkedCode
@@ -230,7 +240,7 @@ $(document).ready(function() {
                 columnDefs: colDefsManageTPOS,
                 rowData: data,
                 pagination: true,
-                paginationPageSize: 50,
+                paginationPageSize: 20,
                 masterDetail: true,
                 suppressContextMenu:true,
                 components: {
@@ -281,15 +291,16 @@ $(document).ready(function() {
             rowSelection: 'multiple',
             onSelectionChanged: onSelectionChanged,
             paginationNumberFormatter: function(params) {
-                return '[' + params.value.toLocaleString() + ']';
+                return '' + params.value.toLocaleString() + '';
             },
             onRowEditingStarted: function(event){
               var _this = this;
               
-              $('.saveRow').css({'display': 'inline-block'});
+              $('.saveRow').removeClass('disabled');
             },
             onRowSelected: onRowSelected,
             onGridReady: function(params) {
+                // params.api.sizeColumnsToFit();
             },
             components: {
                 'priorAdAction': PriorAdAction
@@ -353,7 +364,7 @@ $(document).ready(function() {
     $('body').on('click', '.saveRow', function(event) {
         event.preventDefault();
         adPromoItemDetailDatatableGridData.api.stopEditing();
-        $(this).hide();
+        $(this).addClass('disabled');
     });
     
     function manageTPOSAction() {}
@@ -365,11 +376,11 @@ $(document).ready(function() {
         this.eGui.classList.add('button-wrapper');
         var status = Math.floor(Math.random() * 2) + 1;
         var html = '';
-        if(status === 1) {
+        // if(status === 1) {
             html = '<a href="javascript:;" title="Approve" class="button-primary button-stroked" >Approve</a><a href="javascript:;" title="Reject" class="button-primary button-stroked" >Reject</a>';
-        } else {
-            html = '<a href="javascript:;" title="Re-open" class="button-primary button-stroked" >Re-open</a>';
-        }
+        // } else {
+            // html = '<a href="javascript:;" title="Re-open" class="button-primary button-stroked" >Re-open</a>';
+        // }
         this.eGui.innerHTML = html;
     };
 
@@ -384,7 +395,7 @@ $(document).ready(function() {
         this.eGui = document.createElement('div');
         this.eGui.classList.add('table-action-wrapper');
         this.eGui.classList.add('button-wrapper');
-        html = '<a href="/manage-tpos.html" title="Manage TPOS" class="button-primary button-stroked" >Manage TPOS</a>';
+        html = '<a href="" title="Submit" class="button-primary button-stroked">Save</a><a href="" title="Submit" class="button-primary button-stroked" >Submit</a>';
         this.eGui.innerHTML = html;
     };
 
@@ -395,7 +406,7 @@ $(document).ready(function() {
     $('body').on('click', '.saveRow', function(event) {
         event.preventDefault();
         adPromoItemDetailDatatableGridData.api.stopEditing();
-        $(this).hide();
+        $(this).addClass('disabled');
     });
 
     $('body').on('change', '#showEventInput', function(event) {
