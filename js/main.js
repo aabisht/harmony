@@ -35,11 +35,6 @@ $(document).ready(function() {
         $('.header-dropdown-wrapper').removeClass('active');
     });
 
-    $('body').on('click', '.left-menu-trigger', function(event) {
-        event.preventDefault();
-        $('body').toggleClass('left-menu-fixed');
-    });
-
     $('body').on('click', '.left-sidebar-menu-wrapper .has-children > a', function(event) {
         event.preventDefault();
         $(this).siblings('.child-menu').slideToggle();

@@ -53,6 +53,19 @@ a {
   @include text-truncate;
 }
 
+.input-field {
+  > label {
+    font-weight: bold;
+    font-size: 1.01rem;
+
+    &:not(.label-icon) {
+      &.active {
+        @include transform(translateY(-14px) scale(0.9));
+      }
+    }
+  }
+}
+
 .mat-form-field-label {
   margin-bottom: 0;
 }
