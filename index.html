@@ -265,6 +265,9 @@ $.get("data/home.json", function(data, status){
   adsPendingApprovalDatatableGridData.api.setRowData(data);
   pendingAllowancesDatatableGridData.api.setRowData(data);
   vendorBillingDatatableGridData.api.setRowData(data);
+  
+  pendingAllowancesDatatableGridData.api.sizeColumnsToFit();
+  adsPendingApprovalDatatableGridData.api.sizeColumnsToFit();
 });
 
 function Linking() {}
@@ -290,6 +293,11 @@ $('body').on('change', '.itemDropdownSelect', function(event) {
     event.preventDefault();
     eval($(this).attr('data-table')).api.paginationSetPageSize(Number($(this).val()));
 }); 
+
+$(window).on("load resize",function(e){
+  pendingAllowancesDatatableGridData.api.sizeColumnsToFit();
+  adsPendingApprovalDatatableGridData.api.sizeColumnsToFit();
+});
 
 </script>
 
