@@ -413,8 +413,6 @@ input, textarea {
     }
   }
 }
-<<<<<<< HEAD
-=======
 
 .date-range-wrapper {
   border-bottom: 1px solid #9e9e9e;
@@ -445,4 +443,9 @@ input, textarea {
     max-height: 250px;
   }
 }
->>>>>>> uat_testing
+
+.input-seperator {
+  @extend %card-title-styling;
+  display: inline-block !important;
+  margin-bottom: 0 !important;
+}

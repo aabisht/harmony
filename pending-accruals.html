@@ -20,6 +20,11 @@
 </head>
 
 <body class="left-menu-fixed">
+<style>
+  .card .datatable.ag-theme-material {
+    height: calc(100vh - 360px);
+  }
+</style>
 
   <div class="body-container-wrapper">
     <div class="body-wrapper">
@@ -64,7 +69,7 @@
             <div class="container-fluid">
               <div class="card header-search-card-wrapper">
                 <div class="card-content">
-                  <h3 class="card-title">Select Month</h3>
+                  <h3 class="card-title mb-0">Select Month</h3>
                   <div class="row justify-content-left align-items-center">
                     <div class="col-lg-4 col-md-4">
                       <div class="cell-wrapper">
@@ -150,8 +155,8 @@
           minWidth: 240
         },
         {headerName: "Store", field: "store"},
-        {headerName: "$/Unit", field: "price_unit"},
-        {headerName: "Total Units Sold", field: "unit"},
+        // {headerName: "$/Unit", field: "price_unit"},
+        // {headerName: "Total Units Sold", field: "unit"},
         {headerName: "Total", field: "total"},
         {headerName: "Accrual Start Date", field: "start_date"},
       ];
@@ -202,7 +207,7 @@
       if(rowCount > 0) {
         $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
         if($('#cardHeaderAction .button-wrapper .header-action-process').length === 0) {
-          $('#cardHeaderAction .button-wrapper').append('<a href="javascript:;" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Run Accruals</a>');
+          $('#cardHeaderAction .button-wrapper').append('<a href="/pending-accruals-process.html" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Run Accruals</a>');
         }
       } else {
         $('#select-row-num').html('');
@@ -211,9 +216,9 @@
     }
 
     $(document).ready(function() { 
-      $(window).on("load resize ",function(e){
-        $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
-      });
+      // $(window).on("load resize ",function(e){
+      //   $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
+      // });
 
       $('.datepicker-here').each(function() {
         var dp = $(this).datepicker({

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Past Bills | Bristol Farms</title>
+  <title>Process Pending Accruals | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -22,12 +22,11 @@
 <body class="left-menu-fixed">
   <style>
     .collapsible-data-table {
-      height: calc(100vh - 90px);
+      height: calc(100vh - 212px);
       background: #fff;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
-    /* .datatable {
-      height: 620px;
-    } */
   </style>
 
   <div class="body-container-wrapper">
@@ -42,11 +41,12 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>Past Bills</h3>
+                      <h3>Process</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Past Bills</li>
+                          <li class="breadcrumb-item"><a href="/pending-accruals.html">Pending Accruals</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Process</li>
                         </ol>
                       </div>
                     </div>
@@ -72,20 +72,27 @@
 
           <div class="main-body-data-wrapper">
             <div class="container-fluid">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-header d-flex flex-row justify-content-between align-items-center mb-0">
+                    <div class="card-title-wrapper">
+                      <h3 class="card-title">Pending Accruals</h3>
+                    </div>
+                    <div class="card-header-action-wrapper" id="cardHeaderAction">
+                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
+                        <a href="/pending-accruals-finalize.html" class="button-primary button-stroked header-action-item">Finalize All</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <ul class="collapsible collapsible-data-table">
                 <li class="">
-                  <div class="align-items-start collapsible-header d-flex flex-row justify-content-between">
+                  <div class="collapsible-header align-items-start d-flex flex-row justify-content-between">
                     <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
                     <div class="header-title">
-                      <h3>Bill To: Broker 1</h3>
+                      <h3>Accruals To: Broker 1</h3>
                       <h4>Total Amout: <span class="header-1-action-total-amt header-action-total-amt"></span></h4>
-                      <h5>Doc ID: 13</h5>
-                    </div>
-                    <div class="header-action-wrapper">
-                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <!-- <a href="javascript:;" class="button-primary header-action-item tooltip download-csv-button" data-position="bottom" data-tooltip="Downlaod CSV file"><i class="fas fa-file-download"></i> CSV</a> -->
-                        <a href="javascript:;" class="button-primary header-action-item tooltip download-pdf-button" data-position="bottom" data-tooltip="Downlaod PDF file"><i class="fas fa-file-download"></i> PDF</a>
-                      </div>
                     </div>
                   </div>
                   <div class="">
@@ -105,18 +112,11 @@
                   </div>
                 </li>
                 <li class="">
-                  <div class="align-items-center collapsible-header d-flex flex-row justify-content-between">
+                  <div class="collapsible-header align-items-center d-flex flex-row justify-content-between">
                     <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
                     <div class="header-title">
-                      <h3>Bill To: Broker 2</h3>
+                      <h3>Accruals To: Broker 2</h3>
                       <h4>Total Amout: <span class="header-2-action-total-amt header-action-total-amt"></span></h4>
-                      <h5>Doc ID: 18</h5>
-                    </div>
-                    <div class="header-action-wrapper">
-                      <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <!-- <a href="javascript:;" class="button-primary header-action-item tooltip download-csv-button" data-position="bottom" data-tooltip="Downlaod CSV file"><i class="fas fa-file-download"></i> CSV</a> -->
-                        <a href="javascript:;" class="button-primary header-action-item tooltip download-pdf-button" data-position="bottom" data-tooltip="Downlaod PDF file"><i class="fas fa-file-download"></i> PDF</a>
-                      </div>
                     </div>
                   </div>
                   <div class="">
@@ -154,36 +154,32 @@
 
 
   <script src="js/main.js"></script>
+
   <script>
-  var gridOptions_1, gridOptions_2, data1=[], data2=[], data1_total_price = 0 , data2_total_price = 0;
+    var gridOptions_1, gridOptions_2, data1=[], data2=[], data1_total_price = 0 , data2_total_price = 0;
       var columnDefs = [
         {headerName: "UPC", field: "upc", minWidth: 240},
-        {headerName: "Description", field: "description"},
         {headerName: "Store", field: "store"},
-        {headerName: "Type", field: "type"},
-        {headerName: "Start Date", field: "start_date"},
-        {headerName: "End Date", field: "end_date"},
-        {headerName: "$/ Unit", field: "price"},
-        {headerName: "Total Units", field: "unit"},
-        {headerName: "Total ($)", field: "total"},
+        {headerName: "$/Unit", field: "price_unit"},
+        {headerName: "Total Units Sold", field: "unit"},
+        {headerName: "Total", field: "total"},
+        {headerName: "Accrual Start Date", field: "start_date"},
       ];
-      $.get("data/pending-billing-process.json", function(data, status){
-        $(data["vendor-1"]).each(function() {
-          this.total = Number.parseFloat(parseFloat(this.price) * parseFloat(this.unit)).toFixed(2);
-          data1_total_price = data1_total_price + parseFloat(this.total);
-          this.price = '$'+ this.price;
-          this.total = '$' + this.total;
-          data1.push(this);
+      $.get("data/pending-accurals.json", function(data, status){
+        $(data).each(function(index, value){
+          // debugger;
+          if(index < 5) {
+            data1_total_price = data1_total_price + parseFloat(this.total);
+            this.price_unit = '$'+ this.price;
+            this.total = '$'+ this.total;
+            data1.push(this);
+          } else if(index < 10) {
+            data2_total_price = data2_total_price + parseFloat(this.total);
+            this.price_unit = '$'+ this.price;
+            this.total = '$'+ this.total;
+            data2.push(this);
+          }
         });
-
-        $(data["vendor-2"]).each(function() {
-          this.total = Number.parseFloat(parseFloat(this.price) * parseFloat(this.unit)).toFixed(2);
-          data2_total_price = data2_total_price + parseFloat(this.total);
-          this.price = '$'+ this.price;
-          this.total = '$' + this.total;
-          data2.push(this);
-        });
-
 
         gridOptions_1 = {
           defaultColDef: {
@@ -200,7 +196,7 @@
               return '' + params.value.toLocaleString() + '';
           },
           onGridReady: function(params) {
-            // params.api.sizeColumnsToFit();
+            params.api.sizeColumnsToFit();
             $('.header-1-action-total-amt').text('$'+Number.parseFloat(data1_total_price).toFixed(2));
             $('#vendor1Data').parent().parent().addClass('collapsible-body');
           }
@@ -220,7 +216,7 @@
               return '' + params.value.toLocaleString() + '';
           },
           onGridReady: function(params) {
-            // params.api.sizeColumnsToFit();
+            params.api.sizeColumnsToFit();
             $('.header-2-action-total-amt').text('$'+Number.parseFloat(data2_total_price).toFixed(2));
             $('#vendor2Data').parent().parent().addClass('collapsible-body');
           }
@@ -239,6 +235,12 @@
     $(document).ready(function() { 
       $(window).on("load resize ",function(e){
         // $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
+      });
+
+      
+      $('body').on('click', '.collapsible-header', function(event) {
+        gridOptions_1.api.sizeColumnsToFit();
+        gridOptions_2.api.sizeColumnsToFit();
       });
     });
   </script>

@@ -5,8 +5,9 @@
     color: darken($primary-color, 20%);
 }
 
-.groups-name-list {
-    max-height: 197px;
+.groups-name-list,
+.groups-users-list {
+    height: calc(100vh - 330px);
     overflow-x: hidden;
     overflow-y: auto;
     border: 1px solid #efefef;
@@ -40,4 +41,16 @@
             }
         }
     }
+}
+
+.groups-users-list {
+    li {
+        border: 1px solid #efefef;
+        border-bottom: none;
+        padding: 8px 12px;
+        color: $secondary-color;
+        @include fontSize(16px);
+        background-color: $color-white;
+        @include transition(all 0.2s);
+    } 
 }

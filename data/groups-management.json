@@ -1,164 +1,5869 @@
 [
-    {
-      "groups": "Group 1",
-      "description": "sint reprehenderit aliquip amet et laborum laborum occaecat aliquip in Lorem labore consectetur ullamco excepteur sunt reprehenderit consequat commodo non do labore ad pariatur tempor exercitation proident nisi consectetur reprehenderit",
-      "view_item": false,
-      "add_item": false,
-      "update_item": false,
-      "view_promo": true,
-      "add_promo": false
-    },
-    {
-      "groups": "Group 2",
-      "description": "et velit Lorem adipisicing amet qui nulla enim ullamco sint fugiat consectetur minim nostrud non ullamco consequat cupidatat commodo esse non magna excepteur aliquip voluptate magna occaecat cillum pariatur exercitation",
-      "view_item": false,
-      "add_item": false,
-      "update_item": true,
-      "view_promo": false,
-      "add_promo": true
-    },
-    {
-      "groups": "Group 3",
-      "description": "cillum Lorem consequat irure ut Lorem aliquip cillum eu ad aute ea fugiat mollit excepteur amet elit ex consectetur in non velit ut ut amet ex dolor fugiat ullamco do",
-      "view_item": false,
-      "add_item": true,
-      "update_item": true,
-      "view_promo": false,
-      "add_promo": true
-    },
-    {
-      "groups": "Group 4",
-      "description": "Lorem anim qui nostrud sint id deserunt eiusmod mollit proident nostrud aute ut ipsum pariatur ad fugiat ullamco sunt sint in incididunt ipsum nulla sint et laborum laborum quis quis",
-      "view_item": true,
-      "add_item": false,
-      "update_item": true,
-      "view_promo": true,
-      "add_promo": true
-    },
-    {
-      "groups": "Group 5",
-      "description": "occaecat aliquip aliquip tempor nostrud in est culpa magna consequat nisi magna cupidatat quis cupidatat incididunt ad ipsum et ut esse labore laborum ea quis adipisicing reprehenderit ut elit dolore",
-      "view_item": true,
-      "add_item": false,
-      "update_item": false,
-      "view_promo": true,
-      "add_promo": false
-    },
-    {
-      "groups": "Group 6",
-      "description": "tempor tempor tempor aute sunt occaecat aute non dolor Lorem nostrud proident irure nisi enim labore laboris sit cillum mollit cupidatat mollit aliquip officia adipisicing excepteur sint labore ea sint",
-      "view_item": true,
-      "add_item": true,
-      "update_item": true,
-      "view_promo": true,
-      "add_promo": false
-    },
-    {
-      "groups": "Group 7",
-      "description": "minim ullamco mollit nulla labore nostrud exercitation consectetur labore et laborum mollit ex laboris deserunt Lorem nulla ipsum elit elit do duis commodo cupidatat fugiat culpa velit cupidatat amet veniam",
-      "view_item": true,
-      "add_item": false,
-      "update_item": false,
-      "view_promo": false,
-      "add_promo": true
-    },
-    {
-      "groups": "Group 8",
-      "description": "consectetur minim id minim ut excepteur ad mollit ullamco pariatur pariatur nulla non id deserunt esse irure ex aliqua magna voluptate irure labore ipsum in dolore sunt sunt tempor in",
-      "view_item": false,
-      "add_item": false,
-      "update_item": true,
-      "view_promo": true,
-      "add_promo": false
-    },
-    {
-      "groups": "Group 9",
-      "description": "reprehenderit duis culpa tempor magna irure ipsum id Lorem qui adipisicing culpa cupidatat adipisicing in sunt exercitation sit magna magna irure et sint dolore nostrud ipsum nisi consectetur deserunt sunt",
-      "view_item": false,
-      "add_item": false,
-      "update_item": false,
-      "view_promo": true,
-      "add_promo": true
-    },
-    {
-      "groups": "Group 10",
-      "description": "non commodo nisi et amet occaecat laboris in ut ullamco pariatur tempor fugiat incididunt ad ullamco reprehenderit veniam irure occaecat nulla commodo culpa cillum et pariatur excepteur sint reprehenderit veniam",
-      "view_item": true,
-      "add_item": false,
-      "update_item": false,
-      "view_promo": false,
-      "add_promo": true
-    },
-    {
-      "groups": "Group 11",
-      "description": "elit Lorem aliquip ut non tempor magna enim nostrud est eu tempor duis voluptate esse anim cupidatat id aliqua do velit culpa ad aute aliqua ullamco et fugiat sunt ex",
-      "view_item": true,
-      "add_item": true,
-      "update_item": false,
-      "view_promo": true,
-      "add_promo": true
-    },
-    {
-      "groups": "Group 12",
-      "description": "eu ullamco officia consectetur in mollit irure ex non nostrud dolore consectetur minim mollit ipsum proident esse cupidatat officia Lorem elit consequat ullamco pariatur voluptate Lorem amet laboris magna nulla",
-      "view_item": true,
-      "add_item": false,
-      "update_item": false,
-      "view_promo": true,
-      "add_promo": false
-    },
-    {
-      "groups": "Group 13",
-      "description": "sunt aliquip anim quis magna cillum eiusmod occaecat anim esse ea quis consectetur anim nostrud nulla ex ea quis aliquip do veniam laborum cillum reprehenderit et dolore mollit fugiat enim",
-      "view_item": false,
-      "add_item": false,
-      "update_item": true,
-      "view_promo": true,
-      "add_promo": false
-    },
-    {
-      "groups": "Group 14",
-      "description": "est amet nulla aute amet ex duis Lorem nostrud cillum mollit cupidatat nisi irure nostrud quis ad do labore ea aute est ea officia adipisicing amet elit non ad aute",
-      "view_item": false,
-      "add_item": true,
-      "update_item": true,
-      "view_promo": true,
-      "add_promo": true
-    },
-    {
-      "groups": "Group 15",
-      "description": "excepteur culpa velit veniam tempor ipsum aute duis voluptate in tempor irure dolor nostrud do aute mollit excepteur officia non consectetur sit aliqua id culpa adipisicing voluptate in dolor aliquip",
-      "view_item": true,
-      "add_item": true,
-      "update_item": false,
-      "view_promo": false,
-      "add_promo": false
-    },
-    {
-      "groups": "Group 16",
-      "description": "ea aute quis officia do ea cupidatat enim quis elit amet nisi adipisicing laborum minim culpa amet nostrud duis culpa cillum non duis nisi veniam commodo anim ex dolor labore",
-      "view_item": true,
-      "add_item": true,
-      "update_item": true,
-      "view_promo": true,
-      "add_promo": false
-    },
-    {
-      "groups": "Group 17",
-      "description": "mollit ex excepteur excepteur sit proident enim et ullamco et mollit officia duis occaecat eu voluptate duis in eiusmod sint eiusmod dolor aute eu cillum deserunt proident sit culpa cupidatat",
-      "view_item": false,
-      "add_item": true,
-      "update_item": true,
-      "view_promo": true,
-      "add_promo": true
-    },
-    {
-      "groups": "Group 18",
-      "description": "ex proident anim officia in elit esse cupidatat adipisicing anim id commodo laboris dolor reprehenderit irure commodo eiusmod enim duis irure non laboris qui eu mollit excepteur officia sunt do",
-      "view_item": false,
-      "add_item": false,
-      "update_item": false,
-      "view_promo": true,
-      "add_promo": false
-    }
-  ]
+  {
+    "groups": "Group 1",
+    "description": "officia cillum fugiat qui enim fugiat enim amet reprehenderit voluptate consectetur tempor ipsum Lorem adipisicing non consectetur id est commodo labore et proident exercitation id irure do commodo commodo amet",
+    "view_item": false,
+    "add_item": false,
+    "update_item": true,
+    "view_promo": true,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "Jensen",
+          "last": "Hahn"
+        },
+        "email": "jensen.hahn@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Patti",
+          "last": "Jacobson"
+        },
+        "email": "patti.jacobson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Irwin",
+          "last": "Mcclain"
+        },
+        "email": "irwin.mcclain@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sonja",
+          "last": "Petty"
+        },
+        "email": "sonja.petty@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dodson",
+          "last": "Schroeder"
+        },
+        "email": "dodson.schroeder@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Cote",
+          "last": "Butler"
+        },
+        "email": "cote.butler@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bridgett",
+          "last": "Hebert"
+        },
+        "email": "bridgett.hebert@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Grant",
+          "last": "Chen"
+        },
+        "email": "grant.chen@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dianne",
+          "last": "Hess"
+        },
+        "email": "dianne.hess@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Battle",
+          "last": "Mccarthy"
+        },
+        "email": "battle.mccarthy@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Chang",
+          "last": "Saunders"
+        },
+        "email": "chang.saunders@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Barbra",
+          "last": "Briggs"
+        },
+        "email": "barbra.briggs@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Oneil",
+          "last": "Barry"
+        },
+        "email": "oneil.barry@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gina",
+          "last": "Hays"
+        },
+        "email": "gina.hays@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Chandler",
+          "last": "Macdonald"
+        },
+        "email": "chandler.macdonald@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Brooks",
+          "last": "Beach"
+        },
+        "email": "brooks.beach@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Harper",
+          "last": "Hogan"
+        },
+        "email": "harper.hogan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Murphy",
+          "last": "Wolf"
+        },
+        "email": "murphy.wolf@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hubbard",
+          "last": "Russo"
+        },
+        "email": "hubbard.russo@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Griffith",
+          "last": "Townsend"
+        },
+        "email": "griffith.townsend@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Schroeder",
+          "last": "Fisher"
+        },
+        "email": "schroeder.fisher@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rhea",
+          "last": "Terrell"
+        },
+        "email": "rhea.terrell@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Underwood",
+          "last": "York"
+        },
+        "email": "underwood.york@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mcneil",
+          "last": "Davis"
+        },
+        "email": "mcneil.davis@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ursula",
+          "last": "Carson"
+        },
+        "email": "ursula.carson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Carson",
+          "last": "Frost"
+        },
+        "email": "carson.frost@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mason",
+          "last": "Hunt"
+        },
+        "email": "mason.hunt@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dorothea",
+          "last": "Deleon"
+        },
+        "email": "dorothea.deleon@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Valenzuela",
+          "last": "Shaw"
+        },
+        "email": "valenzuela.shaw@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 2",
+    "description": "ut incididunt dolor sint adipisicing do reprehenderit ut et veniam laborum culpa excepteur aute dolore sint mollit do veniam occaecat dolore nulla sint esse ad est mollit cupidatat amet sit",
+    "view_item": false,
+    "add_item": false,
+    "update_item": true,
+    "view_promo": false,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "Nielsen",
+          "last": "Hale"
+        },
+        "email": "nielsen.hale@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wilder",
+          "last": "Barron"
+        },
+        "email": "wilder.barron@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Joyce",
+          "last": "Combs"
+        },
+        "email": "joyce.combs@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tucker",
+          "last": "Rutledge"
+        },
+        "email": "tucker.rutledge@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Luisa",
+          "last": "Savage"
+        },
+        "email": "luisa.savage@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Leonor",
+          "last": "Miles"
+        },
+        "email": "leonor.miles@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Clare",
+          "last": "Leonard"
+        },
+        "email": "clare.leonard@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wilma",
+          "last": "Richard"
+        },
+        "email": "wilma.richard@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Frye",
+          "last": "Wong"
+        },
+        "email": "frye.wong@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tillman",
+          "last": "Barnes"
+        },
+        "email": "tillman.barnes@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Willie",
+          "last": "Morton"
+        },
+        "email": "willie.morton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Belinda",
+          "last": "Mathis"
+        },
+        "email": "belinda.mathis@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Donovan",
+          "last": "Bowen"
+        },
+        "email": "donovan.bowen@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Frost",
+          "last": "Roman"
+        },
+        "email": "frost.roman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Saundra",
+          "last": "Hardy"
+        },
+        "email": "saundra.hardy@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Conner",
+          "last": "Booth"
+        },
+        "email": "conner.booth@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hallie",
+          "last": "Guy"
+        },
+        "email": "hallie.guy@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Golden",
+          "last": "Weeks"
+        },
+        "email": "golden.weeks@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Madelyn",
+          "last": "Weiss"
+        },
+        "email": "madelyn.weiss@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Emerson",
+          "last": "Clay"
+        },
+        "email": "emerson.clay@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wright",
+          "last": "Ortega"
+        },
+        "email": "wright.ortega@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Nolan",
+          "last": "Pittman"
+        },
+        "email": "nolan.pittman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Roberta",
+          "last": "Melton"
+        },
+        "email": "roberta.melton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Leann",
+          "last": "Ramos"
+        },
+        "email": "leann.ramos@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Helga",
+          "last": "Glenn"
+        },
+        "email": "helga.glenn@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Whitney",
+          "last": "Dunn"
+        },
+        "email": "whitney.dunn@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 3",
+    "description": "anim adipisicing labore velit dolor aliqua voluptate sit sit enim ex aliqua occaecat irure non cupidatat officia aute eu ex Lorem eu non Lorem labore duis sit quis ullamco amet",
+    "view_item": false,
+    "add_item": true,
+    "update_item": false,
+    "view_promo": false,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "Holloway",
+          "last": "Green"
+        },
+        "email": "holloway.green@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Garrett",
+          "last": "Haynes"
+        },
+        "email": "garrett.haynes@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hill",
+          "last": "Jones"
+        },
+        "email": "hill.jones@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Stacy",
+          "last": "Mullen"
+        },
+        "email": "stacy.mullen@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Parrish",
+          "last": "Morgan"
+        },
+        "email": "parrish.morgan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jerry",
+          "last": "Gibson"
+        },
+        "email": "jerry.gibson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kerri",
+          "last": "Edwards"
+        },
+        "email": "kerri.edwards@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Concetta",
+          "last": "Church"
+        },
+        "email": "concetta.church@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Traci",
+          "last": "Bowman"
+        },
+        "email": "traci.bowman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Juarez",
+          "last": "Gay"
+        },
+        "email": "juarez.gay@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Stanton",
+          "last": "Henderson"
+        },
+        "email": "stanton.henderson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Cleveland",
+          "last": "Reilly"
+        },
+        "email": "cleveland.reilly@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rowe",
+          "last": "Peterson"
+        },
+        "email": "rowe.peterson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jerri",
+          "last": "Strong"
+        },
+        "email": "jerri.strong@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Holman",
+          "last": "Henry"
+        },
+        "email": "holman.henry@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bridges",
+          "last": "Jimenez"
+        },
+        "email": "bridges.jimenez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ruth",
+          "last": "Robbins"
+        },
+        "email": "ruth.robbins@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Delia",
+          "last": "Phelps"
+        },
+        "email": "delia.phelps@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lula",
+          "last": "Mclaughlin"
+        },
+        "email": "lula.mclaughlin@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Peters",
+          "last": "Patrick"
+        },
+        "email": "peters.patrick@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Riley",
+          "last": "Short"
+        },
+        "email": "riley.short@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jennifer",
+          "last": "Vincent"
+        },
+        "email": "jennifer.vincent@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Louella",
+          "last": "Robles"
+        },
+        "email": "louella.robles@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Teresa",
+          "last": "Price"
+        },
+        "email": "teresa.price@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Vicky",
+          "last": "Hart"
+        },
+        "email": "vicky.hart@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mccarthy",
+          "last": "Oliver"
+        },
+        "email": "mccarthy.oliver@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 4",
+    "description": "deserunt et magna incididunt culpa esse anim consectetur velit nostrud duis et reprehenderit qui dolor ipsum quis consequat dolore do est laborum occaecat reprehenderit occaecat consequat et ullamco deserunt amet",
+    "view_item": false,
+    "add_item": false,
+    "update_item": false,
+    "view_promo": false,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "Rice",
+          "last": "Espinoza"
+        },
+        "email": "rice.espinoza@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Joanna",
+          "last": "Merritt"
+        },
+        "email": "joanna.merritt@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Deirdre",
+          "last": "Pierce"
+        },
+        "email": "deirdre.pierce@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Navarro",
+          "last": "Charles"
+        },
+        "email": "navarro.charles@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mabel",
+          "last": "Mckinney"
+        },
+        "email": "mabel.mckinney@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Regina",
+          "last": "Noble"
+        },
+        "email": "regina.noble@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Judy",
+          "last": "Kirkland"
+        },
+        "email": "judy.kirkland@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Eliza",
+          "last": "Pruitt"
+        },
+        "email": "eliza.pruitt@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Campos",
+          "last": "Hunter"
+        },
+        "email": "campos.hunter@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Price",
+          "last": "Mccarty"
+        },
+        "email": "price.mccarty@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Avis",
+          "last": "Perez"
+        },
+        "email": "avis.perez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Duran",
+          "last": "Daugherty"
+        },
+        "email": "duran.daugherty@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dolly",
+          "last": "Larsen"
+        },
+        "email": "dolly.larsen@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Torres",
+          "last": "Mcgowan"
+        },
+        "email": "torres.mcgowan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Cecelia",
+          "last": "Burris"
+        },
+        "email": "cecelia.burris@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Debbie",
+          "last": "Wooten"
+        },
+        "email": "debbie.wooten@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dolores",
+          "last": "Dixon"
+        },
+        "email": "dolores.dixon@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Nelda",
+          "last": "Lane"
+        },
+        "email": "nelda.lane@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Janette",
+          "last": "Rice"
+        },
+        "email": "janette.rice@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Darcy",
+          "last": "Hoffman"
+        },
+        "email": "darcy.hoffman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Eugenia",
+          "last": "Crosby"
+        },
+        "email": "eugenia.crosby@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Stefanie",
+          "last": "Medina"
+        },
+        "email": "stefanie.medina@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kirsten",
+          "last": "Pearson"
+        },
+        "email": "kirsten.pearson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Guadalupe",
+          "last": "Dudley"
+        },
+        "email": "guadalupe.dudley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Emily",
+          "last": "Skinner"
+        },
+        "email": "emily.skinner@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 5",
+    "description": "pariatur veniam qui ullamco anim pariatur eiusmod pariatur cillum fugiat incididunt elit velit culpa nulla incididunt enim consectetur voluptate labore non pariatur sunt non eiusmod ipsum voluptate magna excepteur Lorem",
+    "view_item": false,
+    "add_item": true,
+    "update_item": false,
+    "view_promo": false,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "Nola",
+          "last": "Barker"
+        },
+        "email": "nola.barker@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bobbie",
+          "last": "Becker"
+        },
+        "email": "bobbie.becker@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Marisol",
+          "last": "Vaughn"
+        },
+        "email": "marisol.vaughn@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wagner",
+          "last": "Sherman"
+        },
+        "email": "wagner.sherman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rose",
+          "last": "Lynch"
+        },
+        "email": "rose.lynch@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lynn",
+          "last": "Newton"
+        },
+        "email": "lynn.newton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Steele",
+          "last": "Cooper"
+        },
+        "email": "steele.cooper@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jenkins",
+          "last": "Bowers"
+        },
+        "email": "jenkins.bowers@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Morrow",
+          "last": "Harmon"
+        },
+        "email": "morrow.harmon@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Penny",
+          "last": "Parrish"
+        },
+        "email": "penny.parrish@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Candy",
+          "last": "Foley"
+        },
+        "email": "candy.foley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Alyssa",
+          "last": "Washington"
+        },
+        "email": "alyssa.washington@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wendi",
+          "last": "Wilkinson"
+        },
+        "email": "wendi.wilkinson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tasha",
+          "last": "Terry"
+        },
+        "email": "tasha.terry@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Vonda",
+          "last": "Monroe"
+        },
+        "email": "vonda.monroe@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Vance",
+          "last": "Mckay"
+        },
+        "email": "vance.mckay@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Welch",
+          "last": "Stout"
+        },
+        "email": "welch.stout@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gillespie",
+          "last": "Ingram"
+        },
+        "email": "gillespie.ingram@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bright",
+          "last": "Hewitt"
+        },
+        "email": "bright.hewitt@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tabatha",
+          "last": "Solomon"
+        },
+        "email": "tabatha.solomon@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Vang",
+          "last": "Garza"
+        },
+        "email": "vang.garza@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Brenda",
+          "last": "Nash"
+        },
+        "email": "brenda.nash@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kelly",
+          "last": "Rollins"
+        },
+        "email": "kelly.rollins@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rhoda",
+          "last": "Brewer"
+        },
+        "email": "rhoda.brewer@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Clarissa",
+          "last": "Crane"
+        },
+        "email": "clarissa.crane@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mcmillan",
+          "last": "Livingston"
+        },
+        "email": "mcmillan.livingston@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Holmes",
+          "last": "Higgins"
+        },
+        "email": "holmes.higgins@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Juliana",
+          "last": "Santana"
+        },
+        "email": "juliana.santana@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Brady",
+          "last": "Cline"
+        },
+        "email": "brady.cline@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mcclure",
+          "last": "Richardson"
+        },
+        "email": "mcclure.richardson@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 6",
+    "description": "nulla dolore tempor nisi aliquip labore labore laborum ullamco ad tempor reprehenderit enim fugiat anim duis ea reprehenderit ad aliqua in minim et aliquip ipsum officia velit consectetur elit eu",
+    "view_item": true,
+    "add_item": false,
+    "update_item": true,
+    "view_promo": false,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Antonia",
+          "last": "Klein"
+        },
+        "email": "antonia.klein@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Castillo",
+          "last": "Nichols"
+        },
+        "email": "castillo.nichols@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mullins",
+          "last": "Munoz"
+        },
+        "email": "mullins.munoz@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lynch",
+          "last": "Dejesus"
+        },
+        "email": "lynch.dejesus@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mann",
+          "last": "Lindsey"
+        },
+        "email": "mann.lindsey@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Pearson",
+          "last": "Hurley"
+        },
+        "email": "pearson.hurley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Beasley",
+          "last": "Stark"
+        },
+        "email": "beasley.stark@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hannah",
+          "last": "Mendoza"
+        },
+        "email": "hannah.mendoza@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "James",
+          "last": "Cook"
+        },
+        "email": "james.cook@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Castaneda",
+          "last": "Mcleod"
+        },
+        "email": "castaneda.mcleod@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Allie",
+          "last": "Griffin"
+        },
+        "email": "allie.griffin@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Beryl",
+          "last": "Mays"
+        },
+        "email": "beryl.mays@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kristie",
+          "last": "Jacobs"
+        },
+        "email": "kristie.jacobs@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Josefa",
+          "last": "Stanley"
+        },
+        "email": "josefa.stanley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dorsey",
+          "last": "Williamson"
+        },
+        "email": "dorsey.williamson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hodges",
+          "last": "Herman"
+        },
+        "email": "hodges.herman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Alexandria",
+          "last": "Calderon"
+        },
+        "email": "alexandria.calderon@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Richard",
+          "last": "Massey"
+        },
+        "email": "richard.massey@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Leila",
+          "last": "Stuart"
+        },
+        "email": "leila.stuart@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rutledge",
+          "last": "Sanford"
+        },
+        "email": "rutledge.sanford@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jimenez",
+          "last": "Boyer"
+        },
+        "email": "jimenez.boyer@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Humphrey",
+          "last": "Haney"
+        },
+        "email": "humphrey.haney@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wooten",
+          "last": "Rivers"
+        },
+        "email": "wooten.rivers@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Moon",
+          "last": "Oneal"
+        },
+        "email": "moon.oneal@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Pearl",
+          "last": "Sims"
+        },
+        "email": "pearl.sims@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bauer",
+          "last": "Mooney"
+        },
+        "email": "bauer.mooney@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lambert",
+          "last": "Potter"
+        },
+        "email": "lambert.potter@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 7",
+    "description": "dolore irure sint ad mollit dolor ea labore elit aute anim consectetur qui id voluptate irure nisi amet officia aute mollit elit ut dolore ullamco tempor est sit ullamco excepteur",
+    "view_item": true,
+    "add_item": true,
+    "update_item": false,
+    "view_promo": false,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Clay",
+          "last": "Carroll"
+        },
+        "email": "clay.carroll@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Blankenship",
+          "last": "Mckee"
+        },
+        "email": "blankenship.mckee@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Saunders",
+          "last": "Reynolds"
+        },
+        "email": "saunders.reynolds@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kelli",
+          "last": "Taylor"
+        },
+        "email": "kelli.taylor@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Penelope",
+          "last": "Farrell"
+        },
+        "email": "penelope.farrell@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Flora",
+          "last": "Owen"
+        },
+        "email": "flora.owen@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Houston",
+          "last": "William"
+        },
+        "email": "houston.william@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Angelia",
+          "last": "Mercer"
+        },
+        "email": "angelia.mercer@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Keisha",
+          "last": "Ayers"
+        },
+        "email": "keisha.ayers@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Luna",
+          "last": "Sullivan"
+        },
+        "email": "luna.sullivan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Stanley",
+          "last": "Fulton"
+        },
+        "email": "stanley.fulton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Landry",
+          "last": "Black"
+        },
+        "email": "landry.black@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Thomas",
+          "last": "Jefferson"
+        },
+        "email": "thomas.jefferson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Blair",
+          "last": "Reid"
+        },
+        "email": "blair.reid@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Beard",
+          "last": "Mckenzie"
+        },
+        "email": "beard.mckenzie@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Carmela",
+          "last": "Hendrix"
+        },
+        "email": "carmela.hendrix@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mathews",
+          "last": "Coffey"
+        },
+        "email": "mathews.coffey@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Chambers",
+          "last": "Branch"
+        },
+        "email": "chambers.branch@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Shaw",
+          "last": "Howe"
+        },
+        "email": "shaw.howe@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Poole",
+          "last": "Knox"
+        },
+        "email": "poole.knox@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Annie",
+          "last": "Ford"
+        },
+        "email": "annie.ford@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hayden",
+          "last": "Reyes"
+        },
+        "email": "hayden.reyes@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Naomi",
+          "last": "English"
+        },
+        "email": "naomi.english@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sloan",
+          "last": "Robertson"
+        },
+        "email": "sloan.robertson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Walters",
+          "last": "Campbell"
+        },
+        "email": "walters.campbell@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kerry",
+          "last": "Spencer"
+        },
+        "email": "kerry.spencer@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Roman",
+          "last": "Mcfarland"
+        },
+        "email": "roman.mcfarland@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 8",
+    "description": "amet ea labore ipsum ad ex laborum proident et labore qui velit non est enim ea duis aute nisi nisi aliquip labore laboris incididunt est ipsum quis laboris et culpa",
+    "view_item": true,
+    "add_item": true,
+    "update_item": false,
+    "view_promo": false,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Beulah",
+          "last": "Cohen"
+        },
+        "email": "beulah.cohen@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Noble",
+          "last": "Kane"
+        },
+        "email": "noble.kane@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lavonne",
+          "last": "Cox"
+        },
+        "email": "lavonne.cox@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lamb",
+          "last": "Willis"
+        },
+        "email": "lamb.willis@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rosella",
+          "last": "Ramirez"
+        },
+        "email": "rosella.ramirez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Morales",
+          "last": "Snyder"
+        },
+        "email": "morales.snyder@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Marylou",
+          "last": "Watkins"
+        },
+        "email": "marylou.watkins@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Schwartz",
+          "last": "Love"
+        },
+        "email": "schwartz.love@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Nora",
+          "last": "Fletcher"
+        },
+        "email": "nora.fletcher@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Etta",
+          "last": "Lucas"
+        },
+        "email": "etta.lucas@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mckee",
+          "last": "Gibbs"
+        },
+        "email": "mckee.gibbs@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Marissa",
+          "last": "Dillard"
+        },
+        "email": "marissa.dillard@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Robin",
+          "last": "Berg"
+        },
+        "email": "robin.berg@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Blanchard",
+          "last": "Mercado"
+        },
+        "email": "blanchard.mercado@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lana",
+          "last": "Hutchinson"
+        },
+        "email": "lana.hutchinson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mack",
+          "last": "Stevenson"
+        },
+        "email": "mack.stevenson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Katelyn",
+          "last": "Vang"
+        },
+        "email": "katelyn.vang@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Daugherty",
+          "last": "Cash"
+        },
+        "email": "daugherty.cash@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Nellie",
+          "last": "Hodges"
+        },
+        "email": "nellie.hodges@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lucia",
+          "last": "Bell"
+        },
+        "email": "lucia.bell@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Britney",
+          "last": "Santiago"
+        },
+        "email": "britney.santiago@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ramos",
+          "last": "Collier"
+        },
+        "email": "ramos.collier@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gibbs",
+          "last": "Guzman"
+        },
+        "email": "gibbs.guzman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Erna",
+          "last": "Bruce"
+        },
+        "email": "erna.bruce@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Marshall",
+          "last": "Best"
+        },
+        "email": "marshall.best@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Shannon",
+          "last": "Ray"
+        },
+        "email": "shannon.ray@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bowman",
+          "last": "Garner"
+        },
+        "email": "bowman.garner@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Laurel",
+          "last": "Cross"
+        },
+        "email": "laurel.cross@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Snow",
+          "last": "Preston"
+        },
+        "email": "snow.preston@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Robinson",
+          "last": "Sosa"
+        },
+        "email": "robinson.sosa@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 9",
+    "description": "consectetur aliquip veniam Lorem minim Lorem labore Lorem exercitation eu occaecat ut ea quis consectetur incididunt qui ex fugiat amet et nostrud id anim laboris adipisicing excepteur qui ad laboris",
+    "view_item": true,
+    "add_item": true,
+    "update_item": true,
+    "view_promo": false,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Hensley",
+          "last": "Valencia"
+        },
+        "email": "hensley.valencia@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kline",
+          "last": "Joseph"
+        },
+        "email": "kline.joseph@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Walls",
+          "last": "Yates"
+        },
+        "email": "walls.yates@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Benson",
+          "last": "Blankenship"
+        },
+        "email": "benson.blankenship@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Cross",
+          "last": "Shannon"
+        },
+        "email": "cross.shannon@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Guy",
+          "last": "Blair"
+        },
+        "email": "guy.blair@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Cabrera",
+          "last": "Carter"
+        },
+        "email": "cabrera.carter@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Turner",
+          "last": "Kim"
+        },
+        "email": "turner.kim@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lawrence",
+          "last": "Kennedy"
+        },
+        "email": "lawrence.kennedy@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Celia",
+          "last": "Porter"
+        },
+        "email": "celia.porter@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Charlene",
+          "last": "Bond"
+        },
+        "email": "charlene.bond@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tania",
+          "last": "Roach"
+        },
+        "email": "tania.roach@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Elba",
+          "last": "Campos"
+        },
+        "email": "elba.campos@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Russo",
+          "last": "Schultz"
+        },
+        "email": "russo.schultz@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Melba",
+          "last": "Curtis"
+        },
+        "email": "melba.curtis@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jewel",
+          "last": "Welch"
+        },
+        "email": "jewel.welch@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gail",
+          "last": "Aguilar"
+        },
+        "email": "gail.aguilar@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Morrison",
+          "last": "Maddox"
+        },
+        "email": "morrison.maddox@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Daphne",
+          "last": "Fry"
+        },
+        "email": "daphne.fry@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Baird",
+          "last": "Dean"
+        },
+        "email": "baird.dean@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sheryl",
+          "last": "Bright"
+        },
+        "email": "sheryl.bright@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hopper",
+          "last": "Whitehead"
+        },
+        "email": "hopper.whitehead@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Marlene",
+          "last": "Carlson"
+        },
+        "email": "marlene.carlson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Holden",
+          "last": "Peters"
+        },
+        "email": "holden.peters@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Leon",
+          "last": "Luna"
+        },
+        "email": "leon.luna@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bond",
+          "last": "Donovan"
+        },
+        "email": "bond.donovan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Shanna",
+          "last": "Villarreal"
+        },
+        "email": "shanna.villarreal@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Pam",
+          "last": "Hood"
+        },
+        "email": "pam.hood@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hope",
+          "last": "Raymond"
+        },
+        "email": "hope.raymond@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Warren",
+          "last": "Cote"
+        },
+        "email": "warren.cote@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 10",
+    "description": "nostrud veniam cillum anim voluptate labore elit eiusmod tempor magna qui duis magna incididunt esse consectetur aliquip dolore nulla exercitation fugiat nulla voluptate voluptate commodo ex tempor occaecat ut elit",
+    "view_item": true,
+    "add_item": false,
+    "update_item": true,
+    "view_promo": false,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Katrina",
+          "last": "Guerrero"
+        },
+        "email": "katrina.guerrero@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mccarty",
+          "last": "Stevens"
+        },
+        "email": "mccarty.stevens@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mai",
+          "last": "Holcomb"
+        },
+        "email": "mai.holcomb@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Foley",
+          "last": "Vega"
+        },
+        "email": "foley.vega@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Courtney",
+          "last": "Davidson"
+        },
+        "email": "courtney.davidson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Alison",
+          "last": "Carney"
+        },
+        "email": "alison.carney@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Franks",
+          "last": "Cooke"
+        },
+        "email": "franks.cooke@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Edna",
+          "last": "Mccormick"
+        },
+        "email": "edna.mccormick@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Owens",
+          "last": "Wyatt"
+        },
+        "email": "owens.wyatt@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wilcox",
+          "last": "Dickerson"
+        },
+        "email": "wilcox.dickerson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sondra",
+          "last": "Kinney"
+        },
+        "email": "sondra.kinney@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rojas",
+          "last": "Daniel"
+        },
+        "email": "rojas.daniel@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Henry",
+          "last": "Wiley"
+        },
+        "email": "henry.wiley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tracey",
+          "last": "Walter"
+        },
+        "email": "tracey.walter@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Shirley",
+          "last": "Hayden"
+        },
+        "email": "shirley.hayden@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Puckett",
+          "last": "Gaines"
+        },
+        "email": "puckett.gaines@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kimberly",
+          "last": "Cain"
+        },
+        "email": "kimberly.cain@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Vasquez",
+          "last": "Flowers"
+        },
+        "email": "vasquez.flowers@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lucille",
+          "last": "Winters"
+        },
+        "email": "lucille.winters@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Faulkner",
+          "last": "Craft"
+        },
+        "email": "faulkner.craft@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Laura",
+          "last": "Hooper"
+        },
+        "email": "laura.hooper@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 11",
+    "description": "adipisicing consectetur in pariatur proident culpa cupidatat sint dolore nisi deserunt excepteur commodo ea duis adipisicing veniam nisi anim proident et eiusmod velit nulla officia excepteur excepteur labore enim laboris",
+    "view_item": false,
+    "add_item": false,
+    "update_item": true,
+    "view_promo": false,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Schultz",
+          "last": "Tran"
+        },
+        "email": "schultz.tran@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Francis",
+          "last": "Adams"
+        },
+        "email": "francis.adams@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Brianna",
+          "last": "Holloway"
+        },
+        "email": "brianna.holloway@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Colleen",
+          "last": "Sargent"
+        },
+        "email": "colleen.sargent@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Carla",
+          "last": "Richmond"
+        },
+        "email": "carla.richmond@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gertrude",
+          "last": "Spence"
+        },
+        "email": "gertrude.spence@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Albert",
+          "last": "Phillips"
+        },
+        "email": "albert.phillips@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Murray",
+          "last": "Holden"
+        },
+        "email": "murray.holden@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ellis",
+          "last": "Estes"
+        },
+        "email": "ellis.estes@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "William",
+          "last": "Cummings"
+        },
+        "email": "william.cummings@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Linda",
+          "last": "Diaz"
+        },
+        "email": "linda.diaz@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lopez",
+          "last": "Carey"
+        },
+        "email": "lopez.carey@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Farmer",
+          "last": "Nelson"
+        },
+        "email": "farmer.nelson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mcbride",
+          "last": "Carr"
+        },
+        "email": "mcbride.carr@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jodi",
+          "last": "Rios"
+        },
+        "email": "jodi.rios@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hancock",
+          "last": "Norris"
+        },
+        "email": "hancock.norris@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wade",
+          "last": "Gonzalez"
+        },
+        "email": "wade.gonzalez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Virginia",
+          "last": "Burnett"
+        },
+        "email": "virginia.burnett@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tara",
+          "last": "Heath"
+        },
+        "email": "tara.heath@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Alejandra",
+          "last": "Delacruz"
+        },
+        "email": "alejandra.delacruz@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 12",
+    "description": "pariatur aliquip commodo eu in culpa laboris amet consequat nisi cupidatat culpa aliquip amet minim adipisicing sunt magna elit laboris in in proident commodo elit exercitation minim nulla consequat anim",
+    "view_item": false,
+    "add_item": false,
+    "update_item": false,
+    "view_promo": false,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Chen",
+          "last": "Spears"
+        },
+        "email": "chen.spears@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Holt",
+          "last": "Copeland"
+        },
+        "email": "holt.copeland@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Anna",
+          "last": "Atkins"
+        },
+        "email": "anna.atkins@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jocelyn",
+          "last": "Orr"
+        },
+        "email": "jocelyn.orr@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Delacruz",
+          "last": "Huber"
+        },
+        "email": "delacruz.huber@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kayla",
+          "last": "Battle"
+        },
+        "email": "kayla.battle@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Webb",
+          "last": "Sweet"
+        },
+        "email": "webb.sweet@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Peck",
+          "last": "Hubbard"
+        },
+        "email": "peck.hubbard@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Henson",
+          "last": "Huff"
+        },
+        "email": "henson.huff@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Francesca",
+          "last": "Ortiz"
+        },
+        "email": "francesca.ortiz@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lillian",
+          "last": "Kirby"
+        },
+        "email": "lillian.kirby@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Marva",
+          "last": "Bass"
+        },
+        "email": "marva.bass@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gregory",
+          "last": "Shelton"
+        },
+        "email": "gregory.shelton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jeanie",
+          "last": "Glover"
+        },
+        "email": "jeanie.glover@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Fisher",
+          "last": "England"
+        },
+        "email": "fisher.england@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sims",
+          "last": "Le"
+        },
+        "email": "sims.le@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Patricia",
+          "last": "Brooks"
+        },
+        "email": "patricia.brooks@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Barrera",
+          "last": "Gray"
+        },
+        "email": "barrera.gray@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Freeman",
+          "last": "Miranda"
+        },
+        "email": "freeman.miranda@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lenore",
+          "last": "Parsons"
+        },
+        "email": "lenore.parsons@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Joanne",
+          "last": "Buchanan"
+        },
+        "email": "joanne.buchanan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Faith",
+          "last": "Patterson"
+        },
+        "email": "faith.patterson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Clarke",
+          "last": "Avery"
+        },
+        "email": "clarke.avery@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hines",
+          "last": "Robinson"
+        },
+        "email": "hines.robinson@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 13",
+    "description": "cillum dolor fugiat irure culpa aute tempor sunt voluptate magna minim voluptate officia cillum quis labore fugiat consectetur tempor excepteur aute exercitation eu amet ullamco occaecat proident reprehenderit dolore Lorem",
+    "view_item": true,
+    "add_item": true,
+    "update_item": false,
+    "view_promo": true,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Dudley",
+          "last": "Fuller"
+        },
+        "email": "dudley.fuller@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dina",
+          "last": "Tillman"
+        },
+        "email": "dina.tillman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Eve",
+          "last": "Mullins"
+        },
+        "email": "eve.mullins@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Fleming",
+          "last": "Manning"
+        },
+        "email": "fleming.manning@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lynette",
+          "last": "Leblanc"
+        },
+        "email": "lynette.leblanc@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Huber",
+          "last": "Walls"
+        },
+        "email": "huber.walls@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Araceli",
+          "last": "Bonner"
+        },
+        "email": "araceli.bonner@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Florine",
+          "last": "Mathews"
+        },
+        "email": "florine.mathews@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Koch",
+          "last": "Knight"
+        },
+        "email": "koch.knight@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sherrie",
+          "last": "Boone"
+        },
+        "email": "sherrie.boone@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Vera",
+          "last": "Burt"
+        },
+        "email": "vera.burt@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Claire",
+          "last": "Brown"
+        },
+        "email": "claire.brown@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Morse",
+          "last": "Hansen"
+        },
+        "email": "morse.hansen@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Angelique",
+          "last": "Hanson"
+        },
+        "email": "angelique.hanson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Veronica",
+          "last": "House"
+        },
+        "email": "veronica.house@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Adele",
+          "last": "Vance"
+        },
+        "email": "adele.vance@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rowland",
+          "last": "Madden"
+        },
+        "email": "rowland.madden@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rebecca",
+          "last": "Finley"
+        },
+        "email": "rebecca.finley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Carolina",
+          "last": "Thomas"
+        },
+        "email": "carolina.thomas@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Angie",
+          "last": "Frank"
+        },
+        "email": "angie.frank@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dale",
+          "last": "Barnett"
+        },
+        "email": "dale.barnett@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Chavez",
+          "last": "Murphy"
+        },
+        "email": "chavez.murphy@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jean",
+          "last": "Bennett"
+        },
+        "email": "jean.bennett@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Neal",
+          "last": "Beasley"
+        },
+        "email": "neal.beasley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Reba",
+          "last": "Abbott"
+        },
+        "email": "reba.abbott@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mercado",
+          "last": "Mueller"
+        },
+        "email": "mercado.mueller@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Selma",
+          "last": "Hartman"
+        },
+        "email": "selma.hartman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bennett",
+          "last": "Smith"
+        },
+        "email": "bennett.smith@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Luella",
+          "last": "Tyson"
+        },
+        "email": "luella.tyson@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 14",
+    "description": "consequat nostrud magna et nisi laborum pariatur cupidatat sit quis voluptate enim ipsum velit excepteur proident ea sit aute aute ut eu duis anim est id deserunt tempor reprehenderit non",
+    "view_item": false,
+    "add_item": false,
+    "update_item": true,
+    "view_promo": false,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Annmarie",
+          "last": "Lott"
+        },
+        "email": "annmarie.lott@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ford",
+          "last": "Park"
+        },
+        "email": "ford.park@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Potter",
+          "last": "Chase"
+        },
+        "email": "potter.chase@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Autumn",
+          "last": "Lewis"
+        },
+        "email": "autumn.lewis@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Joyner",
+          "last": "Norman"
+        },
+        "email": "joyner.norman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Polly",
+          "last": "Faulkner"
+        },
+        "email": "polly.faulkner@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Petty",
+          "last": "Bush"
+        },
+        "email": "petty.bush@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Marsh",
+          "last": "Chan"
+        },
+        "email": "marsh.chan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wells",
+          "last": "Shaffer"
+        },
+        "email": "wells.shaffer@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bonnie",
+          "last": "Sharpe"
+        },
+        "email": "bonnie.sharpe@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mathis",
+          "last": "Garcia"
+        },
+        "email": "mathis.garcia@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Burks",
+          "last": "Shepherd"
+        },
+        "email": "burks.shepherd@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Pamela",
+          "last": "Martinez"
+        },
+        "email": "pamela.martinez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Cummings",
+          "last": "Woodward"
+        },
+        "email": "cummings.woodward@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Silva",
+          "last": "Wheeler"
+        },
+        "email": "silva.wheeler@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Becky",
+          "last": "Haley"
+        },
+        "email": "becky.haley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Haley",
+          "last": "Horne"
+        },
+        "email": "haley.horne@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Harrell",
+          "last": "Lopez"
+        },
+        "email": "harrell.lopez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Brooke",
+          "last": "Pace"
+        },
+        "email": "brooke.pace@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Cruz",
+          "last": "Whitley"
+        },
+        "email": "cruz.whitley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ola",
+          "last": "Dorsey"
+        },
+        "email": "ola.dorsey@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Aguirre",
+          "last": "Moreno"
+        },
+        "email": "aguirre.moreno@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Taylor",
+          "last": "Castaneda"
+        },
+        "email": "taylor.castaneda@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Heath",
+          "last": "Glass"
+        },
+        "email": "heath.glass@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Erin",
+          "last": "Chapman"
+        },
+        "email": "erin.chapman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Erma",
+          "last": "Burgess"
+        },
+        "email": "erma.burgess@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hewitt",
+          "last": "Rhodes"
+        },
+        "email": "hewitt.rhodes@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rowena",
+          "last": "Stokes"
+        },
+        "email": "rowena.stokes@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jillian",
+          "last": "Mcdaniel"
+        },
+        "email": "jillian.mcdaniel@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 15",
+    "description": "incididunt sint cillum duis voluptate ullamco tempor Lorem ut deserunt sunt et pariatur veniam cupidatat elit dolore exercitation labore id dolor Lorem Lorem occaecat minim officia velit exercitation sint consequat",
+    "view_item": true,
+    "add_item": true,
+    "update_item": true,
+    "view_promo": false,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "May",
+          "last": "Hull"
+        },
+        "email": "may.hull@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hardy",
+          "last": "Pacheco"
+        },
+        "email": "hardy.pacheco@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sexton",
+          "last": "Kelley"
+        },
+        "email": "sexton.kelley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sally",
+          "last": "Pickett"
+        },
+        "email": "sally.pickett@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Cannon",
+          "last": "Frederick"
+        },
+        "email": "cannon.frederick@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Todd",
+          "last": "Underwood"
+        },
+        "email": "todd.underwood@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Arnold",
+          "last": "Cotton"
+        },
+        "email": "arnold.cotton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Meagan",
+          "last": "Mcfadden"
+        },
+        "email": "meagan.mcfadden@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Louisa",
+          "last": "Macias"
+        },
+        "email": "louisa.macias@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Crane",
+          "last": "Rose"
+        },
+        "email": "crane.rose@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Daniels",
+          "last": "Franks"
+        },
+        "email": "daniels.franks@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Madeline",
+          "last": "Burke"
+        },
+        "email": "madeline.burke@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wong",
+          "last": "Byrd"
+        },
+        "email": "wong.byrd@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Aileen",
+          "last": "Olsen"
+        },
+        "email": "aileen.olsen@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lawanda",
+          "last": "Olson"
+        },
+        "email": "lawanda.olson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Janna",
+          "last": "Giles"
+        },
+        "email": "janna.giles@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tracie",
+          "last": "Mendez"
+        },
+        "email": "tracie.mendez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Campbell",
+          "last": "Jennings"
+        },
+        "email": "campbell.jennings@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Marjorie",
+          "last": "Joyce"
+        },
+        "email": "marjorie.joyce@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Salinas",
+          "last": "Nieves"
+        },
+        "email": "salinas.nieves@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Robyn",
+          "last": "Meadows"
+        },
+        "email": "robyn.meadows@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Young",
+          "last": "Dawson"
+        },
+        "email": "young.dawson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Long",
+          "last": "Callahan"
+        },
+        "email": "long.callahan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gamble",
+          "last": "Farmer"
+        },
+        "email": "gamble.farmer@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Stokes",
+          "last": "Riggs"
+        },
+        "email": "stokes.riggs@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 16",
+    "description": "fugiat minim amet reprehenderit ut cillum magna in nisi elit non velit cupidatat magna consequat ut ullamco ut duis qui est excepteur sit officia sunt ipsum aliquip id nulla eiusmod",
+    "view_item": false,
+    "add_item": false,
+    "update_item": false,
+    "view_promo": true,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "Glenn",
+          "last": "Koch"
+        },
+        "email": "glenn.koch@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Slater",
+          "last": "Delgado"
+        },
+        "email": "slater.delgado@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sampson",
+          "last": "Suarez"
+        },
+        "email": "sampson.suarez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Henrietta",
+          "last": "Benton"
+        },
+        "email": "henrietta.benton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Christine",
+          "last": "Montgomery"
+        },
+        "email": "christine.montgomery@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bray",
+          "last": "Sellers"
+        },
+        "email": "bray.sellers@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Liz",
+          "last": "Bryant"
+        },
+        "email": "liz.bryant@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rios",
+          "last": "Kerr"
+        },
+        "email": "rios.kerr@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rosario",
+          "last": "Whitfield"
+        },
+        "email": "rosario.whitfield@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wilda",
+          "last": "Franco"
+        },
+        "email": "wilda.franco@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lucile",
+          "last": "Hill"
+        },
+        "email": "lucile.hill@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gill",
+          "last": "Bridges"
+        },
+        "email": "gill.bridges@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bryan",
+          "last": "Alford"
+        },
+        "email": "bryan.alford@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mcgee",
+          "last": "Rodriguez"
+        },
+        "email": "mcgee.rodriguez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Warner",
+          "last": "Hensley"
+        },
+        "email": "warner.hensley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Margaret",
+          "last": "Duke"
+        },
+        "email": "margaret.duke@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ramona",
+          "last": "Oneill"
+        },
+        "email": "ramona.oneill@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Head",
+          "last": "Benjamin"
+        },
+        "email": "head.benjamin@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Newton",
+          "last": "Eaton"
+        },
+        "email": "newton.eaton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lizzie",
+          "last": "Dyer"
+        },
+        "email": "lizzie.dyer@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Elva",
+          "last": "Moore"
+        },
+        "email": "elva.moore@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ruiz",
+          "last": "Simon"
+        },
+        "email": "ruiz.simon@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Maggie",
+          "last": "Cochran"
+        },
+        "email": "maggie.cochran@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rodriquez",
+          "last": "Maxwell"
+        },
+        "email": "rodriquez.maxwell@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jeri",
+          "last": "Todd"
+        },
+        "email": "jeri.todd@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "May",
+          "last": "Puckett"
+        },
+        "email": "may.puckett@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jo",
+          "last": "Byers"
+        },
+        "email": "jo.byers@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Terra",
+          "last": "Reed"
+        },
+        "email": "terra.reed@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sharlene",
+          "last": "Gilliam"
+        },
+        "email": "sharlene.gilliam@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Edith",
+          "last": "Melendez"
+        },
+        "email": "edith.melendez@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 17",
+    "description": "est tempor veniam consequat culpa ex nisi voluptate aute consectetur magna esse id nulla pariatur esse voluptate eu dolor elit velit excepteur ipsum tempor qui ex culpa consequat mollit dolore",
+    "view_item": false,
+    "add_item": true,
+    "update_item": false,
+    "view_promo": false,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Kathryn",
+          "last": "Morales"
+        },
+        "email": "kathryn.morales@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Diane",
+          "last": "Holland"
+        },
+        "email": "diane.holland@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mccormick",
+          "last": "Juarez"
+        },
+        "email": "mccormick.juarez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Logan",
+          "last": "Hammond"
+        },
+        "email": "logan.hammond@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sabrina",
+          "last": "Herrera"
+        },
+        "email": "sabrina.herrera@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Stevens",
+          "last": "Patel"
+        },
+        "email": "stevens.patel@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Parsons",
+          "last": "Conway"
+        },
+        "email": "parsons.conway@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ewing",
+          "last": "Hoover"
+        },
+        "email": "ewing.hoover@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Nelson",
+          "last": "Dodson"
+        },
+        "email": "nelson.dodson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Katharine",
+          "last": "Cobb"
+        },
+        "email": "katharine.cobb@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Walker",
+          "last": "Yang"
+        },
+        "email": "walker.yang@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ora",
+          "last": "Velez"
+        },
+        "email": "ora.velez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Leigh",
+          "last": "Zimmerman"
+        },
+        "email": "leigh.zimmerman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Riggs",
+          "last": "Witt"
+        },
+        "email": "riggs.witt@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hamilton",
+          "last": "Knowles"
+        },
+        "email": "hamilton.knowles@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Love",
+          "last": "Mcbride"
+        },
+        "email": "love.mcbride@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wheeler",
+          "last": "Wood"
+        },
+        "email": "wheeler.wood@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Justine",
+          "last": "Goodwin"
+        },
+        "email": "justine.goodwin@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "House",
+          "last": "Burks"
+        },
+        "email": "house.burks@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Langley",
+          "last": "Andrews"
+        },
+        "email": "langley.andrews@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Reyes",
+          "last": "Castro"
+        },
+        "email": "reyes.castro@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 18",
+    "description": "tempor ullamco quis ipsum fugiat duis velit nisi nulla aliqua velit irure consequat qui ullamco ut ad cillum officia aliquip duis tempor reprehenderit dolor in et cillum sint consectetur quis",
+    "view_item": true,
+    "add_item": false,
+    "update_item": true,
+    "view_promo": true,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "Yolanda",
+          "last": "Garrett"
+        },
+        "email": "yolanda.garrett@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Thompson",
+          "last": "Watson"
+        },
+        "email": "thompson.watson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hazel",
+          "last": "Goff"
+        },
+        "email": "hazel.goff@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Macias",
+          "last": "Paul"
+        },
+        "email": "macias.paul@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Goodman",
+          "last": "White"
+        },
+        "email": "goodman.white@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ladonna",
+          "last": "Fowler"
+        },
+        "email": "ladonna.fowler@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Nona",
+          "last": "Small"
+        },
+        "email": "nona.small@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Louise",
+          "last": "Greer"
+        },
+        "email": "louise.greer@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mckay",
+          "last": "Ochoa"
+        },
+        "email": "mckay.ochoa@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ethel",
+          "last": "Malone"
+        },
+        "email": "ethel.malone@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Strickland",
+          "last": "Leon"
+        },
+        "email": "strickland.leon@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Galloway",
+          "last": "Schwartz"
+        },
+        "email": "galloway.schwartz@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hobbs",
+          "last": "Keller"
+        },
+        "email": "hobbs.keller@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mitchell",
+          "last": "Osborn"
+        },
+        "email": "mitchell.osborn@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lou",
+          "last": "Parker"
+        },
+        "email": "lou.parker@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Elinor",
+          "last": "Hopper"
+        },
+        "email": "elinor.hopper@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ollie",
+          "last": "Wise"
+        },
+        "email": "ollie.wise@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ginger",
+          "last": "Richards"
+        },
+        "email": "ginger.richards@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rosemarie",
+          "last": "Pratt"
+        },
+        "email": "rosemarie.pratt@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Adrian",
+          "last": "May"
+        },
+        "email": "adrian.may@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Waller",
+          "last": "Anthony"
+        },
+        "email": "waller.anthony@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Roseann",
+          "last": "Levy"
+        },
+        "email": "roseann.levy@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jayne",
+          "last": "Harrell"
+        },
+        "email": "jayne.harrell@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Page",
+          "last": "Hobbs"
+        },
+        "email": "page.hobbs@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Caroline",
+          "last": "Drake"
+        },
+        "email": "caroline.drake@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Berta",
+          "last": "Thornton"
+        },
+        "email": "berta.thornton@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 19",
+    "description": "cillum eiusmod deserunt tempor adipisicing commodo cillum eu do nisi id tempor tempor eiusmod quis nulla incididunt adipisicing cillum nisi eu sunt ex non cupidatat quis consectetur labore fugiat laborum",
+    "view_item": true,
+    "add_item": true,
+    "update_item": false,
+    "view_promo": true,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Waters",
+          "last": "George"
+        },
+        "email": "waters.george@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lloyd",
+          "last": "Duran"
+        },
+        "email": "lloyd.duran@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Delgado",
+          "last": "Erickson"
+        },
+        "email": "delgado.erickson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Chasity",
+          "last": "Casey"
+        },
+        "email": "chasity.casey@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ellison",
+          "last": "Lee"
+        },
+        "email": "ellison.lee@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dillon",
+          "last": "Burns"
+        },
+        "email": "dillon.burns@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Elena",
+          "last": "Brady"
+        },
+        "email": "elena.brady@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bobbi",
+          "last": "Wilson"
+        },
+        "email": "bobbi.wilson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Beverly",
+          "last": "Bates"
+        },
+        "email": "beverly.bates@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jordan",
+          "last": "Webb"
+        },
+        "email": "jordan.webb@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Summers",
+          "last": "Blackwell"
+        },
+        "email": "summers.blackwell@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Vega",
+          "last": "Sampson"
+        },
+        "email": "vega.sampson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gilbert",
+          "last": "Castillo"
+        },
+        "email": "gilbert.castillo@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sara",
+          "last": "Conley"
+        },
+        "email": "sara.conley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sophia",
+          "last": "Neal"
+        },
+        "email": "sophia.neal@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Maude",
+          "last": "Conner"
+        },
+        "email": "maude.conner@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hudson",
+          "last": "Fernandez"
+        },
+        "email": "hudson.fernandez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Padilla",
+          "last": "Flynn"
+        },
+        "email": "padilla.flynn@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Leona",
+          "last": "Payne"
+        },
+        "email": "leona.payne@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jamie",
+          "last": "Freeman"
+        },
+        "email": "jamie.freeman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bailey",
+          "last": "Barrett"
+        },
+        "email": "bailey.barrett@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 20",
+    "description": "anim proident amet laboris dolore fugiat cupidatat velit sunt est excepteur cillum irure minim nulla reprehenderit commodo dolore enim sunt ea eu nisi commodo eu ad enim Lorem quis minim",
+    "view_item": false,
+    "add_item": false,
+    "update_item": true,
+    "view_promo": false,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Kinney",
+          "last": "Graves"
+        },
+        "email": "kinney.graves@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Staci",
+          "last": "Huffman"
+        },
+        "email": "staci.huffman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Debora",
+          "last": "Howard"
+        },
+        "email": "debora.howard@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Johns",
+          "last": "Colon"
+        },
+        "email": "johns.colon@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mayo",
+          "last": "Forbes"
+        },
+        "email": "mayo.forbes@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Glenna",
+          "last": "Snow"
+        },
+        "email": "glenna.snow@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ivy",
+          "last": "Cruz"
+        },
+        "email": "ivy.cruz@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bean",
+          "last": "Sparks"
+        },
+        "email": "bean.sparks@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Heather",
+          "last": "Ratliff"
+        },
+        "email": "heather.ratliff@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Leticia",
+          "last": "Chandler"
+        },
+        "email": "leticia.chandler@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bradley",
+          "last": "Ward"
+        },
+        "email": "bradley.ward@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Nikki",
+          "last": "Vaughan"
+        },
+        "email": "nikki.vaughan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Fitzgerald",
+          "last": "Henson"
+        },
+        "email": "fitzgerald.henson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Richmond",
+          "last": "Sandoval"
+        },
+        "email": "richmond.sandoval@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Greene",
+          "last": "Hampton"
+        },
+        "email": "greene.hampton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Pena",
+          "last": "Navarro"
+        },
+        "email": "pena.navarro@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Boone",
+          "last": "Dillon"
+        },
+        "email": "boone.dillon@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Theresa",
+          "last": "Crawford"
+        },
+        "email": "theresa.crawford@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Annette",
+          "last": "Mcgee"
+        },
+        "email": "annette.mcgee@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Karin",
+          "last": "Chaney"
+        },
+        "email": "karin.chaney@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gayle",
+          "last": "Bradford"
+        },
+        "email": "gayle.bradford@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 21",
+    "description": "commodo consequat amet veniam deserunt magna quis elit laborum esse duis ea sit commodo esse et aute qui cupidatat esse non dolore eu id et dolore laboris sunt labore deserunt",
+    "view_item": false,
+    "add_item": true,
+    "update_item": true,
+    "view_promo": true,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "Sonia",
+          "last": "Holmes"
+        },
+        "email": "sonia.holmes@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kelley",
+          "last": "Riddle"
+        },
+        "email": "kelley.riddle@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dale",
+          "last": "Newman"
+        },
+        "email": "dale.newman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dana",
+          "last": "Morrow"
+        },
+        "email": "dana.morrow@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Amanda",
+          "last": "Patton"
+        },
+        "email": "amanda.patton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Francis",
+          "last": "Duffy"
+        },
+        "email": "francis.duffy@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Barrett",
+          "last": "Middleton"
+        },
+        "email": "barrett.middleton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Monica",
+          "last": "Bauer"
+        },
+        "email": "monica.bauer@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Briana",
+          "last": "Fuentes"
+        },
+        "email": "briana.fuentes@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gilmore",
+          "last": "Petersen"
+        },
+        "email": "gilmore.petersen@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mercer",
+          "last": "Holder"
+        },
+        "email": "mercer.holder@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Huff",
+          "last": "Wiggins"
+        },
+        "email": "huff.wiggins@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Monique",
+          "last": "Rocha"
+        },
+        "email": "monique.rocha@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Fletcher",
+          "last": "Pate"
+        },
+        "email": "fletcher.pate@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Patsy",
+          "last": "Randolph"
+        },
+        "email": "patsy.randolph@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tami",
+          "last": "Singleton"
+        },
+        "email": "tami.singleton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Renee",
+          "last": "Gates"
+        },
+        "email": "renee.gates@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Consuelo",
+          "last": "Cardenas"
+        },
+        "email": "consuelo.cardenas@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Guerra",
+          "last": "Michael"
+        },
+        "email": "guerra.michael@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Molly",
+          "last": "Watts"
+        },
+        "email": "molly.watts@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 22",
+    "description": "tempor cillum mollit culpa nulla cillum veniam id id commodo irure excepteur laborum pariatur deserunt consequat velit minim proident voluptate adipisicing ut ex elit amet nostrud veniam elit commodo ullamco",
+    "view_item": false,
+    "add_item": true,
+    "update_item": false,
+    "view_promo": false,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Farley",
+          "last": "Galloway"
+        },
+        "email": "farley.galloway@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Janie",
+          "last": "Hawkins"
+        },
+        "email": "janie.hawkins@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mcclain",
+          "last": "Carver"
+        },
+        "email": "mcclain.carver@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Randall",
+          "last": "Young"
+        },
+        "email": "randall.young@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Payne",
+          "last": "Page"
+        },
+        "email": "payne.page@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sofia",
+          "last": "Velazquez"
+        },
+        "email": "sofia.velazquez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dona",
+          "last": "Hickman"
+        },
+        "email": "dona.hickman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Charlotte",
+          "last": "Bentley"
+        },
+        "email": "charlotte.bentley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Myrtle",
+          "last": "Hamilton"
+        },
+        "email": "myrtle.hamilton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bertha",
+          "last": "Douglas"
+        },
+        "email": "bertha.douglas@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Johnson",
+          "last": "Buckley"
+        },
+        "email": "johnson.buckley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jenny",
+          "last": "Ware"
+        },
+        "email": "jenny.ware@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Larson",
+          "last": "Bryan"
+        },
+        "email": "larson.bryan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hilda",
+          "last": "Hines"
+        },
+        "email": "hilda.hines@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Alisa",
+          "last": "Grimes"
+        },
+        "email": "alisa.grimes@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Fulton",
+          "last": "Montoya"
+        },
+        "email": "fulton.montoya@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Franklin",
+          "last": "Lester"
+        },
+        "email": "franklin.lester@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mcpherson",
+          "last": "Rogers"
+        },
+        "email": "mcpherson.rogers@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Benita",
+          "last": "Molina"
+        },
+        "email": "benita.molina@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Fowler",
+          "last": "Hancock"
+        },
+        "email": "fowler.hancock@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kathleen",
+          "last": "Trevino"
+        },
+        "email": "kathleen.trevino@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Melisa",
+          "last": "Mcmillan"
+        },
+        "email": "melisa.mcmillan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kaye",
+          "last": "Slater"
+        },
+        "email": "kaye.slater@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kenya",
+          "last": "Donaldson"
+        },
+        "email": "kenya.donaldson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Valerie",
+          "last": "Pena"
+        },
+        "email": "valerie.pena@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Berg",
+          "last": "Pollard"
+        },
+        "email": "berg.pollard@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Robertson",
+          "last": "Figueroa"
+        },
+        "email": "robertson.figueroa@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wiley",
+          "last": "Moses"
+        },
+        "email": "wiley.moses@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tiffany",
+          "last": "Powell"
+        },
+        "email": "tiffany.powell@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kennedy",
+          "last": "Valenzuela"
+        },
+        "email": "kennedy.valenzuela@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 23",
+    "description": "duis mollit consectetur non adipisicing sunt irure nulla ullamco cillum aliquip incididunt commodo sit ad mollit occaecat enim dolore amet quis ea ut consectetur pariatur do irure labore minim tempor",
+    "view_item": false,
+    "add_item": false,
+    "update_item": true,
+    "view_promo": false,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Priscilla",
+          "last": "Barton"
+        },
+        "email": "priscilla.barton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mildred",
+          "last": "Trujillo"
+        },
+        "email": "mildred.trujillo@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Angel",
+          "last": "Calhoun"
+        },
+        "email": "angel.calhoun@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Carly",
+          "last": "Mccoy"
+        },
+        "email": "carly.mccoy@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Terri",
+          "last": "Fitzpatrick"
+        },
+        "email": "terri.fitzpatrick@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Neva",
+          "last": "Stephenson"
+        },
+        "email": "neva.stephenson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mejia",
+          "last": "Peck"
+        },
+        "email": "mejia.peck@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Wanda",
+          "last": "Coleman"
+        },
+        "email": "wanda.coleman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Holly",
+          "last": "Jenkins"
+        },
+        "email": "holly.jenkins@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kitty",
+          "last": "Nicholson"
+        },
+        "email": "kitty.nicholson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Austin",
+          "last": "Case"
+        },
+        "email": "austin.case@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mccray",
+          "last": "Beard"
+        },
+        "email": "mccray.beard@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bolton",
+          "last": "Waller"
+        },
+        "email": "bolton.waller@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Perkins",
+          "last": "Goodman"
+        },
+        "email": "perkins.goodman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dunn",
+          "last": "Rowe"
+        },
+        "email": "dunn.rowe@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kendra",
+          "last": "Ellis"
+        },
+        "email": "kendra.ellis@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bettie",
+          "last": "Irwin"
+        },
+        "email": "bettie.irwin@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Leach",
+          "last": "Pope"
+        },
+        "email": "leach.pope@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Holder",
+          "last": "Acevedo"
+        },
+        "email": "holder.acevedo@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Brewer",
+          "last": "Gregory"
+        },
+        "email": "brewer.gregory@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Caldwell",
+          "last": "Ryan"
+        },
+        "email": "caldwell.ryan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Barton",
+          "last": "Morris"
+        },
+        "email": "barton.morris@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Aline",
+          "last": "Houston"
+        },
+        "email": "aline.houston@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sullivan",
+          "last": "Lara"
+        },
+        "email": "sullivan.lara@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Robbie",
+          "last": "Little"
+        },
+        "email": "robbie.little@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Diana",
+          "last": "Santos"
+        },
+        "email": "diana.santos@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sanchez",
+          "last": "Mcguire"
+        },
+        "email": "sanchez.mcguire@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 24",
+    "description": "aute et occaecat tempor quis ut dolore incididunt ea consequat incididunt nisi culpa cillum eiusmod nulla cillum ex laborum reprehenderit laboris eu elit enim incididunt duis duis deserunt est pariatur",
+    "view_item": false,
+    "add_item": false,
+    "update_item": true,
+    "view_promo": true,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "Sheena",
+          "last": "Durham"
+        },
+        "email": "sheena.durham@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Harrington",
+          "last": "Bird"
+        },
+        "email": "harrington.bird@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Myra",
+          "last": "Nunez"
+        },
+        "email": "myra.nunez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Addie",
+          "last": "Barrera"
+        },
+        "email": "addie.barrera@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ines",
+          "last": "Morse"
+        },
+        "email": "ines.morse@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mara",
+          "last": "Woods"
+        },
+        "email": "mara.woods@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mclaughlin",
+          "last": "Strickland"
+        },
+        "email": "mclaughlin.strickland@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Alford",
+          "last": "Dotson"
+        },
+        "email": "alford.dotson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Adams",
+          "last": "Lindsay"
+        },
+        "email": "adams.lindsay@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Denise",
+          "last": "Lang"
+        },
+        "email": "denise.lang@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Laurie",
+          "last": "Knapp"
+        },
+        "email": "laurie.knapp@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sharp",
+          "last": "Britt"
+        },
+        "email": "sharp.britt@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Petra",
+          "last": "Cole"
+        },
+        "email": "petra.cole@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Combs",
+          "last": "Brennan"
+        },
+        "email": "combs.brennan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Carmella",
+          "last": "Mcdowell"
+        },
+        "email": "carmella.mcdowell@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Latoya",
+          "last": "Franklin"
+        },
+        "email": "latoya.franklin@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ruby",
+          "last": "Randall"
+        },
+        "email": "ruby.randall@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kaitlin",
+          "last": "Gentry"
+        },
+        "email": "kaitlin.gentry@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Prince",
+          "last": "Salinas"
+        },
+        "email": "prince.salinas@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Watson",
+          "last": "Sexton"
+        },
+        "email": "watson.sexton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lily",
+          "last": "Levine"
+        },
+        "email": "lily.levine@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bertie",
+          "last": "Acosta"
+        },
+        "email": "bertie.acosta@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Evans",
+          "last": "David"
+        },
+        "email": "evans.david@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Antoinette",
+          "last": "Reeves"
+        },
+        "email": "antoinette.reeves@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Snyder",
+          "last": "James"
+        },
+        "email": "snyder.james@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 25",
+    "description": "Lorem id fugiat tempor sit in ad magna reprehenderit do in sit mollit veniam elit dolor duis amet ullamco labore ut veniam qui duis laborum adipisicing cupidatat commodo occaecat occaecat",
+    "view_item": false,
+    "add_item": true,
+    "update_item": false,
+    "view_promo": true,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Sandoval",
+          "last": "Baird"
+        },
+        "email": "sandoval.baird@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Quinn",
+          "last": "Buck"
+        },
+        "email": "quinn.buck@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dunlap",
+          "last": "Mcintyre"
+        },
+        "email": "dunlap.mcintyre@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Reilly",
+          "last": "Walton"
+        },
+        "email": "reilly.walton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Harrison",
+          "last": "Lloyd"
+        },
+        "email": "harrison.lloyd@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Alston",
+          "last": "Mills"
+        },
+        "email": "alston.mills@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Knowles",
+          "last": "Prince"
+        },
+        "email": "knowles.prince@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Armstrong",
+          "last": "Finch"
+        },
+        "email": "armstrong.finch@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ada",
+          "last": "Francis"
+        },
+        "email": "ada.francis@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Nina",
+          "last": "Moran"
+        },
+        "email": "nina.moran@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Amelia",
+          "last": "Johnson"
+        },
+        "email": "amelia.johnson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Raymond",
+          "last": "Keith"
+        },
+        "email": "raymond.keith@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Atkinson",
+          "last": "Kent"
+        },
+        "email": "atkinson.kent@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Marcie",
+          "last": "Ayala"
+        },
+        "email": "marcie.ayala@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Stein",
+          "last": "Chang"
+        },
+        "email": "stein.chang@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rachael",
+          "last": "Atkinson"
+        },
+        "email": "rachael.atkinson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Barron",
+          "last": "Ellison"
+        },
+        "email": "barron.ellison@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "West",
+          "last": "Bray"
+        },
+        "email": "west.bray@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Alisha",
+          "last": "Rivas"
+        },
+        "email": "alisha.rivas@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Whitehead",
+          "last": "Herring"
+        },
+        "email": "whitehead.herring@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Frederick",
+          "last": "Sloan"
+        },
+        "email": "frederick.sloan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Cynthia",
+          "last": "Nielsen"
+        },
+        "email": "cynthia.nielsen@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tommie",
+          "last": "Berry"
+        },
+        "email": "tommie.berry@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Brittany",
+          "last": "Fleming"
+        },
+        "email": "brittany.fleming@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Trevino",
+          "last": "Hayes"
+        },
+        "email": "trevino.hayes@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Vargas",
+          "last": "Ramsey"
+        },
+        "email": "vargas.ramsey@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Everett",
+          "last": "Salazar"
+        },
+        "email": "everett.salazar@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mendoza",
+          "last": "West"
+        },
+        "email": "mendoza.west@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dean",
+          "last": "Matthews"
+        },
+        "email": "dean.matthews@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 26",
+    "description": "excepteur minim anim commodo consectetur cupidatat do sint ut Lorem dolor qui eu quis qui voluptate dolore eu aliquip eiusmod est irure consequat aliqua elit id elit consectetur mollit id",
+    "view_item": false,
+    "add_item": true,
+    "update_item": true,
+    "view_promo": false,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "Taylor",
+          "last": "Shields"
+        },
+        "email": "taylor.shields@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tanner",
+          "last": "Williams"
+        },
+        "email": "tanner.williams@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Brandy",
+          "last": "Soto"
+        },
+        "email": "brandy.soto@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lourdes",
+          "last": "Beck"
+        },
+        "email": "lourdes.beck@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mays",
+          "last": "Romero"
+        },
+        "email": "mays.romero@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Fry",
+          "last": "Bradshaw"
+        },
+        "email": "fry.bradshaw@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Estelle",
+          "last": "Thompson"
+        },
+        "email": "estelle.thompson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Roberson",
+          "last": "Noel"
+        },
+        "email": "roberson.noel@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Carmen",
+          "last": "Avila"
+        },
+        "email": "carmen.avila@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Harriett",
+          "last": "Greene"
+        },
+        "email": "harriett.greene@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Aurelia",
+          "last": "Camacho"
+        },
+        "email": "aurelia.camacho@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Adeline",
+          "last": "Nolan"
+        },
+        "email": "adeline.nolan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Morin",
+          "last": "Harding"
+        },
+        "email": "morin.harding@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Zelma",
+          "last": "Shepard"
+        },
+        "email": "zelma.shepard@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mattie",
+          "last": "Sharp"
+        },
+        "email": "mattie.sharp@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Smith",
+          "last": "Odom"
+        },
+        "email": "smith.odom@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Marie",
+          "last": "Good"
+        },
+        "email": "marie.good@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Little",
+          "last": "Wynn"
+        },
+        "email": "little.wynn@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Finch",
+          "last": "Riley"
+        },
+        "email": "finch.riley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tabitha",
+          "last": "Webster"
+        },
+        "email": "tabitha.webster@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Marcy",
+          "last": "Floyd"
+        },
+        "email": "marcy.floyd@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Vincent",
+          "last": "Meyers"
+        },
+        "email": "vincent.meyers@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hartman",
+          "last": "Martin"
+        },
+        "email": "hartman.martin@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dominique",
+          "last": "Cabrera"
+        },
+        "email": "dominique.cabrera@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Minnie",
+          "last": "Rowland"
+        },
+        "email": "minnie.rowland@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Valarie",
+          "last": "Marks"
+        },
+        "email": "valarie.marks@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Darla",
+          "last": "Wilkerson"
+        },
+        "email": "darla.wilkerson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dotson",
+          "last": "Vargas"
+        },
+        "email": "dotson.vargas@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 27",
+    "description": "magna aliquip consectetur nulla tempor est veniam laboris eiusmod irure ea aute ullamco Lorem sit ea id irure exercitation nulla ad non labore amet id est excepteur sunt deserunt officia",
+    "view_item": true,
+    "add_item": true,
+    "update_item": false,
+    "view_promo": false,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "Gay",
+          "last": "Mack"
+        },
+        "email": "gay.mack@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lupe",
+          "last": "Mayer"
+        },
+        "email": "lupe.mayer@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jessica",
+          "last": "Clark"
+        },
+        "email": "jessica.clark@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sylvia",
+          "last": "Silva"
+        },
+        "email": "sylvia.silva@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Duffy",
+          "last": "Miller"
+        },
+        "email": "duffy.miller@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Andrea",
+          "last": "Mann"
+        },
+        "email": "andrea.mann@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Benjamin",
+          "last": "Evans"
+        },
+        "email": "benjamin.evans@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Diann",
+          "last": "Parks"
+        },
+        "email": "diann.parks@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hahn",
+          "last": "Simpson"
+        },
+        "email": "hahn.simpson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Finley",
+          "last": "Blackburn"
+        },
+        "email": "finley.blackburn@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Janet",
+          "last": "Griffith"
+        },
+        "email": "janet.griffith@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Clara",
+          "last": "Mcneil"
+        },
+        "email": "clara.mcneil@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Isabelle",
+          "last": "Mcdonald"
+        },
+        "email": "isabelle.mcdonald@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hooper",
+          "last": "Marquez"
+        },
+        "email": "hooper.marquez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lorrie",
+          "last": "Marsh"
+        },
+        "email": "lorrie.marsh@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dalton",
+          "last": "Gilbert"
+        },
+        "email": "dalton.gilbert@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Olivia",
+          "last": "Valentine"
+        },
+        "email": "olivia.valentine@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Cindy",
+          "last": "Bishop"
+        },
+        "email": "cindy.bishop@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Violet",
+          "last": "Cherry"
+        },
+        "email": "violet.cherry@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Freda",
+          "last": "Mclean"
+        },
+        "email": "freda.mclean@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Herring",
+          "last": "Mcintosh"
+        },
+        "email": "herring.mcintosh@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Velazquez",
+          "last": "Alvarado"
+        },
+        "email": "velazquez.alvarado@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Noreen",
+          "last": "Estrada"
+        },
+        "email": "noreen.estrada@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Erickson",
+          "last": "Roberson"
+        },
+        "email": "erickson.roberson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jacobson",
+          "last": "Aguirre"
+        },
+        "email": "jacobson.aguirre@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Karen",
+          "last": "Wagner"
+        },
+        "email": "karen.wagner@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kari",
+          "last": "Dalton"
+        },
+        "email": "kari.dalton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gallegos",
+          "last": "Torres"
+        },
+        "email": "gallegos.torres@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 28",
+    "description": "in mollit qui voluptate elit est anim minim in aliquip proident deserunt exercitation ipsum cupidatat ex reprehenderit amet proident nostrud sit cillum labore exercitation minim quis amet mollit incididunt elit",
+    "view_item": false,
+    "add_item": true,
+    "update_item": false,
+    "view_promo": true,
+    "add_promo": false,
+    "users": [
+      {
+        "name": {
+          "first": "Tamra",
+          "last": "Holman"
+        },
+        "email": "tamra.holman@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "England",
+          "last": "Whitney"
+        },
+        "email": "england.whitney@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Leblanc",
+          "last": "Alexander"
+        },
+        "email": "leblanc.alexander@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Reeves",
+          "last": "Warren"
+        },
+        "email": "reeves.warren@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hogan",
+          "last": "Rich"
+        },
+        "email": "hogan.rich@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Reed",
+          "last": "Head"
+        },
+        "email": "reed.head@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Haynes",
+          "last": "Hughes"
+        },
+        "email": "haynes.hughes@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Stuart",
+          "last": "Swanson"
+        },
+        "email": "stuart.swanson@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Kim",
+          "last": "Humphrey"
+        },
+        "email": "kim.humphrey@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lindsey",
+          "last": "Hernandez"
+        },
+        "email": "lindsey.hernandez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Boyd",
+          "last": "Ross"
+        },
+        "email": "boyd.ross@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Chan",
+          "last": "Odonnell"
+        },
+        "email": "chan.odonnell@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mcfadden",
+          "last": "Tucker"
+        },
+        "email": "mcfadden.tucker@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Christensen",
+          "last": "Kemp"
+        },
+        "email": "christensen.kemp@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Inez",
+          "last": "Rosa"
+        },
+        "email": "inez.rosa@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tessa",
+          "last": "Flores"
+        },
+        "email": "tessa.flores@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Juliet",
+          "last": "Whitaker"
+        },
+        "email": "juliet.whitaker@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jessie",
+          "last": "Collins"
+        },
+        "email": "jessie.collins@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sallie",
+          "last": "Carrillo"
+        },
+        "email": "sallie.carrillo@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Swanson",
+          "last": "Burch"
+        },
+        "email": "swanson.burch@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Margery",
+          "last": "Scott"
+        },
+        "email": "margery.scott@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Romero",
+          "last": "Curry"
+        },
+        "email": "romero.curry@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Earlene",
+          "last": "Cannon"
+        },
+        "email": "earlene.cannon@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Georgette",
+          "last": "Mccray"
+        },
+        "email": "georgette.mccray@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jacklyn",
+          "last": "Downs"
+        },
+        "email": "jacklyn.downs@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Corinne",
+          "last": "Serrano"
+        },
+        "email": "corinne.serrano@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Fuller",
+          "last": "Long"
+        },
+        "email": "fuller.long@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Shelley",
+          "last": "Grant"
+        },
+        "email": "shelley.grant@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Manning",
+          "last": "Baxter"
+        },
+        "email": "manning.baxter@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 29",
+    "description": "nostrud consequat aute consectetur excepteur adipisicing commodo anim eu do excepteur eu deserunt veniam dolore dolore nostrud deserunt non aute commodo incididunt nisi incididunt nulla in velit esse pariatur ex",
+    "view_item": false,
+    "add_item": true,
+    "update_item": true,
+    "view_promo": false,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "Owen",
+          "last": "Barber"
+        },
+        "email": "owen.barber@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Patty",
+          "last": "Hatfield"
+        },
+        "email": "patty.hatfield@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Pickett",
+          "last": "Blevins"
+        },
+        "email": "pickett.blevins@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jenna",
+          "last": "Walker"
+        },
+        "email": "jenna.walker@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Alexander",
+          "last": "Johns"
+        },
+        "email": "alexander.johns@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Alyce",
+          "last": "Vasquez"
+        },
+        "email": "alyce.vasquez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Dorthy",
+          "last": "Wade"
+        },
+        "email": "dorthy.wade@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Susanna",
+          "last": "Sweeney"
+        },
+        "email": "susanna.sweeney@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Stevenson",
+          "last": "Maynard"
+        },
+        "email": "stevenson.maynard@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Edwina",
+          "last": "Guerra"
+        },
+        "email": "edwina.guerra@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Marian",
+          "last": "Gordon"
+        },
+        "email": "marian.gordon@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Alissa",
+          "last": "Cleveland"
+        },
+        "email": "alissa.cleveland@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Tate",
+          "last": "Wells"
+        },
+        "email": "tate.wells@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Nash",
+          "last": "Rodriquez"
+        },
+        "email": "nash.rodriquez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Claudette",
+          "last": "Palmer"
+        },
+        "email": "claudette.palmer@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gale",
+          "last": "Cooley"
+        },
+        "email": "gale.cooley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gentry",
+          "last": "Kidd"
+        },
+        "email": "gentry.kidd@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Isabella",
+          "last": "Justice"
+        },
+        "email": "isabella.justice@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Cash",
+          "last": "Alston"
+        },
+        "email": "cash.alston@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Rose",
+          "last": "Powers"
+        },
+        "email": "rose.powers@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Burt",
+          "last": "Wilcox"
+        },
+        "email": "burt.wilcox@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lyons",
+          "last": "Myers"
+        },
+        "email": "lyons.myers@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Vinson",
+          "last": "Kramer"
+        },
+        "email": "vinson.kramer@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lela",
+          "last": "Ashley"
+        },
+        "email": "lela.ashley@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Barnett",
+          "last": "Sears"
+        },
+        "email": "barnett.sears@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hughes",
+          "last": "Nixon"
+        },
+        "email": "hughes.nixon@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Thelma",
+          "last": "Baker"
+        },
+        "email": "thelma.baker@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Isabel",
+          "last": "Christian"
+        },
+        "email": "isabel.christian@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Howard",
+          "last": "Fox"
+        },
+        "email": "howard.fox@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Moran",
+          "last": "Compton"
+        },
+        "email": "moran.compton@good-food-holdings.com"
+      }
+    ]
+  },
+  {
+    "groups": "Group 30",
+    "description": "reprehenderit in sunt occaecat elit nulla Lorem excepteur quis pariatur Lorem Lorem officia ipsum labore do tempor magna aliquip ullamco aliquip ut mollit et tempor ipsum magna est consectetur veniam",
+    "view_item": false,
+    "add_item": false,
+    "update_item": false,
+    "view_promo": false,
+    "add_promo": true,
+    "users": [
+      {
+        "name": {
+          "first": "Patel",
+          "last": "Harrison"
+        },
+        "email": "patel.harrison@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Hendrix",
+          "last": "Gilmore"
+        },
+        "email": "hendrix.gilmore@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Whitney",
+          "last": "Conrad"
+        },
+        "email": "whitney.conrad@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Leta",
+          "last": "Garrison"
+        },
+        "email": "leta.garrison@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sadie",
+          "last": "Everett"
+        },
+        "email": "sadie.everett@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Perez",
+          "last": "Graham"
+        },
+        "email": "perez.graham@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Gilliam",
+          "last": "Russell"
+        },
+        "email": "gilliam.russell@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Herminia",
+          "last": "Davenport"
+        },
+        "email": "herminia.davenport@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Paulette",
+          "last": "Austin"
+        },
+        "email": "paulette.austin@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mckinney",
+          "last": "Morin"
+        },
+        "email": "mckinney.morin@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ina",
+          "last": "Clements"
+        },
+        "email": "ina.clements@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Christi",
+          "last": "Harvey"
+        },
+        "email": "christi.harvey@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jennings",
+          "last": "Bartlett"
+        },
+        "email": "jennings.bartlett@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Ilene",
+          "last": "Norton"
+        },
+        "email": "ilene.norton@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bernadette",
+          "last": "Frye"
+        },
+        "email": "bernadette.frye@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Lucas",
+          "last": "Buckner"
+        },
+        "email": "lucas.buckner@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mcconnell",
+          "last": "Alvarez"
+        },
+        "email": "mcconnell.alvarez@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Johnnie",
+          "last": "Sheppard"
+        },
+        "email": "johnnie.sheppard@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Sasha",
+          "last": "Bean"
+        },
+        "email": "sasha.bean@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Jefferson",
+          "last": "Lambert"
+        },
+        "email": "jefferson.lambert@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Velasquez",
+          "last": "Perry"
+        },
+        "email": "velasquez.perry@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Amy",
+          "last": "Mccall"
+        },
+        "email": "amy.mccall@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Pacheco",
+          "last": "Clemons"
+        },
+        "email": "pacheco.clemons@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Elnora",
+          "last": "Adkins"
+        },
+        "email": "elnora.adkins@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Odessa",
+          "last": "Lamb"
+        },
+        "email": "odessa.lamb@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Mindy",
+          "last": "Logan"
+        },
+        "email": "mindy.logan@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Anastasia",
+          "last": "Poole"
+        },
+        "email": "anastasia.poole@good-food-holdings.com"
+      },
+      {
+        "name": {
+          "first": "Bates",
+          "last": "Padilla"
+        },
+        "email": "bates.padilla@good-food-holdings.com"
+      }
+    ]
+  }
+]

@@ -20,6 +20,11 @@
 </head>
 
 <body class="left-menu-fixed">
+  <style>
+    .card .datatable.ag-theme-material {
+      height: calc(100vh - 360px);
+    }
+  </style>
 
   <div class="body-container-wrapper">
     <div class="body-wrapper">
@@ -64,7 +69,7 @@
             <div class="container-fluid">
               <div class="card header-search-card-wrapper">
                 <div class="card-content">
-                  <h3 class="card-title">Start Date</h3>
+                  <h3 class="card-title mb-0">Select Date</h3>
                   <div class="row justify-content-left align-items-center">
                     <div class="col-lg-4 col-md-4">
                       <div class="cell-wrapper">
@@ -211,9 +216,9 @@
     }
 
     $(document).ready(function() { 
-      $(window).on("load resize ",function(e){
-        $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
-      });
+      // $(window).on("load resize ",function(e){
+      //   $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
+      // });
 
       $('.datepicker-here').each(function() {
         var dp = $(this).datepicker({

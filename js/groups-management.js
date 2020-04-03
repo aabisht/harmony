@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var groupData;
+    var groupData, groupUsersData = [];
     $.get("data/groups-management.json", function(data, status){
         groupData = data;
         $(data).each(function(i) {
@@ -29,7 +29,14 @@ $(document).ready(function() {
     });
 
     function activeGpData(gpData) {
-        $('.groups-description-wrapper p').text(gpData.description);
+        // debugger;
+        groupUsersData = gpData.users;
+        $('.groups-users-list').children().remove();
+        $(gpData.users).each(function(i) {
+            $('.groups-users-list').append('<li><i class="fas fa-user"></i> '+this.name.first+' '+this.name.last+'</li>');
+        });
+
+        // $('.groups-description-wrapper p').text(gpData.description);
 
         if(gpData.view_item === true) {
             $('#group_management_view_item').prop("checked", true);
