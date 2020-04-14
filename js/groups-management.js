@@ -1,5 +1,55 @@
 $(document).ready(function() {
-    var groupData, groupUsersData = [];
+    var groupData, groupUsersData, userGridOptions;
+
+    var columnDefs = [
+        {headerName: "First Name", field: "name.first"},
+        {headerName: "Last Name", field: "name.last"},
+        {headerName: "Email", field: "email", minWidth: 350},
+        {headerName: "Primary Banner", field: "primary_banner"},
+        {headerName: "Action", field: "action", cellRenderer: 'userAction'},
+    ];
+
+    userGridOptions = {
+        defaultColDef: {
+            resizable: true,
+            sortable:true,
+            filter: true
+        },
+        columnDefs: columnDefs,
+        suppressContextMenu:true,
+        pagination: true,
+        paginationPageSize: 10,
+        paginationNumberFormatter: function(params) {
+            return '' + params.value.toLocaleString() + '';
+        },
+        onGridReady: function(params) {
+          params.api.sizeColumnsToFit();
+        },
+        components: {
+          'userAction': UserAction
+        }
+    };
+
+    // cell renderer class
+    function UserAction() {}
+
+    // init method gets the details of the cell to be rendere
+    UserAction.prototype.init = function(params) {
+      // debugger;
+      this.eGui = document.createElement('div');
+      this.eGui.classList.add('datatabel-action-btn-wrapper');
+      this.eGui.classList.add('text-right');
+      this.eGui.innerHTML = '<a href="javascript:;" title="Delete User" class="deleteUser"><i class="fas fa-trash-alt"></i></a>';
+    };
+
+    UserAction.prototype.getGui = function() {
+        return this.eGui;
+    };
+    
+    var gridDiv = document.querySelector('#userDataTable');
+    new agGrid.Grid(gridDiv, userGridOptions);   
+
+
     $.get("data/groups-management.json", function(data, status){
         groupData = data;
         $(data).each(function(i) {
@@ -29,14 +79,8 @@ $(document).ready(function() {
     });
 
     function activeGpData(gpData) {
-        // debugger;
-        groupUsersData = gpData.users;
-        $('.groups-users-list').children().remove();
-        $(gpData.users).each(function(i) {
-            $('.groups-users-list').append('<li><i class="fas fa-user"></i> '+this.name.first+' '+this.name.last+'</li>');
-        });
 
-        // $('.groups-description-wrapper p').text(gpData.description);
+        userGridOptions.api.setRowData(gpData.users);
 
         if(gpData.view_item === true) {
             $('#group_management_view_item').prop("checked", true);

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Submit Allowances | Bristol Farms</title>
+  <title>Pending Allowances | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -25,9 +25,9 @@
       height: calc(100vh - 90px);
       background: #fff;
     }
-    /* .datatable {
-      height: 620px;
-    } */
+    .header-title {
+      max-width: 100%;
+    }
   </style>
 
   <div class="body-container-wrapper">
@@ -42,11 +42,11 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>Submit Allowances</h3>
+                      <h3>Pending Allowances</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active">Submit Allowances</li>
+                          <li class="breadcrumb-item active">Pending Allowances</li>
                         </ol>
                       </div>
                     </div>
@@ -77,19 +77,21 @@
                   <div class="align-items-start collapsible-header d-flex flex-row justify-content-between">
                     <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
                     <div class="header-title">
-                      <h3>File Name: File 1</h3>
-                      <!-- <h4>Total Amout: <span class="header-1-action-total-amt header-action-total-amt"></span></h4> -->
+                      <h3 class="mb-1">File Name: File 1 - 
+                        <small><span class="reject">Reject</span></small>
+                      </h3>
+                      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elementum varius dolor nec tristique.</h4>
                     </div>
-                    <div class="header-action-wrapper">
+                    <!-- <div class="header-action-wrapper">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <!-- <div class="input-field">
+                        <div class="input-field">
                           <textarea id="textarea1" class="materialize-textarea" maxlength="60" style="min-width: 300px;"></textarea>
                           <label for="textarea1">Comment</label>
-                        </div> -->
+                        </div>
                         <a href="javascript:;" class="button-primary header-action-item"><i class="fas fa-check"></i> Accept</a>
                         <a href="#updateItemRowModal" class="button-primary header-action-item modal-trigger"><i class="fas fa-times"></i> Reject</a>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="">
                     <div class="datatable-wrapper">
@@ -111,19 +113,21 @@
                   <div class="align-items-start collapsible-header d-flex flex-row justify-content-between">
                     <div class="collapsible-header-icon-wrapper"><i class="fa"></i></div>
                     <div class="header-title">
-                      <h3>File Name: File 2</h3>
-                      <!-- <h4>Total Amout: <span class="header-2-action-total-amt header-action-total-amt"></span></h4> -->
+                      <h3 class="mb-1">File Name: File 2 - 
+                        <small><span class="reject">Reject</span></small>
+                      </h3>
+                      <h4>Integer orci risus, tempus et odio vitae, cursus dictum felis. In ut rutrum ante. Sed tincidunt vel augue a sagittis.</h4>
                     </div>
-                    <div class="header-action-wrapper">
+                    <!-- <div class="header-action-wrapper">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <!-- <div class="input-field">
+                        <div class="input-field">
                           <textarea id="textarea1" class="materialize-textarea" maxlength="60" style="min-width: 300px;"></textarea>
                           <label for="textarea1">Comment</label>
-                        </div> -->
+                        </div>
                         <a href="javascript:;" class="button-primary header-action-item"><i class="fas fa-check"></i> Accept</a>
                         <a href="#updateItemRowModal" class="button-primary header-action-item modal-trigger"><i class="fas fa-times"></i> Reject</a>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="">
                     <div class="datatable-wrapper">

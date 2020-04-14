@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Upload Deals | Bristol Farms</title>
+  <title>Upload Allowances | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -39,11 +39,11 @@
                 <div class="cell-wrapper">
                   <div class="header-title-nav-wrapper">
                     <div class="title">
-                      <h3>Upload Deals</h3>
+                      <h3>Upload Allowances</h3>
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Upload Deals</li>
+                          <li class="breadcrumb-item active" aria-current="page">Upload Allowances</li>
                         </ol>
                       </div>
                     </div>
@@ -70,7 +70,7 @@
             <div class="container-fluid">
               <div class="card header-search-card-wrapper">
                 <div class="card-content">
-                  <h3 class="card-title">Deal Import</h3>
+                  <h3 class="card-title">Allowances Import</h3>
                   <div class="row justify-content-left align-items-center">
                     <div class="col-lg-5 col-md-4">
                       <div class="cell-wrapper">
@@ -80,7 +80,7 @@
                             <input type="file">
                           </div>
                           <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text" value="deals.csv">
+                            <input class="file-path validate" type="text" value="allowances.csv">
                           </div>
                         </div>
                       </div>
@@ -107,7 +107,7 @@
                 <div class="card-content">
                   <div class="card-header d-flex flex-row justify-content-between align-items-center">
                     <div class="card-title-wrapper">
-                      <h3 class="card-title">Deals<br><small>Double Click on row to edit.</small></h3>
+                      <h3 class="card-title mb-0">Allowances<br><small>Double Click on row to edit.</small></h3>
                     </div>
                     <div class="card-header-action-wrapper" id="cardHeaderAction">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
@@ -126,7 +126,7 @@
                         <button type="button" class="button-primary header-action-item disabled">Submit</button>
                       </div>
                       <div class="info-msg error text-right">
-                        <i class="fas fa-info-circle"></i> Fix validation errors to submit deals.
+                        <i class="fas fa-info-circle"></i> Fix validation errors to submit allowances.
                       </div>
                     </div>
                   </div>
@@ -174,8 +174,8 @@
           minWidth: 240
         },
         {headerName: "Vendor", field: "vendor", editable: true},
-        {headerName: "Deal Type", field: "allowance_type", editable: true, cellRenderer: 'tooltipCellRenderer'},
-        {headerName: "Deal Amount", field: "amount", editable: true},
+        {headerName: "Allowances Type", field: "allowance_type", editable: true, cellRenderer: 'tooltipCellRenderer'},
+        {headerName: "Allowances Amount", field: "amount", editable: true},
         {headerName: "Start Date", field: "start_date", editable: true, cellRenderer: 'tooltipCellRenderer'},
         {headerName: "End Date", field: "end_date", editable: true, cellRenderer: 'tooltipCellRenderer'},
         {headerName: "Store/Zone", field: "store", editable: true},

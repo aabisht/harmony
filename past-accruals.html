@@ -155,8 +155,8 @@
           minWidth: 240
         },
         {headerName: "Store", field: "store"},
-        {headerName: "$/Unit", field: "price_unit"},
-        {headerName: "Total Units Sold", field: "unit"},
+        // {headerName: "$/Unit", field: "price_unit"},
+        // {headerName: "Total Units Sold", field: "unit"},
         {headerName: "Total", field: "total"},
         {headerName: "Accrual Start Date", field: "start_date"},
       ];
@@ -206,9 +206,9 @@
       console.log('selection changed, ' + rowCount + ' rows selected');
       if(rowCount > 0) {
         $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
-        // if($('#cardHeaderAction .button-wrapper .header-action-process').length === 0) {
-        //   $('#cardHeaderAction .button-wrapper').append('<a href="javascript:;" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Run Accruals</a>');
-        // }
+        if($('#cardHeaderAction .button-wrapper .header-action-process').length === 0) {
+          $('#cardHeaderAction .button-wrapper').append('<a href="/pending-accruals-process.html" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Run Accruals</a>');
+        }
       } else {
         $('#select-row-num').html('');
         $('#cardHeaderAction .button-wrapper .header-action-process').remove();

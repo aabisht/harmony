@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     var userTableWrapper = $('#usersCards');
     userTableWrapper.addClass('user-cards-wrapper');
-    var searchData = {};
+    var fNameData = {}, lNameData = {}, userEmailData = {};
 
     var gridOptions;
     var columnDefs = [
@@ -19,8 +19,10 @@ $(document).ready(function() {
 
     $.get("data/users.json", function(data, status){
       $(data).each(function(i) {
-        searchData[this.email] = null;
-        searchData[this.name.first+' '+this.name.last] = null;
+        userEmailData[this.email] = null;
+        // searchData[this.name.first+' '+this.name.last] = null;
+        fNameData[this.name.first] = null;
+        lNameData[this.name.last] = null;
       });
 
       gridOptions = {
@@ -85,8 +87,15 @@ $(document).ready(function() {
 
       $('.dropdown-trigger').dropdown();
       $('select').formSelect();
-      $('input.autocomplete').autocomplete({
-        data: searchData,
+
+      $('#first_name').autocomplete({
+        data: fNameData,
+      });
+      $('#last_name').autocomplete({
+        data: lNameData,
+      });
+      $('#user_email').autocomplete({
+        data: userEmailData,
       });
     });
       
