@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Process Pending Accruals | Bristol Farms</title>
+  <title>Process | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -45,7 +45,7 @@
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item"><a href="/pending-accruals.html">Pending Accruals</a></li>
+                          <li class="breadcrumb-item active"><a href="javascript:;" class="page-name-link"><span class="page-name"></span></a></li>
                           <li class="breadcrumb-item active" aria-current="page">Process</li>
                         </ol>
                       </div>
@@ -76,11 +76,11 @@
                 <div class="card-content">
                   <div class="card-header d-flex flex-row justify-content-between align-items-center mb-0">
                     <div class="card-title-wrapper">
-                      <h3 class="card-title">Pending Accruals</h3>
+                      <h3 class="card-title"><span class="page-name"></span></h3>
                     </div>
                     <div class="card-header-action-wrapper" id="cardHeaderAction">
                       <div class="button-wrapper d-flex flex-row justify-content-end align-items-center">
-                        <a href="/pending-accruals-finalize.html" class="button-primary button-stroked header-action-item">Finalize All</a>
+                        <a href="javascript:;" class="button-primary button-stroked header-action-item finalizeAllLink">Finalize All</a>
                       </div>
                     </div>
                   </div>
@@ -233,9 +233,22 @@
     }
 
     $(document).ready(function() { 
+      var url = new URL(window.location.href),
+        paramName = url.searchParams.get("from");
+
       $(window).on("load resize ",function(e){
         // $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
       });
+      if(paramName) {
+        $('.finalizeAllLink').attr('href', '/pending-accruals-finalize.html?from='+paramName);
+        if(paramName === "pending-accruals") {
+          $('.page-name').text("Pending Accruals");
+          $('.page-name-link').attr('href', '/pending-accruals.html');
+        } else if(paramName === "past-accruals") {
+          $('.page-name').text("Past Accruals");
+          $('.page-name-link').attr('href', '/past-accruals.html');
+        }
+      }
 
       
       $('body').on('click', '.collapsible-header', function(event) {

@@ -207,7 +207,7 @@
       if(rowCount > 0) {
         $('#select-row-num').html('('+rowCount + ' <span>selected</span>'+')');
         if($('#cardHeaderAction .button-wrapper .header-action-process').length === 0) {
-          $('#cardHeaderAction .button-wrapper').append('<a href="/pending-accruals-process.html" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Run Accruals</a>');
+          $('#cardHeaderAction .button-wrapper').append('<a href="/pending-accruals-process.html?from=past-accruals" class="button-primary header-action-item header-action-process"><i class="fas fa-cogs"></i> Run Accruals</a>');
         }
       } else {
         $('#select-row-num').html('');

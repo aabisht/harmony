@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Finalize Pending Accruals | Bristol Farms</title>
+  <title>Finalize | Bristol Farms</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
@@ -48,7 +48,7 @@
                       <div aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/">Home</a></li>
-                          <li class="breadcrumb-item">Pending Accruals</li>
+                          <li class="breadcrumb-item"><span class="page-name"></span></li>
                           <li class="breadcrumb-item">Process</li>
                           <li class="breadcrumb-item active" aria-current="page">Finalize All</li>
                         </ol>
@@ -237,9 +237,22 @@
     }
 
     $(document).ready(function() { 
+      var url = new URL(window.location.href),
+        paramName = url.searchParams.get("from");
+
       $(window).on("load resize ",function(e){
         // $('#datatable').outerHeight($(document).outerHeight(true) - $('.header-container').outerHeight(true) - $('.header-search-card-wrapper').outerHeight(true) - $('.main-body-data-wrapper .card-header').outerHeight(true) - 40);
       });
+      if(paramName) {
+        $('.finalizeAllLink').attr('href', '/pending-accruals-finalize.html?from='+paramName);
+        if(paramName === "pending-accruals") {
+          $('.page-name').text("Pending Accruals");
+          // $('.page-name-link').attr('href', '/pending-accruals.html');
+        } else if(paramName === "past-accruals") {
+          $('.page-name').text("Past Accruals");
+          // $('.page-name-link').attr('href', '/past-accruals.html');
+        }
+      }
 
       $('body').on('click', '.collapsible-header', function(event) {
         gridOptions_1.api.sizeColumnsToFit();
